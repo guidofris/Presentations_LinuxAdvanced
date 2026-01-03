@@ -1344,6 +1344,118 @@ const FourDSlides = () => {
       )
     },
     {
+      title: "Adding Context to Chat",
+      subtitle: "Help AI Understand Your Code Better",
+      content: (
+        <div className="flex flex-col space-y-5 max-w-4xl mx-auto">
+          <div className="bg-cyan-50 p-5 rounded-lg border-l-4 border-cyan-500">
+            <p className="text-gray-700">
+              Better context = better responses. VS Code provides multiple ways to give Copilot the information it needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            {/* #-mentions */}
+            <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
+              <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                <span className="bg-cyan-500 text-white px-2 py-0.5 rounded text-sm font-mono mr-2">#</span>
+                Mentions
+              </h4>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-start space-x-2">
+                  <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs font-mono">#file</code>
+                  <span className="text-gray-600">Reference specific files</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs font-mono">#folder</code>
+                  <span className="text-gray-600">Include entire folders</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs font-mono">#symbol</code>
+                  <span className="text-gray-600">Functions, classes, variables</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs font-mono">#codebase</code>
+                  <span className="text-gray-600">Search your entire project</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Web & External */}
+            <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
+              <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                <span className="bg-purple-500 text-white px-2 py-0.5 rounded text-sm mr-2">🌐</span>
+                Web & External
+              </h4>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-start space-x-2">
+                  <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs font-mono">#fetch URL</code>
+                  <span className="text-gray-600">Fetch web page content</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs font-mono">#githubRepo</code>
+                  <span className="text-gray-600">Search GitHub repos</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs font-mono">#terminalSelection</code>
+                  <span className="text-gray-600">Terminal output</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs font-mono">#changes</code>
+                  <span className="text-gray-600">Git changes / diffs</span>
+                </div>
+              </div>
+            </div>
+
+            {/* @-mentions */}
+            <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
+              <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                <span className="bg-green-500 text-white px-2 py-0.5 rounded text-sm font-mono mr-2">@</span>
+                Participants
+              </h4>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-start space-x-2">
+                  <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs font-mono">@workspace</code>
+                  <span className="text-gray-600">Workspace-aware answers</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs font-mono">@vscode</code>
+                  <span className="text-gray-600">VS Code settings & features</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <code className="bg-gray-100 px-1.5 py-0.5 rounded text-xs font-mono">@terminal</code>
+                  <span className="text-gray-600">Terminal commands</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Other methods */}
+            <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
+              <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                <span className="bg-orange-500 text-white px-2 py-0.5 rounded text-sm mr-2">📎</span>
+                Other Methods
+              </h4>
+              <div className="space-y-2 text-sm text-gray-600">
+                <p>• <strong>Drag & drop</strong> files onto chat</p>
+                <p>• <strong>Images</strong> for vision queries</p>
+                <p>• <strong>Selected text</strong> auto-included</p>
+                <p>• <strong>Active file</strong> in Ask/Edit modes</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gray-800 p-3 rounded-lg">
+            <p className="text-green-400 font-mono text-sm mb-1">Example prompts:</p>
+            <div className="text-gray-300 font-mono text-xs space-y-1">
+              <p>"Explain how auth works #codebase"</p>
+              <p>"Update this to match #fetch https://api-docs.example.com"</p>
+              <p>"@terminal what's causing this error?"</p>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    {
       title: "Custom Instructions",
       subtitle: "Teaching AI Your Coding Standards",
       content: (
