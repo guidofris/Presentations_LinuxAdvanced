@@ -107,6 +107,14 @@ For tool demonstration slides:
 - Dot indicators: active = `bg-blue-600 w-8`, inactive = `bg-gray-300`
 - Click any dot to jump directly
 
+## Slide Positioning (IMPORTANT)
+
+**Always validate the current slide order before adding or modifying slides.**
+- Never assume slide positions based on cached or initial context
+- Search for `title:` in the slides array to get the current order
+- Verify the exact insertion point by reading the surrounding slides
+- The slides array may have changed since the conversation started
+
 ## Attribution Layout
 
 When content requires attribution, use the footer pattern:

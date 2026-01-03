@@ -85,6 +85,45 @@ const FourDSlides = () => {
       )
     },
     {
+      title: "Understanding LLMs",
+      subtitle: "The Technology Powering AI Coding Assistants",
+      content: (
+        <div className="flex flex-col items-center justify-center h-full space-y-8">
+          <div className="text-center mb-4">
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+              Before we can effectively delegate to AI, we need to understand how these systems actually work
+            </p>
+          </div>
+
+          <div className="grid grid-cols-3 gap-6 max-w-4xl">
+            <div className="bg-indigo-500 text-white p-6 rounded-lg shadow-lg text-center">
+              <div className="text-3xl mb-3">🧠</div>
+              <div className="text-xl font-bold mb-2">Architecture</div>
+              <div className="text-sm opacity-90">How transformers process and generate text</div>
+            </div>
+
+            <div className="bg-indigo-600 text-white p-6 rounded-lg shadow-lg text-center">
+              <div className="text-3xl mb-3">📈</div>
+              <div className="text-xl font-bold mb-2">Evolution</div>
+              <div className="text-sm opacity-90">From simple models to emergent reasoning</div>
+            </div>
+
+            <div className="bg-indigo-700 text-white p-6 rounded-lg shadow-lg text-center">
+              <div className="text-3xl mb-3">⚖️</div>
+              <div className="text-xl font-bold mb-2">Limitations</div>
+              <div className="text-sm opacity-90">What LLMs can and cannot do</div>
+            </div>
+          </div>
+
+          <div className="bg-indigo-100 px-6 py-4 rounded-lg max-w-2xl mt-4">
+            <p className="text-center text-indigo-900">
+              <strong>Why This Matters:</strong> Understanding the technology helps you set realistic expectations and use AI more effectively.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
       title: "What is an LLM?",
       subtitle: "Large Language Models & Transformer Architecture",
       content: (
