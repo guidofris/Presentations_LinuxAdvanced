@@ -966,63 +966,80 @@ const FourDSlides = () => {
       )
     },
     {
-      title: "Copilot Modes",
-      subtitle: "Three Ways to Interact with AI in Your Workflow",
+      title: "Copilot Chat Modes",
+      subtitle: "Four Ways to Interact with AI in Your Workflow",
       content: (
         <div className="flex flex-col items-center justify-center h-full space-y-6">
           <p className="text-xl text-gray-700 max-w-2xl text-center mb-4">
             Copilot offers different interaction modes — each optimized for specific tasks and levels of AI autonomy
           </p>
 
-          <div className="flex space-x-6 max-w-5xl">
+          <div className="flex space-x-4 max-w-6xl">
             {/* Ask Mode */}
-            <div className="flex-1 bg-gradient-to-b from-blue-500 to-blue-700 text-white p-6 rounded-lg shadow-lg">
-              <div className="text-center mb-4">
-                <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-3">Ask Mode</div>
-                <div className="text-4xl mb-2">💬</div>
+            <div className="flex-1 bg-gradient-to-b from-blue-500 to-blue-700 text-white p-5 rounded-lg shadow-lg">
+              <div className="text-center mb-3">
+                <div className="inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-semibold mb-2">Ask Mode</div>
+                <div className="text-3xl mb-2">💬</div>
               </div>
-              <ul className="text-sm space-y-2 opacity-90">
+              <ul className="text-xs space-y-1 opacity-90">
                 <li>• Chat-based Q&A interface</li>
                 <li>• Explore ideas and concepts</li>
                 <li>• Get explanations of code</li>
                 <li>• No direct file changes</li>
               </ul>
-              <div className="mt-4 pt-4 border-t border-white/20 text-xs text-center opacity-75">
-                <strong>Best for:</strong> Learning, exploring, understanding
+              <div className="mt-3 pt-3 border-t border-white/20 text-xs text-center opacity-75">
+                <strong>Best for:</strong> Learning, exploring
               </div>
             </div>
 
             {/* Edit Mode */}
-            <div className="flex-1 bg-gradient-to-b from-green-500 to-green-700 text-white p-6 rounded-lg shadow-lg">
-              <div className="text-center mb-4">
-                <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-3">Edit Mode</div>
-                <div className="text-4xl mb-2">✏️</div>
+            <div className="flex-1 bg-gradient-to-b from-green-500 to-green-700 text-white p-5 rounded-lg shadow-lg">
+              <div className="text-center mb-3">
+                <div className="inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-semibold mb-2">Edit Mode</div>
+                <div className="text-3xl mb-2">✏️</div>
               </div>
-              <ul className="text-sm space-y-2 opacity-90">
+              <ul className="text-xs space-y-1 opacity-90">
                 <li>• Direct code modifications</li>
                 <li>• Inline suggestions & changes</li>
                 <li>• You review before accepting</li>
                 <li>• Scoped to specific files</li>
               </ul>
-              <div className="mt-4 pt-4 border-t border-white/20 text-xs text-center opacity-75">
-                <strong>Best for:</strong> Targeted changes, refactoring
+              <div className="mt-3 pt-3 border-t border-white/20 text-xs text-center opacity-75">
+                <strong>Best for:</strong> Targeted changes
+              </div>
+            </div>
+
+            {/* Plan Mode */}
+            <div className="flex-1 bg-gradient-to-b from-orange-500 to-orange-700 text-white p-5 rounded-lg shadow-lg">
+              <div className="text-center mb-3">
+                <div className="inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-semibold mb-2">Plan Mode</div>
+                <div className="text-3xl mb-2">📋</div>
+              </div>
+              <ul className="text-xs space-y-1 opacity-90">
+                <li>• Generate step-by-step plans</li>
+                <li>• Review before execution</li>
+                <li>• Iterate on the approach</li>
+                <li>• Then execute with Agent</li>
+              </ul>
+              <div className="mt-3 pt-3 border-t border-white/20 text-xs text-center opacity-75">
+                <strong>Best for:</strong> Complex planning
               </div>
             </div>
 
             {/* Agent Mode */}
-            <div className="flex-1 bg-gradient-to-b from-purple-500 to-purple-700 text-white p-6 rounded-lg shadow-lg">
-              <div className="text-center mb-4">
-                <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-3">Agent Mode</div>
-                <div className="text-4xl mb-2">🤖</div>
+            <div className="flex-1 bg-gradient-to-b from-purple-500 to-purple-700 text-white p-5 rounded-lg shadow-lg">
+              <div className="text-center mb-3">
+                <div className="inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-semibold mb-2">Agent Mode</div>
+                <div className="text-3xl mb-2">🤖</div>
               </div>
-              <ul className="text-sm space-y-2 opacity-90">
+              <ul className="text-xs space-y-1 opacity-90">
                 <li>• Autonomous task execution</li>
                 <li>• Multi-file operations</li>
                 <li>• Runs terminal commands</li>
                 <li>• Iterates until complete</li>
               </ul>
-              <div className="mt-4 pt-4 border-t border-white/20 text-xs text-center opacity-75">
-                <strong>Best for:</strong> Complex tasks, new features
+              <div className="mt-3 pt-3 border-t border-white/20 text-xs text-center opacity-75">
+                <strong>Best for:</strong> Complex tasks
               </div>
             </div>
           </div>
@@ -1142,6 +1159,59 @@ const FourDSlides = () => {
       )
     },
     {
+      title: "Plan Mode",
+      subtitle: "Think Before You Build",
+      content: (
+        <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
+          <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
+            <h3 className="text-2xl font-bold text-orange-900 mb-2">What is Plan Mode?</h3>
+            <p className="text-lg text-gray-700">
+              Plan mode generates a detailed, step-by-step implementation plan before any code changes. You review and refine the approach, then execute it — separating planning from doing.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-6">
+            <div className="bg-white p-5 rounded-lg shadow border border-orange-200">
+              <h4 className="font-semibold text-orange-900 mb-3">✅ Great For:</h4>
+              <ul className="space-y-2 text-gray-700 text-sm">
+                <li>• Complex features requiring thought</li>
+                <li>• Architectural decisions</li>
+                <li>• Tasks where approach matters</li>
+                <li>• Learning by seeing the plan first</li>
+                <li>• When you want control over strategy</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-5 rounded-lg shadow border border-orange-200">
+              <h4 className="font-semibold text-orange-900 mb-3">💡 How It Works:</h4>
+              <ul className="space-y-2 text-gray-700 text-sm">
+                <li>• AI analyzes your request</li>
+                <li>• Generates detailed step-by-step plan</li>
+                <li>• You review and adjust the plan</li>
+                <li>• Execute plan with Agent mode</li>
+                <li>• Iterate on plan if needed</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-gray-800 p-4 rounded-lg">
+            <p className="text-green-400 font-mono text-sm mb-2">Example workflow:</p>
+            <div className="space-y-2 text-gray-300 font-mono text-sm">
+              <p>1. <span className="text-orange-400">Plan:</span> "How should I implement user authentication?"</p>
+              <p>2. <span className="text-gray-400">Review:</span> AI proposes JWT tokens, middleware, route guards...</p>
+              <p>3. <span className="text-purple-400">Agent:</span> Execute the approved plan</p>
+            </div>
+          </div>
+
+          <div className="bg-orange-100 p-4 rounded-lg">
+            <p className="text-sm italic text-orange-900">
+              <strong>4D Connection:</strong> Plan mode is pure <strong>Delegation</strong> — you're strategizing the approach before any execution, maximizing your control over the AI's direction.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
       title: "Agent Mode",
       subtitle: "Autonomous Multi-Step Task Execution",
       content: (
@@ -1198,14 +1268,14 @@ const FourDSlides = () => {
       title: "Choosing the Right Mode",
       subtitle: "Match the Mode to Your Task",
       content: (
-        <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
+        <div className="flex flex-col space-y-5 max-w-4xl mx-auto">
           {/* Visual comparison */}
           <div className="relative">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-semibold text-gray-600">More Human Control</span>
               <span className="text-sm font-semibold text-gray-600">More AI Autonomy</span>
             </div>
-            <div className="h-4 bg-gradient-to-r from-blue-500 via-green-500 to-purple-500 rounded-full"></div>
+            <div className="h-4 bg-gradient-to-r from-blue-500 via-green-500 via-orange-500 to-purple-500 rounded-full"></div>
             <div className="flex justify-between mt-2">
               <div className="text-center">
                 <div className="w-4 h-4 bg-blue-500 rounded-full mx-auto mb-1"></div>
@@ -1216,6 +1286,10 @@ const FourDSlides = () => {
                 <span className="text-xs font-semibold text-green-700">Edit</span>
               </div>
               <div className="text-center">
+                <div className="w-4 h-4 bg-orange-500 rounded-full mx-auto mb-1"></div>
+                <span className="text-xs font-semibold text-orange-700">Plan</span>
+              </div>
+              <div className="text-center">
                 <div className="w-4 h-4 bg-purple-500 rounded-full mx-auto mb-1"></div>
                 <span className="text-xs font-semibold text-purple-700">Agent</span>
               </div>
@@ -1223,41 +1297,466 @@ const FourDSlides = () => {
           </div>
 
           {/* Decision guide */}
-          <div className="grid grid-cols-3 gap-4">
-            <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-              <h4 className="font-bold text-blue-900 mb-2 text-center">Use Ask When...</h4>
-              <ul className="text-sm text-gray-700 space-y-1">
-                <li>• You need to understand code</li>
-                <li>• Exploring different approaches</li>
+          <div className="grid grid-cols-4 gap-3">
+            <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
+              <h4 className="font-bold text-blue-900 mb-2 text-center text-sm">Use Ask When...</h4>
+              <ul className="text-xs text-gray-700 space-y-1">
+                <li>• Need to understand code</li>
+                <li>• Exploring approaches</li>
                 <li>• Learning something new</li>
-                <li>• You want suggestions, not changes</li>
               </ul>
             </div>
 
-            <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-              <h4 className="font-bold text-green-900 mb-2 text-center">Use Edit When...</h4>
-              <ul className="text-sm text-gray-700 space-y-1">
-                <li>• You know what needs to change</li>
+            <div className="bg-green-50 p-3 rounded-lg border border-green-200">
+              <h4 className="font-bold text-green-900 mb-2 text-center text-sm">Use Edit When...</h4>
+              <ul className="text-xs text-gray-700 space-y-1">
+                <li>• Know what to change</li>
                 <li>• Working in specific files</li>
-                <li>• You want to review each change</li>
-                <li>• Iterating on existing code</li>
+                <li>• Review each change</li>
               </ul>
             </div>
 
-            <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
-              <h4 className="font-bold text-purple-900 mb-2 text-center">Use Agent When...</h4>
-              <ul className="text-sm text-gray-700 space-y-1">
-                <li>• Task spans multiple files</li>
-                <li>• Building something new</li>
-                <li>• You can clearly define the goal</li>
-                <li>• You'll review the final result</li>
+            <div className="bg-orange-50 p-3 rounded-lg border border-orange-200">
+              <h4 className="font-bold text-orange-900 mb-2 text-center text-sm">Use Plan When...</h4>
+              <ul className="text-xs text-gray-700 space-y-1">
+                <li>• Complex implementation</li>
+                <li>• Want to review approach</li>
+                <li>• Architectural decisions</li>
               </ul>
+            </div>
+
+            <div className="bg-purple-50 p-3 rounded-lg border border-purple-200">
+              <h4 className="font-bold text-purple-900 mb-2 text-center text-sm">Use Agent When...</h4>
+              <ul className="text-xs text-gray-700 space-y-1">
+                <li>• Multi-file tasks</li>
+                <li>• Building something new</li>
+                <li>• Clear, defined goals</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-gray-100 p-4 rounded-lg">
+            <p className="text-sm italic text-gray-700">
+              <strong>Pro Tip:</strong> Start with <span className="text-blue-600 font-semibold">Ask</span> to explore → <span className="text-orange-600 font-semibold">Plan</span> for strategy → <span className="text-purple-600 font-semibold">Agent</span> to execute → <span className="text-green-600 font-semibold">Edit</span> to refine. Switch modes anytime!
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Custom Instructions",
+      subtitle: "Teaching AI Your Coding Standards",
+      content: (
+        <div className="flex flex-col items-center justify-center h-full space-y-8">
+          <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 max-w-2xl">
+            <div className="flex items-center space-x-4">
+              <div className="text-4xl">📋</div>
+              <div>
+                <h3 className="text-2xl font-bold text-white">Context That Persists</h3>
+                <p className="text-gray-400">Define guidelines once, apply them automatically to every AI interaction</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-6 max-w-4xl">
+            <div className="bg-white p-5 rounded-lg shadow border border-gray-200">
+              <h4 className="font-bold text-gray-900 mb-3">🎯 What Custom Instructions Do</h4>
+              <ul className="text-sm text-gray-700 space-y-2">
+                <li>• Set coding style & conventions</li>
+                <li>• Define project-specific patterns</li>
+                <li>• Specify preferred frameworks/libraries</li>
+                <li>• Establish documentation standards</li>
+                <li>• Share team knowledge with AI</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-5 rounded-lg shadow border border-gray-200">
+              <h4 className="font-bold text-gray-900 mb-3">✨ Why They Matter</h4>
+              <ul className="text-sm text-gray-700 space-y-2">
+                <li>• Consistent AI responses across sessions</li>
+                <li>• No need to repeat context every prompt</li>
+                <li>• Team-wide shared understanding</li>
+                <li>• Version controlled with your code</li>
+                <li>• Works across multiple AI agents</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-blue-50 px-6 py-4 rounded-lg max-w-2xl">
+            <p className="text-center text-blue-900">
+              <strong>Description + Delegation:</strong> Good instructions reduce the need to describe context repeatedly and help delegate tasks more effectively.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Instruction File Types",
+      subtitle: "Three Ways to Customize AI Behavior",
+      content: (
+        <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 gap-5">
+            {/* copilot-instructions.md */}
+            <div className="bg-white p-5 rounded-lg shadow border-l-4 border-blue-500">
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <div className="flex items-center space-x-3 mb-2">
+                    <code className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm font-mono">.github/copilot-instructions.md</code>
+                    <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded">Global</span>
+                  </div>
+                  <p className="text-gray-700 text-sm mb-2">Single file that applies to <strong>all</strong> chat requests in your workspace automatically.</p>
+                  <p className="text-gray-500 text-xs">✓ Works in VS Code, Visual Studio, and GitHub.com</p>
+                </div>
+              </div>
+            </div>
+
+            {/* .instructions.md */}
+            <div className="bg-white p-5 rounded-lg shadow border-l-4 border-green-500">
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <div className="flex items-center space-x-3 mb-2">
+                    <code className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-mono">*.instructions.md</code>
+                    <span className="bg-green-500 text-white text-xs px-2 py-1 rounded">Conditional</span>
+                  </div>
+                  <p className="text-gray-700 text-sm mb-2">Multiple files with <strong>glob patterns</strong> — apply different rules to different file types.</p>
+                  <p className="text-gray-500 text-xs">✓ e.g., applyTo: "**/*.py" for Python-specific guidelines</p>
+                </div>
+              </div>
+            </div>
+
+            {/* AGENTS.md */}
+            <div className="bg-white p-5 rounded-lg shadow border-l-4 border-purple-500">
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <div className="flex items-center space-x-3 mb-2">
+                    <code className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm font-mono">AGENTS.md</code>
+                    <span className="bg-purple-500 text-white text-xs px-2 py-1 rounded">Multi-Agent</span>
+                  </div>
+                  <p className="text-gray-700 text-sm mb-2">Universal format for <strong>multiple AI agents</strong> — Copilot, Claude Code, and others.</p>
+                  <p className="text-gray-500 text-xs">✓ Root or subfolders for different project areas (experimental)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gray-100 p-4 rounded-lg">
+            <p className="text-sm text-gray-700">
+              <strong>💡 Tip:</strong> All files are combined when sent to the AI. Use <code className="bg-gray-200 px-1 rounded">copilot-instructions.md</code> for project-wide rules, <code className="bg-gray-200 px-1 rounded">.instructions.md</code> for language-specific, and <code className="bg-gray-200 px-1 rounded">AGENTS.md</code> for cross-tool compatibility.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Writing Instructions",
+      subtitle: "Anatomy of an Effective Instructions File",
+      content: (
+        <div className="flex flex-col space-y-5 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 gap-6">
+            {/* Code example */}
+            <div className="bg-gray-900 p-4 rounded-lg">
+              <p className="text-gray-400 text-xs mb-2 font-mono">.github/copilot-instructions.md</p>
+              <pre className="text-sm text-gray-100 font-mono whitespace-pre-wrap leading-relaxed">
+{`# Project Guidelines
+
+## Code Style
+- Use TypeScript for all new code
+- Prefer functional components
+- Use Tailwind CSS for styling
+
+## Conventions
+- File names: kebab-case
+- Components: PascalCase
+- Functions: camelCase
+
+## Project Structure
+- Components in /src/components
+- Hooks in /src/hooks
+- Types in /src/types
+
+## Testing
+- Write tests for all new features
+- Use React Testing Library`}
+              </pre>
+            </div>
+
+            {/* Tips */}
+            <div className="flex flex-col space-y-4">
+              <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                <h4 className="font-semibold text-green-900 mb-2">✅ Do</h4>
+                <ul className="text-sm text-gray-700 space-y-1">
+                  <li>• Keep instructions short & specific</li>
+                  <li>• Use natural language</li>
+                  <li>• Organize with Markdown headers</li>
+                  <li>• Include examples when helpful</li>
+                  <li>• Version control your instructions</li>
+                </ul>
+              </div>
+
+              <div className="bg-red-50 p-4 rounded-lg border border-red-200">
+                <h4 className="font-semibold text-red-900 mb-2">❌ Don't</h4>
+                <ul className="text-sm text-gray-700 space-y-1">
+                  <li>• Write essays — be concise</li>
+                  <li>• Include sensitive information</li>
+                  <li>• Contradict yourself</li>
+                  <li>• Expect 100% compliance</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-blue-100 p-4 rounded-lg">
+            <p className="text-sm italic text-blue-900">
+              <strong>Pro Tip:</strong> VS Code can generate instructions automatically! Use <strong>Configure Chat → Generate Chat Instructions</strong> to create a starting point based on your codebase.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Conditional Instructions",
+      subtitle: "Apply Different Rules to Different Files",
+      content: (
+        <div className="flex flex-col space-y-5 max-w-4xl mx-auto">
+          <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+            <p className="text-gray-700">
+              Use <code className="bg-green-100 px-1 rounded">.instructions.md</code> files with YAML frontmatter to apply instructions only when working with specific file types.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            {/* Python example */}
+            <div className="bg-gray-900 p-4 rounded-lg">
+              <p className="text-green-400 text-xs mb-2 font-mono">python-standards.instructions.md</p>
+              <pre className="text-sm text-gray-100 font-mono whitespace-pre-wrap leading-relaxed">
+{`---
+applyTo: "**/*.py"
+description: "Python coding standards"
+---
+# Python Guidelines
+
+- Follow PEP 8 style guide
+- Use type hints for all functions
+- Docstrings for public methods
+- Use pytest for testing
+- Prefer pathlib over os.path`}
+              </pre>
+            </div>
+
+            {/* React example */}
+            <div className="bg-gray-900 p-4 rounded-lg">
+              <p className="text-blue-400 text-xs mb-2 font-mono">react-components.instructions.md</p>
+              <pre className="text-sm text-gray-100 font-mono whitespace-pre-wrap leading-relaxed">
+{`---
+applyTo: "src/components/**/*.tsx"
+description: "React component standards"
+---
+# React Components
+
+- Use functional components only
+- Props interface above component
+- Destructure props in signature
+- Use custom hooks for logic
+- Memoize expensive calculations`}
+              </pre>
+            </div>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
+            <h4 className="font-semibold text-gray-900 mb-2">📁 Storage Locations</h4>
+            <div className="grid grid-cols-2 gap-4 text-sm">
+              <div>
+                <p className="font-medium text-gray-700">Workspace (project-specific):</p>
+                <code className="text-xs bg-gray-100 px-2 py-1 rounded block mt-1">.github/instructions/</code>
+              </div>
+              <div>
+                <p className="font-medium text-gray-700">User profile (all projects):</p>
+                <code className="text-xs bg-gray-100 px-2 py-1 rounded block mt-1">~/.vscode/instructions/</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "AGENTS.md",
+      subtitle: "Universal Instructions for Multiple AI Tools",
+      content: (
+        <div className="flex flex-col space-y-5 max-w-4xl mx-auto">
+          <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+            <p className="text-gray-700">
+              <code className="bg-purple-100 px-1 rounded font-mono">AGENTS.md</code> is a convention that works across multiple AI coding assistants — GitHub Copilot, Claude Code, Cursor, and more.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-6">
+            <div className="bg-gray-900 p-4 rounded-lg">
+              <p className="text-purple-400 text-xs mb-2 font-mono">AGENTS.md (root)</p>
+              <pre className="text-sm text-gray-100 font-mono whitespace-pre-wrap leading-relaxed">
+{`# AI Agent Instructions
+
+## Project Overview
+This is a React + TypeScript app
+for workshop presentations.
+
+## Architecture
+- Single-page application
+- Tailwind CSS for styling
+- No external UI libraries
+
+## Code Generation Rules
+- Always use TypeScript
+- Prefer const over let
+- Use descriptive variable names
+- Include error handling
+
+## File Structure
+- slides.tsx contains all slides
+- Each slide is an object in array`}
+              </pre>
+            </div>
+
+            <div className="flex flex-col space-y-4">
+              <div className="bg-white p-4 rounded-lg shadow border border-purple-200">
+                <h4 className="font-semibold text-purple-900 mb-2">🔄 Cross-Tool Benefits</h4>
+                <ul className="text-sm text-gray-700 space-y-1">
+                  <li>• Same file works in VS Code & Claude</li>
+                  <li>• Team consistency across tools</li>
+                  <li>• Easy migration between AI assistants</li>
+                  <li>• One source of truth</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg shadow border border-purple-200">
+                <h4 className="font-semibold text-purple-900 mb-2">📂 Nested Files (Experimental)</h4>
+                <ul className="text-sm text-gray-700 space-y-1">
+                  <li>• <code className="bg-gray-100 px-1 rounded">/frontend/AGENTS.md</code></li>
+                  <li>• <code className="bg-gray-100 px-1 rounded">/backend/AGENTS.md</code></li>
+                  <li>• <code className="bg-gray-100 px-1 rounded">/tests/AGENTS.md</code></li>
+                  <li className="text-gray-500 text-xs mt-1">Enable: chat.useNestedAgentsMdFiles</li>
+                </ul>
+              </div>
             </div>
           </div>
 
           <div className="bg-orange-100 p-4 rounded-lg">
             <p className="text-sm italic text-orange-900">
-              <strong>Pro Tip:</strong> Start with Ask to explore, move to Edit for refinement, and use Agent for well-defined larger tasks. You can always switch modes mid-task!
+              <strong>Recommendation:</strong> Use <code className="bg-orange-200 px-1 rounded">AGENTS.md</code> for broad project context and AI-agnostic rules, <code className="bg-orange-200 px-1 rounded">copilot-instructions.md</code> for Copilot-specific features.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Architecting Instructions for Context Efficiency",
+      subtitle: "Keeping your context window lean and relevant",
+      content: (
+        <div className="flex flex-col space-y-5 max-w-4xl mx-auto">
+          <div className="bg-indigo-50 p-5 rounded-lg border-l-4 border-indigo-500">
+            <p className="text-gray-700">
+              <strong>Remember:</strong> Every instruction file loaded consumes precious context window space. Scoped instructions ensure only relevant context is loaded — keeping your window available for what matters.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-3 gap-4">
+            {/* Problem visualization */}
+            <div className="col-span-3 bg-white p-4 rounded-lg shadow border border-red-200">
+              <div className="flex items-center justify-between">
+                <div className="text-center flex-1">
+                  <div className="text-sm font-semibold text-red-700 mb-2">❌ Unscoped Instructions</div>
+                  <div className="bg-red-50 rounded-lg p-3">
+                    <div className="flex h-8 rounded overflow-hidden">
+                      <div className="bg-red-400 flex-[3] flex items-center justify-center text-xs text-white font-medium">Instructions</div>
+                      <div className="bg-blue-400 flex-[2] flex items-center justify-center text-xs text-white font-medium">Your Context</div>
+                      <div className="bg-gray-300 flex-[1] flex items-center justify-center text-xs text-gray-600 font-medium">AI Response</div>
+                    </div>
+                    <p className="text-xs text-red-600 mt-2">All instructions loaded → Less room for actual work</p>
+                  </div>
+                </div>
+                <div className="px-4 text-2xl text-gray-400">→</div>
+                <div className="text-center flex-1">
+                  <div className="text-sm font-semibold text-green-700 mb-2">✓ Scoped Instructions</div>
+                  <div className="bg-green-50 rounded-lg p-3">
+                    <div className="flex h-8 rounded overflow-hidden">
+                      <div className="bg-green-400 flex-[1] flex items-center justify-center text-xs text-white font-medium">Relevant</div>
+                      <div className="bg-blue-400 flex-[3] flex items-center justify-center text-xs text-white font-medium">Your Context</div>
+                      <div className="bg-purple-400 flex-[2] flex items-center justify-center text-xs text-white font-medium">AI Response</div>
+                    </div>
+                    <p className="text-xs text-green-600 mt-2">Only what's needed → Maximum context for work</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
+              <h4 className="font-semibold text-gray-900 mb-3">📁 Scope by File Type (applyTo)</h4>
+              <div className="space-y-2 text-sm">
+                <p className="text-xs text-gray-500 mb-2">Use <code className="bg-gray-100 px-1 rounded">applyTo</code> frontmatter in any <code className="bg-gray-100 px-1 rounded">.instructions.md</code> file:</p>
+                <div className="flex items-center space-x-2">
+                  <code className="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded font-mono text-xs">applyTo: "**/*.go"</code>
+                  <span className="text-gray-500">→ Go files only</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <code className="bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-mono text-xs">applyTo: "**/*.ts"</code>
+                  <span className="text-gray-500">→ TypeScript files</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <code className="bg-green-100 text-green-800 px-2 py-0.5 rounded font-mono text-xs">applyTo: "**/*.md"</code>
+                  <span className="text-gray-500">→ Markdown files</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <code className="bg-purple-100 text-purple-800 px-2 py-0.5 rounded font-mono text-xs">applyTo: "**/*.test.*"</code>
+                  <span className="text-gray-500">→ Test files only</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
+              <h4 className="font-semibold text-gray-900 mb-3">📂 Scope by Directory</h4>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-center space-x-2">
+                  <code className="bg-orange-100 text-orange-800 px-2 py-0.5 rounded font-mono text-xs">/api/AGENTS.md</code>
+                  <span className="text-gray-500">→ API layer context</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <code className="bg-cyan-100 text-cyan-800 px-2 py-0.5 rounded font-mono text-xs">/frontend/AGENTS.md</code>
+                  <span className="text-gray-500">→ UI components</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <code className="bg-pink-100 text-pink-800 px-2 py-0.5 rounded font-mono text-xs">/db/AGENTS.md</code>
+                  <span className="text-gray-500">→ Database layer</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <code className="bg-gray-100 text-gray-800 px-2 py-0.5 rounded font-mono text-xs">applyTo: "src/**"</code>
+                  <span className="text-gray-500">→ YAML frontmatter</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-indigo-100 to-purple-100 p-4 rounded-lg">
+            <h4 className="font-semibold text-gray-900 mb-2">🎯 Architecture Strategy</h4>
+            <div className="grid grid-cols-3 gap-3 text-sm">
+              <div className="bg-white/70 p-2 rounded text-center">
+                <div className="font-medium text-indigo-700">Root Level</div>
+                <div className="text-xs text-gray-600">Project-wide conventions</div>
+              </div>
+              <div className="bg-white/70 p-2 rounded text-center">
+                <div className="font-medium text-purple-700">Directory Level</div>
+                <div className="text-xs text-gray-600">Layer-specific patterns</div>
+              </div>
+              <div className="bg-white/70 p-2 rounded text-center">
+                <div className="font-medium text-pink-700">File Type Level</div>
+                <div className="text-xs text-gray-600">Language/format rules</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-amber-50 p-3 rounded-lg border border-amber-200">
+            <p className="text-sm text-amber-900">
+              <strong>💡 Pro Tip:</strong> Put detailed, verbose instructions in scoped files. Keep root instructions minimal — they're always loaded.
             </p>
           </div>
         </div>
