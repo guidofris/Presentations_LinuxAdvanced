@@ -201,49 +201,5 @@ export const skillsSlides: SlideType[] = [
         </div>
       </div>
     )
-  },
-  {
-    title: "Skills and the 4D Framework",
-    subtitle: "Connecting Agent Skills to AI Fluency",
-    content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-8">
-        <p className="text-xl text-gray-700 max-w-2xl text-center">
-          Agent Skills embody all four dimensions of AI Fluency
-        </p>
-
-        <div className="relative w-full max-w-3xl">
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-blue-500 text-white p-6 rounded-lg shadow-lg">
-              <div className="text-2xl font-bold mb-2">🤝 Delegation</div>
-              <div className="text-sm">Teach repeatable processes for confident task delegation</div>
-            </div>
-
-            <div className="bg-green-500 text-white p-6 rounded-lg shadow-lg">
-              <div className="text-2xl font-bold mb-2">📝 Description</div>
-              <div className="text-sm">Clear descriptions enable smart automatic activation</div>
-            </div>
-
-            <div className="bg-purple-500 text-white p-6 rounded-lg shadow-lg">
-              <div className="text-2xl font-bold mb-2">🎯 Discernment</div>
-              <div className="text-sm">Encode best practices and expert judgment</div>
-            </div>
-
-            <div className="bg-orange-500 text-white p-6 rounded-lg shadow-lg">
-              <div className="text-2xl font-bold mb-2">✅ Diligence</div>
-              <div className="text-sm">Version-controlled, auditable, and shareable</div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-8 text-center">
-          <div className="inline-block bg-gray-100 px-6 py-3 rounded-lg">
-            <div className="font-semibold text-gray-800 mb-2">Key Insight</div>
-            <div className="text-sm text-gray-600">
-              Skills are the practical implementation of AI fluency
-            </div>
-          </div>
-        </div>
-      </div>
-    )
   }
 ];
