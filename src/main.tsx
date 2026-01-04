@@ -5,7 +5,18 @@ import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, ins
 import './index.css';
 
 const FourDSlides = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(() => {
+    // Read initial slide from query parameter (1-based)
+    const params = new URLSearchParams(window.location.search);
+    const slideParam = params.get('slide');
+    if (slideParam) {
+      const slideNumber = parseInt(slideParam, 10);
+      if (!isNaN(slideNumber) && slideNumber > 0) {
+        return slideNumber - 1; // Convert to 0-based index
+      }
+    }
+    return 0;
+  });
 
   // Combine all slide sections
   const slides = [
@@ -15,9 +26,18 @@ const FourDSlides = () => {
     ...modelsSlides,
     ...copilotSlides,
     ...instructionsSlides,
+    ...contextSlides,
     ...repeatingSlides,
     ...skillsSlides,
   ];
+
+  // Update URL when slide changes
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    params.set('slide', String(currentSlide + 1)); // Convert to 1-based for URL
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.history.replaceState({}, '', newUrl);
+  }, [currentSlide]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -26,6 +46,15 @@ const FourDSlides = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
+
+  // Validate and clamp currentSlide to valid range
+  useEffect(() => {
+    if (currentSlide >= slides.length) {
+      setCurrentSlide(slides.length - 1);
+    } else if (currentSlide < 0) {
+      setCurrentSlide(0);
+    }
+  }, [currentSlide, slides.length]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
