@@ -52,7 +52,7 @@ export const instructionsSlides: SlideType[] = [
       title: "Instruction File Types",
       subtitle: "Three Ways to Customize AI Behavior",
       content: (
-        <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
+        <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
           <div className="grid grid-cols-1 gap-5">
             {/* copilot-instructions.md */}
             <div className="bg-white p-5 rounded-lg shadow border-l-4 border-blue-500">
@@ -331,7 +331,7 @@ for workshop presentations.
             <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
               <h4 className="font-semibold text-blue-900 mb-2">Helpful Resources:</h4>
               <ul className="space-y-2 text-gray-700">
-                <li>• 🌟 <a href="https://github.com/github/awesome-copilot/tree/main/instructions" className="text-blue-600 underline">awesome-copilot repository</a> - Community examples</li>
+                <li>• 🌟 <a href="https://github.com/github/awesome-copilot/tree/main/instructions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub Awesome Copilot Instructions</a> - Community examples</li>
                 <li>• 🤖 <strong>VS Code built-in:</strong> "Generate Workspace Instructions File"</li>
                 <li>• 📖 Learn from examples in open source projects</li>
               </ul>
@@ -391,7 +391,7 @@ ambiguity and keep the instructions concise.`}
       title: "Continuous Improvement",
       subtitle: "Self-Analysis & Future Adjustment",
       content: (
-        <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+        <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
           <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
             <h3 className="text-xl font-bold text-orange-900 mb-2">Build a Feedback Loop</h3>
             <p className="text-gray-700">

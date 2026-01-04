@@ -48,7 +48,7 @@ export const modelsSlides: SlideType[] = [
     content: (
       <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
         <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
-          <p className="text-gray-700">
+          <p className="text-lg text-gray-700">
             <strong>SWE-bench</strong> measures ability to resolve actual GitHub issues - real bugs from production codebases requiring understanding of complex systems.
           </p>
         </div>
@@ -119,7 +119,7 @@ export const modelsSlides: SlideType[] = [
     content: (
       <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
         <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-          <p className="text-gray-700">
+          <p className="text-lg text-gray-700">
             <strong>HumanEval</strong> measures fundamental coding ability on well-defined algorithmic challenges - syntax, data structures, and clean implementations.
           </p>
         </div>
@@ -190,7 +190,7 @@ export const modelsSlides: SlideType[] = [
     content: (
       <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
         <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-gray-400">
-          <p className="text-gray-700">
+          <p className="text-lg text-gray-700">
             No single model optimizes all dimensions—selection depends on your specific requirements, constraints, and risk tolerance.
           </p>
         </div>

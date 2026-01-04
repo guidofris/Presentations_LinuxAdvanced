@@ -161,6 +161,18 @@ When creating or modifying slide content in `src/sections/` files:
 4. **Grid Items**: 2x2 grid maximum (4 items), title + 1-2 sentence description
 5. **Text Sizes**: Headings `text-2xl font-bold`, body `text-lg`, captions `text-sm`
 
+## List Formatting
+
+**For proper multi-line list item indentation:**
+```tsx
+<ul className="space-y-2 text-gray-700">
+  <li className="flex"><span className="mr-2">•</span><span>Text content that may wrap</span></li>
+  <li className="flex"><span className="mr-2">•</span><span>This ensures wrapped lines align properly</span></li>
+</ul>
+```
+
+This pattern prevents wrapped text from aligning under the bullet point. When text wraps to a new line, it properly aligns with the first line of text instead.
+
 ## Hyperlinks
 
 **Always make URLs and repository references clickable:**

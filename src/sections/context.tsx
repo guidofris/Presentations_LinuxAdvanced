@@ -5,7 +5,7 @@ export const contextSlides: SlideType[] = [
     title: "Architecting Instructions for Context Efficiency",
     subtitle: "Keeping your context window lean and relevant",
     content: (
-      <div className="flex flex-col space-y-5 max-w-4xl mx-auto">
+      <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
         <div className="bg-indigo-50 p-5 rounded-lg border-l-4 border-indigo-500">
           <p className="text-gray-700">
             <strong>Remember:</strong> Every instruction file loaded consumes precious context window space. Scoped instructions ensure only relevant context is loaded — keeping your window available for what matters.
@@ -120,7 +120,7 @@ export const contextSlides: SlideType[] = [
     title: "Architecting Codebases for Context Efficiency",
     subtitle: "How code structure impacts AI effectiveness",
     content: (
-      <div className="flex flex-col space-y-4 max-w-4xl mx-auto">
+      <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
         <div className="bg-red-50 p-3 rounded-lg border-l-4 border-red-500">
           <p className="text-sm text-gray-700">
             <strong>The Problem:</strong> Large monolithic files waste context window space on irrelevant code when you only need to modify a single function.

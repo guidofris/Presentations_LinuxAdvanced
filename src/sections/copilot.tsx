@@ -20,19 +20,19 @@ export const copilotSlides: SlideType[] = [
             <div className="bg-white p-5 rounded-lg shadow border border-gray-200 text-center">
               <div className="text-3xl mb-3">💻</div>
               <h4 className="font-bold text-gray-900 mb-2">IDE Integration</h4>
-              <p className="text-sm text-gray-600">Works directly in VS Code, Visual Studio, JetBrains, Neovim, and more</p>
+              <p className="text-gray-600">Works directly in VS Code, Visual Studio, JetBrains, Neovim, and more</p>
             </div>
 
             <div className="bg-white p-5 rounded-lg shadow border border-gray-200 text-center">
               <div className="text-3xl mb-3">⌨️</div>
               <h4 className="font-bold text-gray-900 mb-2">CLI Support</h4>
-              <p className="text-sm text-gray-600">GitHub CLI extension brings AI assistance to your terminal</p>
+              <p className="text-gray-600">GitHub CLI extension brings AI assistance to your terminal</p>
             </div>
 
             <div className="bg-white p-5 rounded-lg shadow border border-gray-200 text-center">
               <div className="text-3xl mb-3">🔄</div>
               <h4 className="font-bold text-gray-900 mb-2">Model Agnostic</h4>
-              <p className="text-sm text-gray-600">Leverages Claude, GPT, Gemini and other models under the hood</p>
+              <p className="text-gray-600">Leverages Claude, GPT, Gemini and other models under the hood</p>
             </div>
           </div>
 
@@ -55,76 +55,76 @@ export const copilotSlides: SlideType[] = [
 
           <div className="flex space-x-4 max-w-6xl">
             {/* Ask Mode */}
-            <div className="flex-1 bg-gradient-to-b from-blue-500 to-blue-700 text-white p-5 rounded-lg shadow-lg">
+            <div className="flex-1 flex flex-col bg-gradient-to-b from-blue-500 to-blue-700 text-white p-5 rounded-lg shadow-lg">
               <div className="text-center mb-3">
                 <div className="inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-semibold mb-2">Ask Mode</div>
                 <div className="text-3xl mb-2">💬</div>
               </div>
-              <ul className="text-xs space-y-1 opacity-90">
-                <li>• Chat-based Q&A interface</li>
-                <li>• Explore ideas and concepts</li>
-                <li>• Get explanations of code</li>
-                <li>• No direct file changes</li>
+              <ul className="space-y-1 opacity-90 mb-4">
+                <li className="flex"><span className="mr-2">•</span><span>Chat-based Q&A interface</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Explore ideas and concepts</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Get explanations of code</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>No direct file changes</span></li>
               </ul>
-              <div className="mt-3 pt-3 border-t border-white/20 text-xs text-center opacity-75">
+              <div className="mt-auto pt-3 border-t border-white/20 text-center opacity-75">
                 <strong>Best for:</strong> Learning, exploring
               </div>
             </div>
 
             {/* Edit Mode */}
-            <div className="flex-1 bg-gradient-to-b from-green-500 to-green-700 text-white p-5 rounded-lg shadow-lg">
+            <div className="flex-1 flex flex-col bg-gradient-to-b from-green-500 to-green-700 text-white p-5 rounded-lg shadow-lg">
               <div className="text-center mb-3">
                 <div className="inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-semibold mb-2">Edit Mode</div>
                 <div className="text-3xl mb-2">✏️</div>
               </div>
-              <ul className="text-xs space-y-1 opacity-90">
-                <li>• Direct code modifications</li>
-                <li>• Inline suggestions & changes</li>
-                <li>• You review before accepting</li>
-                <li>• Scoped to specific files</li>
+              <ul className="space-y-1 opacity-90 mb-4">
+                <li className="flex"><span className="mr-2">•</span><span>Direct code modifications</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Inline suggestions & changes</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>You review before accepting</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Scoped to specific files</span></li>
               </ul>
-              <div className="mt-3 pt-3 border-t border-white/20 text-xs text-center opacity-75">
+              <div className="mt-auto pt-3 border-t border-white/20 text-center opacity-75">
                 <strong>Best for:</strong> Targeted changes
               </div>
             </div>
 
             {/* Plan Mode */}
-            <div className="flex-1 bg-gradient-to-b from-orange-500 to-orange-700 text-white p-5 rounded-lg shadow-lg">
+            <div className="flex-1 flex flex-col bg-gradient-to-b from-orange-500 to-orange-700 text-white p-5 rounded-lg shadow-lg">
               <div className="text-center mb-3">
                 <div className="inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-semibold mb-2">Plan Mode</div>
                 <div className="text-3xl mb-2">📋</div>
               </div>
-              <ul className="text-xs space-y-1 opacity-90">
-                <li>• Generate step-by-step plans</li>
-                <li>• Review before execution</li>
-                <li>• Iterate on the approach</li>
-                <li>• Then execute with Agent</li>
+              <ul className="space-y-1 opacity-90 mb-4">
+                <li className="flex"><span className="mr-2">•</span><span>Generate step-by-step plans</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Review before execution</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Iterate on the approach</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Then execute with Agent</span></li>
               </ul>
-              <div className="mt-3 pt-3 border-t border-white/20 text-xs text-center opacity-75">
+              <div className="mt-auto pt-3 border-t border-white/20 text-center opacity-75">
                 <strong>Best for:</strong> Complex planning
               </div>
             </div>
 
             {/* Agent Mode */}
-            <div className="flex-1 bg-gradient-to-b from-purple-500 to-purple-700 text-white p-5 rounded-lg shadow-lg">
+            <div className="flex-1 flex flex-col bg-gradient-to-b from-purple-500 to-purple-700 text-white p-5 rounded-lg shadow-lg">
               <div className="text-center mb-3">
                 <div className="inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-semibold mb-2">Agent Mode</div>
                 <div className="text-3xl mb-2">🤖</div>
               </div>
-              <ul className="text-xs space-y-1 opacity-90">
-                <li>• Autonomous task execution</li>
-                <li>• Multi-file operations</li>
-                <li>• Runs terminal commands</li>
-                <li>• Iterates until complete</li>
+              <ul className="space-y-1 opacity-90 mb-4">
+                <li className="flex"><span className="mr-2">•</span><span>Autonomous task execution</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Multi-file operations</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Runs terminal commands</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Iterates until complete</span></li>
               </ul>
-              <div className="mt-3 pt-3 border-t border-white/20 text-xs text-center opacity-75">
+              <div className="mt-auto pt-3 border-t border-white/20 text-center opacity-75">
                 <strong>Best for:</strong> Complex tasks
               </div>
             </div>
           </div>
 
           <div className="bg-gray-100 px-6 py-3 rounded-lg mt-2">
-            <p className="text-sm text-gray-600 italic text-center">
+            <p className="text-gray-600 italic text-center">
               Each mode represents a different balance between human control and AI autonomy
             </p>
           </div>
@@ -135,7 +135,7 @@ export const copilotSlides: SlideType[] = [
       title: "Ask Mode",
       subtitle: "Chat, Learn, and Explore",
       content: (
-        <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
+        <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
           <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
             <h3 className="text-2xl font-bold text-blue-900 mb-2">What is Ask Mode?</h3>
             <p className="text-lg text-gray-700">
@@ -188,7 +188,7 @@ export const copilotSlides: SlideType[] = [
       title: "Edit Mode",
       subtitle: "Targeted, Controlled Code Changes",
       content: (
-        <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
+        <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
           <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
             <h3 className="text-2xl font-bold text-green-900 mb-2">What is Edit Mode?</h3>
             <p className="text-lg text-gray-700">
@@ -241,7 +241,7 @@ export const copilotSlides: SlideType[] = [
       title: "Plan Mode",
       subtitle: "Think Before You Build",
       content: (
-        <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
+        <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
           <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
             <h3 className="text-2xl font-bold text-orange-900 mb-2">What is Plan Mode?</h3>
             <p className="text-lg text-gray-700">
@@ -294,7 +294,7 @@ export const copilotSlides: SlideType[] = [
       title: "Agent Mode",
       subtitle: "Autonomous Multi-Step Task Execution",
       content: (
-        <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
+        <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
           <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
             <h3 className="text-2xl font-bold text-purple-900 mb-2">What is Agent Mode?</h3>
             <p className="text-lg text-gray-700">
@@ -347,7 +347,7 @@ export const copilotSlides: SlideType[] = [
       title: "Choosing the Right Mode",
       subtitle: "Match the Mode to Your Task",
       content: (
-        <div className="flex flex-col space-y-5 max-w-4xl mx-auto">
+        <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
           {/* Visual comparison */}
           <div className="relative">
             <div className="flex items-center justify-between mb-2">
@@ -426,7 +426,7 @@ export const copilotSlides: SlideType[] = [
       title: "Adding Context to Chat",
       subtitle: "Help AI Understand Your Code Better",
       content: (
-        <div className="flex flex-col space-y-5 max-w-4xl mx-auto">
+        <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
           <div className="bg-cyan-50 p-5 rounded-lg border-l-4 border-cyan-500">
             <p className="text-gray-700">
               Better context = better responses. VS Code provides multiple ways to give Copilot the information it needs.

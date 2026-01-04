@@ -5,17 +5,17 @@ export const repeatingSlides: SlideType[] = [
       title: "Stop Repeating Yourself",
       subtitle: "Reusable Prompt Files in VS Code",
       content: (
-        <div className="flex flex-col space-y-4 max-w-4xl mx-auto">
-          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-            <h3 className="text-xl font-bold text-blue-900 mb-2">What are Prompt Files?</h3>
+        <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
+          <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+            <h3 className="text-xl font-bold text-green-900 mb-2">What are Prompt Files?</h3>
             <p className="text-gray-700">
               Markdown files that define reusable prompts for common development tasks. Run them on-demand in chat to ensure consistent, high-quality AI interactions.
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
-              <h4 className="font-semibold text-blue-900 mb-2">📄 File Structure (.prompt.md)</h4>
+            <div className="bg-white p-4 rounded-lg shadow border border-green-200">
+              <h4 className="font-semibold text-green-900 mb-2">📄 File Structure (.prompt.md)</h4>
               <ul className="space-y-1 text-sm text-gray-700">
                 <li>• Stored in <code className="bg-gray-100 px-1 rounded">.github/prompts</code> folder</li>
                 <li>• YAML frontmatter for metadata (description, agent, tools)</li>
@@ -24,8 +24,8 @@ export const repeatingSlides: SlideType[] = [
               </ul>
             </div>
 
-            <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
-              <h4 className="font-semibold text-blue-900 mb-2">🚀 How to Use</h4>
+            <div className="bg-white p-4 rounded-lg shadow border border-green-200">
+              <h4 className="font-semibold text-green-900 mb-2">🚀 How to Use</h4>
               <ul className="space-y-1 text-sm text-gray-700">
                 <li>• Type <code className="bg-gray-100 px-1 rounded">/prompt-name</code> in chat to run</li>
                 <li>• Add extra context after the command</li>
@@ -45,8 +45,8 @@ export const repeatingSlides: SlideType[] = [
               </div>
             </div>
 
-            <div className="bg-blue-100 p-4 rounded-lg flex items-center">
-              <p className="text-sm italic text-blue-900">
+            <div className="bg-green-100 p-4 rounded-lg flex items-center">
+              <p className="text-sm italic text-green-900">
                 <strong>Pro Tip:</strong> Use Markdown links to reference custom instructions rather than duplicating guidelines.
               </p>
             </div>
@@ -58,7 +58,7 @@ export const repeatingSlides: SlideType[] = [
       title: "Stop Repeating Yourself",
       subtitle: "Custom Agents in VS Code",
       content: (
-        <div className="flex flex-col space-y-4 max-w-4xl mx-auto">
+        <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
           <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
             <h3 className="text-xl font-bold text-purple-900 mb-2">What are Custom Agents?</h3>
             <p className="text-gray-700">
