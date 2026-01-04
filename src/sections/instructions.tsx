@@ -305,4 +305,135 @@ for workshop presentations.
         </div>
       )
     },
+    {
+      title: "Getting Started with Instructions",
+      subtitle: "Building Your Foundation",
+      content: (
+        <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
+          <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4">Start with Best Practices</h3>
+            <p className="text-lg text-gray-700">
+              Begin with widely available best-practice instructions as your baseline. You don't need to start from scratch.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4">
+            <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">Key Principles:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Use markdown headers for emphasis and agent guidance</li>
+                <li>• Keep instructions concise and to the point</li>
+                <li>• Establish a baseline to understand prompting techniques</li>
+                <li>• Focus on clarity over comprehensiveness</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">Helpful Resources:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li>• 🌟 <a href="https://github.com/github/awesome-copilot/tree/main/instructions" className="text-blue-600 underline">awesome-copilot repository</a> - Community examples</li>
+                <li>• 🤖 <strong>VS Code built-in:</strong> "Generate Workspace Instructions File"</li>
+                <li>• 📖 Learn from examples in open source projects</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-blue-100 p-4 rounded-lg">
+            <p className="text-sm italic text-blue-900">
+              <strong>Goal:</strong> Establish a baseline and understand prompting techniques before customizing for your specific needs.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Meta Prompting",
+      subtitle: "Model-Driven Refinement",
+      content: (
+        <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
+          <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+            <h3 className="text-2xl font-bold text-green-900 mb-4">Let AI Refine Your Instructions</h3>
+            <p className="text-lg text-gray-700">
+              Use your AI tool to generate and refine instructions based on your repository's context. The model can help remove ambiguity and keep instructions concise.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4">
+            <div className="bg-white p-5 rounded-lg shadow border border-green-200">
+              <h4 className="font-semibold text-green-900 mb-3">🎯 The Technique:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Ask the model to generate instructions based on your existing code patterns</li>
+                <li>• Request removal of ambiguity and verbosity</li>
+                <li>• Have AI validate instructions for clarity and consistency</li>
+              </ul>
+            </div>
+
+            <div className="bg-gray-900 p-4 rounded-lg">
+              <p className="text-green-400 text-xs mb-2 font-mono">Example Meta Prompt:</p>
+              <pre className="text-sm text-gray-100 font-mono whitespace-pre-wrap leading-relaxed">
+{`Generate me Copilot instructions for my blog post
+content based on the style you find in the current
+posts inside /content/post*.md. Validate for
+ambiguity and keep the instructions concise.`}
+              </pre>
+            </div>
+          </div>
+
+          <div className="bg-green-100 p-4 rounded-lg">
+            <p className="text-sm italic text-green-900">
+              <strong>Key Benefit:</strong> Generate prompts that speak the model's language and are optimized for AI understanding.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Continuous Improvement",
+      subtitle: "Self-Analysis & Future Adjustment",
+      content: (
+        <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+          <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+            <h3 className="text-xl font-bold text-orange-900 mb-2">Build a Feedback Loop</h3>
+            <p className="text-gray-700">
+              After generating output, ask the model to explain deviations and adjust instructions for future tasks.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg shadow border border-orange-200">
+              <h4 className="font-semibold text-orange-900 mb-2">🔄 The Process:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Review outputs for deviations</li>
+                <li>• Ask model to analyze issues</li>
+                <li>• Update instructions iteratively</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-4 rounded-lg shadow border border-orange-200">
+              <h4 className="font-semibold text-orange-900 mb-2">✨ Achieves:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Instructions evolve with needs</li>
+                <li>• Reduced code review friction</li>
+                <li>• Consistent AI outputs</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-gray-900 p-4 rounded-lg">
+            <p className="text-orange-400 text-xs mb-2 font-mono">Example Feedback Prompt:</p>
+            <pre className="text-sm text-gray-100 font-mono whitespace-pre-wrap leading-relaxed">
+{`Go through our conversation and iterations we
+made and implement/adjust instructions to avoid
+these mistakes in the future.`}
+            </pre>
+          </div>
+
+          <div className="bg-orange-100 p-4 rounded-lg">
+            <p className="text-sm italic text-orange-900">
+              <strong>Remember:</strong> Good instructions are living documents that improve through real-world usage and feedback.
+            </p>
+          </div>
+        </div>
+      )
+    },
 ];

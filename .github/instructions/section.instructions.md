@@ -110,6 +110,49 @@ When creating or modifying slide content in `src/sections/` files:
 </div>
 ```
 
+**4. Compact 2-Column Comparison Pattern** (optimal readability):
+```tsx
+<div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+  <div className="bg-{color}-50 p-4 rounded-lg border-l-4 border-{color}-500">
+    <h3 className="text-xl font-bold text-{color}-900 mb-2">Topic Title</h3>
+    <p className="text-gray-700">One clear sentence explaining the topic.</p>
+  </div>
+
+  <div className="grid grid-cols-2 gap-4">
+    <div className="bg-white p-4 rounded-lg shadow border border-{color}-200">
+      <h4 className="font-semibold text-{color}-900 mb-2">Section 1:</h4>
+      <ul className="space-y-2 text-gray-700">
+        <li>• Concise bullet point</li>
+        <li>• 3-4 items maximum per column</li>
+      </ul>
+    </div>
+    <div className="bg-white p-4 rounded-lg shadow border border-{color}-200">
+      <h4 className="font-semibold text-{color}-900 mb-2">Section 2:</h4>
+      <ul className="space-y-2 text-gray-700">
+        <li>• Parallel structure</li>
+        <li>• Balanced content</li>
+      </ul>
+    </div>
+  </div>
+
+  {/* Optional: code example or additional content */}
+
+  <div className="bg-{color}-100 p-4 rounded-lg">
+    <p className="text-sm italic text-{color}-900">
+      <strong>Key Point:</strong> One memorable takeaway.
+    </p>
+  </div>
+</div>
+```
+
+**Typography Guide for Pattern 4 (Recommended for Readability):**
+- Overall spacing: `space-y-5` (slightly tighter than standard)
+- Header: `text-xl font-bold` (more readable than `text-2xl`)
+- Body text: `text-gray-700` (default size, no `text-lg`)
+- Lists: `space-y-2` with `text-gray-700`
+- Cards: `p-4` padding (balanced, not too bulky)
+- This pattern provides optimal readability with minimal eye strain
+
 ## Content Density Rules
 
 1. **Bullet Points**: Max 5 bullets per list, 1-2 lines each
