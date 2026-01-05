@@ -8,3 +8,4 @@ export { instructionsSlides } from './instructions';
 export { contextSlides } from './context';
 export { skillsSlides } from './skills';
 export { repeatingSlides } from './repeating';
+export { worktreesSlides } from './worktrees';

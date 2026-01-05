@@ -6,6 +6,17 @@ applyTo: "src/sections/*.tsx"
 
 When creating or modifying slide content in `src/sections/` files:
 
+## IMPORTANT: Adding New Sections
+
+When creating a **new section file** (e.g., `newsection.tsx`):
+
+1. **Create the file** in `src/sections/newsection.tsx` with slides array export
+2. **Export in index.ts**: Add `export { newsectionSlides } from './newsection';` to `src/sections/index.ts`
+3. **Import in main.tsx**: Add the import to the import statement in `src/main.tsx`
+4. **Add to slides array**: Include `...newsectionSlides` in the slides array in `src/main.tsx` in the desired order
+
+✅ All three files must be updated for the new section to appear in the presentation.
+
 ## Core Principles
 
 **Readability First:**
