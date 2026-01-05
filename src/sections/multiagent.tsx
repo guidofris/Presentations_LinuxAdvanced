@@ -1,6 +1,6 @@
 import { SlideType } from './types';
 
-export const worktreesSlides: SlideType[] = [
+export const multiagentSlides: SlideType[] = [
   {
     title: "Multi-Agent Development with Git Worktrees",
     subtitle: "Supercharge your AI-powered workflow with parallel workspaces",
@@ -315,7 +315,69 @@ export const worktreesSlides: SlideType[] = [
     )
   },
   {
-    title: "Other Tools That Abstract Worktree Management",
+    title: "Git Worktrees in VS Code",
+    subtitle: "Built-in support for managing multiple working directories",
+    content: (
+      <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
+        <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+          <h3 className="text-2xl font-bold text-blue-900 mb-4">VS Code Worktree Support</h3>
+          <p className="text-lg text-gray-700">
+            VS Code has built-in support for Git worktrees, making it easy to manage and work with multiple branches simultaneously.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 gap-5">
+          <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+            <div className="text-3xl mb-3 text-center">➕</div>
+            <h4 className="font-semibold text-blue-900 mb-2">Create a Worktree</h4>
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2">1.</span><span>Open Source Control Repositories view</span></li>
+              <li className="flex"><span className="mr-2">2.</span><span>More Actions (...) → Worktrees → Create Worktree</span></li>
+              <li className="flex"><span className="mr-2">3.</span><span>Choose branch and location</span></li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+            <div className="text-3xl mb-3 text-center">🔀</div>
+            <h4 className="font-semibold text-blue-900 mb-2">Open a Worktree</h4>
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2">•</span><span>Right-click → Open in New/Current Window</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Command: <code className="text-xs bg-gray-200 px-1 rounded">Git: Open Worktree</code></span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Or just open the folder directly</span></li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+            <div className="text-3xl mb-3 text-center">🔍</div>
+            <h4 className="font-semibold text-blue-900 mb-2">Compare Changes</h4>
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2">•</span><span>Right-click file → Compare with Workspace</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Side-by-side diff view</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Review agent changes easily</span></li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+            <div className="text-3xl mb-3 text-center">📥</div>
+            <h4 className="font-semibold text-blue-900 mb-2">Migrate Changes</h4>
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2">•</span><span>Command: <code className="text-xs bg-gray-200 px-1 rounded">Migrate Worktree Changes</code></span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Merge all changes to current workspace</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Perfect for bringing in agent work</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-blue-100 p-4 rounded-lg">
+          <p className="text-sm italic text-blue-900">
+            <strong>Key Benefit:</strong> Each worktree appears as a separate entry in Source Control Repositories view, giving you full visibility of all parallel work.
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: "Tools That Abstract Worktree Management",
     subtitle: "Simplify your multi-agent workflow with dedicated tools",
     content: (
       <div className="flex flex-col space-y-6 max-w-4xl mx-auto">

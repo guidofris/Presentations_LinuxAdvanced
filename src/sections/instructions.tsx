@@ -371,7 +371,7 @@ for workshop presentations.
             <div className="bg-gray-900 p-4 rounded-lg">
               <p className="text-green-400 text-xs mb-2 font-mono">Example Meta Prompt:</p>
               <pre className="text-sm text-gray-100 font-mono whitespace-pre-wrap leading-relaxed">
-{`Generate me Copilot instructions for my blog post
+{`Generate Copilot instructions for my blog post
 content based on the style you find in the current
 posts inside /content/post*.md. Validate for
 ambiguity and keep the instructions concise.`}

@@ -1,7 +1,7 @@
 ---
 description: Create workshop slide content from provided links and sources - fact-based, validated content only
 name: Slide Content Creator
-tools: ['web/fetch', 'search'
+tools: ['web/fetch', 'search']
 argument-hint: Provide a URL or topic to create slide content from
 ---
 

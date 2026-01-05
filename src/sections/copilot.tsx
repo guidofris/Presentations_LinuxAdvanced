@@ -608,7 +608,51 @@ export const copilotSlides: SlideType[] = [
       )
     },
     {
-      title: "Adding Context to Chat",
+      title: "Workspace Indexing & Implicit Context",
+      subtitle: "How Copilot Understands Your Project Automatically",
+      content: (
+        <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+          <div className="bg-cyan-50 p-4 rounded-lg border-l-4 border-cyan-500">
+            <p className="text-gray-700">
+              VS Code works behind the scenes to give Copilot context about your project — indexing your codebase for search and automatically including relevant information based on your current activity.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            {/* Workspace Indexing */}
+            <div className="bg-white p-4 rounded-lg shadow border border-cyan-200">
+              <h4 className="font-semibold text-cyan-900 mb-3">🗂️ Workspace Indexing</h4>
+              <p className="text-sm text-gray-600 mb-3">VS Code indexes your codebase for quick, accurate code search:</p>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li className="flex"><span className="mr-2">•</span><span><strong>Remote:</strong> GitHub-hosted repos with fast search</span></li>
+                <li className="flex"><span className="mr-2">•</span><span><strong>Local:</strong> Semantic index on your machine</span></li>
+                <li className="flex"><span className="mr-2">•</span><span><strong>Basic:</strong> Fallback for larger codebases</span></li>
+              </ul>
+            </div>
+
+            {/* Implicit Context */}
+            <div className="bg-white p-4 rounded-lg shadow border border-cyan-200">
+              <h4 className="font-semibold text-cyan-900 mb-3">🔍 Implicit Context</h4>
+              <p className="text-sm text-gray-600 mb-3">Automatically included in every chat:</p>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li className="flex"><span className="mr-2">•</span><span>Currently selected text in editor</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Active file/notebook name</span></li>
+                <li className="flex"><span className="mr-2">•</span><span><strong>Ask/Edit:</strong> Active file auto-included</span></li>
+                <li className="flex"><span className="mr-2">•</span><span><strong>Agent:</strong> Decides autonomously</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-cyan-100 p-4 rounded-lg">
+            <p className="text-sm italic text-cyan-900">
+              <strong>Key Insight:</strong> You don't always need to manually add context — Copilot already sees your current selection, active file, and can search your indexed codebase automatically.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Explicit Context",
       subtitle: "Help AI Understand Your Code Better",
       content: (
         <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
