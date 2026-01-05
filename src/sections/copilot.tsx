@@ -1,7 +1,7 @@
 import { SlideType } from './types';
 
 export const copilotSlides: SlideType[] = [
-    {
+      {
       title: "GitHub Copilot",
       subtitle: "Your AI-Powered Development Partner",
       content: (
@@ -39,6 +39,191 @@ export const copilotSlides: SlideType[] = [
           <div className="bg-blue-50 px-6 py-4 rounded-lg max-w-2xl">
             <p className="text-center text-blue-900">
               <strong>Key Benefit:</strong> You focus on your code while Copilot handles the complexity of model selection, context management, and prompt engineering.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Ghost Text Suggestions",
+      subtitle: "Real-time coding assistance as you type",
+      content: (
+        <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+            <h3 className="text-xl font-bold text-blue-900 mb-2">What are Ghost Text Suggestions?</h3>
+            <p className="text-gray-700">Copilot offers coding suggestions as you type, including understanding natural language comments to suggest code that accomplishes your described goal.</p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">How It Works:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex"><span className="mr-2">•</span><span>Provides suggestions while you type code</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Appears as gray "ghost" text inline</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Press Tab to accept, Esc to dismiss</span></li>
+              </ul>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">Natural Language Support:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex"><span className="mr-2">•</span><span>Write comments describing what you want</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Copilot suggests code to accomplish the goal</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Works across multiple programming languages</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-blue-100 p-4 rounded-lg">
+            <p className="text-sm italic text-blue-900">
+              <strong>Key Benefit:</strong> Get real-time suggestions without leaving your code editor, accelerating development flow.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Next Edit Suggestions",
+      subtitle: "Predictive editing based on your current changes",
+      content: (
+        <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+            <h3 className="text-xl font-bold text-blue-900 mb-2">Next Edit Suggestions <span className="text-sm font-normal text-blue-700">(Public Preview)</span></h3>
+            <p className="text-gray-700">Based on the edits you're making, Copilot predicts the location of your next edit and suggests a completion for it.</p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">How It Works:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex"><span className="mr-2">•</span><span>Analyzes your current code changes</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Predicts where you'll edit next</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Proactively suggests the change</span></li>
+              </ul>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">Suggestion Scope:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex"><span className="mr-2">•</span><span>Single symbol completions</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Entire line suggestions</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Multiple lines (depending on change scope)</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-blue-100 p-4 rounded-lg">
+            <p className="text-sm italic text-blue-900">
+              <strong>Configuration:</strong> Enable in your <a href="https://docs.github.com/en/copilot/managing-copilot/configure-personal-settings/configuring-github-copilot-in-your-environment#enabling-next-edit-suggestions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Copilot settings</a>.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Language Support",
+      subtitle: "Comprehensive coverage across programming languages",
+      content: (
+        <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+            <h3 className="text-xl font-bold text-blue-900 mb-2">Supported Languages & Frameworks</h3>
+            <p className="text-gray-700">Copilot provides suggestions for over 30 programming languages, with optimized support for the most popular languages and frameworks.</p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">Works Best With:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex"><span className="mr-2">•</span><span>Python, JavaScript, TypeScript</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Ruby, Go, C#, C++</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>30+ languages total</span></li>
+              </ul>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">Additional Capabilities:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex"><span className="mr-2">•</span><span>Database query generation</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>API and framework suggestions</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Infrastructure as code development</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-blue-100 p-4 rounded-lg">
+            <p className="text-sm italic text-blue-900">
+              <strong>Full Language List:</strong> View the complete list of <a href="https://docs.github.com/en/copilot/concepts/completions/code-suggestions#programming-languages-included-in-the-default-model" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">supported programming languages</a>.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "The AI Behind Code Suggestions",
+      subtitle: "Understanding the model powering your suggestions",
+      content: (
+        <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+            <h3 className="text-xl font-bold text-blue-900 mb-2">GPT-4.1 Copilot Model</h3>
+            <p className="text-gray-700">The default model for Copilot inline suggestions, trained on a wide range of high-quality public GitHub repositories.</p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">Training Data:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex"><span className="mr-2">•</span><span>High-quality public GitHub repositories</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Coverage across 30+ programming languages</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Diverse frameworks and patterns</span></li>
+              </ul>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">Model Flexibility:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex"><span className="mr-2">•</span><span>Switch models if alternatives are available</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Only affects ghost text suggestions</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Next edit suggestions use separate model</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-blue-100 p-4 rounded-lg">
+            <p className="text-sm italic text-blue-900">
+              <strong>Learn More:</strong> <a href="https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-completion-model" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Change the AI model</a> for inline suggestions.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Code Referencing & Public Code Matching",
+      subtitle: "How Copilot handles matches with public code",
+      content: (
+        <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+            <h3 className="text-xl font-bold text-blue-900 mb-2">Public Code Matching</h3>
+            <p className="text-gray-700">GitHub Copilot checks each suggestion for matches with publicly available code to help maintain code originality and provide attribution.</p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">How It Works:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex"><span className="mr-2">•</span><span>Checks suggestions against public code</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Happens automatically in real-time</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Controlled by account/organization settings</span></li>
+              </ul>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">Handling Matches:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex"><span className="mr-2">•</span><span>Matches can be discarded automatically</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Or suggested with code reference</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Policy-based control for compliance</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-blue-100 p-4 rounded-lg">
+            <p className="text-sm italic text-blue-900">
+              <strong>Learn More:</strong> <a href="https://docs.github.com/en/copilot/concepts/completions/code-referencing" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub Copilot code referencing</a> documentation.
             </p>
           </div>
         </div>
