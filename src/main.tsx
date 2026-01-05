@@ -86,7 +86,7 @@ const FourDSlides = () => {
           {slides[currentSlide].content}
         </div>
 
-        <div className="mt-6 flex items-center justify-between">
+        <div className="mt-6 flex items-center justify-between px-4">
           <button
             onClick={prevSlide}
             disabled={currentSlide === 0}
@@ -96,18 +96,8 @@ const FourDSlides = () => {
             <span>Previous</span>
           </button>
 
-          <div className="flex space-x-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all ${
-                  index === currentSlide
-                    ? 'bg-blue-600 w-8'
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-              />
-            ))}
+          <div className="text-sm text-gray-500">
+            Slide {currentSlide + 1} of {slides.length} | AI Native Software Engineering
           </div>
 
           <button
@@ -118,10 +108,6 @@ const FourDSlides = () => {
             <span>Next</span>
             <ChevronRight className="w-5 h-5" />
           </button>
-        </div>
-
-        <div className="mt-4 text-center text-sm text-gray-500">
-          Slide {currentSlide + 1} of {slides.length} | AI Native Software Engineering
         </div>
       </div>
     </div>

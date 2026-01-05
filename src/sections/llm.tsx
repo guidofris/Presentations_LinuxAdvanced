@@ -48,19 +48,20 @@ export const llmSlides: SlideType[] = [
         <div className="bg-indigo-50 p-5 rounded-lg border-l-4 border-indigo-500">
           <h4 className="font-bold text-indigo-900 mb-2">Large Language Models (LLMs)</h4>
           <ul className="text-gray-700 space-y-2">
-            <li>• AI systems trained on massive amounts of text data to understand and generate human-like language</li>
-            <li>• Learn patterns, grammar, facts, and reasoning abilities from their training data</li>
-            <li>• Can perform tasks like writing, answering questions, coding, and analysis</li>
+            <li className="flex"><span className="mr-2">•</span><span>AI systems trained on massive amounts of text data to understand and generate human-like language</span></li>
+            <li className="flex"><span className="mr-2">•</span><span>Learn patterns, grammar, facts, and reasoning abilities from their training data</span></li>
+            <li className="flex"><span className="mr-2">•</span><span>Can perform tasks like writing, answering questions, coding, and analysis</span></li>
           </ul>
         </div>
 
         <div className="bg-indigo-50 p-5 rounded-lg border-l-4 border-indigo-500">
           <h4 className="font-bold text-indigo-900 mb-2">Transformer Architecture</h4>
           <ul className="text-gray-700 space-y-2">
-            <li>• The core technology that powers modern LLMs, introduced in 2017</li>
-            <li>• Uses "attention mechanisms" to understand relationships between words in context</li>
-            <li>• Processes entire sequences of text in parallel rather than word-by-word</li>
-            <li>• Enables models to capture long-range dependencies and understand meaning across entire documents</li>
+            <li className="flex"><span className="mr-2">•</span><span>GPT: Generative Pre-trained Transformer</span></li>
+            <li className="flex"><span className="mr-2">•</span><span>The core technology that powers modern LLMs, introduced in 2017</span></li>
+            <li className="flex"><span className="mr-2">•</span><span>Uses "attention mechanisms" to understand relationships between words in context</span></li>
+            <li className="flex"><span className="mr-2">•</span><span>Processes entire sequences of text in parallel rather than word-by-word</span></li>
+            <li className="flex"><span className="mr-2">•</span><span>Enables models to understand meaning across entire documents</span></li>
           </ul>
         </div>
       </div>
@@ -176,31 +177,37 @@ export const llmSlides: SlideType[] = [
     subtitle: "2017 → Now: How LLMs gained reasoning abilities",
     content: (
       <div className="flex flex-col space-y-6 max-w-3xl mx-auto items-center justify-center h-full">
-        <p className="text-center text-lg text-gray-700 mb-2">LLMs gained reasoning abilities through scaling in several key ways:</p>
+        <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+          <h4 className="font-bold text-indigo-900 mb-2">What are Parameters?</h4>
+          <p className="text-gray-700">Parameters are the internal weights and connections the model learns during training. Think of them as the "knowledge" stored in the neural network - more parameters = more capacity to learn patterns.</p>
+        </div>
+
+        <p className="text-center text-lg text-gray-700">LLMs gained reasoning abilities through scaling in several key ways:</p>
+
         <div className="grid grid-cols-3 gap-4">
           <div className="bg-white p-4 rounded-lg shadow border border-indigo-200">
             <h4 className="font-bold text-indigo-900 mb-2">More Parameters = More Pattern Recognition</h4>
             <ul className="text-gray-700 space-y-2">
-              <li>• Larger models store vastly more patterns</li>
-              <li>• Recognize complex multi-step patterns</li>
+              <li className="flex"><span className="mr-2">•</span><span>Larger models store vastly more patterns</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Recognize complex multi-step patterns</span></li>
             </ul>
           </div>
 
           <div className="bg-white p-4 rounded-lg shadow border border-indigo-200">
             <h4 className="font-bold text-indigo-900 mb-2">Emergent Abilities</h4>
             <ul className="text-gray-700 space-y-2">
-              <li>• At certain scales, models develop new capabilities</li>
-              <li>• Multi-step reasoning emerged in larger models</li>
-              <li>• Below threshold, abilities don't appear</li>
+              <li className="flex"><span className="mr-2">•</span><span>At certain scales, models develop new capabilities</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Multi-step reasoning emerged in larger models</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Below threshold, abilities don't appear</span></li>
             </ul>
           </div>
 
           <div className="bg-white p-4 rounded-lg shadow border border-indigo-200">
             <h4 className="font-bold text-indigo-900 mb-2">More Context = Better Reasoning</h4>
             <ul className="text-gray-700 space-y-2">
-              <li>• Process longer context windows</li>
-              <li>• Hold more information simultaneously</li>
-              <li>• Connect ideas across longer distances</li>
+              <li className="flex"><span className="mr-2">•</span><span>Process longer context windows</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Hold more information simultaneously</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Connect ideas across longer distances</span></li>
             </ul>
           </div>
         </div>
@@ -255,22 +262,22 @@ export const llmSlides: SlideType[] = [
         <div className="bg-green-50 p-5 rounded-lg border-l-4 border-green-500">
           <h4 className="font-bold text-green-900 mb-3">✅ Strengths</h4>
           <ul className="text-gray-700 space-y-2">
-            <li><strong>Versatility</strong> - Handle diverse tasks (writing, coding, analysis, translation) without task-specific training</li>
-            <li><strong>Pattern Recognition</strong> - Excel at identifying complex patterns and relationships in data</li>
-            <li><strong>Natural Language</strong> - Generate human-like text and understand context and nuance</li>
-            <li><strong>Knowledge Breadth</strong> - Trained on vast amounts of information across countless domains</li>
-            <li><strong>Few-Shot Learning</strong> - Learn new tasks from just a few examples in the prompt</li>
+            <li className="flex"><span className="mr-2">•</span><span><strong>Versatility</strong> - Handle diverse tasks (writing, coding, analysis, translation) without task-specific training</span></li>
+            <li className="flex"><span className="mr-2">•</span><span><strong>Pattern Recognition</strong> - Excel at identifying complex patterns and relationships in data</span></li>
+            <li className="flex"><span className="mr-2">•</span><span><strong>Natural Language</strong> - Generate human-like text and understand context and nuance</span></li>
+            <li className="flex"><span className="mr-2">•</span><span><strong>Knowledge Breadth</strong> - Trained on vast amounts of information across countless domains</span></li>
+            <li className="flex"><span className="mr-2">•</span><span><strong>Few-Shot Learning</strong> - Learn new tasks from just a few examples in the prompt</span></li>
           </ul>
         </div>
 
         <div className="bg-red-50 p-5 rounded-lg border-l-4 border-red-500">
           <h4 className="font-bold text-red-900 mb-3">⚠️ Weaknesses</h4>
           <ul className="text-gray-700 space-y-2">
-            <li><strong>Hallucinations</strong> - Can confidently generate false or nonsensical information</li>
-            <li><strong>No True Understanding</strong> - Pattern matching, not genuine comprehension</li>
-            <li><strong>Knowledge & Memory Limitations</strong> - Training data cutoffs and no persistent memory</li>
-            <li><strong>Bias & Accuracy</strong> - Reflects training data biases and can struggle with precise calculations</li>
-            <li><strong>Computational Cost</strong> - Expensive to train and run at scale</li>
+            <li className="flex"><span className="mr-2">•</span><span><strong>Hallucinations</strong> - Predict plausible-sounding text rather than compute or reason; can confidently generate false information</span></li>
+            <li className="flex"><span className="mr-2">•</span><span><strong>No True Understanding</strong> - Pattern matching, not genuine comprehension</span></li>
+            <li className="flex"><span className="mr-2">•</span><span><strong>Knowledge & Memory Limitations</strong> - Training data cutoffs and no persistent memory</span></li>
+            <li className="flex"><span className="mr-2">•</span><span><strong>Bias & Accuracy</strong> - Reflects training data biases and can struggle with precise calculations</span></li>
+            <li className="flex"><span className="mr-2">•</span><span><strong>Computational Cost</strong> - Expensive to train and run at scale</span></li>
           </ul>
         </div>
       </div>
@@ -317,4 +324,95 @@ export const llmSlides: SlideType[] = [
       </div>
     )
   },
+    {
+    title: "Context Window Asymmetry",
+    subtitle: "Why input and output limits differ in LLMs",
+    content: (
+      <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
+        <div className="bg-indigo-50 p-6 rounded-lg border-l-4 border-indigo-500">
+          <h3 className="text-2xl font-bold text-indigo-900 mb-4">Input vs Output Windows</h3>
+          <p className="text-lg text-gray-700">
+            LLMs have different limits for input (context) and output (generation). While models can process massive amounts of input, they generate much shorter responses.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 gap-4">
+          <div className="bg-white p-5 rounded-lg shadow border border-indigo-200">
+            <h4 className="font-semibold text-indigo-900 mb-3">Claude Sonnet 4.5</h4>
+            <div className="space-y-2 text-gray-700">
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Input:</span>
+                <span className="font-bold text-indigo-600">128K tokens</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Output:</span>
+                <span className="font-bold text-indigo-600">16K tokens</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white p-5 rounded-lg shadow border border-indigo-200">
+            <h4 className="font-semibold text-indigo-900 mb-3">GPT-5.2</h4>
+            <div className="space-y-2 text-gray-700">
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Input:</span>
+                <span className="font-bold text-indigo-600">128K tokens</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm">Output:</span>
+                <span className="font-bold text-indigo-600">64K tokens</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-indigo-100 p-4 rounded-lg">
+          <p className="text-sm italic text-indigo-900">
+            <strong>Key Takeaway:</strong> Think of LLMs as having a large "reading" capacity but a focused "speaking" style - by design.
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: "Why This Asymmetry Exists",
+    subtitle: "Technical, practical, and quality reasons",
+    content: (
+      <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
+        <div className="bg-white p-5 rounded-lg shadow border border-indigo-200">
+          <h4 className="font-semibold text-indigo-900 mb-3 flex items-center">
+            <span className="text-2xl mr-3">⚙️</span>
+            Technical Efficiency
+          </h4>
+          <ul className="space-y-2 text-gray-700">
+            <li className="flex"><span className="mr-2">•</span><span>Output generation is sequential (one token at a time)</span></li>
+            <li className="flex"><span className="mr-2">•</span><span>Input processing can be parallelized</span></li>
+            <li className="flex"><span className="mr-2">•</span><span>Longer outputs = longer generation times + higher costs</span></li>
+          </ul>
+        </div>
+
+        <div className="bg-white p-5 rounded-lg shadow border border-indigo-200">
+          <h4 className="font-semibold text-indigo-900 mb-3 flex items-center">
+            <span className="text-2xl mr-3">🎯</span>
+            Practical Design
+          </h4>
+          <ul className="space-y-2 text-gray-700">
+            <li className="flex"><span className="mr-2">•</span><span>Most use cases: consume lots of information → produce focused responses</span></li>
+            <li className="flex"><span className="mr-2">•</span><span>Analogy: Read an entire book to answer a question, but don't recite the whole book back</span></li>
+          </ul>
+        </div>
+
+        <div className="bg-white p-5 rounded-lg shadow border border-indigo-200">
+          <h4 className="font-semibold text-indigo-900 mb-3 flex items-center">
+            <span className="text-2xl mr-3">✨</span>
+            Quality Concerns
+          </h4>
+          <ul className="space-y-2 text-gray-700">
+            <li className="flex"><span className="mr-2">•</span><span>Very long outputs risk: repetition, drift from intent, error accumulation</span></li>
+            <li className="flex"><span className="mr-2">•</span><span>Shorter outputs maintain better coherence and quality</span></li>
+          </ul>
+        </div>
+      </div>
+    )
+  }
 ];
