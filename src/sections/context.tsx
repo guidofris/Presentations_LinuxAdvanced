@@ -2,6 +2,83 @@ import { SlideType } from './types';
 
 export const contextSlides: SlideType[] = [
   {
+    title: "Understanding Chat Turns & Context Growth",
+    subtitle: "How conversation history accumulates and consumes your context window",
+    content: (
+      <div className="flex flex-col space-y-4 max-w-3xl mx-auto">
+        <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+          <p className="text-gray-700">Each turn includes <strong>everything</strong> that came before. The AI doesn't have persistent memory — it rebuilds context from scratch every conversation.</p>
+        </div>
+
+        <div className="grid grid-cols-3 gap-4">
+          {/* Turn 1 */}
+          <div className="bg-white p-3 rounded-lg shadow border border-gray-200">
+            <h4 className="font-semibold text-gray-900 mb-2 text-center text-sm">Turn 1</h4>
+            <div className="space-y-1">
+              <div className="bg-blue-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">System Prompt</div>
+              <div className="bg-blue-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">Context</div>
+              <div className="bg-blue-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">User Prompt 1</div>
+              <div className="bg-blue-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">Response 1</div>
+            </div>
+          </div>
+
+          {/* Turn 2 */}
+          <div className="bg-white p-3 rounded-lg shadow border border-gray-200">
+            <h4 className="font-semibold text-gray-900 mb-2 text-center text-sm">Turn 2</h4>
+            <div className="space-y-1">
+              <div className="bg-blue-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">System Prompt</div>
+              <div className="bg-blue-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">Context</div>
+              <div className="bg-blue-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">User Prompt 1</div>
+              <div className="bg-blue-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">Response 1</div>
+              <div className="bg-green-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">User Prompt 2</div>
+              <div className="bg-green-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">Response 2</div>
+            </div>
+          </div>
+
+          {/* Turn 3 */}
+          <div className="bg-white p-3 rounded-lg shadow border border-gray-200">
+            <h4 className="font-semibold text-gray-900 mb-2 text-center text-sm">Turn 3</h4>
+            <div className="space-y-1">
+              <div className="bg-blue-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">System Prompt</div>
+              <div className="bg-blue-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">Context</div>
+              <div className="bg-blue-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">User Prompt 1</div>
+              <div className="bg-blue-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">Response 1</div>
+              <div className="bg-green-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">User Prompt 2</div>
+              <div className="bg-green-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">Response 2</div>
+              <div className="bg-orange-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">User Prompt 3</div>
+              <div className="bg-orange-500 text-white text-xs py-1.5 px-2 rounded text-center font-medium">Response 3</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-3">
+          <div className="bg-white p-3 rounded-lg shadow border border-indigo-200">
+            <h4 className="font-semibold text-indigo-900 mb-2 text-sm">📈 Why Context Grows</h4>
+            <ul className="space-y-1 text-gray-700 text-xs">
+              <li className="flex"><span className="mr-2">•</span><span>Every prompt and response stays in history</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>System prompts repeat each turn</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Attached files add to the total</span></li>
+            </ul>
+          </div>
+          <div className="bg-white p-3 rounded-lg shadow border border-indigo-200">
+            <h4 className="font-semibold text-indigo-900 mb-2 text-sm">⚠️ The Implications</h4>
+            <ul className="space-y-1 text-gray-700 text-xs">
+              <li className="flex"><span className="mr-2">•</span><span>Long conversations hit limits faster</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Verbose responses consume capacity</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Starting fresh resets your context</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-indigo-100 p-3 rounded-lg">
+          <p className="text-sm italic text-indigo-900">
+            <strong>Key Insight:</strong> Be intentional about what goes into your context — every message takes space away from the AI's ability to reason.
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
     title: "Architecting Instructions for Context Efficiency",
     subtitle: "Keeping your context window lean and relevant",
     content: (
