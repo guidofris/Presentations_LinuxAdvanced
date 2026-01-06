@@ -762,5 +762,54 @@ export const copilotSlides: SlideType[] = [
           </div>
         </div>
       )
+    },
+    {
+      title: "Context-Isolated Subagents",
+      subtitle: "Delegate Tasks to Autonomous Agents Within Your Chat",
+      content: (
+        <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+            <h3 className="text-xl font-bold text-blue-900 mb-2">What are Subagents?</h3>
+            <p className="text-gray-700">
+              Subagents let you delegate tasks to an isolated, autonomous agent within your chat session. They have their own context window and return only the final result — keeping your main conversation focused.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">Key Characteristics:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex"><span className="mr-2">•</span><span>Operate independently with own context window</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Run autonomously without pausing for feedback</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Return only final result to main session</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Use same tools & model as main session</span></li>
+              </ul>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">Great For:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex"><span className="mr-2">•</span><span>Research tasks that need deep exploration</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Complex multi-step analysis</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Keeping main context window clean</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Parallel conceptual work streams</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-gray-800 p-4 rounded-lg">
+            <p className="text-green-400 font-mono text-sm mb-2">Example prompts:</p>
+            <div className="space-y-2 text-gray-300 font-mono text-sm">
+              <p>"Use a subagent to research the best auth methods. Summarize findings."</p>
+              <p>"Run #runSubagent to research comprehensively, stop at 80% confidence."</p>
+            </div>
+          </div>
+
+          <div className="bg-blue-100 p-4 rounded-lg">
+            <p className="text-sm italic text-blue-900">
+              <strong>How to Use:</strong> Enable the <code className="bg-blue-200 px-1 rounded">runSubagent</code> tool in the tool picker, then ask the AI to use a subagent for your task. <a href="https://code.visualstudio.com/docs/copilot/chat/chat-sessions#_contextisolated-subagents" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Learn more</a>.
+            </p>
+          </div>
+        </div>
+      )
     }
 ];
