@@ -811,5 +811,59 @@ export const copilotSlides: SlideType[] = [
           </div>
         </div>
       )
+    },
+    {
+      title: "Tracking Your Copilot Usage",
+      subtitle: "Monitor Token Consumption with Copilot Token Tracker",
+      content: (
+        <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+            <h3 className="text-xl font-bold text-blue-900 mb-2">Copilot Token Tracker Extension</h3>
+            <p className="text-gray-700">
+              A VS Code extension that displays your daily and monthly GitHub Copilot estimated token usage directly in the status bar — helping you stay aware of your consumption.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">Key Features:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex"><span className="mr-2">•</span><span>Real-time status bar display: <code className="bg-gray-100 px-1 rounded text-sm"># today | month</code></span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Auto-refreshes every 5 minutes</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Click to manually refresh or view details</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Hover for quick breakdown</span></li>
+              </ul>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-2">How It Works:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex"><span className="mr-2">•</span><span>Analyzes Copilot Chat log files</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Uses model-specific character-to-token ratios</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Intelligent caching for performance</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Detailed statistics panel on click</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-gray-800 p-4 rounded-lg">
+            <p className="text-green-400 font-mono text-sm mb-2">Install from VS Code:</p>
+            <div className="text-gray-300 font-mono text-sm">
+              <p>ext install RobBos.copilot-token-tracker</p>
+            </div>
+          </div>
+
+          <div className="bg-amber-50 p-3 rounded-lg border border-amber-200">
+            <p className="text-sm text-amber-900">
+              <strong>⚠️ Note:</strong> Token counts are estimates based on local logs only. Multi-machine usage, web Copilot, and Premium Requests are not tracked.
+            </p>
+          </div>
+
+          <div className="bg-blue-100 p-4 rounded-lg">
+            <p className="text-sm italic text-blue-900">
+              <strong>4D Connection:</strong> Tracking usage supports <strong>Diligence</strong> — being accountable for how you use AI tools and understanding your consumption patterns. <a href="https://marketplace.visualstudio.com/items?itemName=RobBos.copilot-token-tracker" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">View on Marketplace</a>.
+            </p>
+          </div>
+        </div>
+      )
     }
 ];
