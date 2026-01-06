@@ -193,6 +193,26 @@ This pattern prevents wrapped text from aligning under the bullet point. When te
 - GitHub repos: convert `owner/repo` to full GitHub URLs
 - Always include `target="_blank"` and `rel="noopener noreferrer"` for external links
 
+## Source Citations
+
+**Always cite sources for data, statistics, and research findings:**
+- Include a source line at the bottom of data-driven slides
+- Link to the original paper, article, or dataset
+- Use the footer pattern in a muted background box:
+
+```tsx
+<div className="bg-gray-100 p-4 rounded-lg">
+  <p className="text-sm italic text-gray-700">
+    <strong>Source:</strong> <a href="https://arxiv.org/abs/..." target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">arXiv:XXXX.XXXXX</a> — "Paper Title" (Date)
+  </p>
+</div>
+```
+
+- For arXiv papers: link the arXiv ID (e.g., `arXiv:2505.09598`)
+- For journals: link the DOI or article URL
+- For websites/blogs: link directly to the source page
+- Include publication date for time-sensitive data
+
 ## Common Mistakes to Avoid
 
 ❌ More than 3 major sections vertically stacked
@@ -202,5 +222,6 @@ This pattern prevents wrapped text from aligning under the bullet point. When te
 ❌ Missing `space-y-6` or `gap-4`
 ❌ Nested complexity (sub-bullets with sub-bullets)
 ❌ Plain text URLs or repository references without links
+❌ Data or statistics without linked source citations
 
 ✅ Clear focus, adequate spacing, visual variety, scannable content
