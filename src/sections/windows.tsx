@@ -1,7 +1,48 @@
 import { SlideType } from './types';
 
 export const windowsSlides: SlideType[] = [
-  {
+    {
+    title: "Context Window",
+    subtitle: "Understanding the model's working memory",
+    content: (
+      <div className="flex flex-col space-y-4 max-w-4xl mx-auto items-center justify-center h-full">
+        <div className="bg-indigo-50 p-5 rounded-lg border-l-4 border-indigo-500">
+          <p className="text-gray-700 italic">The maximum amount of text (measured in tokens) an LLM can process at once - includes both your input and the model's response</p>
+        </div>
+
+        <div className="grid grid-cols-2 gap-4">
+          <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
+            <h4 className="font-semibold text-gray-900 mb-2">📏 Practical Limit</h4>
+            <p className="text-gray-700 text-sm">Determines how much conversation history, documents, or code the model can "see" and work with simultaneously</p>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
+            <h4 className="font-semibold text-gray-900 mb-2">📊 Size Varies</h4>
+            <p className="text-gray-700 text-sm">Ranges from a few thousand tokens (early models) to millions of tokens (modern models like Claude 4.5 or GPT-5.2)</p>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
+            <h4 className="font-semibold text-gray-900 mb-2">🔢 Token Count</h4>
+            <p className="text-gray-700 text-sm">Everything counts: your prompts, previous messages, uploaded files, and the AI's responses all consume the window</p>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
+            <h4 className="font-semibold text-gray-900 mb-2">🚫 Beyond the Window</h4>
+            <p className="text-gray-700 text-sm">Information outside the context window is effectively "forgotten" - the model can't reference it</p>
+          </div>
+        </div>
+
+        <div className="bg-amber-50 p-4 rounded-lg border border-amber-200">
+          <p className="text-sm text-amber-900"><strong>Example:</strong> 200K tokens ≈ 150,000 words or a 500-page book</p>
+        </div>
+
+        <div className="bg-gray-100 p-4 rounded-lg">
+          <p className="text-sm text-gray-700"><strong>Trade-offs:</strong> Larger windows enable more complex tasks but require more computational resources and cost</p>
+        </div>
+      </div>
+    )
+  },
+    {
     title: "Context Window Asymmetry",
     subtitle: "Why input and output limits differ in LLMs",
     content: (

@@ -377,7 +377,7 @@ export const multiagentSlides: SlideType[] = [
     )
   },
   {
-    title: "Tools That Abstract Worktree Management",
+    title: "Other Tools That Abstract Worktree Management",
     subtitle: "Simplify your multi-agent workflow with dedicated tools",
     content: (
       <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
