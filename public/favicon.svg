@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="#1e293b"/>
+
+  <!-- Code brackets -->
+  <path d="M18 20 L10 32 L18 44" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M46 20 L54 32 L46 44" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- AI sparkle/star in center -->
+  <path d="M32 18 L34 28 L44 30 L34 32 L32 42 L30 32 L20 30 L30 28 Z" fill="#fbbf24"/>
+
+  <!-- Small sparkles -->
+  <circle cx="24" cy="22" r="2" fill="#a78bfa"/>
+  <circle cx="40" cy="38" r="2" fill="#a78bfa"/>
+  <circle cx="42" cy="22" r="1.5" fill="#34d399"/>
+</svg>
