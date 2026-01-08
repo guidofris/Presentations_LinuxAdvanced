@@ -73,8 +73,8 @@ const FourDSlides = () => {
   }, [slides.length]);
 
   return (
-    <div className="w-full h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col">
-      <div className="flex-1 flex flex-col p-4 md:p-8">
+    <div className="min-w-full w-full min-h-screen h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col overflow-x-hidden">
+      <div className="flex-1 flex flex-col p-4 md:p-8 min-w-0">
         <div className="mb-4 md:mb-6 text-center">
           <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-1 md:mb-2">
             {slides[currentSlide].title}
