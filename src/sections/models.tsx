@@ -1,6 +1,27 @@
+import { Box } from 'lucide-react';
 import { SlideType } from "./types";
 
 export const modelsSlides: SlideType[] = [
+  {
+    title: "",
+    subtitle: "",
+    content: (
+      <div className="flex flex-col items-center justify-center h-full space-y-6">
+        <Box className="w-20 h-20 text-purple-500" />
+        <h1 className="text-5xl md:text-6xl font-bold text-purple-900 text-center">
+          Models
+        </h1>
+        <p className="text-xl md:text-2xl text-gray-600 text-center max-w-2xl">
+          Choosing the right model for the job
+        </p>
+        <div className="flex space-x-2 mt-4">
+          <div className="w-3 h-3 bg-purple-300 rounded-full"></div>
+          <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+          <div className="w-3 h-3 bg-purple-300 rounded-full"></div>
+        </div>
+      </div>
+    )
+  },
   {
     title: "AI Models for Software Engineering",
     subtitle: "Choosing the Right AI Coding Assistant",

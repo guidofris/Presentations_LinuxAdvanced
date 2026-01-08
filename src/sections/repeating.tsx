@@ -1,8 +1,29 @@
+import { Repeat } from 'lucide-react';
 import { SlideType } from './types';
 
 export const repeatingSlides: SlideType[] = [
-    {
-      title: "Stop Repeating Yourself",
+  {
+    title: "",
+    subtitle: "",
+    content: (
+      <div className="flex flex-col items-center justify-center h-full space-y-6">
+        <Repeat className="w-20 h-20 text-green-500" />
+        <h1 className="text-5xl md:text-6xl font-bold text-green-900 text-center">
+          Prompt Files
+        </h1>
+        <p className="text-xl md:text-2xl text-gray-600 text-center max-w-2xl">
+          Building consistent workflows
+        </p>
+        <div className="flex space-x-2 mt-4">
+          <div className="w-3 h-3 bg-green-300 rounded-full"></div>
+          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+          <div className="w-3 h-3 bg-green-300 rounded-full"></div>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: "Stop Repeating Yourself",
       subtitle: "Reusable Prompt Files in VS Code",
       content: (
         <div className="flex flex-col space-y-6 max-w-3xl mx-auto">

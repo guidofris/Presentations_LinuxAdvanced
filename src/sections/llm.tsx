@@ -1,6 +1,27 @@
+import { Sparkles } from 'lucide-react';
 import { SlideType } from './types';
 
 export const llmSlides: SlideType[] = [
+  {
+    title: "",
+    subtitle: "",
+    content: (
+      <div className="flex flex-col items-center justify-center h-full space-y-6">
+        <Sparkles className="w-20 h-20 text-indigo-500" />
+        <h1 className="text-5xl md:text-6xl font-bold text-indigo-900 text-center">
+          LLMs
+        </h1>
+        <p className="text-xl md:text-2xl text-gray-600 text-center max-w-2xl">
+          How large language models actually work
+        </p>
+        <div className="flex space-x-2 mt-4">
+          <div className="w-3 h-3 bg-indigo-300 rounded-full"></div>
+          <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
+          <div className="w-3 h-3 bg-indigo-300 rounded-full"></div>
+        </div>
+      </div>
+    )
+  },
   {
     title: "Understanding LLMs",
     subtitle: "The Technology Powering AI Coding Assistants",
