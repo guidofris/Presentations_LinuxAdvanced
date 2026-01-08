@@ -18,6 +18,61 @@ When creating a **new section file** (e.g., `newsection.tsx`):
 
 ✅ All files must be updated for the new section to appear in the presentation and sidebar.
 
+### Section Title Slide (REQUIRED)
+
+Every section **must** begin with a title slide as its first slide. This serves as a visual divider announcing the section.
+
+**Title Slide Pattern:**
+```tsx
+import { IconName } from 'lucide-react';
+import { SlideType } from './types';
+
+export const sectionSlides: SlideType[] = [
+  {
+    title: "",
+    subtitle: "",
+    content: (
+      <div className="flex flex-col items-center justify-center h-full space-y-6">
+        <IconName className="w-20 h-20 text-{color}-500" />
+        <h1 className="text-5xl md:text-6xl font-bold text-{color}-900 text-center">
+          Section Name
+        </h1>
+        <p className="text-xl md:text-2xl text-gray-600 text-center max-w-2xl">
+          Brief tagline describing what this section covers
+        </p>
+        <div className="flex space-x-2 mt-4">
+          <div className="w-3 h-3 bg-{color}-300 rounded-full"></div>
+          <div className="w-3 h-3 bg-{color}-500 rounded-full"></div>
+          <div className="w-3 h-3 bg-{color}-300 rounded-full"></div>
+        </div>
+      </div>
+    )
+  },
+  // ... rest of section slides
+];
+```
+
+**Title Slide Requirements:**
+- `title` and `subtitle` must be empty strings (hides the standard header)
+- Use a relevant Lucide icon at `w-20 h-20` size
+- Section name in `text-5xl md:text-6xl font-bold`
+- Short tagline (one line) describing the section's focus
+- Three decorative dots in the section's color scheme
+- Icon and colors should match the section's theme
+
+**Recommended Icons by Topic:**
+- LLMs/AI: `Sparkles`, `Brain`, `Cpu`
+- Models: `Box`, `Layers`
+- Framework: `Target`, `Compass`
+- Code/Copilot: `Code`, `Bot`
+- Instructions: `ScrollText`, `FileText`
+- Skills: `Puzzle`, `Wrench`
+- Spaces/Organization: `Layout`, `FolderOpen`
+- Windows/UI: `Monitor`, `PanelLeft`
+- Multi-Agent: `Network`, `Users`
+- Workflows: `Repeat`, `RefreshCw`
+- Context: `Brain`, `Database`
+
 ### Sidebar Configuration
 
 The sidebar navigation is defined in the `sections` array at the top of `src/main.tsx`. Each section requires:
