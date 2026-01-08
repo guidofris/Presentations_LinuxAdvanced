@@ -151,13 +151,14 @@ const FourDSlides = () => {
 
   return (
     <div className="min-w-full w-full min-h-screen h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col overflow-x-hidden">
-      {/* Menu Button - Fixed position, always accessible */}
+      {/* Menu Button - Desktop: top left, Mobile: edge tab on right side */}
       <button
         onClick={() => setMenuOpen(true)}
-        className="fixed top-4 left-4 z-40 p-2 bg-white rounded-lg shadow-md hover:bg-gray-50 transition-all"
+        className="fixed z-40 transition-all md:top-4 md:left-4 md:p-2 md:rounded-lg bottom-32 md:bottom-auto md:translate-y-0 right-0 md:right-auto bg-white/90 shadow-md hover:bg-gray-50 py-4 px-1 md:px-2 md:py-2 rounded-l-lg md:rounded-lg"
         aria-label="Open section menu"
       >
-        <Menu className="w-5 h-5 text-gray-700" />
+        <ChevronLeft className="w-4 h-4 text-gray-600 md:hidden" />
+        <Menu className="w-5 h-5 text-gray-700 hidden md:block" />
       </button>
 
       {/* Backdrop */}
@@ -168,10 +169,10 @@ const FourDSlides = () => {
         />
       )}
 
-      {/* Slide-out Menu */}
+      {/* Slide-out Menu - Desktop: from left, Mobile: from right */}
       <div
-        className={`fixed top-0 left-0 h-full w-72 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out ${
-          menuOpen ? 'translate-x-0' : '-translate-x-full'
+        className={`fixed top-0 h-full w-72 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out md:left-0 right-0 md:right-auto ${
+          menuOpen ? 'translate-x-0' : 'translate-x-full md:-translate-x-full'
         }`}
       >
         <div className="flex items-center justify-between p-4 border-b border-gray-200">
@@ -229,7 +230,7 @@ const FourDSlides = () => {
         </nav>
       </div>
 
-      <div className="flex-1 flex flex-col p-4 md:p-8 min-w-0">
+      <div className="flex-1 flex flex-col p-4 pt-8 md:p-8 min-w-0">
         <div className="mb-4 md:mb-6 text-center">
           <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-1 md:mb-2">
             {slides[currentSlide].title}
