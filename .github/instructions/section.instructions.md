@@ -14,8 +14,37 @@ When creating a **new section file** (e.g., `newsection.tsx`):
 2. **Export in index.ts**: Add `export { newsectionSlides } from './newsection';` to `src/sections/index.ts`
 3. **Import in main.tsx**: Add the import to the import statement in `src/main.tsx`
 4. **Add to slides array**: Include `...newsectionSlides` in the slides array in `src/main.tsx` in the desired order
+5. **Add to sidebar navigation**: Add the section to the `sections` array in `src/main.tsx` with icon and color
 
-✅ All three files must be updated for the new section to appear in the presentation.
+✅ All files must be updated for the new section to appear in the presentation and sidebar.
+
+### Sidebar Configuration
+
+The sidebar navigation is defined in the `sections` array at the top of `src/main.tsx`. Each section requires:
+
+```tsx
+{ name: 'Section Name', slides: newsectionSlides, color: 'blue', icon: IconName }
+```
+
+**Required properties:**
+- `name`: Display name shown in the sidebar
+- `slides`: The imported slides array from the section file
+- `color`: One of `'gray'`, `'blue'`, `'green'`, `'purple'`, `'orange'` (matches 4D Framework colors)
+- `icon`: A lucide-react icon component (must be imported at the top of main.tsx)
+
+**Example - Adding a new "Testing" section:**
+
+1. Import the icon in main.tsx:
+   ```tsx
+   import { ..., TestTube } from 'lucide-react';
+   ```
+
+2. Add to the sections array:
+   ```tsx
+   { name: 'Testing', slides: testingSlides, color: 'green', icon: TestTube },
+   ```
+
+3. Also add `...testingSlides` to the `slides` array in the component.
 
 ## Core Principles
 

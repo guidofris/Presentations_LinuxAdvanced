@@ -1,10 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Monitor, Target, Box, Code, ScrollText, Brain, Repeat, Layout, Puzzle, Network } from 'lucide-react';
 import { introSlides, llmSlides, windowsSlides, fluencySlides, modelsSlides, copilotSlides, instructionsSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, multiagentSlides } from './sections';
 import './index.css';
 
+// Section definitions with metadata
+const sections = [
+  { name: 'Introduction', slides: introSlides, color: 'gray', icon: Presentation },
+  { name: 'LLM Basics', slides: llmSlides, color: 'blue', icon: Sparkles },
+  { name: 'Context Windows', slides: windowsSlides, color: 'purple', icon: Monitor },
+  { name: '4D Fluency', slides: fluencySlides, color: 'green', icon: Target },
+  { name: 'Models', slides: modelsSlides, color: 'orange', icon: Box },
+  { name: 'Copilot', slides: copilotSlides, color: 'blue', icon: Code },
+  { name: 'Instructions', slides: instructionsSlides, color: 'green', icon: ScrollText },
+  { name: 'Context', slides: contextSlides, color: 'purple', icon: Brain },
+  { name: 'Repeating Tasks', slides: repeatingSlides, color: 'orange', icon: Repeat },
+  { name: 'Spaces', slides: spacesSlides, color: 'blue', icon: Layout },
+  { name: 'Skills', slides: skillsSlides, color: 'green', icon: Puzzle },
+  { name: 'Multi-Agent', slides: multiagentSlides, color: 'purple', icon: Network },
+];
+
+// Calculate section start indices
+const getSectionStartIndices = () => {
+  let index = 0;
+  return sections.map((section) => {
+    const startIndex = index;
+    index += section.slides.length;
+    return { ...section, startIndex, endIndex: index - 1 };
+  });
+};
+
+const sectionData = getSectionStartIndices();
+
 const FourDSlides = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(() => {
     // Read initial slide from query parameter (1-based)
     const params = new URLSearchParams(window.location.search);
@@ -34,6 +63,18 @@ const FourDSlides = () => {
     ...multiagentSlides,
   ];
 
+  // Get current section based on slide index
+  const getCurrentSection = () => {
+    return sectionData.find(
+      (section) => currentSlide >= section.startIndex && currentSlide <= section.endIndex
+    );
+  };
+
+  const jumpToSection = (startIndex: number) => {
+    setCurrentSlide(startIndex);
+    setMenuOpen(false);
+  };
+
   // Update URL when slide changes
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -61,19 +102,99 @@ const FourDSlides = () => {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowRight') {
+      if (e.key === 'Escape' && menuOpen) {
+        setMenuOpen(false);
+      } else if (e.key === 'ArrowRight' && !menuOpen) {
         setCurrentSlide((prev) => Math.min(prev + 1, slides.length - 1));
-      } else if (e.key === 'ArrowLeft') {
+      } else if (e.key === 'ArrowLeft' && !menuOpen) {
         setCurrentSlide((prev) => Math.max(prev - 1, 0));
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [slides.length]);
+  }, [slides.length, menuOpen]);
 
   return (
     <div className="min-w-full w-full min-h-screen h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col overflow-x-hidden">
+      {/* Menu Button - Fixed position, always accessible */}
+      <button
+        onClick={() => setMenuOpen(true)}
+        className="fixed top-4 left-4 z-40 p-2 bg-white rounded-lg shadow-md hover:bg-gray-50 transition-all"
+        aria-label="Open section menu"
+      >
+        <Menu className="w-5 h-5 text-gray-700" />
+      </button>
+
+      {/* Backdrop */}
+      {menuOpen && (
+        <div
+          className="fixed inset-0 bg-black/30 z-40 transition-opacity"
+          onClick={() => setMenuOpen(false)}
+        />
+      )}
+
+      {/* Slide-out Menu */}
+      <div
+        className={`fixed top-0 left-0 h-full w-72 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out ${
+          menuOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        <div className="flex items-center justify-between p-4 border-b border-gray-200">
+          <h2 className="text-lg font-semibold text-gray-800">Sections</h2>
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="p-1 rounded hover:bg-gray-100 transition-colors"
+            aria-label="Close menu"
+          >
+            <X className="w-5 h-5 text-gray-600" />
+          </button>
+        </div>
+        <nav className="overflow-y-auto h-[calc(100%-65px)]">
+          <ul className="py-2">
+            {sectionData.map((section, index) => {
+              const isActive = getCurrentSection()?.name === section.name;
+              const colorClasses: Record<string, string> = {
+                gray: 'bg-gray-100 border-gray-500 text-gray-900',
+                blue: 'bg-blue-50 border-blue-500 text-blue-900',
+                green: 'bg-green-50 border-green-500 text-green-900',
+                purple: 'bg-purple-50 border-purple-500 text-purple-900',
+                orange: 'bg-orange-50 border-orange-500 text-orange-900',
+              };
+              const iconColorClasses: Record<string, string> = {
+                gray: 'text-gray-600',
+                blue: 'text-blue-600',
+                green: 'text-green-600',
+                purple: 'text-purple-600',
+                orange: 'text-orange-600',
+              };
+              const activeClass = isActive
+                ? `${colorClasses[section.color]} border-l-4`
+                : 'hover:bg-gray-50 border-l-4 border-transparent';
+              const IconComponent = section.icon;
+              return (
+                <li key={index}>
+                  <button
+                    onClick={() => jumpToSection(section.startIndex)}
+                    className={`w-full text-left px-4 py-3 transition-colors ${activeClass}`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <IconComponent className={`w-5 h-5 ${iconColorClasses[section.color]}`} />
+                      <div>
+                        <span className="font-medium">{section.name}</span>
+                        <span className="text-xs text-gray-500 ml-2">
+                          ({section.slides.length} slides)
+                        </span>
+                      </div>
+                    </div>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </div>
+
       <div className="flex-1 flex flex-col p-4 md:p-8 min-w-0">
         <div className="mb-4 md:mb-6 text-center">
           <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-1 md:mb-2">
