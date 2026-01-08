@@ -39,7 +39,7 @@ export const multiagentSlides: SlideType[] = [
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl px-4 md:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl w-full">
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg border-t-4 border-purple-500 text-center">
             <div className="text-4xl mb-3">📁</div>
             <h4 className="font-bold text-gray-900 mb-2">Isolated Workspaces</h4>
@@ -59,7 +59,7 @@ export const multiagentSlides: SlideType[] = [
           </div>
         </div>
 
-        <div className="bg-purple-50 px-8 py-4 rounded-lg max-w-3xl border border-purple-200">
+        <div className="bg-purple-50 px-8 py-4 rounded-lg max-w-3xl w-full border border-purple-200">
           <p className="text-center text-purple-900 text-lg">
             <strong>The Challenge:</strong> How do you let AI agents work in parallel without stepping on each other's toes?
             <strong className="ml-2">The Solution:</strong> Git worktrees.
@@ -104,8 +104,8 @@ export const multiagentSlides: SlideType[] = [
     title: "Git Worktrees vs Branches",
     subtitle: "Understanding the structural difference",
     content: (
-      <div className="flex flex-col space-y-6 max-w-4xl mx-auto px-4 md:px-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+      <div className="flex flex-col space-y-6 max-w-4xl w-full mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full">
           {/* Traditional Branches */}
           <div className="bg-gray-50 p-4 md:p-6 rounded-lg border-l-4 border-gray-500">
             <h3 className="text-xl font-bold text-gray-900 mb-4">Traditional Branches</h3>
@@ -145,7 +145,7 @@ export const multiagentSlides: SlideType[] = [
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
           <div className="bg-white p-4 rounded-lg shadow border border-purple-200 text-center">
             <div className="text-2xl mb-2">📂</div>
             <p className="text-sm font-semibold text-purple-900">Standalone Folders</p>
@@ -212,11 +212,11 @@ export const multiagentSlides: SlideType[] = [
     subtitle: "Organize your work with purpose-driven worktrees",
     content: (
       <div className="flex flex-col items-center justify-center h-full space-y-8">
-        <p className="text-xl text-gray-700 max-w-2xl text-center">
+        <p className="text-xl text-gray-700 max-w-3xl w-full text-center">
           Each worktree serves a specific purpose in your development workflow
         </p>
 
-        <div className="relative w-full max-w-3xl px-4 md:px-0">
+        <div className="w-full max-w-3xl">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
             <div className="bg-blue-500 text-white p-4 md:p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-3">🏠</div>
@@ -238,7 +238,7 @@ export const multiagentSlides: SlideType[] = [
           </div>
         </div>
 
-        <div className="bg-gray-100 px-6 py-4 rounded-lg max-w-2xl">
+        <div className="bg-gray-100 px-6 py-4 rounded-lg max-w-3xl w-full">
           <p className="text-center text-gray-900">
             <strong>Clear Organization:</strong> See at a glance what's happening where, with each worktree having a clear, defined purpose.
           </p>

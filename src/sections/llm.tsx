@@ -26,14 +26,14 @@ export const llmSlides: SlideType[] = [
     title: "Understanding LLMs",
     subtitle: "The Technology Powering AI Coding Assistants",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-4 md:space-y-8 px-4 md:px-0">
+      <div className="flex flex-col items-center justify-center h-full space-y-4 md:space-y-8">
         <div className="text-center mb-2 md:mb-4">
           <p className="text-base md:text-xl text-gray-700 max-w-2xl mx-auto">
             Before we can effectively delegate to AI, we need to understand how these systems actually work
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl px-4 md:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-2xl w-full">
           <div className="bg-indigo-500 text-white p-4 md:p-6 rounded-lg shadow-lg text-center">
             <div className="text-2xl md:text-3xl mb-2 md:mb-3">🧠</div>
             <div className="text-lg md:text-xl font-bold mb-1 md:mb-2">Architecture</div>
@@ -53,7 +53,7 @@ export const llmSlides: SlideType[] = [
           </div>
         </div>
 
-        <div className="bg-indigo-100 px-4 md:px-6 py-3 md:py-4 rounded-lg max-w-2xl mt-2 md:mt-4">
+        <div className="bg-indigo-100 px-4 md:px-6 py-3 md:py-4 rounded-lg max-w-2xl w-full mt-2 md:mt-4">
           <p className="text-center text-indigo-900 text-sm md:text-base">
             <strong>Why This Matters:</strong> Understanding the technology helps you set realistic expectations and use AI more effectively.
           </p>
@@ -65,7 +65,7 @@ export const llmSlides: SlideType[] = [
     title: "What is an LLM?",
     subtitle: "Large Language Models & Transformer Architecture",
     content: (
-      <div className="flex flex-col space-y-4 md:space-y-6 max-w-3xl mx-auto px-4 md:px-0">
+      <div className="flex flex-col space-y-4 md:space-y-6 max-w-3xl mx-auto">
         <div className="bg-indigo-50 p-4 md:p-5 rounded-lg border-l-4 border-indigo-500">
           <h4 className="font-bold text-indigo-900 mb-2 text-sm md:text-base">Large Language Models (LLMs)</h4>
           <ul className="text-gray-700 space-y-2 text-sm md:text-base">
@@ -92,7 +92,7 @@ export const llmSlides: SlideType[] = [
     title: "How Transformers Work",
     subtitle: "From input to output - a visual flow",
     content: (
-      <div className="flex flex-col items-center justify-center h-full px-4 md:px-0">
+      <div className="flex flex-col items-center justify-center h-full">
         <div className="w-full max-w-5xl">
           {/* Mobile: Vertical flow */}
           <div className="flex md:hidden flex-col items-center space-y-2">
@@ -237,7 +237,7 @@ export const llmSlides: SlideType[] = [
     title: "Evolution Through Scale",
     subtitle: "2017 → Now: How LLMs gained reasoning abilities",
     content: (
-      <div className="flex flex-col space-y-4 md:space-y-6 max-w-3xl mx-auto items-center justify-center h-full px-4 md:px-0">
+      <div className="flex flex-col space-y-4 md:space-y-6 max-w-3xl mx-auto items-center justify-center h-full">
         <div className="bg-indigo-50 p-3 md:p-4 rounded-lg border-l-4 border-indigo-500">
           <h4 className="font-bold text-indigo-900 mb-2 text-sm md:text-base">What are Parameters?</h4>
           <p className="text-gray-700 text-sm md:text-base">Parameters are the internal weights and connections the model learns during training. Think of them as the "knowledge" stored in the neural network - more parameters = more capacity to learn patterns.</p>
@@ -279,8 +279,8 @@ export const llmSlides: SlideType[] = [
     title: "Role of GPUs",
     subtitle: "The hardware that made the AI revolution possible",
     content: (
-      <div className="flex flex-col space-y-3 md:space-y-4 max-w-4xl mx-auto items-center justify-center h-full px-4 md:px-0">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+      <div className="flex flex-col space-y-3 md:space-y-4 max-w-4xl mx-auto items-center justify-center h-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 w-full">
           <div className="bg-white p-3 md:p-4 rounded-lg shadow border border-gray-200">
             <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">⚡ Parallel Processing</h4>
             <p className="text-gray-700 text-sm md:text-base">Thousands of cores perform calculations simultaneously, perfect for transformer architecture that processes all tokens at once</p>
@@ -319,7 +319,7 @@ export const llmSlides: SlideType[] = [
     title: "Key Strengths & Weaknesses",
     subtitle: "Understanding what LLMs can and cannot do",
     content: (
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-5xl mx-auto px-4 md:px-0">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-5xl mx-auto">
         <div className="bg-green-50 p-4 md:p-5 rounded-lg border-l-4 border-green-500">
           <h4 className="font-bold text-green-900 mb-2 md:mb-3 text-sm md:text-base">✅ Strengths</h4>
           <ul className="text-gray-700 space-y-2 text-sm md:text-base">

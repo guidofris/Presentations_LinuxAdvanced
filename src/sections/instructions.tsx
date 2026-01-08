@@ -27,7 +27,7 @@ export const instructionsSlides: SlideType[] = [
       subtitle: "Teaching AI Your Coding Standards",
       content: (
         <div className="flex flex-col items-center justify-center h-full space-y-8">
-          <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 max-w-2xl">
+          <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 max-w-2xl w-full">
             <div className="flex items-center space-x-4">
               <div className="text-4xl">📋</div>
               <div>
@@ -37,7 +37,7 @@ export const instructionsSlides: SlideType[] = [
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl px-4 md:px-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-2xl w-full">
             <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-gray-200">
               <h4 className="font-bold text-gray-900 mb-3">🎯 What Custom Instructions Do</h4>
               <ul className="text-sm text-gray-700 space-y-2">
@@ -61,7 +61,7 @@ export const instructionsSlides: SlideType[] = [
             </div>
           </div>
 
-          <div className="bg-blue-50 px-6 py-4 rounded-lg max-w-2xl">
+          <div className="bg-blue-50 px-6 py-4 rounded-lg max-w-2xl w-full">
             <p className="text-center text-blue-900">
               <strong>Description + Delegation:</strong> Good instructions reduce the need to describe context repeatedly and help delegate tasks more effectively.
             </p>
@@ -131,7 +131,7 @@ export const instructionsSlides: SlideType[] = [
       subtitle: "Anatomy of an Effective Instructions File",
       content: (
         <div className="flex flex-col space-y-5 max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Code example */}
             <div className="bg-gray-900 p-4 rounded-lg">
               <p className="text-gray-400 text-xs mb-2 font-mono">.github/copilot-instructions.md</p>

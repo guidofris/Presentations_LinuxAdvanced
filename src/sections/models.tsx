@@ -34,7 +34,7 @@ export const modelsSlides: SlideType[] = [
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-3xl px-4 md:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-3xl w-full">
           <div className="bg-gradient-to-br from-purple-500 to-purple-700 text-white p-4 md:p-6 rounded-lg shadow-lg">
             <div className="text-xl md:text-2xl font-bold mb-2">🎯 SWE-bench</div>
             <div className="text-sm">
@@ -68,7 +68,7 @@ export const modelsSlides: SlideType[] = [
           </div>
         </div>
 
-        <div className="bg-gray-100 px-6 py-3 rounded-lg mt-4">
+        <div className="bg-gray-100 px-6 py-3 rounded-lg mt-4 max-w-3xl w-full">
           <p className="text-sm text-gray-600 italic">
             Source: Lunabase AI - "Best AI Coding Models for Software
             Development 2025"

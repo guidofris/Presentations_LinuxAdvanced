@@ -33,8 +33,8 @@ export const fluencySlides: SlideType[] = [
           </p>
         </div>
 
-        <div className="relative w-full max-w-3xl px-4 md:px-0">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+        <div className="relative w-full max-w-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full">
             <div className="bg-blue-500 text-white p-4 md:p-6 rounded-lg shadow-lg">
               <div className="text-xl md:text-2xl font-bold mb-2">1. Delegation</div>
               <div className="text-sm">Setting goals & deciding when to engage with AI</div>

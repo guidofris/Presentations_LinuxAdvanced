@@ -70,7 +70,7 @@ export const skillsSlides: SlideType[] = [
     subtitle: "When to Use Each Approach",
     content: (
       <div className="flex flex-col items-center justify-center h-full space-y-8">
-        <div className="relative w-full max-w-3xl">
+        <div className="w-full max-w-3xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <div className="bg-green-500 text-white p-4 md:p-6 rounded-lg shadow-lg">
               <div className="text-xl md:text-2xl font-bold mb-2">📝 Custom Instructions</div>
@@ -94,13 +94,11 @@ export const skillsSlides: SlideType[] = [
           </div>
         </div>
 
-        <div className="mt-8 text-center">
-          <div className="inline-block bg-gray-100 px-6 py-3 rounded-lg">
-            <div className="font-semibold text-gray-800 mb-2">Working Together</div>
-            <div className="text-sm text-gray-600 space-y-1">
-              <div>• Skills are currently repository-level only</div>
-              <div>• Both teach Copilot how to work in your codebase</div>
-            </div>
+        <div className="bg-gray-100 px-6 py-3 rounded-lg max-w-3xl w-full">
+          <div className="font-semibold text-gray-800 mb-2 text-center">Working Together</div>
+          <div className="text-sm text-gray-600 space-y-1 text-center">
+            <div>• Skills are currently repository-level only</div>
+            <div>• Both teach Copilot how to work in your codebase</div>
           </div>
         </div>
       </div>
@@ -110,7 +108,7 @@ export const skillsSlides: SlideType[] = [
     title: "Creating an Agent Skill",
     subtitle: "The SKILL.md File Structure",
     content: (
-      <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
+      <div className="flex flex-col space-y-6 max-w-3xl w-full mx-auto">
         <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
           <h3 className="text-2xl font-bold text-purple-900 mb-4">Skill Directory Structure</h3>
           <div className="bg-gray-900 p-4 rounded font-mono text-sm text-green-400">

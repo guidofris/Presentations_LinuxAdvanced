@@ -27,7 +27,7 @@ export const copilotSlides: SlideType[] = [
       subtitle: "Your AI-Powered Development Partner",
       content: (
         <div className="flex flex-col items-center justify-center h-full space-y-8">
-          <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 max-w-2xl">
+          <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 max-w-2xl w-full">
             <div className="flex items-center space-x-4 mb-4">
               <div className="text-4xl">🤖</div>
               <div>
@@ -37,7 +37,7 @@ export const copilotSlides: SlideType[] = [
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl px-4 md:px-0">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-2xl w-full">
             <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-gray-200 text-center">
               <div className="text-3xl mb-3">💻</div>
               <h4 className="font-bold text-gray-900 mb-2">IDE Integration</h4>
@@ -57,7 +57,7 @@ export const copilotSlides: SlideType[] = [
             </div>
           </div>
 
-          <div className="bg-blue-50 px-6 py-4 rounded-lg max-w-2xl">
+          <div className="bg-blue-50 px-6 py-4 rounded-lg max-w-2xl w-full">
             <p className="text-center text-blue-900">
               <strong>Key Benefit:</strong> You focus on your code while Copilot handles the complexity of model selection, context management, and prompt engineering.
             </p>
@@ -259,7 +259,7 @@ export const copilotSlides: SlideType[] = [
             Copilot offers different interaction modes — each optimized for specific tasks and levels of AI autonomy
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-6xl px-4 md:px-0">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-4xl w-full">
             {/* Ask Mode */}
             <div className="flex flex-col bg-gradient-to-b from-blue-500 to-blue-700 text-white p-4 md:p-5 rounded-lg shadow-lg">
               <div className="text-center mb-3">
@@ -553,9 +553,9 @@ export const copilotSlides: SlideType[] = [
       title: "Choosing the Right Mode",
       subtitle: "Match the Mode to Your Task",
       content: (
-        <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
+        <div className="flex flex-col space-y-6 max-w-3xl w-full mx-auto">
           {/* Visual comparison */}
-          <div className="relative">
+          <div className="relative w-full">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-semibold text-gray-600">More Human Control</span>
               <span className="text-sm font-semibold text-gray-600">More AI Autonomy</span>
@@ -582,7 +582,7 @@ export const copilotSlides: SlideType[] = [
           </div>
 
           {/* Decision guide */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-3 w-full">
             <div className="bg-blue-50 p-2 md:p-3 rounded-lg border border-blue-200">
               <h4 className="font-bold text-blue-900 mb-2 text-center text-sm">Use Ask When...</h4>
               <ul className="text-xs text-gray-700 space-y-1">
@@ -620,7 +620,7 @@ export const copilotSlides: SlideType[] = [
             </div>
           </div>
 
-          <div className="bg-gray-100 p-4 rounded-lg">
+          <div className="bg-gray-100 p-4 rounded-lg w-full">
             <p className="text-sm italic text-gray-700">
               <strong>Pro Tip:</strong> Start with <span className="text-blue-600 font-semibold">Ask</span> to explore → <span className="text-orange-600 font-semibold">Plan</span> for strategy → <span className="text-purple-600 font-semibold">Agent</span> to execute → <span className="text-green-600 font-semibold">Edit</span> to refine. Switch modes anytime!
             </p>
