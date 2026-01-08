@@ -21,7 +21,18 @@ export const skillsSlides: SlideType[] = [
               <li>• Works with Copilot coding agent, GitHub Copilot CLI, and VS Code Insiders</li>
               <li>• Create your own or use community skills</li>
               <li>• Find examples at <a href="https://github.com/anthropics/skills" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">anthropics/skills</a> and <a href="https://github.com/github/awesome-copilot" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">github/awesome-copilot</a></li>
+              <li>• Browse and discover skills at <a href="https://skillsmp.com/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">skillsmp.com</a></li>
             </ul>
+          </div>
+        </div>
+
+        <div className="bg-amber-50 border border-amber-300 rounded-lg p-4">
+          <div className="flex items-start space-x-2">
+            <span className="text-amber-600 text-lg">⚠️</span>
+            <div>
+              <p className="text-amber-800 font-medium text-sm">Enable Agent Skills in VS Code settings:</p>
+              <code className="text-xs bg-amber-100 px-2 py-1 rounded mt-1 inline-block text-amber-900">"chat.useAgentSkills": true</code>
+            </div>
           </div>
         </div>
 

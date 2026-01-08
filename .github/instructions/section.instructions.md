@@ -36,6 +36,17 @@ When creating a **new section file** (e.g., `newsection.tsx`):
 - Use established component patterns (definition boxes, content cards, callouts)
 - Maintain consistency with existing slides in tone and structure
 
+## Validation (REQUIRED)
+
+After making any changes to slide files:
+
+1. **Syntax Check**: Ensure all slide objects have proper opening `{` and closing `}` braces
+2. **Array Structure**: Verify each slide in the array is properly separated by commas
+3. **JSX Balance**: Confirm all JSX tags are properly opened and closed
+4. **TypeScript Errors**: Check for any compile errors before considering the task complete
+
+⚠️ Always validate correctness of the modified code - do not assume edits are error-free.
+
 ## Required Slide Structure
 
 ```tsx
