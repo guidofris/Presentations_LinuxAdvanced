@@ -115,6 +115,40 @@ const FourDSlides = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [slides.length, menuOpen]);
 
+  // Touch/swipe handling for mobile navigation
+  useEffect(() => {
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const minSwipeDistance = 50;
+
+    const handleTouchStart = (e: TouchEvent) => {
+      touchStartX = e.changedTouches[0].screenX;
+    };
+
+    const handleTouchEnd = (e: TouchEvent) => {
+      if (menuOpen) return;
+      touchEndX = e.changedTouches[0].screenX;
+      const swipeDistance = touchEndX - touchStartX;
+
+      if (Math.abs(swipeDistance) > minSwipeDistance) {
+        if (swipeDistance > 0) {
+          // Swiped right - go to previous slide
+          setCurrentSlide((prev) => Math.max(prev - 1, 0));
+        } else {
+          // Swiped left - go to next slide
+          setCurrentSlide((prev) => Math.min(prev + 1, slides.length - 1));
+        }
+      }
+    };
+
+    window.addEventListener('touchstart', handleTouchStart);
+    window.addEventListener('touchend', handleTouchEnd);
+    return () => {
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [slides.length, menuOpen]);
+
   return (
     <div className="min-w-full w-full min-h-screen h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col overflow-x-hidden">
       {/* Menu Button - Fixed position, always accessible */}
