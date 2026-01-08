@@ -16,20 +16,20 @@ export const copilotSlides: SlideType[] = [
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-6 max-w-4xl">
-            <div className="bg-white p-5 rounded-lg shadow border border-gray-200 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl px-4 md:px-0">
+            <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-gray-200 text-center">
               <div className="text-3xl mb-3">💻</div>
               <h4 className="font-bold text-gray-900 mb-2">IDE Integration</h4>
               <p className="text-gray-600">Works directly in VS Code, Visual Studio, JetBrains, Neovim, and more</p>
             </div>
 
-            <div className="bg-white p-5 rounded-lg shadow border border-gray-200 text-center">
+            <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-gray-200 text-center">
               <div className="text-3xl mb-3">⌨️</div>
               <h4 className="font-bold text-gray-900 mb-2">CLI Support</h4>
               <p className="text-gray-600">GitHub CLI extension brings AI assistance to your terminal</p>
             </div>
 
-            <div className="bg-white p-5 rounded-lg shadow border border-gray-200 text-center">
+            <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-gray-200 text-center">
               <div className="text-3xl mb-3">🔄</div>
               <h4 className="font-bold text-gray-900 mb-2">Model Agnostic</h4>
               <p className="text-gray-600">Leverages Claude, GPT, Gemini and other models under the hood</p>
@@ -54,7 +54,7 @@ export const copilotSlides: SlideType[] = [
             <p className="text-gray-700">Copilot offers coding suggestions as you type, including understanding natural language comments to suggest code that accomplishes your described goal.</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
               <h4 className="font-semibold text-blue-900 mb-2">How It Works:</h4>
               <ul className="space-y-2 text-gray-700">
@@ -91,7 +91,7 @@ export const copilotSlides: SlideType[] = [
             <p className="text-gray-700">Based on the edits you're making, Copilot predicts the location of your next edit and suggests a completion for it.</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
               <h4 className="font-semibold text-blue-900 mb-2">How It Works:</h4>
               <ul className="space-y-2 text-gray-700">
@@ -128,7 +128,7 @@ export const copilotSlides: SlideType[] = [
             <p className="text-gray-700">Copilot provides suggestions for over 30 programming languages, with optimized support for the most popular languages and frameworks.</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
               <h4 className="font-semibold text-blue-900 mb-2">Works Best With:</h4>
               <ul className="space-y-2 text-gray-700">
@@ -165,7 +165,7 @@ export const copilotSlides: SlideType[] = [
             <p className="text-gray-700">The default model for Copilot inline suggestions, trained on a wide range of high-quality public GitHub repositories.</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
               <h4 className="font-semibold text-blue-900 mb-2">Training Data:</h4>
               <ul className="space-y-2 text-gray-700">
@@ -202,7 +202,7 @@ export const copilotSlides: SlideType[] = [
             <p className="text-gray-700">GitHub Copilot checks each suggestion for matches with publicly available code to help maintain code originality and provide attribution.</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
               <h4 className="font-semibold text-blue-900 mb-2">How It Works:</h4>
               <ul className="space-y-2 text-gray-700">
@@ -238,9 +238,9 @@ export const copilotSlides: SlideType[] = [
             Copilot offers different interaction modes — each optimized for specific tasks and levels of AI autonomy
           </p>
 
-          <div className="flex space-x-4 max-w-6xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-6xl px-4 md:px-0">
             {/* Ask Mode */}
-            <div className="flex-1 flex flex-col bg-gradient-to-b from-blue-500 to-blue-700 text-white p-5 rounded-lg shadow-lg">
+            <div className="flex flex-col bg-gradient-to-b from-blue-500 to-blue-700 text-white p-4 md:p-5 rounded-lg shadow-lg">
               <div className="text-center mb-3">
                 <div className="inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-semibold mb-2">Ask Mode</div>
                 <div className="text-3xl mb-2">💬</div>
@@ -257,7 +257,7 @@ export const copilotSlides: SlideType[] = [
             </div>
 
             {/* Edit Mode */}
-            <div className="flex-1 flex flex-col bg-gradient-to-b from-green-500 to-green-700 text-white p-5 rounded-lg shadow-lg">
+            <div className="flex flex-col bg-gradient-to-b from-green-500 to-green-700 text-white p-4 md:p-5 rounded-lg shadow-lg">
               <div className="text-center mb-3">
                 <div className="inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-semibold mb-2">Edit Mode</div>
                 <div className="text-3xl mb-2">✏️</div>
@@ -274,7 +274,7 @@ export const copilotSlides: SlideType[] = [
             </div>
 
             {/* Plan Mode */}
-            <div className="flex-1 flex flex-col bg-gradient-to-b from-orange-500 to-orange-700 text-white p-5 rounded-lg shadow-lg">
+            <div className="flex flex-col bg-gradient-to-b from-orange-500 to-orange-700 text-white p-4 md:p-5 rounded-lg shadow-lg">
               <div className="text-center mb-3">
                 <div className="inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-semibold mb-2">Plan Mode</div>
                 <div className="text-3xl mb-2">📋</div>
@@ -291,7 +291,7 @@ export const copilotSlides: SlideType[] = [
             </div>
 
             {/* Agent Mode */}
-            <div className="flex-1 flex flex-col bg-gradient-to-b from-purple-500 to-purple-700 text-white p-5 rounded-lg shadow-lg">
+            <div className="flex flex-col bg-gradient-to-b from-purple-500 to-purple-700 text-white p-4 md:p-5 rounded-lg shadow-lg">
               <div className="text-center mb-3">
                 <div className="inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-semibold mb-2">Agent Mode</div>
                 <div className="text-3xl mb-2">🤖</div>
@@ -328,8 +328,8 @@ export const copilotSlides: SlideType[] = [
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-blue-200">
               <h4 className="font-semibold text-blue-900 mb-3">✅ Great For:</h4>
               <ul className="space-y-2 text-gray-700 text-sm">
                 <li>• Understanding unfamiliar code</li>
@@ -381,8 +381,8 @@ export const copilotSlides: SlideType[] = [
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-white p-5 rounded-lg shadow border border-green-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-green-200">
               <h4 className="font-semibold text-green-900 mb-3">✅ Great For:</h4>
               <ul className="space-y-2 text-gray-700 text-sm">
                 <li>• Refactoring existing code</li>
@@ -434,8 +434,8 @@ export const copilotSlides: SlideType[] = [
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-white p-5 rounded-lg shadow border border-orange-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-orange-200">
               <h4 className="font-semibold text-orange-900 mb-3">✅ Great For:</h4>
               <ul className="space-y-2 text-gray-700 text-sm">
                 <li>• Complex features requiring thought</li>
@@ -487,8 +487,8 @@ export const copilotSlides: SlideType[] = [
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-white p-5 rounded-lg shadow border border-purple-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-purple-200">
               <h4 className="font-semibold text-purple-900 mb-3">✅ Great For:</h4>
               <ul className="space-y-2 text-gray-700 text-sm">
                 <li>• Building new features end-to-end</li>
@@ -561,8 +561,8 @@ export const copilotSlides: SlideType[] = [
           </div>
 
           {/* Decision guide */}
-          <div className="grid grid-cols-4 gap-3">
-            <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
+            <div className="bg-blue-50 p-2 md:p-3 rounded-lg border border-blue-200">
               <h4 className="font-bold text-blue-900 mb-2 text-center text-sm">Use Ask When...</h4>
               <ul className="text-xs text-gray-700 space-y-1">
                 <li>• Need to understand code</li>
@@ -571,7 +571,7 @@ export const copilotSlides: SlideType[] = [
               </ul>
             </div>
 
-            <div className="bg-green-50 p-3 rounded-lg border border-green-200">
+            <div className="bg-green-50 p-2 md:p-3 rounded-lg border border-green-200">
               <h4 className="font-bold text-green-900 mb-2 text-center text-sm">Use Edit When...</h4>
               <ul className="text-xs text-gray-700 space-y-1">
                 <li>• Know what to change</li>
@@ -580,7 +580,7 @@ export const copilotSlides: SlideType[] = [
               </ul>
             </div>
 
-            <div className="bg-orange-50 p-3 rounded-lg border border-orange-200">
+            <div className="bg-orange-50 p-2 md:p-3 rounded-lg border border-orange-200">
               <h4 className="font-bold text-orange-900 mb-2 text-center text-sm">Use Plan When...</h4>
               <ul className="text-xs text-gray-700 space-y-1">
                 <li>• Complex implementation</li>
@@ -589,7 +589,7 @@ export const copilotSlides: SlideType[] = [
               </ul>
             </div>
 
-            <div className="bg-purple-50 p-3 rounded-lg border border-purple-200">
+            <div className="bg-purple-50 p-2 md:p-3 rounded-lg border border-purple-200">
               <h4 className="font-bold text-purple-900 mb-2 text-center text-sm">Use Agent When...</h4>
               <ul className="text-xs text-gray-700 space-y-1">
                 <li>• Multi-file tasks</li>
@@ -618,7 +618,7 @@ export const copilotSlides: SlideType[] = [
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Workspace Indexing */}
             <div className="bg-white p-4 rounded-lg shadow border border-cyan-200">
               <h4 className="font-semibold text-cyan-900 mb-3">🗂️ Workspace Indexing</h4>
@@ -662,7 +662,7 @@ export const copilotSlides: SlideType[] = [
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* #-mentions */}
             <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
               <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
@@ -775,7 +775,7 @@ export const copilotSlides: SlideType[] = [
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
               <h4 className="font-semibold text-blue-900 mb-2">Key Characteristics:</h4>
               <ul className="space-y-2 text-gray-700">
@@ -824,7 +824,7 @@ export const copilotSlides: SlideType[] = [
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
               <h4 className="font-semibold text-blue-900 mb-2">Key Features:</h4>
               <ul className="space-y-2 text-gray-700">

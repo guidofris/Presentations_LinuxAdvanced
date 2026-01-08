@@ -78,7 +78,7 @@ export const spacesSlides: SlideType[] = [
     subtitle: "Two Types of Context to Ground Copilot's Responses",
     content: (
       <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
             <h3 className="text-lg font-bold text-blue-900 mb-2">📋 Instructions</h3>
             <p className="text-sm text-gray-700 mb-2">
@@ -101,7 +101,7 @@ export const spacesSlides: SlideType[] = [
 
         <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
           <h4 className="font-semibold text-blue-900 mb-3">4 Ways to Add Sources</h4>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-3 md:gap-4">
             <div className="flex items-start gap-2">
               <span className="text-xl">📄</span>
               <div>
@@ -146,9 +146,9 @@ export const spacesSlides: SlideType[] = [
     subtitle: "Access Your Curated Context in GitHub and Your IDE",
     content: (
       <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
-        <div className="grid grid-cols-2 gap-4">
-          <div className="bg-blue-50 p-5 rounded-lg border-l-4 border-blue-500">
-            <h3 className="text-xl font-bold text-blue-900 mb-3">🌐 GitHub (Web)</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-blue-50 p-4 md:p-5 rounded-lg border-l-4 border-blue-500">
+            <h3 className="text-lg md:text-xl font-bold text-blue-900 mb-3">🌐 GitHub (Web)</h3>
             <ul className="space-y-2 text-sm text-gray-700">
               <li>• Chat interface grounded in your space's context</li>
               <li>• View all conversations in the "Conversations" tab</li>
@@ -158,8 +158,8 @@ export const spacesSlides: SlideType[] = [
             </ul>
           </div>
 
-          <div className="bg-purple-50 p-5 rounded-lg border-l-4 border-purple-500">
-            <h3 className="text-xl font-bold text-purple-900 mb-3">💻 Your IDE</h3>
+          <div className="bg-purple-50 p-4 md:p-5 rounded-lg border-l-4 border-purple-500">
+            <h3 className="text-lg md:text-xl font-bold text-purple-900 mb-3">💻 Your IDE</h3>
             <ul className="space-y-2 text-sm text-gray-700">
               <li>• Access via GitHub MCP server</li>
               <li>• <strong>Agent mode only</strong> (uses MCP tools)</li>
@@ -195,9 +195,9 @@ export const spacesSlides: SlideType[] = [
     subtitle: "Collaborate with Teams or Share Knowledge Publicly",
     content: (
       <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
-        <div className="grid grid-cols-2 gap-4">
-          <div className="bg-blue-50 p-5 rounded-lg border-l-4 border-blue-500">
-            <h3 className="text-xl font-bold text-blue-900 mb-3">🏢 Organization-Owned</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-blue-50 p-4 md:p-5 rounded-lg border-l-4 border-blue-500">
+            <h3 className="text-lg md:text-xl font-bold text-blue-900 mb-3">🏢 Organization-Owned</h3>
             <ul className="space-y-2 text-sm text-gray-700">
               <li>• Share with organization members</li>
               <li>• <strong>Three access levels:</strong></li>
@@ -208,8 +208,8 @@ export const spacesSlides: SlideType[] = [
             </ul>
           </div>
 
-          <div className="bg-green-50 p-5 rounded-lg border-l-4 border-green-500">
-            <h3 className="text-xl font-bold text-green-900 mb-3">👤 Individual-Owned</h3>
+          <div className="bg-green-50 p-4 md:p-5 rounded-lg border-l-4 border-green-500">
+            <h3 className="text-lg md:text-xl font-bold text-green-900 mb-3">👤 Individual-Owned</h3>
             <ul className="space-y-2 text-sm text-gray-700">
               <li>• <strong>Three sharing options:</strong></li>
               <li className="ml-4">🌍 Public — View-only by default</li>

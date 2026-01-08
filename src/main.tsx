@@ -74,12 +74,12 @@ const FourDSlides = () => {
 
   return (
     <div className="w-full h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col">
-      <div className="flex-1 flex flex-col p-8">
-        <div className="mb-6 text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">
+      <div className="flex-1 flex flex-col p-4 md:p-8">
+        <div className="mb-4 md:mb-6 text-center">
+          <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-1 md:mb-2">
             {slides[currentSlide].title}
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-base md:text-xl text-gray-600">
             {slides[currentSlide].subtitle}
           </p>
         </div>
@@ -88,28 +88,45 @@ const FourDSlides = () => {
           {slides[currentSlide].content}
         </div>
 
-        <div className="mt-6 flex items-center justify-between px-4">
-          <button
-            onClick={prevSlide}
-            disabled={currentSlide === 0}
-            className="flex items-center space-x-2 px-4 py-2 bg-white rounded-lg shadow hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-          >
-            <ChevronLeft className="w-5 h-5" />
-            <span>Previous</span>
-          </button>
+        <div className="mt-4 md:mt-6 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-0 px-2 md:px-4">
+          <div className="flex items-center justify-between w-full md:w-auto md:flex-1">
+            <button
+              onClick={prevSlide}
+              disabled={currentSlide === 0}
+              className="flex items-center space-x-1 md:space-x-2 px-3 py-1.5 md:px-4 md:py-2 bg-white rounded-lg shadow hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all text-sm md:text-base"
+            >
+              <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
+              <span className="hidden sm:inline">Previous</span>
+            </button>
 
-          <div className="text-sm text-gray-500">
+            <div className="text-xs md:text-sm text-gray-500 text-center md:hidden">
+              {currentSlide + 1} / {slides.length}
+            </div>
+
+            <button
+              onClick={nextSlide}
+              disabled={currentSlide === slides.length - 1}
+              className="flex items-center space-x-1 md:space-x-2 px-3 py-1.5 md:px-4 md:py-2 bg-white rounded-lg shadow hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all text-sm md:text-base md:hidden"
+            >
+              <span className="hidden sm:inline">Next</span>
+              <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
+            </button>
+          </div>
+
+          <div className="hidden md:block text-sm text-gray-500">
             Slide {currentSlide + 1} of {slides.length} | AI Native Software Engineering
           </div>
 
-          <button
-            onClick={nextSlide}
-            disabled={currentSlide === slides.length - 1}
-            className="flex items-center space-x-2 px-4 py-2 bg-white rounded-lg shadow hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-          >
-            <span>Next</span>
-            <ChevronRight className="w-5 h-5" />
-          </button>
+          <div className="hidden md:flex md:flex-1 md:justify-end">
+            <button
+              onClick={nextSlide}
+              disabled={currentSlide === slides.length - 1}
+              className="flex items-center space-x-2 px-4 py-2 bg-white rounded-lg shadow hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            >
+              <span>Next</span>
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

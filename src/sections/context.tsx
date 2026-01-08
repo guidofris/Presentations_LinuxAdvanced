@@ -10,7 +10,7 @@ export const contextSlides: SlideType[] = [
           <p className="text-gray-700">Each turn includes <strong>everything</strong> that came before. The AI doesn't have persistent memory — it rebuilds context from scratch every conversation.</p>
         </div>
 
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
           {/* Turn 1 */}
           <div className="bg-white p-3 rounded-lg shadow border border-gray-200">
             <h4 className="font-semibold text-gray-900 mb-2 text-center text-sm">Turn 1</h4>
@@ -51,7 +51,7 @@ export const contextSlides: SlideType[] = [
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="bg-white p-3 rounded-lg shadow border border-indigo-200">
             <h4 className="font-semibold text-indigo-900 mb-2 text-sm">📈 Why Context Grows</h4>
             <ul className="space-y-1 text-gray-700 text-xs">
@@ -89,9 +89,9 @@ export const contextSlides: SlideType[] = [
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4">
           {/* Problem visualization */}
-          <div className="col-span-3 bg-white p-4 rounded-lg shadow border border-red-200">
+          <div className="bg-white p-4 rounded-lg shadow border border-red-200">
             <div className="flex items-center justify-between">
               <div className="text-center flex-1">
                 <div className="text-sm font-semibold text-red-700 mb-2">❌ Unscoped Instructions</div>
@@ -120,7 +120,7 @@ export const contextSlides: SlideType[] = [
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
             <h4 className="font-semibold text-gray-900 mb-3">📁 Scope by File Type (applyTo)</h4>
             <div className="space-y-2 text-sm">
@@ -169,7 +169,7 @@ export const contextSlides: SlideType[] = [
 
         <div className="bg-gradient-to-r from-indigo-100 to-purple-100 p-4 rounded-lg">
           <h4 className="font-semibold text-gray-900 mb-2">🎯 Architecture Strategy</h4>
-          <div className="grid grid-cols-3 gap-3 text-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
             <div className="bg-white/70 p-2 rounded text-center">
               <div className="font-medium text-indigo-700">Root Level</div>
               <div className="text-xs text-gray-600">Project-wide conventions</div>
@@ -204,7 +204,7 @@ export const contextSlides: SlideType[] = [
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {/* Visualization + Patterns */}
           <div className="space-y-3">
             <div className="bg-white p-3 rounded-lg shadow border border-red-200">
@@ -251,7 +251,7 @@ export const contextSlides: SlideType[] = [
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="bg-white p-3 rounded-lg shadow border border-gray-200">
             <h4 className="font-semibold text-gray-900 mb-2">📊 Real-World Impact</h4>
             <div className="grid grid-cols-3 gap-2 text-sm">
@@ -272,7 +272,7 @@ export const contextSlides: SlideType[] = [
 
           <div className="bg-gradient-to-r from-indigo-100 to-purple-100 p-3 rounded-lg">
             <h4 className="font-semibold text-gray-900 mb-2">🔧 Refactoring for AI</h4>
-            <div className="grid grid-cols-3 gap-2 text-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-sm">
               <div className="bg-white/70 p-2 rounded text-center">
                 <div className="font-medium text-indigo-700 text-xs">Extract Functions</div>
               </div>

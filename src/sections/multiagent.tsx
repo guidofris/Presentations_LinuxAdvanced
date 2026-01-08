@@ -18,20 +18,20 @@ export const multiagentSlides: SlideType[] = [
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-6 max-w-4xl">
-          <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-purple-500 text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl px-4 md:px-0">
+          <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg border-t-4 border-purple-500 text-center">
             <div className="text-4xl mb-3">📁</div>
             <h4 className="font-bold text-gray-900 mb-2">Isolated Workspaces</h4>
             <p className="text-gray-600">Each agent gets its own directory and branch</p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-500 text-center">
+          <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg border-t-4 border-blue-500 text-center">
             <div className="text-4xl mb-3">⚡</div>
             <h4 className="font-bold text-gray-900 mb-2">True Parallelism</h4>
             <p className="text-gray-600">Multiple agents work simultaneously on different tasks</p>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-green-500 text-center">
+          <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg border-t-4 border-green-500 text-center">
             <div className="text-4xl mb-3">🔒</div>
             <h4 className="font-bold text-gray-900 mb-2">Safe Experiments</h4>
             <p className="text-gray-600">Isolated changes that don't affect your main work</p>
@@ -83,10 +83,10 @@ export const multiagentSlides: SlideType[] = [
     title: "Git Worktrees vs Branches",
     subtitle: "Understanding the structural difference",
     content: (
-      <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
-        <div className="grid grid-cols-2 gap-6">
+      <div className="flex flex-col space-y-6 max-w-4xl mx-auto px-4 md:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {/* Traditional Branches */}
-          <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-gray-500">
+          <div className="bg-gray-50 p-4 md:p-6 rounded-lg border-l-4 border-gray-500">
             <h3 className="text-xl font-bold text-gray-900 mb-4">Traditional Branches</h3>
             <div className="bg-white p-4 rounded border border-gray-300 font-mono text-sm mb-4">
               <div className="mb-2">📁 my-repo/</div>
@@ -102,7 +102,7 @@ export const multiagentSlides: SlideType[] = [
           </div>
 
           {/* Git Worktrees */}
-          <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
+          <div className="bg-purple-50 p-4 md:p-6 rounded-lg border-l-4 border-purple-500">
             <h3 className="text-xl font-bold text-purple-900 mb-4">Git Worktrees</h3>
             <div className="bg-white p-4 rounded border border-purple-300 font-mono text-sm mb-4 space-y-3">
               <div>
@@ -124,7 +124,7 @@ export const multiagentSlides: SlideType[] = [
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="bg-white p-4 rounded-lg shadow border border-purple-200 text-center">
             <div className="text-2xl mb-2">📂</div>
             <p className="text-sm font-semibold text-purple-900">Standalone Folders</p>
@@ -156,8 +156,8 @@ export const multiagentSlides: SlideType[] = [
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
-          <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-blue-200">
             <div className="text-3xl mb-3 text-center">🤖</div>
             <h4 className="font-semibold text-blue-900 mb-2">Isolated Agent Workspace:</h4>
             <ul className="space-y-2 text-gray-700">
@@ -167,7 +167,7 @@ export const multiagentSlides: SlideType[] = [
             </ul>
           </div>
 
-          <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+          <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-blue-200">
             <div className="text-3xl mb-3 text-center">⚡</div>
             <h4 className="font-semibold text-blue-900 mb-2">Parallel Execution:</h4>
             <ul className="space-y-2 text-gray-700">
@@ -195,21 +195,21 @@ export const multiagentSlides: SlideType[] = [
           Each worktree serves a specific purpose in your development workflow
         </p>
 
-        <div className="relative w-full max-w-3xl">
-          <div className="grid grid-cols-3 gap-6">
-            <div className="bg-blue-500 text-white p-6 rounded-lg shadow-lg">
+        <div className="relative w-full max-w-3xl px-4 md:px-0">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+            <div className="bg-blue-500 text-white p-4 md:p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-3">🏠</div>
               <div className="text-xl font-bold mb-2">Main Worktree</div>
               <div className="text-sm">Primary work, PR reviews, code browsing</div>
             </div>
 
-            <div className="bg-purple-500 text-white p-6 rounded-lg shadow-lg">
+            <div className="bg-purple-500 text-white p-4 md:p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-3">🤖</div>
               <div className="text-xl font-bold mb-2">Agent Worktrees</div>
               <div className="text-sm">On-demand agent tasks, parallel experiments</div>
             </div>
 
-            <div className="bg-green-500 text-white p-6 rounded-lg shadow-lg">
+            <div className="bg-green-500 text-white p-4 md:p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-3">⚡</div>
               <div className="text-xl font-bold mb-2">Quick-Fix Worktrees</div>
               <div className="text-sm">Temporary changes, quick tests, bug fixes</div>
@@ -230,8 +230,8 @@ export const multiagentSlides: SlideType[] = [
     subtitle: "Why the worktree + agent workflow improves productivity",
     content: (
       <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
-        <div className="grid grid-cols-2 gap-5">
-          <div className="bg-green-50 p-5 rounded-lg border-l-4 border-green-500">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+          <div className="bg-green-50 p-4 md:p-5 rounded-lg border-l-4 border-green-500">
             <div className="text-3xl mb-3">💾</div>
             <h4 className="text-lg font-bold text-green-900 mb-2">Context Preservation</h4>
             <p className="text-gray-700">
@@ -239,7 +239,7 @@ export const multiagentSlides: SlideType[] = [
             </p>
           </div>
 
-          <div className="bg-blue-50 p-5 rounded-lg border-l-4 border-blue-500">
+          <div className="bg-blue-50 p-4 md:p-5 rounded-lg border-l-4 border-blue-500">
             <div className="text-3xl mb-3">✨</div>
             <h4 className="text-lg font-bold text-blue-900 mb-2">No More WIP Commits</h4>
             <p className="text-gray-700">
@@ -247,7 +247,7 @@ export const multiagentSlides: SlideType[] = [
             </p>
           </div>
 
-          <div className="bg-purple-50 p-5 rounded-lg border-l-4 border-purple-500">
+          <div className="bg-purple-50 p-4 md:p-5 rounded-lg border-l-4 border-purple-500">
             <div className="text-3xl mb-3">🔬</div>
             <h4 className="text-lg font-bold text-purple-900 mb-2">Parallel Experimentation</h4>
             <p className="text-gray-700">
@@ -255,7 +255,7 @@ export const multiagentSlides: SlideType[] = [
             </p>
           </div>
 
-          <div className="bg-orange-50 p-5 rounded-lg border-l-4 border-orange-500">
+          <div className="bg-orange-50 p-4 md:p-5 rounded-lg border-l-4 border-orange-500">
             <div className="text-3xl mb-3">🧠</div>
             <h4 className="text-lg font-bold text-orange-900 mb-2">Mental Clarity</h4>
             <p className="text-gray-700">
@@ -326,8 +326,8 @@ export const multiagentSlides: SlideType[] = [
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-5">
-          <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+          <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-blue-200">
             <div className="text-3xl mb-3 text-center">➕</div>
             <h4 className="font-semibold text-blue-900 mb-2">Create a Worktree</h4>
             <ul className="space-y-2 text-gray-700 text-sm">
@@ -337,7 +337,7 @@ export const multiagentSlides: SlideType[] = [
             </ul>
           </div>
 
-          <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+          <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-blue-200">
             <div className="text-3xl mb-3 text-center">🔀</div>
             <h4 className="font-semibold text-blue-900 mb-2">Open a Worktree</h4>
             <ul className="space-y-2 text-gray-700 text-sm">
@@ -347,7 +347,7 @@ export const multiagentSlides: SlideType[] = [
             </ul>
           </div>
 
-          <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+          <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-blue-200">
             <div className="text-3xl mb-3 text-center">🔍</div>
             <h4 className="font-semibold text-blue-900 mb-2">Compare Changes</h4>
             <ul className="space-y-2 text-gray-700 text-sm">
@@ -357,7 +357,7 @@ export const multiagentSlides: SlideType[] = [
             </ul>
           </div>
 
-          <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+          <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-blue-200">
             <div className="text-3xl mb-3 text-center">📥</div>
             <h4 className="font-semibold text-blue-900 mb-2">Migrate Changes</h4>
             <ul className="space-y-2 text-gray-700 text-sm">
@@ -388,8 +388,8 @@ export const multiagentSlides: SlideType[] = [
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg border border-gray-200">
             <div className="flex items-center space-x-3 mb-4">
               <div className="text-3xl">⚙️</div>
               <div>
@@ -410,11 +410,11 @@ export const multiagentSlides: SlideType[] = [
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+          <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg border border-gray-200">
             <div className="flex items-center space-x-3 mb-4">
               <div className="text-3xl">🤖</div>
               <div>
-                <h4 className="text-xl font-bold text-gray-900">Claude Squad</h4>
+                <h4 className="text-lg md:text-xl font-bold text-gray-900">Claude Squad</h4>
                 <a href="https://smtg-ai.github.io/claude-squad/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline text-sm">smtg-ai.github.io/claude-squad</a>
               </div>
             </div>

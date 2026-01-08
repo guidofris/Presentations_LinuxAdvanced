@@ -10,7 +10,7 @@ export const windowsSlides: SlideType[] = [
           <p className="text-gray-700 italic">The maximum amount of text (measured in tokens) an LLM can process at once - includes both your input and the model's response</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
             <h4 className="font-semibold text-gray-900 mb-2">📏 Practical Limit</h4>
             <p className="text-gray-700 text-sm">Determines how much conversation history, documents, or code the model can "see" and work with simultaneously</p>
@@ -47,15 +47,15 @@ export const windowsSlides: SlideType[] = [
     subtitle: "Why input and output limits differ in LLMs",
     content: (
       <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
-        <div className="bg-indigo-50 p-6 rounded-lg border-l-4 border-indigo-500">
-          <h3 className="text-2xl font-bold text-indigo-900 mb-4">Input vs Output Windows</h3>
-          <p className="text-lg text-gray-700">
+        <div className="bg-indigo-50 p-4 md:p-6 rounded-lg border-l-4 border-indigo-500">
+          <h3 className="text-xl md:text-2xl font-bold text-indigo-900 mb-4">Input vs Output Windows</h3>
+          <p className="text-base md:text-lg text-gray-700">
             LLMs have different limits for input (context) and output (generation). While models can process massive amounts of input, they generate much shorter responses.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
-          <div className="bg-white p-5 rounded-lg shadow border border-indigo-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-indigo-200">
             <h4 className="font-semibold text-indigo-900 mb-3">Claude Sonnet 4.5</h4>
             <div className="space-y-2 text-gray-700">
               <div className="flex items-center justify-between">
@@ -69,7 +69,7 @@ export const windowsSlides: SlideType[] = [
             </div>
           </div>
 
-          <div className="bg-white p-5 rounded-lg shadow border border-indigo-200">
+          <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-indigo-200">
             <h4 className="font-semibold text-indigo-900 mb-3">GPT-5.2</h4>
             <div className="space-y-2 text-gray-700">
               <div className="flex items-center justify-between">
@@ -97,9 +97,9 @@ export const windowsSlides: SlideType[] = [
     subtitle: "Technical, practical, and quality reasons",
     content: (
       <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
-        <div className="bg-white p-5 rounded-lg shadow border border-indigo-200">
+        <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-indigo-200">
           <h4 className="font-semibold text-indigo-900 mb-3 flex items-center">
-            <span className="text-2xl mr-3">⚙️</span>
+            <span className="text-xl md:text-2xl mr-3">⚙️</span>
             Technical Efficiency
           </h4>
           <ul className="space-y-2 text-gray-700">
@@ -109,9 +109,9 @@ export const windowsSlides: SlideType[] = [
           </ul>
         </div>
 
-        <div className="bg-white p-5 rounded-lg shadow border border-indigo-200">
+        <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-indigo-200">
           <h4 className="font-semibold text-indigo-900 mb-3 flex items-center">
-            <span className="text-2xl mr-3">🎯</span>
+            <span className="text-xl md:text-2xl mr-3">🎯</span>
             Practical Design
           </h4>
           <ul className="space-y-2 text-gray-700">
@@ -120,9 +120,9 @@ export const windowsSlides: SlideType[] = [
           </ul>
         </div>
 
-        <div className="bg-white p-5 rounded-lg shadow border border-indigo-200">
+        <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-indigo-200">
           <h4 className="font-semibold text-indigo-900 mb-3 flex items-center">
-            <span className="text-2xl mr-3">✨</span>
+            <span className="text-xl md:text-2xl mr-3">✨</span>
             Quality Concerns
           </h4>
           <ul className="space-y-2 text-gray-700">

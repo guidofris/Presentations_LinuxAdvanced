@@ -12,25 +12,25 @@ export const fluencySlides: SlideType[] = [
           </p>
         </div>
 
-        <div className="relative w-full max-w-3xl">
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-blue-500 text-white p-6 rounded-lg shadow-lg">
-              <div className="text-2xl font-bold mb-2">1. Delegation</div>
+        <div className="relative w-full max-w-3xl px-4 md:px-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="bg-blue-500 text-white p-4 md:p-6 rounded-lg shadow-lg">
+              <div className="text-xl md:text-2xl font-bold mb-2">1. Delegation</div>
               <div className="text-sm">Setting goals & deciding when to engage with AI</div>
             </div>
 
-            <div className="bg-green-500 text-white p-6 rounded-lg shadow-lg">
-              <div className="text-2xl font-bold mb-2">2. Description</div>
+            <div className="bg-green-500 text-white p-4 md:p-6 rounded-lg shadow-lg">
+              <div className="text-xl md:text-2xl font-bold mb-2">2. Description</div>
               <div className="text-sm">Effectively describing goals to prompt useful AI behaviors</div>
             </div>
 
-            <div className="bg-purple-500 text-white p-6 rounded-lg shadow-lg">
-              <div className="text-2xl font-bold mb-2">3. Discernment</div>
+            <div className="bg-purple-500 text-white p-4 md:p-6 rounded-lg shadow-lg">
+              <div className="text-xl md:text-2xl font-bold mb-2">3. Discernment</div>
               <div className="text-sm">Accurately assessing usefulness of AI outputs</div>
             </div>
 
-            <div className="bg-orange-500 text-white p-6 rounded-lg shadow-lg">
-              <div className="text-2xl font-bold mb-2">4. Diligence</div>
+            <div className="bg-orange-500 text-white p-4 md:p-6 rounded-lg shadow-lg">
+              <div className="text-xl md:text-2xl font-bold mb-2">4. Diligence</div>
               <div className="text-sm">Taking responsibility for what we do with AI</div>
             </div>
           </div>
@@ -54,8 +54,8 @@ export const fluencySlides: SlideType[] = [
     subtitle: "Setting Goals & Deciding When to Engage",
     content: (
       <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
-        <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-          <h3 className="text-2xl font-bold text-blue-900 mb-4">What is Delegation?</h3>
+        <div className="bg-blue-50 p-4 md:p-6 rounded-lg border-l-4 border-blue-500">
+          <h3 className="text-xl md:text-2xl font-bold text-blue-900 mb-4">What is Delegation?</h3>
           <p className="text-lg text-gray-700">
             Delegation is the process of setting goals and making strategic decisions about whether, when, and how to engage with AI systems.
           </p>
@@ -96,8 +96,8 @@ export const fluencySlides: SlideType[] = [
     subtitle: "Effectively Prompting AI Systems",
     content: (
       <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
-        <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
-          <h3 className="text-2xl font-bold text-green-900 mb-4">What is Description?</h3>
+        <div className="bg-green-50 p-4 md:p-6 rounded-lg border-l-4 border-green-500">
+          <h3 className="text-xl md:text-2xl font-bold text-green-900 mb-4">What is Description?</h3>
           <p className="text-lg text-gray-700">
             Description involves effectively communicating your goals, context, and requirements to AI systems to prompt useful behaviors and outputs.
           </p>
@@ -138,8 +138,8 @@ export const fluencySlides: SlideType[] = [
     subtitle: "Assessing AI Outputs & Behaviors",
     content: (
       <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
-        <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
-          <h3 className="text-2xl font-bold text-purple-900 mb-4">What is Discernment?</h3>
+        <div className="bg-purple-50 p-4 md:p-6 rounded-lg border-l-4 border-purple-500">
+          <h3 className="text-xl md:text-2xl font-bold text-purple-900 mb-4">What is Discernment?</h3>
           <p className="text-lg text-gray-700">
             Discernment is the ability to accurately evaluate and assess the quality, accuracy, and usefulness of AI outputs and behaviors.
           </p>
@@ -180,8 +180,8 @@ export const fluencySlides: SlideType[] = [
     subtitle: "Taking Responsibility for AI Use",
     content: (
       <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
-        <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
-          <h3 className="text-2xl font-bold text-orange-900 mb-4">What is Diligence?</h3>
+        <div className="bg-orange-50 p-4 md:p-6 rounded-lg border-l-4 border-orange-500">
+          <h3 className="text-xl md:text-2xl font-bold text-orange-900 mb-4">What is Diligence?</h3>
           <p className="text-lg text-gray-700">
             Diligence means taking responsibility for what we do with AI, how we use it, and the impacts of our AI-assisted work.
           </p>

@@ -16,8 +16,8 @@ export const instructionsSlides: SlideType[] = [
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-6 max-w-4xl">
-            <div className="bg-white p-5 rounded-lg shadow border border-gray-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl px-4 md:px-0">
+            <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-gray-200">
               <h4 className="font-bold text-gray-900 mb-3">🎯 What Custom Instructions Do</h4>
               <ul className="text-sm text-gray-700 space-y-2">
                 <li>• Set coding style & conventions</li>
@@ -28,7 +28,7 @@ export const instructionsSlides: SlideType[] = [
               </ul>
             </div>
 
-            <div className="bg-white p-5 rounded-lg shadow border border-gray-200">
+            <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-gray-200">
               <h4 className="font-bold text-gray-900 mb-3">✨ Why They Matter</h4>
               <ul className="text-sm text-gray-700 space-y-2">
                 <li>• Consistent AI responses across sessions</li>
@@ -182,7 +182,7 @@ export const instructionsSlides: SlideType[] = [
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Python example */}
             <div className="bg-gray-900 p-4 rounded-lg">
               <p className="text-green-400 text-xs mb-2 font-mono">python-standards.instructions.md</p>
@@ -222,7 +222,7 @@ description: "React component standards"
 
           <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
             <h4 className="font-semibold text-gray-900 mb-2">📁 Storage Locations</h4>
-            <div className="grid grid-cols-2 gap-4 text-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
               <div>
                 <p className="font-medium text-gray-700">Workspace (project-specific):</p>
                 <code className="text-xs bg-gray-100 px-2 py-1 rounded block mt-1">.github/instructions/</code>
@@ -247,7 +247,7 @@ description: "React component standards"
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <div className="bg-gray-900 p-4 rounded-lg">
               <p className="text-purple-400 text-xs mb-2 font-mono">AGENTS.md (root)</p>
               <pre className="text-sm text-gray-100 font-mono whitespace-pre-wrap leading-relaxed">
@@ -399,7 +399,7 @@ ambiguity and keep the instructions concise.`}
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-4 rounded-lg shadow border border-orange-200">
               <h4 className="font-semibold text-orange-900 mb-2">🔄 The Process:</h4>
               <ul className="space-y-2 text-gray-700">

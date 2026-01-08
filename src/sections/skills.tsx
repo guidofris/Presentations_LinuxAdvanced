@@ -39,9 +39,9 @@ export const skillsSlides: SlideType[] = [
     content: (
       <div className="flex flex-col items-center justify-center h-full space-y-8">
         <div className="relative w-full max-w-3xl">
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-green-500 text-white p-6 rounded-lg shadow-lg">
-              <div className="text-2xl font-bold mb-2">📝 Custom Instructions</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="bg-green-500 text-white p-4 md:p-6 rounded-lg shadow-lg">
+              <div className="text-xl md:text-2xl font-bold mb-2">📝 Custom Instructions</div>
               <div className="text-sm mb-3">Simple guidelines for every task</div>
               <div className="text-xs space-y-1 opacity-90">
                 <div>• Coding standards</div>
@@ -50,8 +50,8 @@ export const skillsSlides: SlideType[] = [
               </div>
             </div>
 
-            <div className="bg-purple-500 text-white p-6 rounded-lg shadow-lg">
-              <div className="text-2xl font-bold mb-2">🎯 Agent Skills</div>
+            <div className="bg-purple-500 text-white p-4 md:p-6 rounded-lg shadow-lg">
+              <div className="text-xl md:text-2xl font-bold mb-2">🎯 Agent Skills</div>
               <div className="text-sm mb-3">Detailed context when relevant</div>
               <div className="text-xs space-y-1 opacity-90">
                 <div>• Testing workflows</div>

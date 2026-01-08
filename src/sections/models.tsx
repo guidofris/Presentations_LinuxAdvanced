@@ -13,33 +13,33 @@ export const modelsSlides: SlideType[] = [
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 max-w-3xl">
-          <div className="bg-gradient-to-br from-purple-500 to-purple-700 text-white p-6 rounded-lg shadow-lg">
-            <div className="text-2xl font-bold mb-2">🎯 SWE-bench</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-3xl px-4 md:px-0">
+          <div className="bg-gradient-to-br from-purple-500 to-purple-700 text-white p-4 md:p-6 rounded-lg shadow-lg">
+            <div className="text-xl md:text-2xl font-bold mb-2">🎯 SWE-bench</div>
             <div className="text-sm">
               Real-world GitHub issue resolution - the gold standard for
               practical coding ability
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-500 to-blue-700 text-white p-6 rounded-lg shadow-lg">
-            <div className="text-2xl font-bold mb-2">🧮 HumanEval</div>
+          <div className="bg-gradient-to-br from-blue-500 to-blue-700 text-white p-4 md:p-6 rounded-lg shadow-lg">
+            <div className="text-xl md:text-2xl font-bold mb-2">🧮 HumanEval</div>
             <div className="text-sm">
               Algorithmic problem-solving - measures fundamental coding
               capabilities
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-green-500 to-green-700 text-white p-6 rounded-lg shadow-lg">
-            <div className="text-2xl font-bold mb-2">📊 Context Window</div>
+          <div className="bg-gradient-to-br from-green-500 to-green-700 text-white p-4 md:p-6 rounded-lg shadow-lg">
+            <div className="text-xl md:text-2xl font-bold mb-2">📊 Context Window</div>
             <div className="text-sm">
               How much code the model can "see" at once - critical for large
               codebases
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-orange-500 to-orange-700 text-white p-6 rounded-lg shadow-lg">
-            <div className="text-2xl font-bold mb-2">⚡ Use Case Fit</div>
+          <div className="bg-gradient-to-br from-orange-500 to-orange-700 text-white p-4 md:p-6 rounded-lg shadow-lg">
+            <div className="text-xl md:text-2xl font-bold mb-2">⚡ Use Case Fit</div>
             <div className="text-sm">
               Different models excel at different tasks - match the tool to the
               job
@@ -390,7 +390,7 @@ export const modelsSlides: SlideType[] = [
           </table>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-white p-3 rounded-lg shadow border border-gray-200">
             <p className="text-sm text-gray-700"><strong>🏢 Infrastructure matters:</strong> Same model on Azure vs. original servers can differ by ~70%</p>
           </div>

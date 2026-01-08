@@ -35,7 +35,7 @@ export const repeatingSlides: SlideType[] = [
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-4 rounded-lg shadow border border-green-200">
               <h4 className="font-semibold text-green-900 mb-2">💡 Example Use Cases</h4>
               <div className="flex justify-around text-sm text-gray-700">
@@ -66,7 +66,7 @@ export const repeatingSlides: SlideType[] = [
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-4 rounded-lg shadow border border-purple-200">
               <h4 className="font-semibold text-purple-900 mb-2">🤖 File Structure (.agent.md)</h4>
               <ul className="space-y-1 text-sm text-gray-700">
@@ -88,7 +88,7 @@ export const repeatingSlides: SlideType[] = [
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-4 rounded-lg shadow border border-green-200">
               <h4 className="font-semibold text-green-900 mb-2">💡 Example Agents</h4>
               <div className="flex justify-around text-sm text-gray-700">

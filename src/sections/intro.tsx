@@ -5,17 +5,17 @@ export const introSlides: SlideType[] = [
     title: "",
     subtitle: "",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-8">
+      <div className="flex flex-col items-center justify-center h-full space-y-4 md:space-y-8 px-4 md:px-0">
         <div className="text-center">
-          <h2 className="text-5xl font-bold text-gray-800 mb-4">AI Native Software Engineering</h2>
-          <p className="text-2xl text-gray-600 mb-12">How to embrace AI and improve your developer happiness</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-2 md:mb-4">AI Native Software Engineering</h2>
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-6 md:mb-12">How to embrace AI and improve your developer happiness</p>
         </div>
 
-        <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
+        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg border border-gray-200 w-full max-w-md md:max-w-none md:w-auto">
           <div className="text-center">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-2">Jan De Dobbeleer</h3>
-            <p className="text-lg text-gray-600 mb-4">Engineering Leader & Open Source Innovator</p>
-            <div className="flex items-center justify-center space-x-6 text-gray-600">
+            <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-2">Jan De Dobbeleer</h3>
+            <p className="text-base md:text-lg text-gray-600 mb-4">Engineering Leader & Open Source Innovator</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-gray-600">
               <span className="flex items-center space-x-2">
                 <span>📧</span>
                 <span>jan@itdepends.be</span>
@@ -44,27 +44,27 @@ export const introSlides: SlideType[] = [
     title: "AI Adoption & the Quantum State",
     subtitle: "Understanding the unique challenges of AI adoption",
     content: (
-      <div className="grid grid-cols-2 gap-8 max-w-5xl mx-auto h-full items-center">
-        <div className="flex flex-col space-y-4">
-          <div className="bg-white p-5 rounded-lg shadow border border-gray-200">
-            <h4 className="font-semibold text-gray-900 mb-2">Quantum State Concept</h4>
-            <p className="text-gray-700">AI adoption creates a 'quantum state' where developers exist in overlapping adoption stages simultaneously.</p>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto h-full items-center px-4 md:px-0">
+        <div className="flex flex-col space-y-3 md:space-y-4">
+          <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-gray-200">
+            <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Quantum State Concept</h4>
+            <p className="text-gray-700 text-sm md:text-base">AI adoption creates a 'quantum state' where developers exist in overlapping adoption stages simultaneously.</p>
           </div>
 
-          <div className="bg-white p-5 rounded-lg shadow border border-gray-200">
-            <h4 className="font-semibold text-gray-900 mb-2">Technology Adoption Lifecycle</h4>
-            <p className="text-gray-700">The traditional technology adoption lifecycle is challenged by AI's rapid evolution and integration.</p>
+          <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-gray-200">
+            <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Technology Adoption Lifecycle</h4>
+            <p className="text-gray-700 text-sm md:text-base">The traditional technology adoption lifecycle is challenged by AI's rapid evolution and integration.</p>
           </div>
 
-          <div className="bg-white p-5 rounded-lg shadow border border-gray-200">
-            <h4 className="font-semibold text-gray-900 mb-2">Need for Adaptive Strategies</h4>
-            <p className="text-gray-700">Developers must implement adaptive strategies to navigate AI's evolving and blended adoption stages.</p>
+          <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-gray-200">
+            <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Need for Adaptive Strategies</h4>
+            <p className="text-gray-700 text-sm md:text-base">Developers must implement adaptive strategies to navigate AI's evolving and blended adoption stages.</p>
           </div>
         </div>
 
-        <div className="flex flex-col items-center space-y-4">
+        <div className="flex flex-col items-center space-y-3 md:space-y-4">
           {/* Adoption Lifecycle Bell Curve Visualization */}
-          <div className="relative w-full h-64 bg-white rounded-lg p-4 shadow border border-gray-200">
+          <div className="relative w-full h-48 md:h-64 bg-white rounded-lg p-2 md:p-4 shadow border border-gray-200">
             <svg viewBox="0 0 400 160" className="w-full h-full">
               <defs>
                 {/* Section fills */}
@@ -116,16 +116,16 @@ export const introSlides: SlideType[] = [
           </div>
 
           {/* Quantum State Indicator */}
-          <div className="bg-gradient-to-r from-blue-100 via-purple-100 to-green-100 p-4 rounded-lg w-full">
-            <div className="flex items-center justify-center space-x-2">
-              <div className="w-3 h-3 rounded-full bg-blue-500 animate-pulse"></div>
-              <div className="w-3 h-3 rounded-full bg-purple-500 animate-pulse" style={{animationDelay: '0.15s'}}></div>
-              <div className="w-3 h-3 rounded-full bg-pink-500 animate-pulse" style={{animationDelay: '0.3s'}}></div>
-              <div className="w-3 h-3 rounded-full bg-orange-500 animate-pulse" style={{animationDelay: '0.45s'}}></div>
-              <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" style={{animationDelay: '0.6s'}}></div>
-              <span className="text-sm font-semibold text-gray-700 ml-2">You are here... and here... and here</span>
+          <div className="bg-gradient-to-r from-blue-100 via-purple-100 to-green-100 p-3 md:p-4 rounded-lg w-full">
+            <div className="flex flex-wrap items-center justify-center gap-1 md:space-x-2">
+              <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-blue-500 animate-pulse"></div>
+              <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-purple-500 animate-pulse" style={{animationDelay: '0.15s'}}></div>
+              <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-pink-500 animate-pulse" style={{animationDelay: '0.3s'}}></div>
+              <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-orange-500 animate-pulse" style={{animationDelay: '0.45s'}}></div>
+              <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-green-500 animate-pulse" style={{animationDelay: '0.6s'}}></div>
+              <span className="text-xs md:text-sm font-semibold text-gray-700 ml-1 md:ml-2">You are here... and here... and here</span>
             </div>
-            <p className="text-xs text-center text-gray-600 mt-2">
+            <p className="text-xs text-center text-gray-600 mt-1 md:mt-2">
               With AI, developers often exist in multiple stages simultaneously
             </p>
           </div>
@@ -137,20 +137,20 @@ export const introSlides: SlideType[] = [
     title: "Personal Experience with AI",
     subtitle: "A journey from skepticism to renewed joy",
     content: (
-      <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
-        <div className="bg-white p-5 rounded-lg shadow border border-gray-200 w-full text-center">
-          <h4 className="font-semibold text-gray-900 mb-2">Initial Skepticism</h4>
-          <p className="text-gray-700">A lot of marketing terminology thrown at us does not spark enthusiasm, especially when it doesn't seem approachable.</p>
+      <div className="flex flex-col space-y-4 md:space-y-6 max-w-3xl mx-auto px-4 md:px-0">
+        <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-gray-200 w-full text-center">
+          <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Initial Skepticism</h4>
+          <p className="text-gray-700 text-sm md:text-base">A lot of marketing terminology thrown at us does not spark enthusiasm, especially when it doesn't seem approachable.</p>
         </div>
 
-        <div className="bg-white p-5 rounded-lg shadow border border-gray-200 w-full text-center">
-          <h4 className="font-semibold text-gray-900 mb-2">Enhanced Productivity</h4>
-          <p className="text-gray-700">AI enabled faster building processes and deeper understanding, improving overall development efficiency.</p>
+        <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-gray-200 w-full text-center">
+          <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Enhanced Productivity</h4>
+          <p className="text-gray-700 text-sm md:text-base">AI enabled faster building processes and deeper understanding, improving overall development efficiency.</p>
         </div>
 
-        <div className="bg-white p-5 rounded-lg shadow border border-gray-200 w-full text-center">
-          <h4 className="font-semibold text-gray-900 mb-2">Renewed Joy in Coding</h4>
-          <p className="text-gray-700">Fine tuning AI usage opened a world of new opportunities.</p>
+        <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-gray-200 w-full text-center">
+          <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Renewed Joy in Coding</h4>
+          <p className="text-gray-700 text-sm md:text-base">Fine tuning AI usage opened a world of new opportunities.</p>
         </div>
       </div>
     )
