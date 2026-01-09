@@ -209,9 +209,13 @@ const FourDSlides = () => {
               const IconComponent = section.icon;
               return (
                 <li key={index}>
-                  <button
-                    onClick={() => jumpToSection(section.startIndex)}
-                    className={`w-full text-left px-4 py-3 transition-colors ${activeClass}`}
+                  <a
+                    href={`?slide=${section.startIndex + 1}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      jumpToSection(section.startIndex);
+                    }}
+                    className={`block w-full text-left px-4 py-3 transition-colors ${activeClass}`}
                   >
                     <div className="flex items-center gap-3">
                       <IconComponent className={`w-5 h-5 ${iconColorClasses[section.color]}`} />
@@ -222,7 +226,7 @@ const FourDSlides = () => {
                         </span>
                       </div>
                     </div>
-                  </button>
+                  </a>
                 </li>
               );
             })}
