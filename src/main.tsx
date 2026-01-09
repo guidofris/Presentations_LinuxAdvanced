@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Monitor, Target, Box, Code, ScrollText, Brain, Repeat, Layout, Puzzle, Network, PanelRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Monitor, Target, Box, Code, ScrollText, Brain, Repeat, Layout, Puzzle, Network, PanelRight, PanelLeft } from 'lucide-react';
 import { introSlides, llmSlides, windowsSlides, fluencySlides, modelsSlides, copilotSlides, instructionsSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, multiagentSlides } from './sections';
 import './index.css';
 
@@ -34,6 +34,11 @@ const sectionData = getSectionStartIndices();
 
 const FourDSlides = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [navOnLeft, setNavOnLeft] = useState(() => {
+    // Read preference from localStorage, default to false (right-handed)
+    const stored = localStorage.getItem('navOnLeft');
+    return stored === 'true';
+  });
   const [currentSlide, setCurrentSlide] = useState(() => {
     // Read initial slide from query parameter (1-based)
     const params = new URLSearchParams(window.location.search);
@@ -82,6 +87,15 @@ const FourDSlides = () => {
     const newUrl = `${window.location.pathname}?${params.toString()}`;
     window.history.replaceState({}, '', newUrl);
   }, [currentSlide]);
+
+  // Persist nav position preference
+  useEffect(() => {
+    localStorage.setItem('navOnLeft', String(navOnLeft));
+  }, [navOnLeft]);
+
+  const toggleNavPosition = () => {
+    setNavOnLeft((prev) => !prev);
+  };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -151,13 +165,19 @@ const FourDSlides = () => {
 
   return (
     <div className="min-w-full w-full min-h-screen h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col overflow-x-hidden">
-      {/* Menu Button - Desktop: top left, Mobile: edge tab on right side */}
+      {/* Menu Button - Desktop: top left, Mobile: edge tab (position based on navOnLeft) */}
       <button
         onClick={() => setMenuOpen(true)}
-        className="fixed z-40 transition-all md:top-4 md:left-4 md:p-2 md:rounded-lg bottom-32 md:bottom-auto md:translate-y-0 right-0 md:right-auto bg-white/90 shadow-md hover:bg-gray-50 py-4 px-1 md:px-2 md:py-2 rounded-l-lg md:rounded-lg"
+        className={`fixed z-40 transition-all md:top-4 md:left-4 md:p-2 md:rounded-lg bottom-32 md:bottom-auto md:translate-y-0 md:right-auto bg-white/90 shadow-md hover:bg-gray-50 py-4 px-1 md:px-2 md:py-2 md:rounded-lg ${
+          navOnLeft ? 'left-0 rounded-r-lg rounded-l-none' : 'right-0 rounded-l-lg rounded-r-none'
+        } md:rounded-lg`}
         aria-label="Open section menu"
       >
-        <PanelRight className="w-4 h-4 text-gray-600 md:hidden" />
+        {navOnLeft ? (
+          <PanelLeft className="w-4 h-4 text-gray-600 md:hidden" />
+        ) : (
+          <PanelRight className="w-4 h-4 text-gray-600 md:hidden" />
+        )}
         <Menu className="w-5 h-5 text-gray-700 hidden md:block" />
       </button>
 
@@ -169,10 +189,12 @@ const FourDSlides = () => {
         />
       )}
 
-      {/* Slide-out Menu - Desktop: from left, Mobile: from right */}
+      {/* Slide-out Menu - Desktop: from left, Mobile: based on navOnLeft preference */}
       <div
-        className={`fixed top-0 h-full w-72 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out md:left-0 right-0 md:right-auto ${
-          menuOpen ? 'translate-x-0' : 'translate-x-full md:-translate-x-full'
+        className={`fixed top-0 h-full w-72 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out flex flex-col md:left-0 md:right-auto ${
+          navOnLeft 
+            ? `left-0 ${menuOpen ? 'translate-x-0' : '-translate-x-full'}`
+            : `right-0 md:left-0 ${menuOpen ? 'translate-x-0' : 'translate-x-full md:-translate-x-full'}`
         }`}
       >
         <div className="flex items-center justify-between p-4 border-b border-gray-200">
@@ -185,7 +207,7 @@ const FourDSlides = () => {
             <X className="w-5 h-5 text-gray-600" />
           </button>
         </div>
-        <nav className="overflow-y-auto h-[calc(100%-65px)]">
+        <nav className="overflow-y-auto flex-1">
           <ul className="py-2">
             {sectionData.map((section, index) => {
               const isActive = getCurrentSection()?.name === section.name;
@@ -232,6 +254,24 @@ const FourDSlides = () => {
             })}
           </ul>
         </nav>
+        {/* Nav position toggle - mobile only, at bottom for one-handed access */}
+        <button
+          onClick={toggleNavPosition}
+          className="md:hidden flex items-center gap-2 w-full px-4 py-3 text-sm text-gray-600 hover:bg-gray-50 border-t border-gray-200 transition-colors"
+          aria-label={navOnLeft ? 'Move navigation to right' : 'Move navigation to left'}
+        >
+          {navOnLeft ? (
+            <>
+              <PanelRight className="w-4 h-4" />
+              <span>Move nav to right</span>
+            </>
+          ) : (
+            <>
+              <PanelLeft className="w-4 h-4" />
+              <span>Move nav to left</span>
+            </>
+          )}
+        </button>
       </div>
 
       <div className="flex-1 flex flex-col p-4 pt-8 md:p-8 min-w-0">
