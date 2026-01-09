@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Monitor, Target, Box, Code, ScrollText, Brain, Repeat, Layout, Puzzle, Network } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Monitor, Target, Box, Code, ScrollText, Brain, Repeat, Layout, Puzzle, Network, PanelRight } from 'lucide-react';
 import { introSlides, llmSlides, windowsSlides, fluencySlides, modelsSlides, copilotSlides, instructionsSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, multiagentSlides } from './sections';
 import './index.css';
 
@@ -157,7 +157,7 @@ const FourDSlides = () => {
         className="fixed z-40 transition-all md:top-4 md:left-4 md:p-2 md:rounded-lg bottom-32 md:bottom-auto md:translate-y-0 right-0 md:right-auto bg-white/90 shadow-md hover:bg-gray-50 py-4 px-1 md:px-2 md:py-2 rounded-l-lg md:rounded-lg"
         aria-label="Open section menu"
       >
-        <ChevronLeft className="w-4 h-4 text-gray-600 md:hidden" />
+        <PanelRight className="w-4 h-4 text-gray-600 md:hidden" />
         <Menu className="w-5 h-5 text-gray-700 hidden md:block" />
       </button>
 
