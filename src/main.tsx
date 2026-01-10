@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Monitor, Target, Box, Code, ScrollText, Brain, Repeat, Layout, Puzzle, Network, PanelRight, PanelLeft, Plug } from 'lucide-react';
-import { introSlides, llmSlides, windowsSlides, fluencySlides, modelsSlides, copilotSlides, instructionsSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, multiagentSlides, mcpSlides } from './sections';
+import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Target, Box, Code, ScrollText, Brain, Repeat, Layout, Puzzle, Network, PanelRight, PanelLeft, Plug } from 'lucide-react';
+import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, instructionsSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, multiagentSlides, mcpSlides } from './sections';
 import './index.css';
 
 // Section definitions with metadata
 const sections = [
   { name: 'Introduction', slides: introSlides, color: 'gray', icon: Presentation },
   { name: 'LLM Basics', slides: llmSlides, color: 'blue', icon: Sparkles },
-  { name: 'Context Windows', slides: windowsSlides, color: 'purple', icon: Monitor },
   { name: '4D Fluency', slides: fluencySlides, color: 'green', icon: Target },
   { name: 'Models', slides: modelsSlides, color: 'orange', icon: Box },
   { name: 'Copilot', slides: copilotSlides, color: 'blue', icon: Code },
@@ -57,7 +56,6 @@ const FourDSlides = () => {
   const slides = [
     ...introSlides,
     ...llmSlides,
-    ...windowsSlides,
     ...fluencySlides,
     ...modelsSlides,
     ...copilotSlides,
@@ -194,7 +192,7 @@ const FourDSlides = () => {
       {/* Slide-out Menu - Desktop: from left, Mobile: based on navOnLeft preference */}
       <div
         className={`fixed top-0 h-full w-72 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out flex flex-col md:left-0 md:right-auto ${
-          navOnLeft 
+          navOnLeft
             ? `left-0 ${menuOpen ? 'translate-x-0' : '-translate-x-full'}`
             : `right-0 md:left-0 ${menuOpen ? 'translate-x-0' : 'translate-x-full md:-translate-x-full'}`
         }`}
