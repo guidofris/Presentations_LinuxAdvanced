@@ -11,3 +11,4 @@ export { skillsSlides } from './skills';
 export { repeatingSlides } from './repeating';
 export { spacesSlides } from './spaces';
 export { multiagentSlides } from './multiagent';
+export { mcpSlides } from './mcp';

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Monitor, Target, Box, Code, ScrollText, Brain, Repeat, Layout, Puzzle, Network, PanelRight, PanelLeft } from 'lucide-react';
-import { introSlides, llmSlides, windowsSlides, fluencySlides, modelsSlides, copilotSlides, instructionsSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, multiagentSlides } from './sections';
+import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Monitor, Target, Box, Code, ScrollText, Brain, Repeat, Layout, Puzzle, Network, PanelRight, PanelLeft, Plug } from 'lucide-react';
+import { introSlides, llmSlides, windowsSlides, fluencySlides, modelsSlides, copilotSlides, instructionsSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, multiagentSlides, mcpSlides } from './sections';
 import './index.css';
 
 // Section definitions with metadata
@@ -18,6 +18,7 @@ const sections = [
   { name: 'Spaces', slides: spacesSlides, color: 'blue', icon: Layout },
   { name: 'Skills', slides: skillsSlides, color: 'green', icon: Puzzle },
   { name: 'Multi-Agent', slides: multiagentSlides, color: 'purple', icon: Network },
+  { name: 'MCP', slides: mcpSlides, color: 'teal', icon: Plug },
 ];
 
 // Calculate section start indices
@@ -66,6 +67,7 @@ const FourDSlides = () => {
     ...spacesSlides,
     ...skillsSlides,
     ...multiagentSlides,
+    ...mcpSlides,
   ];
 
   // Get current section based on slide index
