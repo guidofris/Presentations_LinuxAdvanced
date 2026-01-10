@@ -784,6 +784,119 @@ export const copilotSlides: SlideType[] = [
         </div>
       )
     },
+        {
+      title: "The 4 S's of Effective Prompts",
+      subtitle: "A Framework for Crafting Better Prompts",
+      content: (
+        <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+            <h3 className="text-xl font-bold text-blue-900 mb-2">What is a Prompt?</h3>
+            <p className="text-gray-700">A request you make to Copilot — a question or code snippet. Copilot combines your prompt with additional context to generate a response. The <strong>4 S's</strong> help you craft effective prompts.</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div className="bg-gradient-to-b from-blue-500 to-blue-700 text-white p-4 rounded-lg shadow-lg text-center">
+              <div className="text-3xl mb-2">🎯</div>
+              <h4 className="font-bold text-lg mb-1">Single</h4>
+              <p className="text-sm opacity-90">Focus on one well-defined task or question</p>
+            </div>
+            <div className="bg-gradient-to-b from-green-500 to-green-700 text-white p-4 rounded-lg shadow-lg text-center">
+              <div className="text-3xl mb-2">🔍</div>
+              <h4 className="font-bold text-lg mb-1">Specific</h4>
+              <p className="text-sm opacity-90">Explicit and detailed instructions</p>
+            </div>
+            <div className="bg-gradient-to-b from-orange-500 to-orange-700 text-white p-4 rounded-lg shadow-lg text-center">
+              <div className="text-3xl mb-2">✂️</div>
+              <h4 className="font-bold text-lg mb-1">Short</h4>
+              <p className="text-sm opacity-90">Concise prompts without overloading</p>
+            </div>
+            <div className="bg-gradient-to-b from-purple-500 to-purple-700 text-white p-4 rounded-lg shadow-lg text-center">
+              <div className="text-3xl mb-2">📁</div>
+              <h4 className="font-bold text-lg mb-1">Surround</h4>
+              <p className="text-sm opacity-90">Descriptive filenames, related files open</p>
+            </div>
+          </div>
+
+          <div className="bg-gray-800 p-4 rounded-lg">
+            <p className="text-green-400 font-mono text-sm mb-2">Example prompt following the 4 S's:</p>
+            <div className="text-gray-300 font-mono text-sm">
+              <p className="text-blue-300">Write a JavaScript function that tells me if a number is prime</p>
+              <p className="text-gray-400 mt-1">The function should take an integer and return true if prime</p>
+              <p className="text-gray-400">The function should error if input is not a positive integer</p>
+            </div>
+          </div>
+
+          <div className="bg-blue-100 p-4 rounded-lg">
+            <p className="text-sm italic text-blue-900">
+              <strong>Remember:</strong> These principles work together — a prompt can be specific yet short, focused on a single task while surrounded by relevant context.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Prompting Best Practices",
+      subtitle: "Do's, Don'ts, and Example-Based Learning",
+      content: (
+        <div className="flex flex-col space-y-4 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg shadow border border-green-200">
+              <h4 className="font-semibold text-green-900 mb-2">✅ Do This</h4>
+              <ul className="space-y-1 text-gray-700 text-sm">
+                <li className="flex"><span className="mr-2">•</span><span>Break complex tasks into smaller steps</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Use @-mentions to indicate relevant code</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Iterate and refine your prompts</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Use threads for new tasks</span></li>
+              </ul>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow border border-red-200">
+              <h4 className="font-semibold text-red-900 mb-2">❌ Avoid This</h4>
+              <ul className="space-y-1 text-gray-700 text-sm">
+                <li className="flex"><span className="mr-2">•</span><span>Ambiguous terms like "what does this do"</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Keeping irrelevant chat history</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>Assuming Copilot knows your library</span></li>
+                <li className="flex"><span className="mr-2">•</span><span>One giant prompt for complex tasks</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
+            <h4 className="font-semibold text-blue-900 mb-1">Guide Copilot With Examples</h4>
+            <p className="text-sm text-gray-700">The number of examples you provide affects how Copilot responds:</p>
+          </div>
+
+          <div className="grid grid-cols-3 gap-3">
+            <div className="bg-white p-3 rounded-lg shadow border border-blue-200 text-center">
+              <div className="inline-block bg-blue-100 px-2 py-1 rounded-full text-xs font-semibold text-blue-800 mb-1">Zero-shot</div>
+              <p className="text-xs text-gray-600 mb-2">No examples — relies on training</p>
+              <div className="bg-gray-100 p-2 rounded text-xs font-mono text-gray-700">
+                # Convert C to F
+              </div>
+            </div>
+            <div className="bg-white p-3 rounded-lg shadow border border-green-200 text-center">
+              <div className="inline-block bg-green-100 px-2 py-1 rounded-full text-xs font-semibold text-green-800 mb-1">One-shot</div>
+              <p className="text-xs text-gray-600 mb-2">Single example for context</p>
+              <div className="bg-gray-100 p-2 rounded text-xs font-mono text-gray-700">
+                # f_to_c(32)→0<br/># Now: c_to_f
+              </div>
+            </div>
+            <div className="bg-white p-3 rounded-lg shadow border border-purple-200 text-center">
+              <div className="inline-block bg-purple-100 px-2 py-1 rounded-full text-xs font-semibold text-purple-800 mb-1">Few-shot</div>
+              <p className="text-xs text-gray-600 mb-2">Multiple examples for precision</p>
+              <div className="bg-gray-100 p-2 rounded text-xs font-mono text-gray-700">
+                # 9AM→morning<br/># 2PM→afternoon
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-blue-100 p-3 rounded-lg">
+            <p className="text-sm italic text-blue-900">
+              <strong>Pro Tip:</strong> Zero-shot for simple tasks, one-shot for specific patterns, few-shot for complex or unconventional outputs.
+            </p>
+          </div>
+        </div>
+      )
+    },
     {
       title: "Context-Isolated Subagents",
       subtitle: "Delegate Tasks to Autonomous Agents Within Your Chat",
