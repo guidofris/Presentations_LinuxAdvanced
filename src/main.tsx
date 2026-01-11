@@ -2,7 +2,18 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Target, Box, Code, ScrollText, Brain, Repeat, Layout, Puzzle, Network, PanelRight, PanelLeft, Plug } from 'lucide-react';
 import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, instructionsSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, multiagentSlides, mcpSlides } from './sections';
+import { Login } from './components/login';
 import './index.css';
+
+// Workshop password hash (SHA-256)
+// To generate a new hash, run in browser console:
+//   crypto.subtle.digest('SHA-256', new TextEncoder().encode('your-password'))
+//     .then(buf => Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join(''))
+//     .then(console.log)
+// Local dev hash is for 'workshop', production uses VITE_WORKSHOP_PASSWORD_HASH env var
+// This is not actual security, just a simple gate to prevent casual access
+const WORKSHOP_PASSWORD_HASH = import.meta.env.VITE_WORKSHOP_PASSWORD_HASH ||
+  'deb9b04362a3317f16c807bc05da6abc83e60d5548ea6ec3ba0d1a6c49e9eb67'; // hash of 'workshop'
 
 // Section definitions with metadata
 const sections = [
@@ -333,8 +344,35 @@ const FourDSlides = () => {
   );
 };
 
+// Main App component with authentication gate
+const App = () => {
+  const [isUnlocked, setIsUnlocked] = useState(() => {
+    // Check if already unlocked from localStorage
+    return localStorage.getItem('workshop_unlocked') === 'true';
+  });
+
+  const handleLoginSuccess = () => {
+    setIsUnlocked(true);
+  };
+
+  // Optional: Add a way to lock the slides again (for testing)
+  // You can call this from browser console: window.lockWorkshop()
+  useEffect(() => {
+    (window as any).lockWorkshop = () => {
+      localStorage.removeItem('workshop_unlocked');
+      setIsUnlocked(false);
+    };
+  }, []);
+
+  if (!isUnlocked) {
+    return <Login onSuccess={handleLoginSuccess} passwordHash={WORKSHOP_PASSWORD_HASH} />;
+  }
+
+  return <FourDSlides />;
+};
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <FourDSlides />
+    <App />
   </React.StrictMode>,
 );

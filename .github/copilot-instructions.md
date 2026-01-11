@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is a React-based interactive slideshow for an **AI Native Developer Workshop**. Topics range from AI fundamentals to hands-on tool demos. The core framework presented is the **4D AI Fluency Framework** (Delegation, Description, Discernment, Diligence).
+This is a React-based interactive slideshow for an **AI Native Developer Workshop**. Topics range from AI fundamentals to hands-on tool demos, covering all aspects of AI Native Software Engineering.
 
 ## Architecture
 
