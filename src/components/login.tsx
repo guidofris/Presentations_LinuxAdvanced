@@ -181,7 +181,7 @@ export const Login: React.FC<LoginProps> = ({ onSuccess, passwordHash }) => {
       {/* Footer */}
       <div className="border-t border-white/10 py-8">
         <div className="max-w-6xl mx-auto px-4 text-center text-gray-500 text-sm">
-          © {new Date().getFullYear()} AI Native Workshop. Already have access?{' '}
+          © {new Date().getFullYear()} IT depends. Already have access?{' '}
           <button
             onClick={() => setShowLogin(true)}
             className="text-blue-400 hover:underline"
