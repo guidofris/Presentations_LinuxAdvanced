@@ -364,7 +364,7 @@ const LogoutHelper: React.FC = () => {
 // Main App component with route guard authentication
 const App = () => {
   return (
-    <AuthProvider>
+    <AuthProvider passwordHash={WORKSHOP_PASSWORD_HASH}>
       <LogoutHelper />
       <ProtectedRoute passwordHash={WORKSHOP_PASSWORD_HASH}>
         <FourDSlides />

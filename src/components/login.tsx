@@ -17,7 +17,7 @@ import {
 import { verifyPassword } from '../utils/hash';
 
 interface LoginProps {
-  onSuccess: () => void;
+  onSuccess: (password: string) => void;
   passwordHash: string; // SHA-256 hash of the correct password
 }
 
@@ -35,8 +35,8 @@ export const Login: React.FC<LoginProps> = ({ onSuccess, passwordHash }) => {
     const isValid = await verifyPassword(inputPassword, passwordHash);
 
     if (isValid) {
-      // Auth state managed by AuthContext - no localStorage
-      onSuccess();
+      // Pass raw password to derive session signing key
+      onSuccess(inputPassword);
     } else {
       setError(true);
       setIsShaking(true);

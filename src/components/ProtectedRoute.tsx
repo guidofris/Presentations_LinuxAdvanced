@@ -13,8 +13,11 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 }) => {
   const { isAuthenticated, login } = useAuth();
 
+  // Login receives raw password to derive session signing key
+  const handleLogin = (password: string) => login(password);
+
   if (!isAuthenticated) {
-    return <Login onSuccess={login} passwordHash={passwordHash} />;
+    return <Login onSuccess={handleLogin} passwordHash={passwordHash} />;
   }
 
   return <>{children}</>;
