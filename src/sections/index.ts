@@ -5,6 +5,7 @@ export { fluencySlides } from './fluency';
 export { modelsSlides } from './models';
 export { copilotSlides } from './copilot';
 export { privacySlides } from './privacy';
+export { securitySlides } from './security';
 export { instructionsSlides } from './instructions';
 export { contextSlides } from './context';
 export { skillsSlides } from './skills';
