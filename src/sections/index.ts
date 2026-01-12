@@ -4,6 +4,7 @@ export { llmSlides } from './llm';
 export { fluencySlides } from './fluency';
 export { modelsSlides } from './models';
 export { copilotSlides } from './copilot';
+export { privacySlides } from './privacy';
 export { instructionsSlides } from './instructions';
 export { contextSlides } from './context';
 export { skillsSlides } from './skills';
