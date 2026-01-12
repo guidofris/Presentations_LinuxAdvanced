@@ -35,7 +35,7 @@ export const Login: React.FC<LoginProps> = ({ onSuccess, passwordHash }) => {
     const isValid = await verifyPassword(inputPassword, passwordHash);
 
     if (isValid) {
-      localStorage.setItem('workshop_unlocked', 'true');
+      // Auth state managed by AuthContext - no localStorage
       onSuccess();
     } else {
       setError(true);
@@ -57,7 +57,7 @@ export const Login: React.FC<LoginProps> = ({ onSuccess, passwordHash }) => {
   const benefits = [
     'Transform your development workflow with AI',
     'Learn practical prompting techniques',
-    'Hands-on exercises with real tools',
+    'Hands-on demos with real tools',
     'Take home actionable skills immediately',
   ];
 
@@ -112,7 +112,7 @@ export const Login: React.FC<LoginProps> = ({ onSuccess, passwordHash }) => {
               </div>
               <div className="flex items-center gap-2">
                 <Code className="w-4 h-4" />
-                <span>Hands-on exercises</span>
+                <span>Hands-on demos</span>
               </div>
             </div>
           </div>
