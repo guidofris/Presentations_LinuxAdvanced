@@ -860,6 +860,27 @@ export const copilotSlides: SlideType[] = [
             </div>
           </div>
 
+          <div className="grid grid-cols-2 gap-3">
+            <div className="bg-white p-3 rounded-lg shadow border border-cyan-200">
+              <h4 className="font-semibold text-cyan-900 mb-1 flex items-center">
+                <span className="text-lg mr-2">🧠</span> Chain-of-Thought
+              </h4>
+              <p className="text-xs text-gray-600 mb-2">Add "Let's think step by step" to trigger reasoning for complex problems</p>
+              <div className="bg-gray-100 p-2 rounded text-xs font-mono text-gray-700">
+                # How many apples remain?<br/># Let's think step by step...
+              </div>
+            </div>
+            <div className="bg-white p-3 rounded-lg shadow border border-orange-200">
+              <h4 className="font-semibold text-orange-900 mb-1 flex items-center">
+                <span className="text-lg mr-2">🔗</span> Prompt Chaining
+              </h4>
+              <p className="text-xs text-gray-600 mb-2">Break tasks into subtasks — output of one prompt feeds the next</p>
+              <div className="bg-gray-100 p-2 rounded text-xs font-mono text-gray-700">
+                Prompt 1: Extract quotes<br/>Prompt 2: Answer using quotes
+              </div>
+            </div>
+          </div>
+
           <div className="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
             <h4 className="font-semibold text-blue-900 mb-1">Guide Copilot With Examples</h4>
             <p className="text-sm text-gray-700">The number of examples you provide affects how Copilot responds:</p>
@@ -889,9 +910,9 @@ export const copilotSlides: SlideType[] = [
             </div>
           </div>
 
-          <div className="bg-blue-100 p-3 rounded-lg">
-            <p className="text-sm italic text-blue-900">
-              <strong>Pro Tip:</strong> Zero-shot for simple tasks, one-shot for specific patterns, few-shot for complex or unconventional outputs.
+          <div className="bg-gray-100 p-3 rounded-lg">
+            <p className="text-sm text-gray-700">
+              <strong>📚 Learn More:</strong> Explore additional techniques at <a href="https://www.promptingguide.ai/techniques" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">promptingguide.ai/techniques</a>
             </p>
           </div>
         </div>
