@@ -30,3 +30,7 @@ This is a React-based interactive slideshow for an **AI Native Developer Worksho
 - Use Tailwind CSS utility classes only
 - Ensure responsive design principles
 - Maintain accessibility standards (ARIA labels, semantic HTML)
+
+## Validation
+
+After making any code changes, always run `get_errors` to check for compile errors, lint issues, or other problems. Do not consider a task complete until errors are resolved.

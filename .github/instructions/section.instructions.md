@@ -84,7 +84,7 @@ The sidebar navigation is defined in the `sections` array at the top of `src/mai
 **Required properties:**
 - `name`: Display name shown in the sidebar
 - `slides`: The imported slides array from the section file
-- `color`: One of `'gray'`, `'blue'`, `'green'`, `'purple'`, `'orange'` (matches 4D Framework colors)
+- `color`: One of `'gray'`, `'blue'`, `'green'`, `'purple'`, `'orange'`
 - `icon`: A lucide-react icon component (must be imported at the top of main.tsx)
 
 **Example - Adding a new "Testing" section:**
@@ -116,7 +116,7 @@ The sidebar navigation is defined in the `sections` array at the top of `src/mai
 - Always wrap main content in `max-w-3xl mx-auto` and use `space-y-6`
 
 **Presentation Style:**
-- Follow the 4D AI Fluency Framework color scheme strictly
+- Follow the established color scheme strictly
 - Use established component patterns (definition boxes, content cards, callouts)
 - Maintain consistency with existing slides in tone and structure
 
@@ -141,14 +141,13 @@ After making any changes to slide files:
 }
 ```
 
-## Color Scheme by Topic
+## Color Scheme
 
-- **Delegation**: Blue (`blue-500`, `blue-50`, `blue-100`, `blue-200`, `blue-900`)
-- **Description**: Green (`green-500`, `green-50`, `green-100`, `green-200`, `green-900`)
-- **Discernment**: Purple (`purple-500`, `purple-50`, `purple-100`, `purple-200`, `purple-900`)
-- **Diligence**: Orange (`orange-500`, `orange-50`, `orange-100`, `orange-200`, `orange-900`)
-- **Overview/Intro**: Gray (`gray-100`, `gray-600`, `gray-800`) with multi-color accent cards
-- **Tool Demos**: Match related 4D topic or use neutral gray
+- **Blue**: `blue-500`, `blue-50`, `blue-100`, `blue-200`, `blue-900`
+- **Green**: `green-500`, `green-50`, `green-100`, `green-200`, `green-900`
+- **Purple**: `purple-500`, `purple-50`, `purple-100`, `purple-200`, `purple-900`
+- **Orange**: `orange-500`, `orange-50`, `orange-100`, `orange-200`, `orange-900`
+- **Gray** (Overview/Intro): `gray-100`, `gray-600`, `gray-800` with multi-color accent cards
 
 ## Component Patterns
 
@@ -320,3 +319,122 @@ This pattern prevents wrapped text from aligning under the bullet point. When te
 ❌ Data or statistics without linked source citations
 
 ✅ Clear focus, adequate spacing, visual variety, scannable content
+## Responsive Design Guidelines
+
+Tailwind CSS uses a mobile-first responsive design system. Apply these patterns to ensure slides display well across all screen sizes.
+
+### Mobile-First Approach
+
+Unprefixed utilities apply to all screen sizes; breakpoint prefixes apply from that breakpoint up:
+
+```tsx
+// Default breakpoints
+sm: '640px',   // Small devices (landscape phones)
+md: '768px',   // Medium devices (tablets)
+lg: '1024px',  // Large devices (desktops)
+xl: '1280px',  // Extra large devices
+```
+
+### Responsive Typography
+
+Scale text appropriately across devices:
+
+```tsx
+// Headings
+<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+  Responsive Heading
+</h1>
+
+// Body text
+<p className="text-sm sm:text-base md:text-lg leading-relaxed">
+  Body text that scales
+</p>
+```
+
+### Responsive Spacing
+
+Adjust padding and margins for different screens:
+
+```tsx
+<div className="px-4 sm:px-6 md:px-8 lg:px-12 py-8 md:py-12 lg:py-16">
+  {/* Content with responsive padding */}
+</div>
+
+<section className="space-y-4 md:space-y-6 lg:space-y-8">
+  {/* Responsive spacing between children */}
+</section>
+```
+
+### Responsive Grid Layouts
+
+Adapt grid columns to screen size:
+
+```tsx
+{/* 1 column mobile, 2 tablet, 3 desktop */}
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</div>
+```
+
+### Responsive Flexbox Direction
+
+```tsx
+<div className="flex flex-col md:flex-row gap-4 items-center md:items-start">
+  <div className="w-full md:w-1/2">Column 1</div>
+  <div className="w-full md:w-1/2">Column 2</div>
+</div>
+```
+
+### Show/Hide Elements
+
+Control visibility across breakpoints:
+
+```tsx
+{/* Mobile only */}
+<div className="block md:hidden">Mobile content</div>
+
+{/* Desktop only */}
+<div className="hidden md:block">Desktop content</div>
+```
+
+### Responsive Anti-Patterns
+
+❌ **Don't use excessive breakpoints:**
+```tsx
+// Bad
+<div className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
+
+// Good - strategic breakpoints only
+<div className="text-sm md:text-base lg:text-lg">
+```
+
+❌ **Don't forget mobile-first:**
+```tsx
+// Bad - desktop-first
+<div className="grid grid-cols-4 gap-2">
+
+// Good - mobile-first
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+```
+
+### Slide-Specific Responsive Patterns
+
+**Title Slide:**
+```tsx
+<h1 className="text-5xl md:text-6xl font-bold">Section Name</h1>
+<p className="text-xl md:text-2xl text-gray-600">Tagline</p>
+```
+
+**Content Cards:**
+```tsx
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+  {/* Cards stack on mobile, side-by-side on tablet+ */}
+</div>
+```
+
+**Icon Sizes:**
+```tsx
+<IconName className="w-16 h-16 md:w-20 md:h-20" />
+```
