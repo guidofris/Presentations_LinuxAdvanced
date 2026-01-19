@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Target, Box, Code, Shield, ShieldAlert, ScrollText, Brain, Repeat, Layout, Puzzle, Network, PanelRight, PanelLeft, Plug } from 'lucide-react';
-import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, privacySlides, securitySlides, instructionsSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, multiagentSlides, mcpSlides } from './sections';
+import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Target, Box, Code, Shield, ShieldAlert, ScrollText, MessageSquare, Brain, Repeat, Layout, Puzzle, Network, PanelRight, PanelLeft, Plug } from 'lucide-react';
+import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, privacySlides, securitySlides, instructionsSlides, promptingSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, multiagentSlides, mcpSlides } from './sections';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import './index.css';
@@ -26,6 +26,7 @@ const sections = [
   { name: 'Privacy', slides: privacySlides, color: 'purple', icon: Shield },
   { name: 'Security', slides: securitySlides, color: 'red', icon: ShieldAlert },
   { name: 'Instructions', slides: instructionsSlides, color: 'green', icon: ScrollText },
+  { name: 'Prompting', slides: promptingSlides, color: 'indigo', icon: MessageSquare },
   { name: 'Context', slides: contextSlides, color: 'purple', icon: Brain },
   { name: 'Repeating Tasks', slides: repeatingSlides, color: 'orange', icon: Repeat },
   { name: 'Spaces', slides: spacesSlides, color: 'blue', icon: Layout },
@@ -76,6 +77,7 @@ const FourDSlides = () => {
     ...privacySlides,
     ...securitySlides,
     ...instructionsSlides,
+    ...promptingSlides,
     ...contextSlides,
     ...repeatingSlides,
     ...spacesSlides,
