@@ -457,4 +457,109 @@ these mistakes in the future.`}
         </div>
       )
     },
+    {
+      title: "The Core Loop",
+      subtitle: "Human-in-the-Loop Workflow",
+      content: (
+        <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
+          <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+            <h3 className="text-2xl font-bold text-blue-900 mb-3">What is the Core Loop?</h3>
+            <p className="text-lg text-gray-700">
+              A tight <strong>human-in-the-loop workflow</strong> that is faster and safer than skipping planning. AI coding power isn't in automation — it's in an efficient feedback loop.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-3">🔁 Essential Pattern:</h4>
+              <ol className="space-y-2 text-gray-700">
+                <li><strong>1.</strong> Clean context</li>
+                <li><strong>2.</strong> Plan (read-only mode)</li>
+                <li><strong>3.</strong> Review & ask questions</li>
+                <li><strong>4.</strong> Approve</li>
+                <li><strong>5.</strong> Execute</li>
+                <li><strong>6.</strong> Verify</li>
+                <li><strong>7.</strong> Document learnings</li>
+              </ol>
+            </div>
+
+            <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+              <h4 className="font-semibold text-blue-900 mb-3">✨ Why It Matters:</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li>• Catch mistakes before writing code</li>
+                <li>• Surface flawed approaches early</li>
+                <li>• Reduce iteration cost significantly</li>
+                <li>• Build confidence in AI suggestions</li>
+                <li>• Make the loop compound over time</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-blue-100 p-4 rounded-lg">
+            <p className="text-sm text-blue-900">
+              <strong>Key Insight:</strong> Developers who master this loop ship consistently. Those who skip planning spend more time fixing mistakes.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <p className="text-xs text-gray-500">
+              Source: <a href="https://paddo.dev/blog/stop-speedrunning-claude-code" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Stop Speedrunning Claude Code (paddo.dev)</a>
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Core Loop: When to Automate",
+      subtitle: "Master the Fundamentals First",
+      content: (
+        <div className="flex flex-col items-center justify-center h-full space-y-8 max-w-5xl mx-auto px-4">
+          <div className="bg-yellow-50 p-5 rounded-lg border-l-4 border-yellow-500 max-w-3xl">
+            <h3 className="text-2xl font-bold text-yellow-900 mb-2">Don't Speedrun It</h3>
+            <p className="text-base text-gray-700">
+              The bottleneck isn't what AI can do — it's how effectively you can direct it. Master the core loop before adding automation layers.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-3 gap-6 w-full max-w-4xl">
+            <div className="bg-white p-4 rounded-lg shadow border-t-4 border-green-500">
+              <h4 className="font-semibold text-green-900 mb-3 text-center">✅ Do First</h4>
+              <ul className="space-y-1.5 text-sm text-gray-700">
+                <li>• Clean context</li>
+                <li>• Fast plan-approve loop</li>
+                <li>• Solid repo instructions</li>
+                <li>• Master the basics</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-4 rounded-lg shadow border-t-4 border-orange-500">
+              <h4 className="font-semibold text-orange-900 mb-3 text-center">⚖️ Then Add</h4>
+              <ul className="space-y-1.5 text-sm text-gray-700">
+                <li>• MCPs (specific needs)</li>
+                <li>• Subagents (complex)</li>
+                <li>• Automation (proven)</li>
+                <li>• Tools (real problems)</li>
+              </ul>
+            </div>
+
+            <div className="bg-gray-900 p-4 rounded-lg shadow border-t-4 border-blue-500">
+              <h4 className="font-semibold text-blue-400 mb-3 text-center">📊 Success</h4>
+              <div className="space-y-1.5 text-xs text-gray-300">
+                <div className="text-green-400">✓ Master core loop</div>
+                <div className="text-green-400">✓ Clean context</div>
+                <div className="text-green-400">✓ Plan everything</div>
+                <div className="text-red-400 mt-2">✗ Skip planning</div>
+                <div className="text-red-400">✗ Add tools early</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-blue-100 px-6 py-3 rounded-lg max-w-3xl">
+            <p className="text-sm text-blue-900 text-center">
+              <strong>Key Takeaway:</strong> The boring fundamentals work. Get fast at the core loop — it gets you 90% of the way there.
+            </p>
+          </div>
+        </div>
+      )
+    },
 ];
