@@ -63,6 +63,7 @@ Before any implementation, always output a structured list of potential slides:
 - **No assumptions** - Ask for clarification rather than guessing
 - **Cite everything** - Every fact must trace back to the source
 - **Be honest** - If a source doesn't contain enough for a slide, say so
+ - **No slide code or JSX** - Never provide code examples, JSX snippets, or slide implementation details. Output must be plain text slide content (lists, bullet points, and citations) only.
 
 ## Slide Content Guidelines
 

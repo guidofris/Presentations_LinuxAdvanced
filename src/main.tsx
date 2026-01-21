@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Target, Box, Code, Shield, ShieldAlert, ScrollText, MessageSquare, Brain, Repeat, Layout, Puzzle, Network, PanelRight, PanelLeft, Plug } from 'lucide-react';
-import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, privacySlides, securitySlides, instructionsSlides, promptingSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, multiagentSlides, mcpSlides } from './sections';
+import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Target, Box, Code, Terminal, Shield, ShieldAlert, ScrollText, MessageSquare, Brain, Repeat, Layout, Puzzle, Network, PanelRight, PanelLeft, Plug } from 'lucide-react';
+import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, copilotCliSlides, privacySlides, securitySlides, instructionsSlides, promptingSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, multiagentSlides, mcpSlides } from './sections';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import './index.css';
@@ -23,6 +23,7 @@ const sections = [
   { name: '4D Fluency', slides: fluencySlides, color: 'green', icon: Target },
   { name: 'Models', slides: modelsSlides, color: 'orange', icon: Box },
   { name: 'Copilot', slides: copilotSlides, color: 'blue', icon: Code },
+  { name: 'Copilot CLI', slides: copilotCliSlides, color: 'gray', icon: Terminal },
   { name: 'Privacy', slides: privacySlides, color: 'purple', icon: Shield },
   { name: 'Security', slides: securitySlides, color: 'red', icon: ShieldAlert },
   { name: 'Instructions', slides: instructionsSlides, color: 'green', icon: ScrollText },
@@ -74,6 +75,7 @@ const FourDSlides = () => {
     ...fluencySlides,
     ...modelsSlides,
     ...copilotSlides,
+    ...copilotCliSlides,
     ...privacySlides,
     ...securitySlides,
     ...instructionsSlides,

@@ -5,6 +5,7 @@ export { fluencySlides } from './fluency';
 export { promptingSlides } from './prompting';
 export { modelsSlides } from './models';
 export { copilotSlides } from './copilot';
+export { copilotCliSlides } from './copilot-cli';
 export { privacySlides } from './privacy';
 export { securitySlides } from './security';
 export { instructionsSlides } from './instructions';
