@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Target, Box, Code, Terminal, Shield, ShieldAlert, ScrollText, MessageSquare, Brain, Repeat, Layout, Puzzle, Network, PanelRight, PanelLeft, Plug } from 'lucide-react';
-import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, copilotCliSlides, privacySlides, securitySlides, instructionsSlides, promptingSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, multiagentSlides, mcpSlides } from './sections';
+import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Target, Box, Code, Terminal, Shield, ShieldAlert, ScrollText, MessageSquare, Brain, Repeat, Layout, Puzzle, Network, PanelRight, PanelLeft, Plug, TrendingUp } from 'lucide-react';
+import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, copilotCliSlides, privacySlides, securitySlides, instructionsSlides, promptingSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, evolutionSlides, multiagentSlides, mcpSlides } from './sections';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import './index.css';
@@ -23,7 +23,6 @@ const sections = [
   { name: '4D Fluency', slides: fluencySlides, color: 'green', icon: Target },
   { name: 'Models', slides: modelsSlides, color: 'orange', icon: Box },
   { name: 'Copilot', slides: copilotSlides, color: 'blue', icon: Code },
-  { name: 'Copilot CLI', slides: copilotCliSlides, color: 'gray', icon: Terminal },
   { name: 'Privacy', slides: privacySlides, color: 'purple', icon: Shield },
   { name: 'Security', slides: securitySlides, color: 'red', icon: ShieldAlert },
   { name: 'Instructions', slides: instructionsSlides, color: 'green', icon: ScrollText },
@@ -32,8 +31,10 @@ const sections = [
   { name: 'Repeating Tasks', slides: repeatingSlides, color: 'orange', icon: Repeat },
   { name: 'Spaces', slides: spacesSlides, color: 'blue', icon: Layout },
   { name: 'Skills', slides: skillsSlides, color: 'green', icon: Puzzle },
-  { name: 'Multi-Agent', slides: multiagentSlides, color: 'purple', icon: Network },
+  { name: 'Evolution', slides: evolutionSlides, color: 'indigo', icon: TrendingUp },
+  { name: 'Copilot CLI', slides: copilotCliSlides, color: 'gray', icon: Terminal },
   { name: 'MCP', slides: mcpSlides, color: 'teal', icon: Plug },
+  { name: 'Multi-Agent', slides: multiagentSlides, color: 'purple', icon: Network },
 ];
 
 // Calculate section start indices
@@ -75,7 +76,6 @@ const FourDSlides = () => {
     ...fluencySlides,
     ...modelsSlides,
     ...copilotSlides,
-    ...copilotCliSlides,
     ...privacySlides,
     ...securitySlides,
     ...instructionsSlides,
@@ -84,8 +84,10 @@ const FourDSlides = () => {
     ...repeatingSlides,
     ...spacesSlides,
     ...skillsSlides,
-    ...multiagentSlides,
+    ...evolutionSlides,
+    ...copilotCliSlides,
     ...mcpSlides,
+    ...multiagentSlides,
   ];
 
   // Get current section based on slide index

@@ -286,6 +286,7 @@ This pattern prevents wrapped text from aligning under the bullet point. When te
 - Use color-appropriate link styling (e.g., `text-purple-600` for purple-themed slides)
 - GitHub repos: convert `owner/repo` to full GitHub URLs
 - Always include `target="_blank"` and `rel="noopener noreferrer"` for external links
+- **CRITICAL**: When sources, articles, or URLs are mentioned in content, ALWAYS add clickable links - do not forget this step!
 
 ## Source Citations
 

@@ -13,5 +13,6 @@ export { contextSlides } from './context';
 export { skillsSlides } from './skills';
 export { repeatingSlides } from './repeating';
 export { spacesSlides } from './spaces';
+export { evolutionSlides } from './evolution';
 export { multiagentSlides } from './multiagent';
 export { mcpSlides } from './mcp';
