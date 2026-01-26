@@ -17,3 +17,4 @@ export { evolutionSlides } from './evolution';
 export { multiagentSlides } from './multiagent';
 export { sdkSlides } from './sdk';
 export { mcpSlides } from './mcp';
+export { closingSlides } from './closing';

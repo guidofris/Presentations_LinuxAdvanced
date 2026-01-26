@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Target, Box, Code, Terminal, Shield, ShieldAlert, ScrollText, MessageSquare, Brain, Repeat, Layout, Puzzle, Network, PanelRight, PanelLeft, Plug, TrendingUp } from 'lucide-react';
-import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, copilotCliSlides, privacySlides, securitySlides, instructionsSlides, promptingSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, evolutionSlides, multiagentSlides, sdkSlides, mcpSlides } from './sections';
+import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, copilotCliSlides, privacySlides, securitySlides, instructionsSlides, promptingSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, evolutionSlides, multiagentSlides, sdkSlides, mcpSlides, closingSlides } from './sections';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import './index.css';
@@ -36,6 +36,7 @@ const sections = [
   { name: 'MCP', slides: mcpSlides, color: 'teal', icon: Plug },
   { name: 'Multi-Agent', slides: multiagentSlides, color: 'purple', icon: Network },
   { name: 'Copilot SDK', slides: sdkSlides, color: 'indigo', icon: Code },
+  { name: 'Closing', slides: closingSlides, color: 'gray', icon: Presentation },
 ];
 
 // Calculate section start indices
@@ -90,6 +91,7 @@ const FourDSlides = () => {
     ...mcpSlides,
     ...multiagentSlides,
     ...sdkSlides,
+    ...closingSlides,
   ];
 
   // Get current section based on slide index
@@ -313,28 +315,34 @@ const FourDSlides = () => {
         </div>
 
         <div className="mt-4 md:mt-6 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-0 px-2 md:px-4">
-          <div className="flex items-center justify-between w-full md:w-auto md:flex-1">
-            <button
-              onClick={prevSlide}
-              disabled={currentSlide === 0}
-              className="flex items-center space-x-1 md:space-x-2 px-3 py-1.5 md:px-4 md:py-2 bg-white rounded-lg shadow hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all text-sm md:text-base"
-            >
-              <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
-              <span className="hidden sm:inline">Previous</span>
-            </button>
+          <div className="grid grid-cols-3 items-center w-full md:w-auto md:flex md:flex-1">
+            <div className="flex justify-start">
+              {currentSlide > 0 && (
+                <button
+                  onClick={prevSlide}
+                  className="flex items-center space-x-1 md:space-x-2 px-3 py-1.5 md:px-4 md:py-2 bg-white rounded-lg shadow hover:bg-gray-50 transition-all text-sm md:text-base"
+                >
+                  <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
+                  <span className="hidden sm:inline">Previous</span>
+                </button>
+              )}
+            </div>
 
             <div className="text-xs md:text-sm text-gray-500 text-center md:hidden">
               {currentSlide + 1} / {slides.length}
             </div>
 
-            <button
-              onClick={nextSlide}
-              disabled={currentSlide === slides.length - 1}
-              className="flex items-center space-x-1 md:space-x-2 px-3 py-1.5 md:px-4 md:py-2 bg-white rounded-lg shadow hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all text-sm md:text-base md:hidden"
-            >
-              <span className="hidden sm:inline">Next</span>
-              <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
-            </button>
+            <div className="flex justify-end">
+              {currentSlide < slides.length - 1 && (
+                <button
+                  onClick={nextSlide}
+                  className="flex items-center space-x-1 md:space-x-2 px-3 py-1.5 md:px-4 md:py-2 bg-white rounded-lg shadow hover:bg-gray-50 transition-all text-sm md:text-base md:hidden"
+                >
+                  <span className="hidden sm:inline">Next</span>
+                  <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
+                </button>
+              )}
+            </div>
           </div>
 
           <div className="hidden md:block text-sm text-gray-500">
@@ -342,14 +350,15 @@ const FourDSlides = () => {
           </div>
 
           <div className="hidden md:flex md:flex-1 md:justify-end">
-            <button
-              onClick={nextSlide}
-              disabled={currentSlide === slides.length - 1}
-              className="flex items-center space-x-2 px-4 py-2 bg-white rounded-lg shadow hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-            >
-              <span>Next</span>
-              <ChevronRight className="w-5 h-5" />
-            </button>
+            {currentSlide < slides.length - 1 && (
+              <button
+                onClick={nextSlide}
+                className="flex items-center space-x-2 px-4 py-2 bg-white rounded-lg shadow hover:bg-gray-50 transition-all"
+              >
+                <span>Next</span>
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            )}
           </div>
         </div>
       </div>
