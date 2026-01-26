@@ -6,7 +6,7 @@ export const multiagentSlides: SlideType[] = [
     title: "",
     subtitle: "",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-6">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-6">
         <Network className="w-20 h-20 text-purple-500" />
         <h1 className="text-5xl md:text-6xl font-bold text-purple-900 text-center">
           Multi-Agent
@@ -26,7 +26,7 @@ export const multiagentSlides: SlideType[] = [
     title: "Multi-Agent Development with Git Worktrees",
     subtitle: "Supercharge your AI-powered workflow with parallel workspaces",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-8">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-8">
         <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-8 rounded-lg shadow-xl max-w-3xl">
           <div className="flex items-center space-x-4 mb-4">
             <div className="text-5xl">🔀</div>
@@ -211,7 +211,7 @@ export const multiagentSlides: SlideType[] = [
     title: "Multi-Agent Workflow Pattern",
     subtitle: "Organize your work with purpose-driven worktrees",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-8">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-8">
         <p className="text-xl text-gray-700 max-w-3xl w-full text-center">
           Each worktree serves a specific purpose in your development workflow
         </p>

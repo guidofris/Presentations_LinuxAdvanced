@@ -6,7 +6,7 @@ export const contextSlides: SlideType[] = [
     title: "",
     subtitle: "",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-6">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-6">
         <Brain className="w-20 h-20 text-indigo-500" />
         <h1 className="text-5xl md:text-6xl font-bold text-indigo-900 text-center">
           Context
@@ -26,7 +26,7 @@ export const contextSlides: SlideType[] = [
     title: "Context Window",
     subtitle: "Understanding the model's working memory",
     content: (
-      <div className="flex flex-col space-y-4 max-w-4xl w-full mx-auto items-center justify-center h-full">
+      <div className="flex flex-col space-y-4 max-w-4xl w-full mx-auto items-center md:justify-center md:h-full">
         <div className="bg-indigo-50 p-5 rounded-lg border-l-4 border-indigo-500 w-full">
           <p className="text-gray-700 italic">The maximum amount of text (measured in tokens) an LLM can process at once - includes both your input and the model's response</p>
         </div>

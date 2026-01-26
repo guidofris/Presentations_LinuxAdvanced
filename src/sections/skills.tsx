@@ -6,7 +6,7 @@ export const skillsSlides: SlideType[] = [
     title: "",
     subtitle: "",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-6">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-6">
         <Puzzle className="w-20 h-20 text-purple-500" />
         <h1 className="text-5xl md:text-6xl font-bold text-purple-900 text-center">
           Skills
@@ -69,7 +69,7 @@ export const skillsSlides: SlideType[] = [
     title: "Skills vs Custom Instructions",
     subtitle: "When to Use Each Approach",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-8">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-8">
         <div className="w-full max-w-3xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <div className="bg-green-500 text-white p-4 md:p-6 rounded-lg shadow-lg">

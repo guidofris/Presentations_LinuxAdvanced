@@ -6,7 +6,7 @@ export const evolutionSlides: SlideType[] = [
     title: "",
     subtitle: "",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-6">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-6">
         <TrendingUp className="w-20 h-20 text-indigo-500" />
         <h1 className="text-5xl md:text-6xl font-bold text-indigo-900 text-center">
           Evolution of the Programmer
@@ -26,9 +26,9 @@ export const evolutionSlides: SlideType[] = [
     title: "The 8 Stages of Dev Evolution to AI",
     subtitle: "From code completions to orchestrating 30+ agents",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-4 px-4">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-4 px-4">
         {/* Stage Grid */}
-        <div className="grid grid-cols-4 gap-4 max-w-7xl w-full">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl w-full">
           {/* Stage 1 */}
           <div className="border-4 border-teal-400 rounded-lg bg-gradient-to-b from-gray-800 to-gray-900 p-4 shadow-xl">
             <div className="text-white text-xs font-bold mb-2 bg-teal-500 px-2 py-1 rounded">Stage 1</div>
@@ -203,7 +203,7 @@ export const evolutionSlides: SlideType[] = [
     title: "Stages 1-2: First Steps with AI",
     subtitle: "From code completions to permission-based agents",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-8 px-8">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-8 px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full">
           {/* Stage 1 */}
           <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg shadow-xl border-l-4 border-blue-500">
@@ -277,7 +277,7 @@ export const evolutionSlides: SlideType[] = [
     title: "Stages 3-4: Building Trust",
     subtitle: "YOLO mode and wide agents take over the IDE",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-8 px-8">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-8 px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full">
           {/* Stage 3 */}
           <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg shadow-xl border-l-4 border-purple-500">
@@ -355,7 +355,7 @@ export const evolutionSlides: SlideType[] = [
     title: "Stages 5-6: CLI and Multi-Agent",
     subtitle: "Terminal workflows with parallel agents",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-8 px-8">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-8 px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full">
           {/* Stage 5 */}
           <div className="bg-gradient-to-br from-cyan-50 to-cyan-100 p-8 rounded-lg shadow-xl border-l-4 border-cyan-500">
@@ -433,7 +433,7 @@ export const evolutionSlides: SlideType[] = [
     title: "Stages 7-8: Orchestration Era",
     subtitle: "From hand-management to automated orchestration",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-8 px-8">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-8 px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full">
           {/* Stage 7 */}
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-lg shadow-xl border-l-4 border-orange-500">
@@ -511,7 +511,7 @@ export const evolutionSlides: SlideType[] = [
     title: "The Vibe Coding Future",
     subtitle: "What work looks like at Stage 8+",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-8 px-8">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-8 px-8">
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-8 rounded-lg shadow-2xl max-w-4xl">
           <h3 className="text-3xl font-bold text-white mb-4 text-center">
             "Work becomes fluid, an uncountable substance that you sling around freely"
@@ -576,7 +576,7 @@ export const evolutionSlides: SlideType[] = [
     title: "Key Insights: The Evolution Path",
     subtitle: "Understanding the transformation",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-8 px-8">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-8 px-8">
         <div className="grid grid-cols-1 gap-6 max-w-5xl w-full">
           <div className="bg-gradient-to-r from-blue-500 to-indigo-500 p-6 rounded-lg shadow-xl">
             <h4 className="font-bold text-white text-xl mb-2 flex items-center">

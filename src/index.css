@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide scrollbars globally */
+@layer base {
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  *::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+}
+
 /* Shake animation for login error */
 @keyframes shake {
   0%, 100% { transform: translateX(0); }

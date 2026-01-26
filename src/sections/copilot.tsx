@@ -6,7 +6,7 @@ export const copilotSlides: SlideType[] = [
     title: "",
     subtitle: "",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-6">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-6">
         <Code className="w-20 h-20 text-gray-700" />
         <h1 className="text-5xl md:text-6xl font-bold text-gray-900 text-center">
           GitHub Copilot
@@ -26,7 +26,7 @@ export const copilotSlides: SlideType[] = [
     title: "GitHub Copilot",
       subtitle: "Your AI-Powered Development Partner",
       content: (
-        <div className="flex flex-col items-center justify-center h-full space-y-8">
+        <div className="flex flex-col items-center md:justify-center md:h-full space-y-8">
           <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 max-w-2xl w-full">
             <div className="flex items-center space-x-4 mb-4">
               <div className="text-4xl">🤖</div>
@@ -254,7 +254,7 @@ export const copilotSlides: SlideType[] = [
       title: "Copilot Chat Modes",
       subtitle: "Four Ways to Interact with AI in Your Workflow",
       content: (
-        <div className="flex flex-col items-center justify-center h-full space-y-6">
+        <div className="flex flex-col items-center md:justify-center md:h-full space-y-6">
           <p className="text-xl text-gray-700 max-w-2xl text-center mb-4">
             Copilot offers different interaction modes — each optimized for specific tasks and levels of AI autonomy
           </p>

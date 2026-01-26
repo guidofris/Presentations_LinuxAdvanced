@@ -6,7 +6,7 @@ export const modelsSlides: SlideType[] = [
     title: "",
     subtitle: "",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-6">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-6">
         <Box className="w-20 h-20 text-purple-500" />
         <h1 className="text-5xl md:text-6xl font-bold text-purple-900 text-center">
           Models
@@ -26,7 +26,7 @@ export const modelsSlides: SlideType[] = [
     title: "AI Models for Software Engineering",
     subtitle: "Choosing the Right AI Coding Assistant",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-8">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-8">
         <div className="text-center mb-6">
           <p className="text-xl text-gray-700 max-w-2xl mx-auto">
             Understanding model capabilities helps you delegate effectively and

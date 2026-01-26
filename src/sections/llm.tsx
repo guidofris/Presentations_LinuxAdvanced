@@ -6,7 +6,7 @@ export const llmSlides: SlideType[] = [
     title: "",
     subtitle: "",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-6">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-6">
         <Sparkles className="w-20 h-20 text-indigo-500" />
         <h1 className="text-5xl md:text-6xl font-bold text-indigo-900 text-center">
           LLMs
@@ -26,7 +26,7 @@ export const llmSlides: SlideType[] = [
     title: "Understanding LLMs",
     subtitle: "The Technology Powering AI Coding Assistants",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-4 md:space-y-8">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-4 md:space-y-8">
         <div className="text-center mb-2 md:mb-4">
           <p className="text-base md:text-xl text-gray-700 max-w-2xl mx-auto">
             Before we can effectively delegate to AI, we need to understand how these systems actually work
@@ -92,7 +92,7 @@ export const llmSlides: SlideType[] = [
     title: "How Transformers Work",
     subtitle: "From input to output - a visual flow",
     content: (
-      <div className="flex flex-col items-center justify-center h-full">
+      <div className="flex flex-col items-center md:justify-center md:h-full">
         <div className="w-full max-w-5xl">
           {/* Mobile: Vertical flow */}
           <div className="flex md:hidden flex-col items-center space-y-2">
@@ -237,7 +237,7 @@ export const llmSlides: SlideType[] = [
     title: "Evolution Through Scale",
     subtitle: "2017 → Now: How LLMs gained reasoning abilities",
     content: (
-      <div className="flex flex-col space-y-4 md:space-y-6 max-w-3xl mx-auto items-center justify-center h-full">
+      <div className="flex flex-col space-y-4 md:space-y-6 max-w-3xl mx-auto items-center md:justify-center md:h-full">
         <div className="bg-indigo-50 p-3 md:p-4 rounded-lg border-l-4 border-indigo-500">
           <h4 className="font-bold text-indigo-900 mb-2 text-sm md:text-base">What are Parameters?</h4>
           <p className="text-gray-700 text-sm md:text-base">Parameters are the internal weights and connections the model learns during training. Think of them as the "knowledge" stored in the neural network - more parameters = more capacity to learn patterns.</p>
@@ -279,7 +279,7 @@ export const llmSlides: SlideType[] = [
     title: "Role of GPUs",
     subtitle: "The hardware that made the AI revolution possible",
     content: (
-      <div className="flex flex-col space-y-3 md:space-y-4 max-w-4xl mx-auto items-center justify-center h-full">
+      <div className="flex flex-col space-y-3 md:space-y-4 max-w-4xl mx-auto items-center md:justify-center md:h-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 w-full">
           <div className="bg-white p-3 md:p-4 rounded-lg shadow border border-gray-200">
             <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">⚡ Parallel Processing</h4>

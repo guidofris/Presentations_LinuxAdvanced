@@ -6,7 +6,7 @@ export const fluencySlides: SlideType[] = [
     title: "",
     subtitle: "",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-6">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-6">
         <Target className="w-20 h-20 text-blue-500" />
         <h1 className="text-5xl md:text-6xl font-bold text-blue-900 text-center">
           AI Fluency
@@ -26,7 +26,7 @@ export const fluencySlides: SlideType[] = [
     title: "The 4D AI Fluency Framework",
     subtitle: "Process Flow",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-8">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-8">
         <div className="text-center mb-6">
           <p className="text-xl text-gray-700 max-w-2xl mx-auto">
             Four interconnected competencies for effective, efficient, ethical, and safe AI interaction

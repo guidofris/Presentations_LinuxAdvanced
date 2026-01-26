@@ -6,7 +6,7 @@ export const repeatingSlides: SlideType[] = [
     title: "",
     subtitle: "",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-6">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-6">
         <Repeat className="w-20 h-20 text-green-500" />
         <h1 className="text-5xl md:text-6xl font-bold text-green-900 text-center">
           Prompt Files

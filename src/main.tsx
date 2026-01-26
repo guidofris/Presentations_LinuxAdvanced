@@ -189,6 +189,20 @@ const FourDSlides = () => {
     };
   }, [slides.length, menuOpen]);
 
+  // Prevent wheel/scroll from triggering slide navigation
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      // Don't prevent scroll within the content area
+      // Only allow scrolling, not slide navigation
+      e.stopPropagation();
+    };
+
+    window.addEventListener('wheel', handleWheel, { passive: true });
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+    };
+  }, []);
+
   return (
     <div className="min-w-full w-full min-h-screen h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col overflow-x-hidden">
       {/* Menu Button - Desktop: top left, Mobile: edge tab (position based on navOnLeft) */}
@@ -300,21 +314,25 @@ const FourDSlides = () => {
         </button>
       </div>
 
-      <div className="flex-1 flex flex-col p-4 pt-8 md:p-8 min-w-0">
-        <div className="mb-4 md:mb-6 text-center">
-          <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-1 md:mb-2">
-            {slides[currentSlide].title}
-          </h1>
-          <p className="text-base md:text-xl text-gray-600">
-            {slides[currentSlide].subtitle}
-          </p>
+      <div className="flex-1 flex flex-col p-4 pt-8 md:p-8 min-w-0 min-h-0">
+        {(slides[currentSlide].title || slides[currentSlide].subtitle) && (
+          <div className="mb-4 md:mb-6 text-center flex-shrink-0">
+            <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-1 md:mb-2">
+              {slides[currentSlide].title}
+            </h1>
+            <p className="text-base md:text-xl text-gray-600">
+              {slides[currentSlide].subtitle}
+            </p>
+          </div>
+        )}
+
+        <div className="flex-1 min-h-0 md:flex md:items-center md:justify-center">
+          <div className={`w-full h-full overflow-auto ${!slides[currentSlide].title && !slides[currentSlide].subtitle ? 'flex items-center justify-center' : ''}`}>
+            {slides[currentSlide].content}
+          </div>
         </div>
 
-        <div className="flex-1 overflow-auto flex items-center justify-center">
-          {slides[currentSlide].content}
-        </div>
-
-        <div className="mt-4 md:mt-6 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-0 px-2 md:px-4">
+        <div className="mt-4 md:mt-6 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-0 px-2 md:px-4 flex-shrink-0">
           <div className="grid grid-cols-3 items-center w-full md:w-auto md:flex md:flex-1">
             <div className="flex justify-start">
               {currentSlide > 0 && (

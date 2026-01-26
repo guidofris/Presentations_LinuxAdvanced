@@ -6,7 +6,7 @@ export const instructionsSlides: SlideType[] = [
     title: "",
     subtitle: "",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-6">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-6">
         <ScrollText className="w-20 h-20 text-green-500" />
         <h1 className="text-5xl md:text-6xl font-bold text-green-900 text-center">
           Instructions
@@ -26,7 +26,7 @@ export const instructionsSlides: SlideType[] = [
     title: "Custom Instructions",
       subtitle: "Teaching AI Your Coding Standards",
       content: (
-        <div className="flex flex-col items-center justify-center h-full space-y-8">
+        <div className="flex flex-col items-center md:justify-center md:h-full space-y-8">
           <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 max-w-2xl">
             <div className="flex items-center space-x-4">
               <div className="text-4xl">📋</div>

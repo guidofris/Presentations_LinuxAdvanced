@@ -6,7 +6,7 @@ export const sdkSlides: SlideType[] = [
     title: "",
     subtitle: "",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-6">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-6">
         <Code className="w-20 h-20 text-indigo-500" />
         <h1 className="text-5xl md:text-6xl font-bold text-indigo-900 text-center">
           GitHub Copilot SDK
@@ -97,7 +97,7 @@ export const sdkSlides: SlideType[] = [
         <div className="bg-indigo-50 p-6 rounded-lg border-l-4 border-indigo-500">
           <h3 className="text-xl font-bold text-indigo-900 mb-4">Architecture</h3>
           <p className="text-gray-700 mb-3">All SDKs communicate with Copilot CLI server via <strong>JSON-RPC</strong></p>
-          
+
           <div className="bg-white p-4 rounded-lg border border-indigo-200 font-mono text-sm">
             <div className="text-center space-y-2">
               <div className="bg-indigo-100 px-4 py-2 rounded">Your Application</div>

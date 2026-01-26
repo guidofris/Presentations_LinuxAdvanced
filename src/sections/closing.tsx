@@ -5,7 +5,7 @@ export const closingSlides: SlideType[] = [
     title: "",
     subtitle: "",
     content: (
-      <div className="flex flex-col items-center justify-center h-full space-y-4 md:space-y-8 px-4 md:px-0">
+      <div className="flex flex-col items-center md:justify-center md:h-full space-y-4 md:space-y-8 px-4 md:px-0">
         <div className="text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-2 md:mb-4">Thank You!</h2>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-6 md:mb-12">Questions & Discussion</p>
