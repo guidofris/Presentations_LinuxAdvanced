@@ -15,4 +15,5 @@ export { repeatingSlides } from './repeating';
 export { spacesSlides } from './spaces';
 export { evolutionSlides } from './evolution';
 export { multiagentSlides } from './multiagent';
+export { sdkSlides } from './sdk';
 export { mcpSlides } from './mcp';
