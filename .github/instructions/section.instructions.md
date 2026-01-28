@@ -59,6 +59,7 @@ export const sectionSlides: SlideType[] = [
 - Short tagline (one line) describing the section's focus
 - Three decorative dots in the section's color scheme
 - Icon and colors should match the section's theme
+- **CRITICAL: Choose a unique icon not already used by other sections** - check the existing sections array in main.tsx to avoid duplicates
 
 **Recommended Icons by Topic:**
 - LLMs/AI: `Sparkles`, `Brain`, `Cpu`
