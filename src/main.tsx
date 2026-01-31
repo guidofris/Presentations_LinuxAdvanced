@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Target, Box, Code, Terminal, Shield, ShieldAlert, ScrollText, MessageSquare, Brain, Repeat, Layout, Puzzle, Network, PanelRight, PanelLeft, Plug, TrendingUp, Cpu } from 'lucide-react';
-import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, copilotCliSlides, privacySlides, securitySlides, instructionsSlides, promptingSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, evolutionSlides, multiagentSlides, sdkSlides, mcpSlides, closingSlides, ollamaSlides } from './sections';
+import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Target, Box, Code, Terminal, Shield, ShieldAlert, ScrollText, MessageSquare, Brain, Repeat, Layout, Puzzle, Network, PanelRight, PanelLeft, Plug, TrendingUp, Cpu, FileCode } from 'lucide-react';
+import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, copilotCliSlides, privacySlides, securitySlides, instructionsSlides, promptingSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, evolutionSlides, multiagentSlides, sdkSlides, mcpSlides, closingSlides, ollamaSlides, speckitSlides } from './sections';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import './index.css';
@@ -37,6 +37,7 @@ const sections = [
   { name: 'Multi-Agent', slides: multiagentSlides, color: 'purple', icon: Network },
   { name: 'Copilot SDK', slides: sdkSlides, color: 'indigo', icon: Code },
   { name: 'Ollama', slides: ollamaSlides, color: 'blue', icon: Cpu },
+  { name: 'Spec Kit', slides: speckitSlides, color: 'teal', icon: FileCode },
   { name: 'Closing', slides: closingSlides, color: 'gray', icon: Presentation },
 ];
 
@@ -93,6 +94,7 @@ const FourDSlides = () => {
     ...multiagentSlides,
     ...sdkSlides,
     ...ollamaSlides,
+    ...speckitSlides,
     ...closingSlides,
   ];
 
@@ -329,7 +331,7 @@ const FourDSlides = () => {
         )}
 
         <div className="flex-1 min-h-0 md:flex md:items-center md:justify-center">
-          <div className={`w-full h-full overflow-auto ${!slides[currentSlide].title && !slides[currentSlide].subtitle ? 'flex items-center justify-center' : ''}`}>
+          <div className={`w-full h-full overflow-auto md:h-auto md:max-h-full ${!slides[currentSlide].title && !slides[currentSlide].subtitle ? 'flex items-center justify-center' : ''}`}>
             {slides[currentSlide].content}
           </div>
         </div>
