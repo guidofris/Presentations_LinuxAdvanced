@@ -19,6 +19,7 @@ const WORKSHOP_PASSWORD_HASH = import.meta.env.VITE_WORKSHOP_PASSWORD_HASH ||
 // Section definitions with metadata
 const sections = [
   { name: 'Introduction', slides: introSlides, color: 'gray', icon: Presentation },
+  { name: 'Evolution', slides: evolutionSlides, color: 'indigo', icon: TrendingUp },
   { name: 'LLM Basics', slides: llmSlides, color: 'blue', icon: Sparkles },
   { name: '4D Fluency', slides: fluencySlides, color: 'green', icon: Target },
   { name: 'Models', slides: modelsSlides, color: 'orange', icon: Box },
@@ -31,7 +32,6 @@ const sections = [
   { name: 'Repeating Tasks', slides: repeatingSlides, color: 'orange', icon: Repeat },
   { name: 'Spaces', slides: spacesSlides, color: 'blue', icon: Layout },
   { name: 'Skills', slides: skillsSlides, color: 'green', icon: Puzzle },
-  { name: 'Evolution', slides: evolutionSlides, color: 'indigo', icon: TrendingUp },
   { name: 'Copilot CLI', slides: copilotCliSlides, color: 'gray', icon: Terminal },
   { name: 'MCP', slides: mcpSlides, color: 'teal', icon: Plug },
   { name: 'Multi-Agent', slides: multiagentSlides, color: 'purple', icon: Network },
@@ -76,6 +76,7 @@ const FourDSlides = () => {
   // Combine all slide sections
   const slides = [
     ...introSlides,
+    ...evolutionSlides,
     ...llmSlides,
     ...fluencySlides,
     ...modelsSlides,
@@ -88,7 +89,6 @@ const FourDSlides = () => {
     ...repeatingSlides,
     ...spacesSlides,
     ...skillsSlides,
-    ...evolutionSlides,
     ...copilotCliSlides,
     ...mcpSlides,
     ...multiagentSlides,
