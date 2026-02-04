@@ -267,7 +267,7 @@ export const evolutionSlides: SlideType[] = [
             What's needed to evolve
           </h4>
           <p className="text-green-800">
-            Build trust in the agent's judgment; begin letting it operate with more autonomy
+            Learn the skills to produce high-quality responses from AI tools; get comfortable and efficient with AI assistance
           </p>
         </div>
       </div>
@@ -345,7 +345,7 @@ export const evolutionSlides: SlideType[] = [
             What's needed to evolve
           </h4>
           <p className="text-green-800">
-            Shift from IDE to CLI; embrace terminal-based workflows for faster iteration
+            Build trust in the agent's judgment; begin letting it operate with more autonomy
           </p>
         </div>
       </div>
@@ -423,7 +423,7 @@ export const evolutionSlides: SlideType[] = [
             What's needed to evolve
           </h4>
           <p className="text-green-800">
-            Push beyond manual management limits; start thinking about orchestration
+            Shift from IDE to CLI; embrace terminal-based workflows for faster iteration
           </p>
         </div>
       </div>
