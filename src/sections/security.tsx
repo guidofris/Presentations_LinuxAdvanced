@@ -203,6 +203,9 @@ export const securitySlides: SlideType[] = [
               <li>Compromised code suggestions can spread undetected across many files</li>
               <li>By the time detected, damage may be widespread</li>
             </ul>
+            <div className="mt-2 text-xs text-gray-500">
+              Source: <a href="https://idanhabler.medium.com/hiding-in-plain-sight-weaponizing-invisible-unicode-to-attack-llms-f9033865ec10" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Hiding in Plain Sight — Weaponizing Invisible Unicode to Attack LLMs</a>
+            </div>
           </div>
         </div>
 

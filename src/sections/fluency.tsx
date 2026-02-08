@@ -60,8 +60,8 @@ export const fluencySlides: SlideType[] = [
             <div className="inline-block bg-gray-100 px-6 py-3 rounded-lg">
               <div className="font-semibold text-gray-800 mb-2">Three Modes of AI Interaction:</div>
               <div className="text-sm text-gray-600 space-y-1">
-                <div>• Automation: AI executes specific tasks</div>
                 <div>• Augmentation: Humans & AI collaborate</div>
+                <div>• Automation: AI executes specific tasks</div>
                 <div>• Agency: AI performs future tasks independently</div>
               </div>
             </div>

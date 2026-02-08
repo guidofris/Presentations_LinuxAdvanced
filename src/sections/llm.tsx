@@ -222,7 +222,7 @@ export const llmSlides: SlideType[] = [
             </div>
             <div className="bg-gray-50 p-3 rounded-lg">
               <p className="font-semibold text-gray-800 text-sm md:text-base">Embedding & Attention</p>
-              <p className="text-gray-600 text-xs md:text-base">Tokens become numbers; attention finds relationships between words</p>
+              <p className="text-gray-600 text-xs md:text-base">Tokens become number vectors; attention weighs how relevant each token is to others</p>
             </div>
             <div className="bg-gray-50 p-3 rounded-lg">
               <p className="font-semibold text-gray-800 text-sm md:text-base">Layer Processing</p>

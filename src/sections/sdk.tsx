@@ -23,12 +23,12 @@ export const sdkSlides: SlideType[] = [
     )
   },
   {
-    title: "GitHub Copilot SDK - What It Is",
+    title: "GitHub Copilot SDK - What it is",
     subtitle: "Multi-platform SDK for integrating GitHub Copilot Agent",
     content: (
       <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
         <div className="bg-indigo-50 p-6 rounded-lg border-l-4 border-indigo-500">
-          <h3 className="text-2xl font-bold text-indigo-900 mb-3">What Is It?</h3>
+          <h3 className="text-2xl font-bold text-indigo-900 mb-3">What is it</h3>
           <p className="text-lg text-gray-700 mb-4">
             Multi-platform SDK for integrating GitHub Copilot Agent into apps and services
           </p>
@@ -290,78 +290,6 @@ console.`}<code className="text-blue-400">{`log`}</code>{`(response?.data.conten
   }
 });`}
           </pre>
-        </div>
-      </div>
-    )
-  },
-  {
-    title: "External CLI Server Mode",
-    subtitle: "Run CLI separately for debugging and resource sharing",
-    content: (
-      <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
-        <div className="bg-gray-50 p-5 rounded-lg">
-          <h3 className="text-xl font-bold text-gray-900 mb-3">Default vs External Mode</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-500">
-              <div className="font-bold text-blue-900 mb-2">Default Behavior</div>
-              <p className="text-sm text-gray-700">SDK automatically manages CLI process lifecycle</p>
-            </div>
-            <div className="bg-purple-50 p-4 rounded border-l-4 border-purple-500">
-              <div className="font-bold text-purple-900 mb-2">External Mode</div>
-              <p className="text-sm text-gray-700">Run CLI in server mode separately, SDK connects to it</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white p-5 rounded-lg shadow border border-gray-200">
-          <h4 className="font-semibold text-gray-900 mb-3">📋 Use Cases for External Mode</h4>
-          <div className="space-y-2">
-            <div className="flex items-start">
-              <span className="text-lg mr-3">🐛</span>
-              <div>
-                <div className="font-semibold text-gray-900">Debugging</div>
-                <p className="text-sm text-gray-600">Keep CLI running between SDK restarts to inspect logs</p>
-              </div>
-            </div>
-            <div className="flex items-start">
-              <span className="text-lg mr-3">🔗</span>
-              <div>
-                <div className="font-semibold text-gray-900">Resource Sharing</div>
-                <p className="text-sm text-gray-600">Multiple SDK clients connect to same CLI server</p>
-              </div>
-            </div>
-            <div className="flex items-start">
-              <span className="text-lg mr-3">⚙️</span>
-              <div>
-                <div className="font-semibold text-gray-900">Development</div>
-                <p className="text-sm text-gray-600">Run CLI with custom settings or in different environment</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-gray-900 p-5 rounded-lg text-white">
-          <h4 className="text-sm text-gray-400 mb-3">Setup External CLI Server</h4>
-          <div className="space-y-3 text-sm">
-            <div>
-              <div className="text-gray-400 mb-1">1. Start CLI in server mode:</div>
-              <code className="text-green-400">copilot --server --port 4321</code>
-            </div>
-            <div>
-              <div className="text-gray-400 mb-1 mt-3">2. Configure SDK to connect:</div>
-              <pre className="text-xs leading-relaxed">
-                <code className="text-purple-400">{`const`}</code>{` client = `}<code className="text-purple-400">{`new`}</code>{` `}<code className="text-blue-400">{`CopilotClient`}</code>{`({
-  cliUrl: `}<code className="text-yellow-400">{`"localhost:4321"`}</code>{`
-});`}
-              </pre>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
-          <p className="text-sm text-yellow-900">
-            <strong>💡 Note:</strong> When <code className="bg-yellow-100 px-1 rounded">cliUrl</code> is provided, the SDK will not spawn or manage a CLI process—it will only connect to the existing server.
-          </p>
         </div>
       </div>
     )

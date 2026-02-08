@@ -133,26 +133,4 @@ export const introSlides: SlideType[] = [
       </div>
     )
   },
-  {
-    title: "Personal Experience with AI",
-    subtitle: "A journey from skepticism to renewed joy",
-    content: (
-      <div className="flex flex-col space-y-4 md:space-y-6 max-w-3xl mx-auto px-4 md:px-0">
-        <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-gray-200 w-full text-center">
-          <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Initial Skepticism</h4>
-          <p className="text-gray-700 text-sm md:text-base">A lot of marketing terminology thrown at us does not spark enthusiasm, especially when it doesn't seem approachable.</p>
-        </div>
-
-        <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-gray-200 w-full text-center">
-          <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Enhanced Productivity</h4>
-          <p className="text-gray-700 text-sm md:text-base">AI enabled faster building processes and deeper understanding, improving overall development efficiency.</p>
-        </div>
-
-        <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-gray-200 w-full text-center">
-          <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Renewed Joy in Coding</h4>
-          <p className="text-gray-700 text-sm md:text-base">Fine tuning AI usage opened a world of new opportunities.</p>
-        </div>
-      </div>
-    )
-  },
 ];

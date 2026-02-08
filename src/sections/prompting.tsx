@@ -20,7 +20,7 @@ export const promptingSlides: SlideType[] = [
           <div className="w-3 h-3 bg-blue-300 rounded-full"></div>
         </div>
       </div>
-    ),
+    )
   },
   {
     title: "The 4 S's of Effective Prompts",
@@ -94,7 +94,7 @@ export const promptingSlides: SlideType[] = [
           </p>
         </div>
       </div>
-    ),
+    )
   },
   {
     title: "Prompting Best Practices",
@@ -236,7 +236,7 @@ export const promptingSlides: SlideType[] = [
           </p>
         </div>
       </div>
-    ),
+    )
   },
   {
     title: "Meta Prompting",
@@ -289,7 +289,7 @@ ambiguity and keep the instructions concise.`}
           </p>
         </div>
       </div>
-    ),
+    )
   },
   {
     title: "Continuous Improvement",
@@ -346,7 +346,7 @@ these mistakes in the future.`}
           </p>
         </div>
       </div>
-    ),
+    )
   },
   {
     title: "The Core Loop",
@@ -430,69 +430,6 @@ these mistakes in the future.`}
           </p>
         </div>
       </div>
-    ),
-  },
-  {
-    title: "Core Loop: When to Automate",
-    subtitle: "Master the Fundamentals First",
-    content: (
-      <div className="flex flex-col items-center md:justify-center md:h-full space-y-8 max-w-5xl mx-auto px-4">
-        <div className="bg-yellow-50 p-5 rounded-lg border-l-4 border-yellow-500 max-w-3xl">
-          <h3 className="text-2xl font-bold text-yellow-900 mb-2">
-            Don't Speedrun It
-          </h3>
-          <p className="text-base text-gray-700">
-            The bottleneck isn't what AI can do — it's how effectively you can
-            direct it. Master the core loop before adding automation layers.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-3 gap-6 w-full max-w-4xl">
-          <div className="bg-white p-4 rounded-lg shadow border-t-4 border-green-500">
-            <h4 className="font-semibold text-green-900 mb-3 text-center">
-              ✅ Do First
-            </h4>
-            <ul className="space-y-1.5 text-sm text-gray-700">
-              <li>• Clean context</li>
-              <li>• Fast plan-approve loop</li>
-              <li>• Solid repo instructions</li>
-              <li>• Master the basics</li>
-            </ul>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg shadow border-t-4 border-orange-500">
-            <h4 className="font-semibold text-orange-900 mb-3 text-center">
-              ⚖️ Then Add
-            </h4>
-            <ul className="space-y-1.5 text-sm text-gray-700">
-              <li>• MCPs (specific needs)</li>
-              <li>• Subagents (complex)</li>
-              <li>• Automation (proven)</li>
-              <li>• Tools (real problems)</li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-900 p-4 rounded-lg shadow border-t-4 border-blue-500">
-            <h4 className="font-semibold text-blue-400 mb-3 text-center">
-              📊 Success
-            </h4>
-            <div className="space-y-1.5 text-xs text-gray-300">
-              <div className="text-green-400">✓ Master core loop</div>
-              <div className="text-green-400">✓ Clean context</div>
-              <div className="text-green-400">✓ Plan everything</div>
-              <div className="text-red-400 mt-2">✗ Skip planning</div>
-              <div className="text-red-400">✗ Add tools early</div>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-blue-100 px-6 py-3 rounded-lg max-w-3xl">
-          <p className="text-sm text-blue-900 text-center">
-            <strong>Key Takeaway:</strong> The boring fundamentals work. Get
-            fast at the core loop — it gets you 90% of the way there.
-          </p>
-        </div>
-      </div>
-    ),
-  },
+    )
+  }
 ];

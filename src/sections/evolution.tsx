@@ -381,7 +381,7 @@ export const evolutionSlides: SlideType[] = [
               </li>
               <li className="flex items-start">
                 <span className="mr-2">•</span>
-                <span>Optional diff review</span>
+                <span>Optional code review</span>
               </li>
             </ul>
           </div>
@@ -508,71 +508,6 @@ export const evolutionSlides: SlideType[] = [
     )
   },
   {
-    title: "The Vibe Coding Future",
-    subtitle: "What work looks like at Stage 8+",
-    content: (
-      <div className="flex flex-col items-center md:justify-center md:h-full space-y-8 px-8">
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-8 rounded-lg shadow-2xl max-w-4xl">
-          <h3 className="text-3xl font-bold text-white mb-4 text-center">
-            "Work becomes fluid, an uncountable substance that you sling around freely"
-          </h3>
-          <p className="text-purple-100 text-center text-lg">
-            — Steve Yegge on vibe coding
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl w-full">
-          <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-purple-500">
-            <h4 className="font-bold text-gray-900 mb-3 flex items-center">
-              <span className="mr-2 text-2xl">⚡</span>
-              Throughput Over Perfection
-            </h4>
-            <p className="text-gray-700">
-              Focus on creation and correction at the speed of thought. Not 100% efficient, but you're flying.
-            </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-pink-500">
-            <h4 className="font-bold text-gray-900 mb-3 flex items-center">
-              <span className="mr-2 text-2xl">🔄</span>
-              Regenerative Workflow
-            </h4>
-            <p className="text-gray-700">
-              Some work gets lost, regenerated. Some bugs get fixed 2-3 times. More work will come.
-            </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-indigo-500">
-            <h4 className="font-bold text-gray-900 mb-3 flex items-center">
-              <span className="mr-2 text-2xl">🎯</span>
-              Product Manager Role
-            </h4>
-            <p className="text-gray-700">
-              You become a Product Manager. Gas Town is an Idea Compiler. You make up features, design them, sling work to agents.
-            </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-500">
-            <h4 className="font-bold text-gray-900 mb-3 flex items-center">
-              <span className="mr-2 text-2xl">🌊</span>
-              Simultaneous Creation & Consumption
-            </h4>
-            <p className="text-gray-700">
-              You both generate and consume work simultaneously. Churning forward relentlessly on huge piles of work.
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 max-w-6xl w-full rounded-lg">
-          <h4 className="font-bold text-blue-900 mb-2">💡 The Shift</h4>
-          <p className="text-blue-800">
-            Your job is no longer to write code. Your job is to make tasks for superintelligent AI agents that can handle any reasonably sized task.
-          </p>
-        </div>
-      </div>
-    )
-  },
-  {
     title: "Key Insights: The Evolution Path",
     subtitle: "Understanding the transformation",
     content: (
@@ -621,10 +556,10 @@ export const evolutionSlides: SlideType[] = [
           <div className="bg-gradient-to-r from-teal-500 to-cyan-500 p-6 rounded-lg shadow-xl">
             <h4 className="font-bold text-white text-xl mb-2 flex items-center">
               <span className="mr-3 text-3xl">🏗️</span>
-              Infrastructure Follows Need
+              Tools Follow Needs
             </h4>
             <p className="text-teal-50">
-              Don't try to use Stage 8 tools at Stage 3. Let your pain points guide you. Infrastructure needs emerge naturally at each stage.
+              Don't try to use Stage 8 tools at Stage 3. Let your pain points guide you. Tools needs emerge naturally at each stage.
             </p>
           </div>
         </div>

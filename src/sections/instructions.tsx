@@ -445,5 +445,67 @@ these mistakes in the future.`}
           </div>
         </div>
       )
+    },
+    {
+      title: "",
+      subtitle: "",
+      content: (
+        <div className="flex flex-col items-center justify-center h-full space-y-8">
+          <div className="text-center space-y-4">
+            <div className="text-6xl mb-4">🚀</div>
+            <h1 className="text-5xl md:text-6xl font-bold text-green-900">
+              Live Demo
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-2xl">
+              Explore real-world examples of instructions in action
+            </p>
+          </div>
+
+          <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500 max-w-3xl">
+            <h3 className="text-2xl font-bold text-green-900 mb-4">📂 Example Repositories</h3>
+            <p className="text-lg text-gray-700 mb-4">
+              Let's explore how instructions are structured in production codebases:
+            </p>
+            
+            <div className="space-y-4">
+              <div className="bg-white p-4 rounded-lg shadow border border-green-200">
+                <h4 className="font-semibold text-green-900 mb-2">🎓 This Workshop Repository</h4>
+                <p className="text-gray-700 text-sm mb-2">
+                  Instructions for building and maintaining this presentation app
+                </p>
+                <a 
+                  href="https://github.com/JanDeDobbeleer/workshop_ai_native/tree/main/.github" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-green-600 hover:underline font-mono text-sm"
+                >
+                  github.com/JanDeDobbeleer/workshop_ai_native/.github →
+                </a>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg shadow border border-green-200">
+                <h4 className="font-semibold text-green-900 mb-2">⭐ Oh My Posh</h4>
+                <p className="text-gray-700 text-sm mb-2">
+                  Advanced multi-language project with comprehensive agent instructions
+                </p>
+                <a 
+                  href="https://github.com/JanDeDobbeleer/oh-my-posh/tree/main/.github" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-green-600 hover:underline font-mono text-sm"
+                >
+                  github.com/JanDeDobbeleer/oh-my-posh/.github →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex space-x-2 mt-4">
+            <div className="w-3 h-3 bg-green-300 rounded-full"></div>
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            <div className="w-3 h-3 bg-green-300 rounded-full"></div>
+          </div>
+        </div>
+      )
     }
 ];
