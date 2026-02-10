@@ -339,7 +339,7 @@ const FourDSlides = () => {
         <div className="mt-4 md:mt-6 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-0 px-2 md:px-4 flex-shrink-0">
           <div className="grid grid-cols-3 items-center w-full md:w-auto md:flex md:flex-1">
             <div className="flex justify-start">
-              {currentSlide > 0 && (
+              {currentSlide > 0 && currentSlide < slides.length - 1 && (
                 <button
                   onClick={prevSlide}
                   className="flex items-center space-x-1 md:space-x-2 px-3 py-1.5 md:px-4 md:py-2 bg-white rounded-lg shadow hover:bg-gray-50 transition-all text-sm md:text-base"
@@ -351,11 +351,10 @@ const FourDSlides = () => {
             </div>
 
             <div className="text-xs md:text-sm text-gray-500 text-center md:hidden">
-              {currentSlide + 1} / {slides.length}
             </div>
 
             <div className="flex justify-end">
-              {currentSlide < slides.length - 1 && (
+              {currentSlide < slides.length - 2 && (
                 <button
                   onClick={nextSlide}
                   className="flex items-center space-x-1 md:space-x-2 px-3 py-1.5 md:px-4 md:py-2 bg-white rounded-lg shadow hover:bg-gray-50 transition-all text-sm md:text-base md:hidden"
@@ -368,11 +367,10 @@ const FourDSlides = () => {
           </div>
 
           <div className="hidden md:block text-sm text-gray-500">
-            Slide {currentSlide + 1} of {slides.length} | AI Native Software Engineering
           </div>
 
           <div className="hidden md:flex md:flex-1 md:justify-end">
-            {currentSlide < slides.length - 1 && (
+            {currentSlide < slides.length - 2 && (
               <button
                 onClick={nextSlide}
                 className="flex items-center space-x-2 px-4 py-2 bg-white rounded-lg shadow hover:bg-gray-50 transition-all"
