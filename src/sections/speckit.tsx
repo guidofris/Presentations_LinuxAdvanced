@@ -41,22 +41,22 @@ export const speckitSlides: SlideType[] = [
           <div className="bg-white p-5 rounded-lg shadow border border-gray-200">
             <h4 className="font-bold text-gray-900 mb-3">🎯 What SDD Solves</h4>
             <ul className="text-sm text-gray-700 space-y-2">
-              <li>• Prevents shared-context failures</li>
-              <li>• Surfaces assumptions early</li>
-              <li>• Avoids costly rewrites</li>
-              <li>• Aligns teams before coding</li>
-              <li>• Documents the "why" not just "what"</li>
+              <li className="flex"><span className="mr-2">•</span><span>Eliminates failures caused by divergent team/agent assumptions</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Surfaces assumptions early</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Avoids costly rewrites</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Aligns teams before coding</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Documents the "why" not just "what"</span></li>
             </ul>
           </div>
 
           <div className="bg-white p-5 rounded-lg shadow border border-gray-200">
             <h4 className="font-bold text-gray-900 mb-3">✨ Key Benefits</h4>
             <ul className="text-sm text-gray-700 space-y-2">
-              <li>• Living docs that evolve with code</li>
-              <li>• Guides AI agents to right solution</li>
-              <li>• Enables multi-variant implementations</li>
-              <li>• Natural as refactoring code</li>
-              <li>• Unlocks parallel exploration</li>
+              <li className="flex"><span className="mr-2">•</span><span>Living docs that evolve with code</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Guides AI agents to right solution</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Enables multi-variant implementations</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Natural as refactoring code</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Unlocks parallel exploration</span></li>
             </ul>
           </div>
         </div>
@@ -243,61 +243,6 @@ export const speckitSlides: SlideType[] = [
         <div className="bg-orange-50 px-4 py-3 rounded-lg border border-orange-200">
           <p className="text-center text-orange-900 text-xs">
             <strong>Pro Tip:</strong> Provide detailed initial prompts for higher quality specs. More detail = less tweaking later.
-          </p>
-        </div>
-      </div>
-    )
-  },
-  {
-    title: "Best Practices & Tips",
-    subtitle: "Get the most out of Spec-Driven Development",
-    content: (
-      <div className="flex flex-col space-y-4 max-w-4xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <div className="bg-white p-3 rounded-lg shadow border-l-4 border-green-500">
-            <h4 className="font-bold text-gray-900 mb-1 text-sm">✅ Detailed Initial Prompts</h4>
-            <p className="text-xs text-gray-700">More explicit about <strong>what</strong> & <strong>why</strong> = better specs. Think through requirements before <code className="bg-gray-100 px-1 py-0.5 rounded text-xs">/speckit.specify</code>.</p>
-          </div>
-
-          <div className="bg-white p-3 rounded-lg shadow border-l-4 border-blue-500">
-            <h4 className="font-bold text-gray-900 mb-1 text-sm">📝 Customize Templates</h4>
-            <p className="text-xs text-gray-700">Bundled templates are examples — modify prompts in <code className="bg-gray-100 px-1 py-0.5 rounded text-xs">.specify/</code> to fit your org's needs.</p>
-          </div>
-
-          <div className="bg-white p-3 rounded-lg shadow border-l-4 border-purple-500">
-            <h4 className="font-bold text-gray-900 mb-1 text-sm">🏛️ Use constitution.md</h4>
-            <p className="text-xs text-gray-700">Enforce non-negotiable rules (testing, stack, compliance) in constitution. AI agents reference throughout all phases.</p>
-          </div>
-
-          <div className="bg-white p-3 rounded-lg shadow border-l-4 border-orange-500">
-            <h4 className="font-bold text-gray-900 mb-1 text-sm">🔍 Clarify Before Planning</h4>
-            <p className="text-xs text-gray-700">Use <code className="bg-gray-100 px-1 py-0.5 rounded text-xs">/speckit.clarify</code> after spec to surface gaps <strong>before</strong> technical plan — reduces rework.</p>
-          </div>
-
-          <div className="bg-white p-3 rounded-lg shadow border-l-4 border-teal-500">
-            <h4 className="font-bold text-gray-900 mb-1 text-sm">🔄 Version Specs w/ Code</h4>
-            <p className="text-xs text-gray-700">Keep specs in repo so they survive tool switching & onboarding. Living docs that evolve with code.</p>
-          </div>
-
-          <div className="bg-white p-3 rounded-lg shadow border-l-4 border-indigo-500">
-            <h4 className="font-bold text-gray-900 mb-1 text-sm">🧪 Validate & Iterate</h4>
-            <p className="text-xs text-gray-700">Use <code className="bg-gray-100 px-1 py-0.5 rounded text-xs">/speckit.analyze</code> for consistency & <code className="bg-gray-100 px-1 py-0.5 rounded text-xs">/speckit.checklist</code> for completeness.</p>
-          </div>
-        </div>
-
-        <div className="bg-yellow-50 p-3 rounded-lg border border-yellow-200">
-          <div className="flex items-start space-x-2">
-            <div className="text-xl">💡</div>
-            <div>
-              <h4 className="font-bold text-yellow-900 mb-1 text-sm">Experimental Project</h4>
-              <p className="text-xs text-yellow-900">Spec Kit is an experiment — community feedback shapes evolution. Open issues on GitHub for missing features.</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-gradient-to-r from-teal-500 to-blue-500 px-4 py-3 rounded-lg">
-          <p className="text-center text-white font-bold text-sm">
-            🌱 Learn more: <code className="bg-white/20 px-2 py-1 rounded text-xs">github.com/github/spec-kit</code>
           </p>
         </div>
       </div>
