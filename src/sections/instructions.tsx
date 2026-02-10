@@ -1,5 +1,6 @@
 import { ScrollText } from 'lucide-react';
 import { SlideType } from './types';
+import { CodeBlock } from '../components/CodeBlock';
 
 export const instructionsSlides: SlideType[] = [
   {
@@ -133,7 +134,29 @@ export const instructionsSlides: SlideType[] = [
         <div className="flex flex-col space-y-5 max-w-4xl mx-auto">
           <div className="grid grid-cols-2 gap-6">
             {/* Code example */}
-            <div className="bg-gray-900 p-4 rounded-lg">
+            <CodeBlock
+              code={`# Project Guidelines
+
+## Code Style
+- Use TypeScript for all new code
+- Prefer functional components
+- Use Tailwind CSS for styling
+
+## Conventions
+- File names: kebab-case
+- Components: PascalCase
+- Functions: camelCase
+
+## Project Structure
+- Components in /src/components
+- Hooks in /src/hooks
+- Types in /src/types
+
+## Testing
+- Write tests for all new features
+- Use React Testing Library`}
+              className="bg-gray-900 p-4 rounded-lg"
+            >
               <p className="text-gray-400 text-xs mb-2 font-mono">.github/copilot-instructions.md</p>
               <pre className="text-sm text-gray-100 font-mono whitespace-pre-wrap leading-relaxed">
 {`# Project Guidelines
@@ -157,7 +180,7 @@ export const instructionsSlides: SlideType[] = [
 - Write tests for all new features
 - Use React Testing Library`}
               </pre>
-            </div>
+            </CodeBlock>
 
             {/* Tips */}
             <div className="flex flex-col space-y-4">
@@ -205,7 +228,20 @@ export const instructionsSlides: SlideType[] = [
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Python example */}
-            <div className="bg-gray-900 p-4 rounded-lg">
+            <CodeBlock
+              code={`---
+applyTo: "**/*.py"
+description: "Python coding standards"
+---
+# Python Guidelines
+
+- Follow PEP 8 style guide
+- Use type hints for all functions
+- Docstrings for public methods
+- Use pytest for testing
+- Prefer pathlib over os.path`}
+              className="bg-gray-900 p-4 rounded-lg"
+            >
               <p className="text-green-400 text-xs mb-2 font-mono">python-standards.instructions.md</p>
               <pre className="text-sm text-gray-100 font-mono whitespace-pre-wrap leading-relaxed">
 {`---
@@ -220,10 +256,23 @@ description: "Python coding standards"
 - Use pytest for testing
 - Prefer pathlib over os.path`}
               </pre>
-            </div>
+            </CodeBlock>
 
             {/* React example */}
-            <div className="bg-gray-900 p-4 rounded-lg">
+            <CodeBlock
+              code={`---
+applyTo: "src/components/**/*.tsx"
+description: "React component standards"
+---
+# React Components
+
+- Use functional components only
+- Props interface above component
+- Destructure props in signature
+- Use custom hooks for logic
+- Memoize expensive calculations`}
+              className="bg-gray-900 p-4 rounded-lg"
+            >
               <p className="text-blue-400 text-xs mb-2 font-mono">react-components.instructions.md</p>
               <pre className="text-sm text-gray-100 font-mono whitespace-pre-wrap leading-relaxed">
 {`---
@@ -238,7 +287,7 @@ description: "React component standards"
 - Use custom hooks for logic
 - Memoize expensive calculations`}
               </pre>
-            </div>
+            </CodeBlock>
           </div>
 
           <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
@@ -269,7 +318,29 @@ description: "React component standards"
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            <div className="bg-gray-900 p-4 rounded-lg">
+            <CodeBlock
+              code={`# AI Agent Instructions
+
+## Project Overview
+This is a React + TypeScript app
+for workshop presentations.
+
+## Architecture
+- Single-page application
+- Tailwind CSS for styling
+- No external UI libraries
+
+## Code Generation Rules
+- Always use TypeScript
+- Prefer const over let
+- Use descriptive variable names
+- Include error handling
+
+## File Structure
+- slides.tsx contains all slides
+- Each slide is an object in array`}
+              className="bg-gray-900 p-4 rounded-lg"
+            >
               <p className="text-purple-400 text-xs mb-2 font-mono">AGENTS.md (root)</p>
               <pre className="text-sm text-gray-100 font-mono whitespace-pre-wrap leading-relaxed">
 {`# AI Agent Instructions
@@ -293,7 +364,7 @@ for workshop presentations.
 - slides.tsx contains all slides
 - Each slide is an object in array`}
               </pre>
-            </div>
+            </CodeBlock>
 
             <div className="flex flex-col space-y-4">
               <div className="bg-white p-4 rounded-lg shadow border border-purple-200">
@@ -429,14 +500,19 @@ for workshop presentations.
             </div>
           </div>
 
-          <div className="bg-gray-900 p-4 rounded-lg">
+          <CodeBlock
+            code={`Go through our conversation and iterations we
+made and implement/adjust instructions to avoid
+these mistakes in the future.`}
+            className="bg-gray-900 p-4 rounded-lg"
+          >
             <p className="text-orange-400 text-xs mb-2 font-mono">Example Feedback Prompt:</p>
             <pre className="text-sm text-gray-100 font-mono whitespace-pre-wrap leading-relaxed">
 {`Go through our conversation and iterations we
 made and implement/adjust instructions to avoid
 these mistakes in the future.`}
             </pre>
-          </div>
+          </CodeBlock>
 
           <div className="bg-orange-100 p-4 rounded-lg">
             <p className="text-sm italic text-orange-900">
@@ -466,17 +542,17 @@ these mistakes in the future.`}
             <p className="text-lg text-gray-700 mb-4">
               Let's explore how instructions are structured in production codebases:
             </p>
-            
+
             <div className="space-y-4">
               <div className="bg-white p-4 rounded-lg shadow border border-green-200">
                 <h4 className="font-semibold text-green-900 mb-2">🎓 This Workshop Repository</h4>
                 <p className="text-gray-700 text-sm mb-2">
                   Instructions for building and maintaining this presentation app
                 </p>
-                <a 
-                  href="https://github.com/JanDeDobbeleer/workshop_ai_native/tree/main/.github" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://github.com/JanDeDobbeleer/workshop_ai_native/tree/main/.github"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-green-600 hover:underline font-mono text-sm"
                 >
                   github.com/JanDeDobbeleer/workshop_ai_native/.github →
@@ -488,10 +564,10 @@ these mistakes in the future.`}
                 <p className="text-gray-700 text-sm mb-2">
                   Advanced multi-language project with comprehensive agent instructions
                 </p>
-                <a 
-                  href="https://github.com/JanDeDobbeleer/oh-my-posh/tree/main/.github" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://github.com/JanDeDobbeleer/oh-my-posh/tree/main/.github"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-green-600 hover:underline font-mono text-sm"
                 >
                   github.com/JanDeDobbeleer/oh-my-posh/.github →

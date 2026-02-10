@@ -1,5 +1,6 @@
 import { Puzzle } from 'lucide-react';
 import { SlideType } from './types';
+import { CodeBlock } from '../components/CodeBlock';
 
 export const skillsSlides: SlideType[] = [
   {
@@ -111,14 +112,17 @@ export const skillsSlides: SlideType[] = [
       <div className="flex flex-col space-y-6 max-w-3xl w-full mx-auto">
         <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">
           <h3 className="text-2xl font-bold text-purple-900 mb-4">Skill Directory Structure</h3>
-          <div className="bg-gray-900 p-4 rounded font-mono text-sm text-green-400">
+          <CodeBlock
+            code=".github/skills/webapp-testing/\n  SKILL.md\n  example_test.js\n  debug_script.sh"
+            className="bg-gray-900 p-4 rounded font-mono text-sm text-green-400"
+          >
             <pre>
 {`.github/skills/webapp-testing/
   SKILL.md
   example_test.js
   debug_script.sh`}
             </pre>
-          </div>
+          </CodeBlock>
         </div>
 
         <div className="grid grid-cols-1 gap-4">
@@ -181,13 +185,16 @@ export const skillsSlides: SlideType[] = [
           </div>
         </div>
 
-        <div className="bg-gray-900 p-4 rounded-lg font-mono text-xs">
+        <CodeBlock
+          code="---\nname: webapp-testing\ndescription: Testing guide...\n---\n# Instructions here..."
+          className="bg-gray-900 p-4 rounded-lg font-mono text-xs"
+        >
           <div className="text-blue-400 mb-2">---</div>
           <div className="text-blue-400">name: webapp-testing</div>
           <div className="text-blue-400">description: Testing guide...</div>
           <div className="text-blue-400 mb-2">---</div>
           <div className="text-green-400"># Instructions here...</div>
-        </div>
+        </CodeBlock>
       </div>
     )
   },

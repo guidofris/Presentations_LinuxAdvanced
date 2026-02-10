@@ -1,5 +1,6 @@
 import { Terminal } from 'lucide-react';
 import { SlideType } from './types';
+import { CodeBlock } from '../components/CodeBlock';
 
 export const copilotCliSlides: SlideType[] = [
   {
@@ -70,7 +71,12 @@ export const copilotCliSlides: SlideType[] = [
           <div className="bg-blue-50 p-5 rounded-lg border-l-4 border-blue-500">
             <h4 className="font-semibold text-blue-900 mb-3">🔄 Interactive Mode</h4>
             <p className="text-gray-700 mb-2">Start a multi-turn session:</p>
-            <code className="bg-gray-900 text-green-400 px-3 py-1 rounded text-sm block">copilot</code>
+            <CodeBlock
+              code="copilot"
+              className="bg-gray-900 text-green-400 px-3 py-1 rounded text-sm block"
+            >
+              <code className="bg-gray-900 text-green-400 px-3 py-1 rounded text-sm block">copilot</code>
+            </CodeBlock>
             <ul className="space-y-1 text-gray-700 text-sm mt-3">
               <li>• Multi-turn conversations</li>
               <li>• Slash commands available</li>
@@ -80,7 +86,12 @@ export const copilotCliSlides: SlideType[] = [
           <div className="bg-purple-50 p-5 rounded-lg border-l-4 border-purple-500">
             <h4 className="font-semibold text-purple-900 mb-3">⚡ Programmatic Mode</h4>
             <p className="text-gray-700 mb-2">Single prompt execution:</p>
-            <code className="bg-gray-900 text-green-400 px-3 py-1 rounded text-sm block">copilot -p "prompt"</code>
+            <CodeBlock
+              code='copilot -p "prompt"'
+              className="bg-gray-900 text-green-400 px-3 py-1 rounded text-sm block"
+            >
+              <code className="bg-gray-900 text-green-400 px-3 py-1 rounded text-sm block">copilot -p "prompt"</code>
+            </CodeBlock>
             <ul className="space-y-1 text-gray-700 text-sm mt-3">
               <li>• Use <code className="bg-gray-200 px-1 rounded">-p</code> or <code className="bg-gray-200 px-1 rounded">--prompt</code></li>
               <li>• Pipe options from scripts</li>

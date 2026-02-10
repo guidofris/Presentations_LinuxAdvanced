@@ -1,5 +1,6 @@
 import { FileCode } from 'lucide-react';
 import { SlideType } from './types';
+import { CodeBlock } from '../components/CodeBlock';
 
 export const speckitSlides: SlideType[] = [
   {
@@ -140,29 +141,36 @@ export const speckitSlides: SlideType[] = [
           <div className="bg-white p-5 rounded-lg shadow border-l-4 border-green-500">
             <h4 className="font-bold text-gray-900 mb-3">Option 1: Persistent Install (Recommended)</h4>
             <p className="text-sm text-gray-700 mb-3">Install once, use everywhere — tool stays in PATH and available via <code className="bg-gray-100 px-2 py-1 rounded text-xs">specify</code> command.</p>
-            <div className="bg-gray-900 p-4 rounded overflow-x-auto">
+            <CodeBlock
+              code="uv tool install specify-cli --from git+https://github.com/github/spec-kit.git"
+              className="bg-gray-900 p-4 rounded overflow-x-auto"
+            >
               <code className="text-green-400 text-sm font-mono">
-                uv tool install specify-cli \<br />
-                &nbsp;&nbsp;--from git+https://github.com/github/spec-kit.git
+                uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
               </code>
-            </div>
-            <div className="mt-3 bg-gray-900 p-4 rounded overflow-x-auto">
+            </CodeBlock>
+            <p className="text-sm text-gray-700 mt-3 mb-2">Then use directly:</p>
+            <CodeBlock
+              code="specify init my-project --ai copilot"
+              className="bg-gray-900 p-4 rounded overflow-x-auto"
+            >
               <code className="text-blue-400 text-sm font-mono">
-                # Then use directly<br />
-                specify init my-project --ai claude
+                specify init my-project --ai copilot
               </code>
-            </div>
+            </CodeBlock>
           </div>
 
           <div className="bg-white p-5 rounded-lg shadow border-l-4 border-blue-500">
             <h4 className="font-bold text-gray-900 mb-3">Option 2: One-Time Usage</h4>
             <p className="text-sm text-gray-700 mb-3">Run directly without installing — good for trying it out.</p>
-            <div className="bg-gray-900 p-4 rounded overflow-x-auto">
+            <CodeBlock
+              code="uvx --from git+https://github.com/github/spec-kit.git \\\n  specify init my-project --ai copilot"
+              className="bg-gray-900 p-4 rounded overflow-x-auto"
+            >
               <code className="text-green-400 text-sm font-mono">
-                uvx --from git+https://github.com/github/spec-kit.git \<br />
-                &nbsp;&nbsp;specify init my-project --ai claude
+                uvx --from git+https://github.com/github/spec-kit.git specify init my-project --ai copilot
               </code>
-            </div>
+            </CodeBlock>
           </div>
         </div>
 
@@ -189,7 +197,7 @@ export const speckitSlides: SlideType[] = [
             <div className="flex-shrink-0 w-7 h-7 bg-teal-500 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
             <div>
               <h4 className="font-bold text-gray-900 text-sm">Bootstrap Project</h4>
-              <code className="text-xs bg-gray-100 px-2 py-0.5 rounded block mb-1">specify init --ai claude</code>
+              <code className="text-xs bg-gray-100 px-2 py-0.5 rounded block mb-1">specify init --ai copilot</code>
               <p className="text-xs text-gray-600">Scaffolds .specify/ and prompts</p>
             </div>
           </div>

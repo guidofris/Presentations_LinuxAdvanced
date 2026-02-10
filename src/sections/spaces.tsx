@@ -1,5 +1,6 @@
 import { Layout } from 'lucide-react';
 import { SlideType } from './types';
+import { CodeBlock } from '../components/CodeBlock';
 
 export const spacesSlides: SlideType[] = [
   {
@@ -194,12 +195,22 @@ export const spacesSlides: SlideType[] = [
         <div className="bg-white p-4 rounded-lg shadow border border-purple-200">
           <h4 className="font-semibold text-purple-900 mb-2">💡 Example IDE Prompts</h4>
           <div className="space-y-2 text-sm">
-            <code className="block bg-gray-100 p-2 rounded text-gray-800">
-              Using the Copilot space 'Checkout Flow Redesign' owned by myorg, summarize the implementation plan.
-            </code>
-            <code className="block bg-gray-100 p-2 rounded text-gray-800">
-              Summarize the implementation plan from the Copilot space for the checkout flow redesign.
-            </code>
+            <CodeBlock
+              code="Using the Copilot space 'Checkout Flow Redesign' owned by myorg, summarize the implementation plan."
+              className="block bg-gray-100 p-2 rounded text-gray-800"
+            >
+              <code className="block bg-gray-100 p-2 rounded text-gray-800">
+                Using the Copilot space 'Checkout Flow Redesign' owned by myorg, summarize the implementation plan.
+              </code>
+            </CodeBlock>
+            <CodeBlock
+              code="Summarize the implementation plan from the Copilot space for the checkout flow redesign."
+              className="block bg-gray-100 p-2 rounded text-gray-800"
+            >
+              <code className="block bg-gray-100 p-2 rounded text-gray-800">
+                Summarize the implementation plan from the Copilot space for the checkout flow redesign.
+              </code>
+            </CodeBlock>
           </div>
         </div>
 

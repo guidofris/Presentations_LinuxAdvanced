@@ -1,5 +1,6 @@
 import { Code } from 'lucide-react';
 import { SlideType } from './types';
+import { CodeBlock } from '../components/CodeBlock';
 
 export const sdkSlides: SlideType[] = [
   {
@@ -129,7 +130,21 @@ export const sdkSlides: SlideType[] = [
           </p>
         </div>
 
-        <div className="bg-gray-900 p-6 rounded-lg text-white">
+        <CodeBlock
+          code={`import { CopilotClient } from "@github/copilot-sdk";
+
+const client = new CopilotClient();
+const session = await client.createSession({
+  model: "gpt-4.1"
+});
+
+const response = await session.sendAndWait({
+  prompt: "What is 2 + 2?"
+});
+
+console.log(response?.data.content);`}
+          className="bg-gray-900 p-6 rounded-lg text-white"
+        >
           <h4 className="text-sm text-gray-400 mb-3">TypeScript Example</h4>
           <pre className="text-sm leading-relaxed">
             <code className="text-green-400">{`import`}</code>{` { CopilotClient } `}<code className="text-green-400">{`from`}</code>{` `}<code className="text-yellow-400">{`"@github/copilot-sdk"`}</code>{`;
@@ -145,7 +160,7 @@ export const sdkSlides: SlideType[] = [
 
 console.`}<code className="text-blue-400">{`log`}</code>{`(response?.data.content);`}
           </pre>
-        </div>
+        </CodeBlock>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-white p-4 rounded-lg shadow border-t-4 border-indigo-500 text-center">
@@ -276,7 +291,19 @@ console.`}<code className="text-blue-400">{`log`}</code>{`(response?.data.conten
           </div>
         </div>
 
-        <div className="bg-gray-900 p-5 rounded-lg text-white">
+        <CodeBlock
+          code={`const session = await client.createSession({
+  mcpServers: {
+    "my-server": {
+      type: "local",
+      command: "node",
+      args: ["./mcp-server.js"],
+      tools: ["*"]
+    }
+  }
+});`}
+          className="bg-gray-900 p-5 rounded-lg text-white"
+        >
           <h4 className="text-sm text-gray-400 mb-3">Configuration Example</h4>
           <pre className="text-xs leading-relaxed overflow-x-auto">
             <code className="text-purple-400">{`const`}</code>{` session = `}<code className="text-purple-400">{`await`}</code>{` client.`}<code className="text-blue-400">{`createSession`}</code>{`({
@@ -290,7 +317,7 @@ console.`}<code className="text-blue-400">{`log`}</code>{`(response?.data.conten
   }
 });`}
           </pre>
-        </div>
+        </CodeBlock>
       </div>
     )
   }

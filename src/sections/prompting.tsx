@@ -1,5 +1,6 @@
 import { MessageSquare } from "lucide-react";
 import { SlideType } from "./types";
+import { CodeBlock } from "../components/CodeBlock";
 
 export const promptingSlides: SlideType[] = [
   {
@@ -269,7 +270,13 @@ export const promptingSlides: SlideType[] = [
             </ul>
           </div>
 
-          <div className="bg-gray-900 p-4 rounded-lg">
+          <CodeBlock
+            code={`Generate instructions for my blog post
+content based on the style you find in the current
+posts inside /content/post*.md. Validate for
+ambiguity and keep the instructions concise.`}
+            className="bg-gray-900 p-4 rounded-lg"
+          >
             <p className="text-green-400 text-xs mb-2 font-mono">
               Example Meta Prompt:
             </p>
@@ -279,7 +286,7 @@ content based on the style you find in the current
 posts inside /content/post*.md. Validate for
 ambiguity and keep the instructions concise.`}
             </pre>
-          </div>
+          </CodeBlock>
         </div>
 
         <div className="bg-green-100 p-4 rounded-lg">
@@ -328,7 +335,12 @@ ambiguity and keep the instructions concise.`}
           </div>
         </div>
 
-        <div className="bg-gray-900 p-4 rounded-lg">
+        <CodeBlock
+          code={`Go through our conversation and iterations we
+made and implement/adjust instructions to avoid
+these mistakes in the future.`}
+          className="bg-gray-900 p-4 rounded-lg"
+        >
           <p className="text-orange-400 text-xs mb-2 font-mono">
             Example Feedback Prompt:
           </p>
@@ -337,7 +349,7 @@ ambiguity and keep the instructions concise.`}
 made and implement/adjust instructions to avoid
 these mistakes in the future.`}
           </pre>
-        </div>
+        </CodeBlock>
 
         <div className="bg-orange-100 p-4 rounded-lg">
           <p className="text-sm italic text-orange-900">
