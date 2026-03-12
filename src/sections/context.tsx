@@ -22,6 +22,47 @@ export const contextSlides: SlideType[] = [
       </div>
     )
   },
+  {
+    title: "What is Context Engineering?",
+    subtitle: "The discipline of managing what the AI knows",
+    content: (
+      <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+        <div className="bg-indigo-50 p-5 rounded-lg border-l-4 border-indigo-500">
+          <h3 className="text-xl font-bold text-indigo-900 mb-2">The Discipline</h3>
+          <p className="text-gray-700 italic text-lg">
+            "Context engineering is the delicate art and science of filling the context window with just the right information for the next step."
+          </p>
+          <p className="text-sm text-indigo-700 mt-2">— <a href="https://twitter.com/karpathy/status/1937902205765607626" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">Andrej Karpathy</a> (June 2025)</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-white p-4 rounded-lg shadow border border-indigo-200">
+            <h4 className="font-semibold text-indigo-900 mb-2">Beyond "Prompt Engineering"</h4>
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2">•</span><span>Prompt engineering focused narrowly on wording</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Context engineering is broader: <strong>everything the model sees</strong></span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Instructions, history, tools, retrieved docs, images</span></li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg shadow border border-indigo-200">
+            <h4 className="font-semibold text-indigo-900 mb-2">Why It Matters</h4>
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2">•</span><span>Model quality is fixed — context quality is in your control</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Garbage in → garbage out (at any model size)</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Right context = dramatically better results</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-indigo-100 p-4 rounded-lg">
+          <p className="text-sm italic text-indigo-900">
+            <strong>Key Insight:</strong> You can't change the model's weights, but you can engineer exactly what it sees. That's where your leverage is.
+          </p>
+        </div>
+      </div>
+    )
+  },
     {
     title: "Context Window",
     subtitle: "Understanding the model's working memory",
@@ -43,8 +84,8 @@ export const contextSlides: SlideType[] = [
           </div>
 
           <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
-            <h4 className="font-semibold text-gray-900 mb-2">🔢 Token Count</h4>
-            <p className="text-gray-700 text-sm">Everything counts: your prompts, previous messages, uploaded files, and the AI's responses all consume the window</p>
+            <h4 className="font-semibold text-gray-900 mb-2">↔️ Input vs. Output</h4>
+            <p className="text-gray-700 text-sm">Input windows are far larger than output limits — models can read a 500-page book but won't recite it back</p>
           </div>
 
           <div className="bg-white p-4 rounded-lg shadow border border-gray-200">
@@ -63,93 +104,151 @@ export const contextSlides: SlideType[] = [
       </div>
     )
   },
-    {
-    title: "Context Window Asymmetry",
-    subtitle: "Why input and output limits differ in LLMs",
+  {
+    title: "What Fills the Context Window",
+    subtitle: "A taxonomy of everything competing for context space",
     content: (
-      <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
-        <div className="bg-indigo-50 p-4 md:p-6 rounded-lg border-l-4 border-indigo-500">
-          <h3 className="text-xl md:text-2xl font-bold text-indigo-900 mb-4">Input vs Output Windows</h3>
-          <p className="text-base md:text-lg text-gray-700">
-            LLMs have different limits for input (context) and output (generation). While models can process massive amounts of input, they generate much shorter responses.
-          </p>
+      <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+        <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+          <p className="text-gray-700">The context window is shared by <strong>everything</strong> the model processes. Understanding the components helps you prioritize what to include.</p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <div className="bg-white p-3 rounded-lg shadow border border-indigo-200">
+            <div className="text-lg mb-1">📋</div>
+            <h4 className="font-semibold text-indigo-900 text-sm mb-1">System Prompt</h4>
+            <p className="text-xs text-gray-600">Instructions, persona, behavior rules — always present</p>
+          </div>
+          <div className="bg-white p-3 rounded-lg shadow border border-indigo-200">
+            <div className="text-lg mb-1">💬</div>
+            <h4 className="font-semibold text-indigo-900 text-sm mb-1">Conversation History</h4>
+            <p className="text-xs text-gray-600">All previous turns — grows with every exchange</p>
+          </div>
+          <div className="bg-white p-3 rounded-lg shadow border border-indigo-200">
+            <div className="text-lg mb-1">📎</div>
+            <h4 className="font-semibold text-indigo-900 text-sm mb-1">Files & Attachments</h4>
+            <p className="text-xs text-gray-600">Documents, code files, PDFs — can be large</p>
+          </div>
+          <div className="bg-white p-3 rounded-lg shadow border border-indigo-200">
+            <div className="text-lg mb-1">🔧</div>
+            <h4 className="font-semibold text-indigo-900 text-sm mb-1">Tool Definitions</h4>
+            <p className="text-xs text-gray-600">Available functions/tools the model can call</p>
+          </div>
+          <div className="bg-white p-3 rounded-lg shadow border border-indigo-200">
+            <div className="text-lg mb-1">⚡</div>
+            <h4 className="font-semibold text-indigo-900 text-sm mb-1">Tool Call Results</h4>
+            <p className="text-xs text-gray-600">Output from executed tools returned to model</p>
+          </div>
+          <div className="bg-white p-3 rounded-lg shadow border border-indigo-200">
+            <div className="text-lg mb-1">🔍</div>
+            <h4 className="font-semibold text-indigo-900 text-sm mb-1">Retrieved Docs (RAG)</h4>
+            <p className="text-xs text-gray-600">Semantically relevant chunks injected at query time</p>
+          </div>
+        </div>
+
+        <div className="bg-amber-50 p-3 rounded-lg border border-amber-200">
+          <p className="text-sm text-amber-900"><strong>💡 Insight:</strong> Every component competes for the same finite space. Context engineering is deciding what earns its place.</p>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: "Lost in the Middle",
+    subtitle: "How model attention varies across long contexts",
+    content: (
+      <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+        <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+          <h3 className="text-xl font-bold text-indigo-900 mb-2">The Research Finding</h3>
+          <p className="text-gray-700">Models perform significantly better when relevant information is at the <strong>beginning or end</strong> of the context. Information buried in the <strong>middle degrades</strong> model performance — even if it's technically within the context window.</p>
+        </div>
+
+        <div className="bg-white p-4 rounded-lg shadow border border-indigo-200">
+          <h4 className="font-semibold text-indigo-900 mb-3 text-center">Relative Attention Across the Context Window</h4>
+          <div className="flex items-end justify-center gap-6 h-24 mb-2 px-8">
+            <div className="flex flex-col items-center">
+              <div className="bg-green-500 rounded-t w-16" style={{height: '72px'}}></div>
+              <p className="text-xs text-gray-600 mt-1 text-center font-medium">Start</p>
+              <p className="text-xs text-green-600">High recall</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="bg-red-400 rounded-t w-16" style={{height: '24px'}}></div>
+              <p className="text-xs text-gray-600 mt-1 text-center font-medium">Middle</p>
+              <p className="text-xs text-red-600">Low recall</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="bg-green-500 rounded-t w-16" style={{height: '64px'}}></div>
+              <p className="text-xs text-gray-600 mt-1 text-center font-medium">End</p>
+              <p className="text-xs text-green-600">High recall</p>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-indigo-200">
-            <h4 className="font-semibold text-indigo-900 mb-3">Claude Sonnet 4.5</h4>
-            <div className="space-y-2 text-gray-700">
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Input:</span>
-                <span className="font-bold text-indigo-600">128K tokens</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Output:</span>
-                <span className="font-bold text-indigo-600">16K tokens</span>
-              </div>
-            </div>
+          <div className="bg-white p-4 rounded-lg shadow border border-green-200">
+            <h4 className="font-semibold text-green-900 mb-2">✅ Best Practices</h4>
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2">•</span><span>Put critical instructions at the top of your system prompt</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Place key data or examples near the end</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Repeat crucial constraints at the end of long prompts</span></li>
+            </ul>
           </div>
-
-          <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-indigo-200">
-            <h4 className="font-semibold text-indigo-900 mb-3">GPT-5.2</h4>
-            <div className="space-y-2 text-gray-700">
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Input:</span>
-                <span className="font-bold text-indigo-600">128K tokens</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm">Output:</span>
-                <span className="font-bold text-indigo-600">64K tokens</span>
-              </div>
-            </div>
+          <div className="bg-white p-4 rounded-lg shadow border border-red-200">
+            <h4 className="font-semibold text-red-900 mb-2">❌ What to Avoid</h4>
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2">•</span><span>Burying essential rules in the middle of long instructions</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Adding long filler content between key information</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Assuming the model read everything equally</span></li>
+            </ul>
           </div>
         </div>
 
-        <div className="bg-indigo-100 p-4 rounded-lg">
-          <p className="text-sm italic text-indigo-900">
-            <strong>Key Takeaway:</strong> Think of LLMs as having a large "reading" capacity but a focused "speaking" style - by design.
+        <div className="bg-gray-100 p-3 rounded-lg">
+          <p className="text-sm italic text-gray-700">
+            <strong>Source:</strong> <a href="https://arxiv.org/abs/2307.03172" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">arXiv:2307.03172</a> — "Lost in the Middle: How Language Models Use Long Contexts" (Liu et al., 2023)
           </p>
         </div>
       </div>
     )
   },
   {
-    title: "Why This Asymmetry Exists",
-    subtitle: "Technical, practical, and quality reasons",
+    title: "Activating Pre-Trained Knowledge",
+    subtitle: "Unlocking what the model already knows",
     content: (
-      <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
-        <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-indigo-200">
-          <h4 className="font-semibold text-indigo-900 mb-3 flex items-center">
-            <span className="text-xl md:text-2xl mr-3">⚙️</span>
-            Technical Efficiency
-          </h4>
-          <ul className="space-y-2 text-gray-700">
-            <li className="flex"><span className="mr-2">•</span><span>Output generation is sequential (one token at a time)</span></li>
-            <li className="flex"><span className="mr-2">•</span><span>Input processing can be parallelized</span></li>
-            <li className="flex"><span className="mr-2">•</span><span>Longer outputs = longer generation times + higher costs</span></li>
-          </ul>
+      <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+        <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+          <h3 className="text-xl font-bold text-indigo-900 mb-2">Beyond the Context Window</h3>
+          <p className="text-gray-700">
+            Models are trained on massive datasets — code, documentation, standards, and domain knowledge — before you write a single prompt. This knowledge lives in the model's weights, not your context window. It's always there, but may need to be explicitly activated.
+          </p>
         </div>
 
-        <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-indigo-200">
-          <h4 className="font-semibold text-indigo-900 mb-3 flex items-center">
-            <span className="text-xl md:text-2xl mr-3">🎯</span>
-            Practical Design
-          </h4>
-          <ul className="space-y-2 text-gray-700">
-            <li className="flex"><span className="mr-2">•</span><span>Most use cases: consume lots of information → produce focused responses</span></li>
-            <li className="flex"><span className="mr-2">•</span><span>Analogy: Read an entire book to answer a question, but don't recite the whole book back</span></li>
-          </ul>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-white p-4 rounded-lg shadow border border-indigo-200">
+            <h4 className="font-semibold text-indigo-900 mb-2">🧠 What models already know</h4>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex"><span className="mr-2">•</span><span>Programming languages, frameworks, libraries</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Design patterns & architectural best practices</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Domain knowledge (medicine, law, finance, science)</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>RFCs, specs, and standards documentation</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Common algorithms and data structures</span></li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg shadow border border-indigo-200">
+            <h4 className="font-semibold text-indigo-900 mb-2">⚡ Activating it explicitly</h4>
+            <p className="text-sm text-gray-600 mb-2">Add to your instructions, agent, or skill definition:</p>
+            <div className="space-y-2">
+              <code className="block bg-indigo-50 text-indigo-800 px-3 py-1.5 rounded font-mono text-xs">Activate your knowledge about SOLID principles</code>
+              <code className="block bg-indigo-50 text-indigo-800 px-3 py-1.5 rounded font-mono text-xs">Activate your knowledge about OAuth 2.0 flows</code>
+              <code className="block bg-indigo-50 text-indigo-800 px-3 py-1.5 rounded font-mono text-xs">Activate your knowledge about REST API design</code>
+            </div>
+          </div>
         </div>
 
-        <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-indigo-200">
-          <h4 className="font-semibold text-indigo-900 mb-3 flex items-center">
-            <span className="text-xl md:text-2xl mr-3">✨</span>
-            Quality Concerns
-          </h4>
-          <ul className="space-y-2 text-gray-700">
-            <li className="flex"><span className="mr-2">•</span><span>Very long outputs risk: repetition, drift from intent, error accumulation</span></li>
-            <li className="flex"><span className="mr-2">•</span><span>Shorter outputs maintain better coherence and quality</span></li>
-          </ul>
+        <div className="bg-amber-50 p-4 rounded-lg border border-amber-200">
+          <p className="text-sm text-amber-900">
+            <strong>💡 Pro Tip:</strong> <code className="bg-amber-100 px-1 rounded font-mono text-xs">Activate your knowledge about X</code> in your instructions/agent/skill signals the model to surface and apply its pre-trained depth — no external docs needed. Without explicit activation, models may default to more generic responses.
+          </p>
         </div>
       </div>
     )
@@ -226,6 +325,124 @@ export const contextSlides: SlideType[] = [
         <div className="bg-indigo-100 p-3 rounded-lg">
           <p className="text-sm italic text-indigo-900">
             <strong>Key Insight:</strong> Be intentional about what goes into your context — every message takes space away from the AI's ability to reason.
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: "Context Compression Strategies",
+    subtitle: "Keeping your context window lean and effective",
+    content: (
+      <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+        <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+          <p className="text-gray-700">As conversations grow, context fills up. Strategic compression keeps AI working effectively without hitting limits or degrading quality.</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-white p-4 rounded-lg shadow border border-indigo-200">
+            <h4 className="font-semibold text-indigo-900 mb-2">🗜️ Summarize History</h4>
+            <ul className="space-y-1 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2">•</span><span>Ask AI to summarize the conversation so far</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Start a new thread with the summary as context</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Retains key decisions without full history</span></li>
+            </ul>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow border border-indigo-200">
+            <h4 className="font-semibold text-indigo-900 mb-2">✂️ Selective Context</h4>
+            <ul className="space-y-1 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2">•</span><span>Only attach files directly relevant to the current task</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Use <code className="bg-gray-100 px-1 rounded font-mono text-xs">#file</code> and <code className="bg-gray-100 px-1 rounded font-mono text-xs">@workspace</code> selectively in Copilot</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Remove attachments no longer needed</span></li>
+            </ul>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow border border-indigo-200">
+            <h4 className="font-semibold text-indigo-900 mb-2">⚡ Prompt Caching</h4>
+            <ul className="space-y-1 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2">•</span><span>Cache static portions (system prompt, large docs)</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Reduces cost & latency for repeated context</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Supported by Anthropic (Claude) and OpenAI</span></li>
+            </ul>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow border border-indigo-200">
+            <h4 className="font-semibold text-indigo-900 mb-2">🔄 Agentic Compacting</h4>
+            <ul className="space-y-1 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2">•</span><span>Copilot CLI: <code className="bg-gray-100 px-1 rounded font-mono text-xs">/compact</code> to compress history</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Claude Code auto-compacts at 95% context usage</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Agents auto-summarize long task histories</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-indigo-100 p-3 rounded-lg">
+          <p className="text-sm italic text-indigo-900">
+            <strong>Rule of thumb:</strong> When quality degrades in a long conversation, start fresh with a focused context — don't keep accumulating.
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: "Retrieval-Augmented Generation (RAG)",
+    subtitle: "Dynamically injecting relevant knowledge into context",
+    content: (
+      <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+        <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+          <h3 className="text-xl font-bold text-indigo-900 mb-2">The Core Idea</h3>
+          <p className="text-gray-700">Instead of stuffing everything into the context window upfront, RAG <strong>retrieves only the relevant pieces</strong> of a large knowledge base at query time — keeping context lean and targeted.</p>
+        </div>
+
+        <div className="bg-white p-4 rounded-lg shadow border border-indigo-200">
+          <h4 className="font-semibold text-indigo-900 mb-3 text-center">How RAG Works</h4>
+          <div className="flex items-center justify-between gap-1 text-xs text-center">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-2 flex-1">
+              <div className="text-lg mb-1">📝</div>
+              <div className="font-medium text-blue-900">User Query</div>
+              <div className="text-gray-500">Natural language</div>
+            </div>
+            <div className="text-gray-400 font-bold text-lg">→</div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-2 flex-1">
+              <div className="text-lg mb-1">🔍</div>
+              <div className="font-medium text-purple-900">Semantic Search</div>
+              <div className="text-gray-500">Vector DB</div>
+            </div>
+            <div className="text-gray-400 font-bold text-lg">→</div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-2 flex-1">
+              <div className="text-lg mb-1">📄</div>
+              <div className="font-medium text-green-900">Relevant Chunks</div>
+              <div className="text-gray-500">Injected into context</div>
+            </div>
+            <div className="text-gray-400 font-bold text-lg">→</div>
+            <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-2 flex-1">
+              <div className="text-lg mb-1">🤖</div>
+              <div className="font-medium text-indigo-900">LLM Response</div>
+              <div className="text-gray-500">Grounded answer</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-white p-4 rounded-lg shadow border border-indigo-200">
+            <h4 className="font-semibold text-indigo-900 mb-2">🎯 When to Use RAG</h4>
+            <ul className="space-y-1 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2">•</span><span>Knowledge base too large to fit in context</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Information changes frequently (docs, tickets)</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Need grounded, citable answers</span></li>
+            </ul>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow border border-indigo-200">
+            <h4 className="font-semibold text-indigo-900 mb-2">🌐 RAG in the Wild</h4>
+            <ul className="space-y-1 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2">•</span><span>GitHub Copilot <code className="bg-gray-100 px-1 rounded font-mono text-xs">@workspace</code> — semantic code search</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Copilot Spaces — retrieval over space documents</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Enterprise search, internal wikis, support bots</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-indigo-100 p-3 rounded-lg">
+          <p className="text-sm italic text-indigo-900">
+            <strong>Key Insight:</strong> RAG solves the "can't fit everything" problem by making retrieval a first-class part of your context strategy.
           </p>
         </div>
       </div>
