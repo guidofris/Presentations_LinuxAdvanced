@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Target, Box, Code, Terminal, Shield, ShieldAlert, ScrollText, MessageSquare, Brain, Repeat, Layout, Puzzle, Network, PanelRight, PanelLeft, Plug, TrendingUp, Cpu, FileCode } from 'lucide-react';
-import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, copilotCliSlides, privacySlides, securitySlides, instructionsSlides, promptingSlides, skillsSlides, repeatingSlides, spacesSlides, contextSlides, evolutionSlides, multiagentSlides, sdkSlides, mcpSlides, closingSlides, ollamaSlides, speckitSlides } from './sections';
+import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Target, Box, Code, Terminal, Shield, ShieldAlert, ScrollText, MessageSquare, Brain, Puzzle, Network, PanelRight, PanelLeft, Plug, TrendingUp, Cpu, FileCode, Users } from 'lucide-react';
+import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, copilotCliSlides, privacySlides, securitySlides, instructionsSlides, promptingSlides, skillsSlides, spacesSlides, contextSlides, evolutionSlides, multiagentSlides, sdkSlides, mcpSlides, closingSlides, ollamaSlides, speckitSlides } from './sections';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import './index.css';
@@ -23,21 +23,20 @@ const sections = [
   { name: 'LLM Basics', slides: llmSlides, color: 'blue', icon: Sparkles },
   { name: '4D Fluency', slides: fluencySlides, color: 'green', icon: Target },
   { name: 'Models', slides: modelsSlides, color: 'orange', icon: Box },
+  { name: 'Ollama', slides: ollamaSlides, color: 'blue', icon: Cpu },
   { name: 'Prompting', slides: promptingSlides, color: 'indigo', icon: MessageSquare },
   { name: 'Copilot', slides: copilotSlides, color: 'blue', icon: Code },
   { name: 'Privacy', slides: privacySlides, color: 'purple', icon: Shield },
   { name: 'Security', slides: securitySlides, color: 'red', icon: ShieldAlert },
   { name: 'Instructions', slides: instructionsSlides, color: 'green', icon: ScrollText },
-  { name: 'Context', slides: contextSlides, color: 'purple', icon: Brain },
-  { name: 'Repeating Tasks', slides: repeatingSlides, color: 'orange', icon: Repeat },
-  { name: 'Skills', slides: skillsSlides, color: 'green', icon: Puzzle },
   { name: 'Spec Kit', slides: speckitSlides, color: 'teal', icon: FileCode },
+  { name: 'Context', slides: contextSlides, color: 'purple', icon: Brain },
+  { name: 'Reuse & Skills', slides: skillsSlides, color: 'purple', icon: Puzzle },
   { name: 'MCP', slides: mcpSlides, color: 'teal', icon: Plug },
-  { name: 'Spaces', slides: spacesSlides, color: 'blue', icon: Layout },
+  { name: 'Team Sharing', slides: spacesSlides, color: 'blue', icon: Users },
   { name: 'Copilot CLI', slides: copilotCliSlides, color: 'gray', icon: Terminal },
   { name: 'Multi-Agent', slides: multiagentSlides, color: 'purple', icon: Network },
   { name: 'Copilot SDK', slides: sdkSlides, color: 'indigo', icon: Code },
-  { name: 'Ollama', slides: ollamaSlides, color: 'blue', icon: Cpu },
   { name: 'Closing', slides: closingSlides, color: 'gray', icon: Presentation },
 ];
 
@@ -80,21 +79,20 @@ const FourDSlides = () => {
     ...llmSlides,
     ...fluencySlides,
     ...modelsSlides,
+    ...ollamaSlides,
     ...promptingSlides,
     ...copilotSlides,
     ...privacySlides,
     ...securitySlides,
     ...instructionsSlides,
-    ...contextSlides,
-    ...repeatingSlides,
-    ...skillsSlides,
     ...speckitSlides,
+    ...contextSlides,
+    ...skillsSlides,
     ...mcpSlides,
     ...spacesSlides,
     ...copilotCliSlides,
     ...multiagentSlides,
     ...sdkSlides,
-    ...ollamaSlides,
     ...closingSlides,
   ];
 
