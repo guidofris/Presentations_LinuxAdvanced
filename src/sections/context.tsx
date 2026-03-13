@@ -445,6 +445,13 @@ export const contextSlides: SlideType[] = [
             <strong>Key Insight:</strong> RAG solves the "can't fit everything" problem by making retrieval a first-class part of your context strategy.
           </p>
         </div>
+
+        <div className="bg-green-50 border border-green-300 p-3 rounded-lg">
+          <p className="text-sm text-green-900">
+            🛠️ <strong>Want to run RAG locally?</strong> Combine <strong>Ollama</strong> + <strong>LlamaIndex</strong> + <strong>ChromaDB</strong> — no cloud, no cost, full privacy.{" "}
+            <a href="https://dev.to/the_aayush_mishra/setting-up-rag-locally-with-ollama-a-beginner-friendly-guide-428m" target="_blank" rel="noopener noreferrer" className="text-green-700 underline hover:text-green-900">Step-by-step guide →</a>
+          </p>
+        </div>
       </div>
     )
   },
