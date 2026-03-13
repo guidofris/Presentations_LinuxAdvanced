@@ -247,5 +247,56 @@ export const spacesSlides: SlideType[] = [
         </div>
       </div>
     )
+  },
+  {
+    title: "APM + Copilot Coding Agent",
+    subtitle: "Auto-initialize your team's AI config in the agent environment",
+    content: (
+      <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+        <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+          <h3 className="text-xl font-bold text-blue-900 mb-2">The Problem</h3>
+          <p className="text-gray-700">When Copilot coding agent spins up an ephemeral environment to work on a task, it starts fresh — with none of your team's APM-managed instructions, skills, or MCP servers installed.</p>
+        </div>
+
+        <div className="grid grid-cols-2 gap-4">
+          <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+            <h4 className="font-semibold text-blue-900 mb-2">🛠️ The Solution</h4>
+            <p className="text-sm text-gray-700 mb-2">Create a <strong>Copilot setup steps</strong> file to run <code className="bg-gray-100 px-1 rounded text-xs">apm install</code> before the agent starts work.</p>
+            <ul className="space-y-1 text-sm text-gray-700">
+              <li className="flex"><span className="mr-2">•</span><span>Runs in GitHub Actions before Copilot starts</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Deterministic — no trial-and-error installs</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Agent gets full team config every time</span></li>
+            </ul>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+            <h4 className="font-semibold text-blue-900 mb-2">📂 File Location</h4>
+            <code className="block bg-gray-100 p-2 rounded text-xs text-gray-800 mb-2">.github/workflows/<br/>copilot-setup-steps.yml</code>
+            <ul className="space-y-1 text-sm text-gray-700">
+              <li className="flex"><span className="mr-2">•</span><span>Must be on your default branch</span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Job must be named <code className="bg-gray-100 px-1 rounded text-xs">copilot-setup-steps</code></span></li>
+              <li className="flex"><span className="mr-2">•</span><span>Auto-runs on push to validate</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-gray-900 p-4 rounded-lg">
+          <pre className="text-green-400 text-xs overflow-x-auto">{`jobs:
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install APM config
+        run: npx apm install`}</pre>
+        </div>
+
+        <div className="bg-blue-100 p-4 rounded-lg">
+          <p className="text-sm italic text-blue-900">
+            <strong>Docs:</strong> <a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-environment" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline">Customize the Copilot coding agent environment</a>
+          </p>
+        </div>
+      </div>
+    )
   }
 ];
