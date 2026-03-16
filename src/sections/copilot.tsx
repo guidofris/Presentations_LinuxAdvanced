@@ -546,6 +546,63 @@ export const copilotSlides: SlideType[] = [
       )
     },
     {
+      title: "Agent Approval Levels",
+      subtitle: "How Much Should Your Agent Do On Its Own?",
+      content: (
+        <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+          <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+            <p className="text-gray-700">
+              VS Code 1.111 adds a <strong>permissions picker</strong> in Copilot Chat to control agent autonomy. Three levels, each trading oversight for speed — accessible from the bottom of the Chat prompt.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+            <div className="flex flex-col bg-white p-4 rounded-lg shadow border-2 border-gray-300">
+              <div className="text-2xl mb-2 text-center">🛡️</div>
+              <h4 className="font-bold text-gray-900 mb-1 text-center text-sm">Default Approvals</h4>
+              <p className="text-xs text-gray-500 text-center mb-3">Manual supervision</p>
+              <ul className="space-y-1 text-xs text-gray-700 flex-1">
+                <li className="flex"><span className="mr-1">•</span><span>Shows confirmation dialogs before every tool call</span></li>
+                <li className="flex"><span className="mr-1">•</span><span>Stops for user input on decisions</span></li>
+                <li className="flex"><span className="mr-1">•</span><span>Expect 9–13 manual stops per complex task</span></li>
+              </ul>
+              <div className="mt-3 pt-2 border-t border-gray-200 text-xs text-center text-gray-500">Maximum oversight</div>
+            </div>
+
+            <div className="flex flex-col bg-white p-4 rounded-lg shadow border-2 border-yellow-400">
+              <div className="text-2xl mb-2 text-center">⚡</div>
+              <h4 className="font-bold text-gray-900 mb-1 text-center text-sm">Bypass Approvals</h4>
+              <p className="text-xs text-gray-500 text-center mb-3">Semi-autonomous</p>
+              <ul className="space-y-1 text-xs text-gray-700 flex-1">
+                <li className="flex"><span className="mr-1">•</span><span>Auto-approves tool calls and retries on errors</span></li>
+                <li className="flex"><span className="mr-1">•</span><span>Still stops when it hits an ambiguous decision</span></li>
+                <li className="flex"><span className="mr-1">•</span><span>A "mute button" for security dialogs</span></li>
+              </ul>
+              <div className="mt-3 pt-2 border-t border-yellow-200 text-xs text-center text-yellow-700">No dialogs, but pauses on decisions</div>
+            </div>
+
+            <div className="flex flex-col bg-white p-4 rounded-lg shadow border-2 border-purple-400">
+              <div className="text-2xl mb-2 text-center">🤖</div>
+              <h4 className="font-bold text-gray-900 mb-1 text-center text-sm">Autopilot <span className="text-purple-500">(Preview)</span></h4>
+              <p className="text-xs text-gray-500 text-center mb-3">Fully autonomous</p>
+              <ul className="space-y-1 text-xs text-gray-700 flex-1">
+                <li className="flex"><span className="mr-1">•</span><span>Auto-approves all tools and retries on errors</span></li>
+                <li className="flex"><span className="mr-1">•</span><span>Auto-responds to blocking questions</span></li>
+                <li className="flex"><span className="mr-1">•</span><span>Iterates until the task is complete</span></li>
+              </ul>
+              <div className="mt-3 pt-2 border-t border-purple-200 text-xs text-center text-purple-700">Enable: <code className="bg-purple-50 px-1 rounded">chat.autopilot.enabled</code></div>
+            </div>
+          </div>
+
+          <div className="bg-gray-100 p-4 rounded-lg">
+            <p className="text-sm italic text-gray-700 text-center">
+              Default = you supervise every step &nbsp;·&nbsp; Bypass = no dialogs, still pauses on decisions &nbsp;·&nbsp; Autopilot = it drives until done
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
       title: "Workspace Indexing & Implicit Context",
       subtitle: "How Copilot Understands Your Project Automatically",
       content: (
