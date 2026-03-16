@@ -70,8 +70,11 @@ export const modelsSlides: SlideType[] = [
 
         <div className="bg-gray-100 px-6 py-3 rounded-lg mt-4 max-w-3xl w-full">
           <p className="text-sm text-gray-600 italic">
-            Source: Lunabase AI - "Best AI Coding Models for Software
-            Development 2025"
+            Sources:{" "}
+            <a href="https://www.swebench.com/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">SWE-bench Leaderboard</a>
+            {" "}·{" "}
+            <a href="https://benchlm.ai/benchmarks/humaneval" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">BenchLM HumanEval</a>
+            {" "}(March 2026)
           </p>
         </div>
       </div>
@@ -79,7 +82,7 @@ export const modelsSlides: SlideType[] = [
   },
   {
     title: "Real-World Coding Performance",
-    subtitle: "SWE-bench Verified Scores (2025)",
+    subtitle: "SWE-bench Verified Scores (March 2026)",
     content: (
       <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
         <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
@@ -91,77 +94,77 @@ export const modelsSlides: SlideType[] = [
         </div>
 
         <div className="space-y-4">
-          {/* Claude Sonnet 4.5 */}
+          {/* Claude 4.5 Opus */}
           <div className="flex items-center space-x-4">
             <div className="w-40 text-right font-semibold text-gray-800">
-              Claude Sonnet 4.5
+              Claude 4.5 Opus
             </div>
             <div className="flex-1 bg-gray-200 rounded-full h-8 overflow-hidden">
               <div
                 className="bg-gradient-to-r from-purple-500 to-purple-600 h-full rounded-full flex items-center justify-end pr-3"
-                style={{ width: "91.8%" }}
+                style={{ width: "76.8%" }}
               >
-                <span className="text-white font-bold text-sm">64.3%</span>
+                <span className="text-white font-bold text-sm">76.8%</span>
               </div>
             </div>
           </div>
 
-          {/* GPT-5 */}
+          {/* Gemini 3 Flash */}
           <div className="flex items-center space-x-4">
             <div className="w-40 text-right font-semibold text-gray-800">
-              GPT-5
-            </div>
-            <div className="flex-1 bg-gray-200 rounded-full h-8 overflow-hidden">
-              <div
-                className="bg-gradient-to-r from-green-500 to-green-600 h-full rounded-full flex items-center justify-end pr-3"
-                style={{ width: "88.3%" }}
-              >
-                <span className="text-white font-bold text-sm">61.8%</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Gemini 2.5 Pro */}
-          <div className="flex items-center space-x-4">
-            <div className="w-40 text-right font-semibold text-gray-800">
-              Gemini 2.5 Pro
+              Gemini 3 Flash
             </div>
             <div className="flex-1 bg-gray-200 rounded-full h-8 overflow-hidden">
               <div
                 className="bg-gradient-to-r from-blue-500 to-blue-600 h-full rounded-full flex items-center justify-end pr-3"
-                style={{ width: "83.1%" }}
+                style={{ width: "75.8%" }}
               >
-                <span className="text-white font-bold text-sm">58.2%</span>
+                <span className="text-white font-bold text-sm">75.8%</span>
               </div>
             </div>
           </div>
 
-          {/* DeepSeek-Coder V3 */}
+          {/* GPT-5-2 */}
           <div className="flex items-center space-x-4">
             <div className="w-40 text-right font-semibold text-gray-800">
-              DeepSeek-Coder V3
+              GPT-5-2
+            </div>
+            <div className="flex-1 bg-gray-200 rounded-full h-8 overflow-hidden">
+              <div
+                className="bg-gradient-to-r from-green-500 to-green-600 h-full rounded-full flex items-center justify-end pr-3"
+                style={{ width: "72.8%" }}
+              >
+                <span className="text-white font-bold text-sm">72.8%</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Claude 4.5 Sonnet */}
+          <div className="flex items-center space-x-4">
+            <div className="w-40 text-right font-semibold text-gray-800">
+              Claude 4.5 Sonnet
+            </div>
+            <div className="flex-1 bg-gray-200 rounded-full h-8 overflow-hidden">
+              <div
+                className="bg-gradient-to-r from-indigo-500 to-indigo-600 h-full rounded-full flex items-center justify-end pr-3"
+                style={{ width: "71.4%" }}
+              >
+                <span className="text-white font-bold text-sm">71.4%</span>
+              </div>
+            </div>
+          </div>
+
+          {/* DeepSeek V3.2 */}
+          <div className="flex items-center space-x-4">
+            <div className="w-40 text-right font-semibold text-gray-800">
+              DeepSeek V3.2
             </div>
             <div className="flex-1 bg-gray-200 rounded-full h-8 overflow-hidden">
               <div
                 className="bg-gradient-to-r from-cyan-500 to-cyan-600 h-full rounded-full flex items-center justify-end pr-3"
-                style={{ width: "73.9%" }}
+                style={{ width: "70.0%" }}
               >
-                <span className="text-white font-bold text-sm">51.7%</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Llama 4 405B */}
-          <div className="flex items-center space-x-4">
-            <div className="w-40 text-right font-semibold text-gray-800">
-              Llama 4 405B
-            </div>
-            <div className="flex-1 bg-gray-200 rounded-full h-8 overflow-hidden">
-              <div
-                className="bg-gradient-to-r from-orange-500 to-orange-600 h-full rounded-full flex items-center justify-end pr-3"
-                style={{ width: "67.0%" }}
-              >
-                <span className="text-white font-bold text-sm">46.9%</span>
+                <span className="text-white font-bold text-sm">70.0%</span>
               </div>
             </div>
           </div>
@@ -169,9 +172,15 @@ export const modelsSlides: SlideType[] = [
 
         <div className="bg-purple-100 p-4 rounded-lg">
           <p className="text-sm italic text-purple-900">
-            <strong>Key Insight:</strong> A 64% score means the model correctly
-            resolves nearly 2 out of 3 real GitHub issues autonomously -
-            productive enough to be a valuable team member.
+            <strong>Key Insight:</strong> Top models now resolve ~3 out of 4 real GitHub issues autonomously. The field is rapidly improving — and converging. All top 5 sit within 7 points of each other.
+          </p>
+        </div>
+
+        <div className="bg-gray-100 px-4 py-3 rounded-lg">
+          <p className="text-sm text-gray-600 italic">
+            Source:{" "}
+            <a href="https://www.swebench.com/" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">SWE-bench Verified Leaderboard</a>
+            {" "}— evaluated with mini-SWE-agent (March 2026)
           </p>
         </div>
       </div>
@@ -179,7 +188,7 @@ export const modelsSlides: SlideType[] = [
   },
   {
     title: "Algorithmic Problem Solving",
-    subtitle: "HumanEval Benchmark Results (2025)",
+    subtitle: "HumanEval Benchmark Results (March 2026)",
     content: (
       <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
         <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
@@ -191,77 +200,62 @@ export const modelsSlides: SlideType[] = [
         </div>
 
         <div className="space-y-4">
-          {/* GPT-5 */}
+          {/* GPT-5.4 Pro */}
           <div className="flex items-center space-x-4">
             <div className="w-40 text-right font-semibold text-gray-800">
-              GPT-5
+              GPT-5.4 Pro
             </div>
             <div className="flex-1 bg-gray-200 rounded-full h-8 overflow-hidden">
               <div
                 className="bg-gradient-to-r from-green-500 to-green-600 h-full rounded-full flex items-center justify-end pr-3"
-                style={{ width: "94.1%" }}
+                style={{ width: "95%" }}
               >
-                <span className="text-white font-bold text-sm">94.1%</span>
+                <span className="text-white font-bold text-sm">95%</span>
               </div>
             </div>
           </div>
 
-          {/* Claude Sonnet 4.5 */}
+          {/* GPT-5.1-Codex-Max */}
           <div className="flex items-center space-x-4">
             <div className="w-40 text-right font-semibold text-gray-800">
-              Claude Sonnet 4.5
+              GPT-5.1-Codex-Max
+            </div>
+            <div className="flex-1 bg-gray-200 rounded-full h-8 overflow-hidden">
+              <div
+                className="bg-gradient-to-r from-emerald-500 to-emerald-600 h-full rounded-full flex items-center justify-end pr-3"
+                style={{ width: "94%" }}
+              >
+                <span className="text-white font-bold text-sm">94%</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Claude Sonnet 4.6 */}
+          <div className="flex items-center space-x-4">
+            <div className="w-40 text-right font-semibold text-gray-800">
+              Claude Sonnet 4.6
             </div>
             <div className="flex-1 bg-gray-200 rounded-full h-8 overflow-hidden">
               <div
                 className="bg-gradient-to-r from-purple-500 to-purple-600 h-full rounded-full flex items-center justify-end pr-3"
-                style={{ width: "92.3%" }}
+                style={{ width: "93%" }}
               >
-                <span className="text-white font-bold text-sm">92.3%</span>
+                <span className="text-white font-bold text-sm">93%</span>
               </div>
             </div>
           </div>
 
-          {/* Gemini 2.5 Pro */}
+          {/* GPT-5.2 Pro */}
           <div className="flex items-center space-x-4">
             <div className="w-40 text-right font-semibold text-gray-800">
-              Gemini 2.5 Pro
+              GPT-5.2 Pro
             </div>
             <div className="flex-1 bg-gray-200 rounded-full h-8 overflow-hidden">
               <div
-                className="bg-gradient-to-r from-blue-500 to-blue-600 h-full rounded-full flex items-center justify-end pr-3"
-                style={{ width: "89.7%" }}
+                className="bg-gradient-to-r from-teal-500 to-teal-600 h-full rounded-full flex items-center justify-end pr-3"
+                style={{ width: "93%" }}
               >
-                <span className="text-white font-bold text-sm">89.7%</span>
-              </div>
-            </div>
-          </div>
-
-          {/* DeepSeek-Coder V3 */}
-          <div className="flex items-center space-x-4">
-            <div className="w-40 text-right font-semibold text-gray-800">
-              DeepSeek-Coder V3
-            </div>
-            <div className="flex-1 bg-gray-200 rounded-full h-8 overflow-hidden">
-              <div
-                className="bg-gradient-to-r from-cyan-500 to-cyan-600 h-full rounded-full flex items-center justify-end pr-3"
-                style={{ width: "87.4%" }}
-              >
-                <span className="text-white font-bold text-sm">87.4%</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Llama 4 405B */}
-          <div className="flex items-center space-x-4">
-            <div className="w-40 text-right font-semibold text-gray-800">
-              Llama 4 405B
-            </div>
-            <div className="flex-1 bg-gray-200 rounded-full h-8 overflow-hidden">
-              <div
-                className="bg-gradient-to-r from-orange-500 to-orange-600 h-full rounded-full flex items-center justify-end pr-3"
-                style={{ width: "82.6%" }}
-              >
-                <span className="text-white font-bold text-sm">82.6%</span>
+                <span className="text-white font-bold text-sm">93%</span>
               </div>
             </div>
           </div>
@@ -269,9 +263,15 @@ export const modelsSlides: SlideType[] = [
 
         <div className="bg-blue-100 p-4 rounded-lg">
           <p className="text-sm italic text-blue-900">
-            <strong>Notice:</strong> Rankings shift between benchmarks! GPT-5
-            leads on algorithmic tasks while Claude leads on real-world
-            complexity. Choose based on your actual use case.
+            <strong>Notice:</strong> HumanEval is near-saturated — the top 7 models all score 93–95%, a gap of just 2 points. This benchmark no longer meaningfully differentiates frontier models. SWE-bench Verified tells the more useful story.
+          </p>
+        </div>
+
+        <div className="bg-gray-100 px-4 py-3 rounded-lg">
+          <p className="text-sm text-gray-600 italic">
+            Source:{" "}
+            <a href="https://benchlm.ai/benchmarks/humaneval" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">BenchLM — HumanEval Leaderboard</a>
+            {" "}(March 2026, 114 models evaluated)
           </p>
         </div>
       </div>
@@ -298,19 +298,19 @@ export const modelsSlides: SlideType[] = [
               Critical systems, complex refactoring, security-sensitive code
             </div>
             <div className="bg-purple-100 px-3 py-1 rounded-full text-purple-800 font-semibold text-sm">
-              Claude Sonnet 4.5
+              Claude 4.5 Opus
             </div>
           </div>
 
           <div className="bg-white p-4 rounded-lg shadow border-l-4 border-green-500 flex items-center">
             <div className="w-48 font-semibold text-green-900">
-              High-Volume / Speed
+              Best Value / Speed
             </div>
             <div className="flex-1 text-gray-700">
-              Code completion, interactive tools, rapid iteration
+              High accuracy at low cost — 75.8% SWE-bench at $0.36/1M tokens
             </div>
             <div className="bg-green-100 px-3 py-1 rounded-full text-green-800 font-semibold text-sm">
-              GPT-5
+              Gemini 3 Flash
             </div>
           </div>
 
@@ -322,7 +322,7 @@ export const modelsSlides: SlideType[] = [
               Cloud-native workflows, compliance requirements
             </div>
             <div className="bg-blue-100 px-3 py-1 rounded-full text-blue-800 font-semibold text-sm">
-              Gemini 2.5 Pro
+              Gemini 3 Pro
             </div>
           </div>
 
@@ -334,7 +334,7 @@ export const modelsSlides: SlideType[] = [
               Self-hosted, IP protection critical, air-gapped environments
             </div>
             <div className="bg-cyan-100 px-3 py-1 rounded-full text-cyan-800 font-semibold text-sm">
-              DeepSeek V3
+              DeepSeek V3.2
             </div>
           </div>
 

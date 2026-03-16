@@ -182,7 +182,9 @@ export const ollamaSlides: SlideType[] = [
           <p className="text-lg text-gray-700">
             Model tags in Ollama indicate how the model has been compressed
             through quantization, trading some accuracy for smaller size and
-            faster performance.
+            faster performance. Each weight is typically a 16-bit float at full
+            precision; quantization maps these to integers (e.g., 4-bit),
+            dramatically reducing memory at the cost of rounding precision.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

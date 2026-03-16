@@ -252,14 +252,14 @@ export const copilotSlides: SlideType[] = [
     },
     {
       title: "Copilot Chat Modes",
-      subtitle: "Four Ways to Interact with AI in Your Workflow",
+      subtitle: "Three Ways to Interact with AI in Your Workflow",
       content: (
         <div className="flex flex-col items-center md:justify-center md:h-full space-y-6">
           <p className="text-xl text-gray-700 max-w-2xl text-center mb-4">
             Copilot offers different interaction modes — each optimized for specific tasks and levels of AI autonomy
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-4xl w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl w-full">
             {/* Ask Mode */}
             <div className="flex flex-col bg-gradient-to-b from-blue-500 to-blue-700 text-white p-4 md:p-5 rounded-lg shadow-lg">
               <div className="text-center mb-3">
@@ -274,23 +274,6 @@ export const copilotSlides: SlideType[] = [
               </ul>
               <div className="mt-auto pt-3 border-t border-white/20 text-center opacity-75">
                 <strong>Best for:</strong> Learning, exploring
-              </div>
-            </div>
-
-            {/* Edit Mode */}
-            <div className="flex flex-col bg-gradient-to-b from-green-500 to-green-700 text-white p-4 md:p-5 rounded-lg shadow-lg">
-              <div className="text-center mb-3">
-                <div className="inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-semibold mb-2">Edit Mode</div>
-                <div className="text-3xl mb-2">✏️</div>
-              </div>
-              <ul className="space-y-1 opacity-90 mb-4">
-                <li className="flex"><span className="mr-2">•</span><span>Direct code modifications</span></li>
-                <li className="flex"><span className="mr-2">•</span><span>Inline suggestions & changes</span></li>
-                <li className="flex"><span className="mr-2">•</span><span>You review before accepting</span></li>
-                <li className="flex"><span className="mr-2">•</span><span>Scoped to specific files</span></li>
-              </ul>
-              <div className="mt-auto pt-3 border-t border-white/20 text-center opacity-75">
-                <strong>Best for:</strong> Targeted changes
               </div>
             </div>
 
@@ -385,59 +368,6 @@ export const copilotSlides: SlideType[] = [
           <div className="bg-blue-100 p-4 rounded-lg">
             <p className="text-sm italic text-blue-900">
               <strong>4D Connection:</strong> Ask mode supports <strong>Delegation</strong> (deciding approach) and <strong>Description</strong> (refining your requirements through conversation).
-            </p>
-          </div>
-        </div>
-      )
-    },
-    {
-      title: "Edit Mode",
-      subtitle: "Targeted, Controlled Code Changes",
-      content: (
-        <div className="flex flex-col space-y-6 max-w-3xl mx-auto">
-          <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
-            <h3 className="text-2xl font-bold text-green-900 mb-2">What is Edit Mode?</h3>
-            <p className="text-lg text-gray-700">
-              Copilot proposes direct changes to your code that you can review, accept, or reject — giving you precise control over every modification.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            <div className="bg-white p-4 md:p-5 rounded-lg shadow border border-green-200">
-              <h4 className="font-semibold text-green-900 mb-3">✅ Great For:</h4>
-              <ul className="space-y-2 text-gray-700 text-sm">
-                <li>• Refactoring existing code</li>
-                <li>• Adding specific features</li>
-                <li>• Fixing bugs you've identified</li>
-                <li>• Code style improvements</li>
-                <li>• Documentation updates</li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-5 rounded-lg shadow border border-green-200">
-              <h4 className="font-semibold text-green-900 mb-3">💡 Key Features:</h4>
-              <ul className="space-y-2 text-gray-700 text-sm">
-                <li>• Inline diff view of changes</li>
-                <li>• Accept/reject per change</li>
-                <li>• Scoped to selected files</li>
-                <li>• You maintain full control</li>
-                <li>• Iterative refinement possible</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="bg-gray-800 p-4 rounded-lg">
-            <p className="text-green-400 font-mono text-sm mb-2">Example prompts:</p>
-            <div className="space-y-2 text-gray-300 font-mono text-sm">
-              <p>"Add error handling to this function"</p>
-              <p>"Convert this class component to a functional component"</p>
-              <p>"Add JSDoc comments to all public methods"</p>
-            </div>
-          </div>
-
-          <div className="bg-green-100 p-4 rounded-lg">
-            <p className="text-sm italic text-green-900">
-              <strong>4D Connection:</strong> Edit mode emphasizes <strong>Discernment</strong> (reviewing each change) and <strong>Diligence</strong> (you approve everything).
             </p>
           </div>
         </div>
@@ -560,15 +490,11 @@ export const copilotSlides: SlideType[] = [
               <span className="text-sm font-semibold text-gray-600">More Human Control</span>
               <span className="text-sm font-semibold text-gray-600">More AI Autonomy</span>
             </div>
-            <div className="h-4 bg-gradient-to-r from-blue-500 via-green-500 via-orange-500 to-purple-500 rounded-full"></div>
+            <div className="h-4 bg-gradient-to-r from-blue-500 via-orange-500 to-purple-500 rounded-full"></div>
             <div className="flex justify-between mt-2">
               <div className="text-center">
                 <div className="w-4 h-4 bg-blue-500 rounded-full mx-auto mb-1"></div>
                 <span className="text-xs font-semibold text-blue-700">Ask</span>
-              </div>
-              <div className="text-center">
-                <div className="w-4 h-4 bg-green-500 rounded-full mx-auto mb-1"></div>
-                <span className="text-xs font-semibold text-green-700">Edit</span>
               </div>
               <div className="text-center">
                 <div className="w-4 h-4 bg-orange-500 rounded-full mx-auto mb-1"></div>
@@ -582,22 +508,13 @@ export const copilotSlides: SlideType[] = [
           </div>
 
           {/* Decision guide */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-3 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3 w-full">
             <div className="bg-blue-50 p-2 md:p-3 rounded-lg border border-blue-200">
               <h4 className="font-bold text-blue-900 mb-2 text-center text-sm">Use Ask When...</h4>
               <ul className="text-xs text-gray-700 space-y-1">
                 <li>• Need to understand code</li>
                 <li>• Exploring approaches</li>
                 <li>• Learning something new</li>
-              </ul>
-            </div>
-
-            <div className="bg-green-50 p-2 md:p-3 rounded-lg border border-green-200">
-              <h4 className="font-bold text-green-900 mb-2 text-center text-sm">Use Edit When...</h4>
-              <ul className="text-xs text-gray-700 space-y-1">
-                <li>• Know what to change</li>
-                <li>• Working in specific files</li>
-                <li>• Review each change</li>
               </ul>
             </div>
 
@@ -622,7 +539,7 @@ export const copilotSlides: SlideType[] = [
 
           <div className="bg-gray-100 p-4 rounded-lg w-full">
             <p className="text-sm italic text-gray-700">
-              <strong>Pro Tip:</strong> Start with <span className="text-blue-600 font-semibold">Ask</span> to explore → <span className="text-orange-600 font-semibold">Plan</span> for strategy → <span className="text-purple-600 font-semibold">Agent</span> to execute → <span className="text-green-600 font-semibold">Edit</span> to refine. Switch modes anytime!
+              <strong>Pro Tip:</strong> Start with <span className="text-blue-600 font-semibold">Ask</span> to explore → <span className="text-orange-600 font-semibold">Plan</span> for strategy → <span className="text-purple-600 font-semibold">Agent</span> to execute. Switch modes anytime!
             </p>
           </div>
         </div>
