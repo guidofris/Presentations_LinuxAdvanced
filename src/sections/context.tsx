@@ -670,5 +670,125 @@ export const contextSlides: SlideType[] = [
         </div>
       </div>
     )
+  },
+  {
+    title: "The Signal-to-Noise Problem",
+    subtitle: "Why raw content is a poor LLM input",
+    content: (
+      <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+        <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+          <h3 className="text-xl font-bold text-indigo-900 mb-2">The Core Challenge</h3>
+          <p className="text-gray-700">
+            The more irrelevant text in the context, the higher the probability the model extracts the wrong information. Researchers call this the <strong>signal-to-noise ratio</strong> problem.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-white p-4 rounded-lg shadow border border-red-200">
+            <h4 className="font-semibold text-red-900 mb-2">📊 The Scale of the Problem</h4>
+            <div className="space-y-3">
+              <div className="bg-red-50 rounded-lg p-3 text-center">
+                <div className="text-3xl font-bold text-red-600">80K+</div>
+                <div className="text-sm text-gray-600">avg tokens in a raw HTML page</div>
+              </div>
+              <div className="bg-orange-50 rounded-lg p-3 text-center">
+                <div className="text-3xl font-bold text-orange-600">90%</div>
+                <div className="text-sm text-gray-600">are CSS, JS, comments &amp; noise</div>
+              </div>
+              <p className="text-xs text-gray-500 italic">Far beyond most context windows when unprocessed</p>
+            </div>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg shadow border border-green-200">
+            <h4 className="font-semibold text-green-900 mb-2">✅ Industry Convergence: Markdown</h4>
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2">•</span><span><strong>Fewer tokens</strong> than HTML for the same content</span></li>
+              <li className="flex"><span className="mr-2">•</span><span><strong>Preserves structure</strong> without verbose tags</span></li>
+              <li className="flex"><span className="mr-2">•</span><span><strong>Both humans and LLMs</strong> can easily parse it</span></li>
+              <li className="flex"><span className="mr-2">•</span><span><strong>Agreed intermediate format</strong> across the industry</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-white p-4 rounded-lg shadow border border-indigo-200">
+          <h4 className="font-semibold text-indigo-900 mb-3 text-center">Token Budget: Raw HTML vs Preprocessed Markdown</h4>
+          <div className="flex items-center gap-4">
+            <div className="flex-1">
+              <div className="text-xs text-gray-500 mb-1 text-center">Raw HTML</div>
+              <div className="flex h-8 rounded overflow-hidden">
+                <div className="bg-red-400 flex-[9] flex items-center justify-center text-xs text-white font-medium">Noise (90%)</div>
+                <div className="bg-green-400 flex-[1] flex items-center justify-center text-xs text-white font-medium">Signal</div>
+              </div>
+            </div>
+            <div className="text-gray-400 font-bold text-xl">→</div>
+            <div className="flex-1">
+              <div className="text-xs text-gray-500 mb-1 text-center">Preprocessed Markdown</div>
+              <div className="flex h-8 rounded overflow-hidden">
+                <div className="bg-green-500 flex-[8] flex items-center justify-center text-xs text-white font-medium">Signal (clean content)</div>
+                <div className="bg-gray-300 flex-[2] flex items-center justify-center text-xs text-gray-600 font-medium">Structure</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-indigo-100 p-3 rounded-lg">
+          <p className="text-sm italic text-indigo-900">
+            <strong>Key Insight:</strong> Preprocessing is context engineering applied at the input level — clean signal in, accurate output out.
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: "LLM Input Preprocessing: Tool Landscape",
+    subtitle: "Practical tools for cleaning content before it enters the context window",
+    content: (
+      <div className="flex flex-col space-y-4 max-w-3xl mx-auto">
+        <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+          <p className="text-gray-700">The tooling has matured significantly. Two practical categories cover most developer use cases.</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
+            <h4 className="font-semibold text-blue-900 mb-3">🌐 Zero-Config API Services</h4>
+            <p className="text-xs text-gray-500 mb-3">Easiest — no setup, no code</p>
+            <div className="space-y-3">
+              <div className="bg-blue-50 p-3 rounded-lg">
+                <div className="font-semibold text-blue-800 text-sm mb-1">Jina Reader</div>
+                <code className="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-mono block mb-1">https://r.jina.ai/{'<your-url>'}</code>
+                <p className="text-xs text-gray-600">Free, zero-setup. Prepend to any URL. Handles JS rendering, image captioning, PDF reading out of the box.</p>
+              </div>
+              <div className="bg-blue-50 p-3 rounded-lg">
+                <div className="font-semibold text-blue-800 text-sm mb-1">Firecrawl</div>
+                <code className="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-mono block mb-1">firecrawl.dev</code>
+                <p className="text-xs text-gray-600">Open-source. More feature-rich than Jina for full-site crawling. Suitable for RAG pipelines and AI training.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg shadow border border-purple-200">
+            <h4 className="font-semibold text-purple-900 mb-3">⌨️ CLI &amp; Local Tools</h4>
+            <p className="text-xs text-gray-500 mb-3">For quick piping, terminal workflows and office documents</p>
+            <div className="space-y-3">
+              <div className="bg-purple-50 p-3 rounded-lg">
+                <div className="font-semibold text-purple-800 text-sm mb-1">strip-tags + llm CLI</div>
+                <code className="text-xs bg-purple-100 text-purple-800 px-2 py-0.5 rounded font-mono block mb-1 break-all">curl url | strip-tags | llm "summarize"</code>
+                <p className="text-xs text-gray-600">Simon Willison's tools. Pipe Mozilla Readability → strip-tags → llm in one terminal chain.</p>
+              </div>
+              <div className="bg-purple-50 p-3 rounded-lg">
+                <div className="font-semibold text-purple-800 text-sm mb-1">GitIngest / repomix</div>
+                <code className="text-xs bg-purple-100 text-purple-800 px-2 py-0.5 rounded font-mono block mb-1">gitingest.com/{'<owner/repo>'}</code>
+                <p className="text-xs text-gray-600">Turn any GitHub repository into a single prompt-friendly text file for LLM context inclusion.</p>
+              </div>
+              <div className="bg-purple-50 p-3 rounded-lg">
+                <div className="font-semibold text-purple-800 text-sm mb-1">Microsoft MarkItDown</div>
+                <code className="text-xs bg-purple-100 text-purple-800 px-2 py-0.5 rounded font-mono block mb-1">pip install markitdown</code>
+                <p className="text-xs text-gray-600">Converts PDF, Word, Excel, and PowerPoint files to Markdown — not just web content, but office documents too.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
   }
 ];
