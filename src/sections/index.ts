@@ -19,3 +19,4 @@ export { mcpSlides } from './mcp';
 export { closingSlides } from './closing';
 export { ollamaSlides } from './ollama';
 export { speckitSlides } from './speckit';
+export { prosSlides } from './pros';

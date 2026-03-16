@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Target, Box, Code, Terminal, Shield, ShieldAlert, ScrollText, MessageSquare, Brain, Puzzle, Network, PanelRight, PanelLeft, Plug, TrendingUp, Cpu, FileCode, Users } from 'lucide-react';
-import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, copilotCliSlides, privacySlides, securitySlides, instructionsSlides, promptingSlides, skillsSlides, spacesSlides, contextSlides, evolutionSlides, multiagentSlides, sdkSlides, mcpSlides, closingSlides, ollamaSlides, speckitSlides } from './sections';
+import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Target, Box, Code, Terminal, Shield, ShieldAlert, ScrollText, MessageSquare, Brain, Puzzle, Network, PanelRight, PanelLeft, Plug, TrendingUp, Cpu, FileCode, Users, Trophy } from 'lucide-react';
+import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, copilotCliSlides, privacySlides, securitySlides, instructionsSlides, promptingSlides, skillsSlides, spacesSlides, contextSlides, evolutionSlides, multiagentSlides, sdkSlides, mcpSlides, closingSlides, ollamaSlides, speckitSlides, prosSlides } from './sections';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import './index.css';
@@ -37,6 +37,7 @@ const sections = [
   { name: 'Copilot CLI', slides: copilotCliSlides, color: 'gray', icon: Terminal },
   { name: 'Multi-Agent', slides: multiagentSlides, color: 'purple', icon: Network },
   { name: 'Copilot SDK', slides: sdkSlides, color: 'indigo', icon: Code },
+  { name: 'What the Pros Use', slides: prosSlides, color: 'orange', icon: Trophy },
   { name: 'Closing', slides: closingSlides, color: 'gray', icon: Presentation },
 ];
 
@@ -93,6 +94,7 @@ const FourDSlides = () => {
     ...copilotCliSlides,
     ...multiagentSlides,
     ...sdkSlides,
+    ...prosSlides,
     ...closingSlides,
   ];
 
