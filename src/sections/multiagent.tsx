@@ -398,6 +398,49 @@ export const multiagentSlides: SlideType[] = [
     )
   },
   {
+    title: "GitHub Copilot CLI: /fleet",
+    subtitle: "Native multi-agent orchestration — automatically break tasks into parallel subagents",
+    content: (
+      <div className="flex flex-col space-y-5 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="bg-white p-5 rounded-lg shadow border border-gray-200">
+            <h4 className="font-semibold text-gray-900 mb-3">⚙️ How It Works:</h4>
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2">1.</span><span>You provide a task or implementation plan</span></li>
+              <li className="flex"><span className="mr-2">2.</span><span>Main agent splits it into independent subtasks</span></li>
+              <li className="flex"><span className="mr-2">3.</span><span>Subtasks run in parallel via subagents</span></li>
+              <li className="flex"><span className="mr-2">4.</span><span>Orchestrator merges results into one outcome</span></li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-5 rounded-lg shadow border border-gray-200">
+            <h4 className="font-semibold text-gray-900 mb-3">vs. Manual Worktrees:</h4>
+            <ul className="space-y-2 text-gray-700 text-sm">
+              <li className="flex"><span className="mr-2 text-green-600">✓</span><span>No manual setup or merging needed</span></li>
+              <li className="flex"><span className="mr-2 text-green-600">✓</span><span>Dependency management built in</span></li>
+              <li className="flex"><span className="mr-2 text-green-600">✓</span><span>Uses your custom agents for specialization</span></li>
+              <li className="flex"><span className="mr-2 text-yellow-500">~</span><span>Less control over individual subtasks</span></li>
+              <li className="flex"><span className="mr-2 text-yellow-500">~</span><span>Higher LLM request consumption</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-gray-900 p-4 rounded-lg font-mono text-sm">
+          <p className="text-gray-400 mb-1"># Interactive</p>
+          <p className="text-yellow-300">&gt; /fleet implement the new user auth feature with tests and docs</p>
+          <p className="text-gray-400 mt-3 mb-1"># Programmatic</p>
+          <p className="text-green-400">copilot -p "/fleet implement the new user auth feature"</p>
+        </div>
+
+        <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+          <p className="text-sm text-blue-900">
+            <strong>Mission Control:</strong> GitHub's Agent HQ gives you a unified interface to assign tasks, monitor agents in real time, steer mid-run, and jump straight to resulting pull requests — across GitHub.com, VS Code, and the CLI.
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
     title: "Other Tools That Abstract Worktree Management",
     subtitle: "Simplify your multi-agent workflow with dedicated tools",
     content: (
