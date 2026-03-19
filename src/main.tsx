@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChevronLeft, ChevronRight, Menu, X, Presentation, Server, PanelRight, PanelLeft } from 'lucide-react';
-import { introSlides, installatieSlides } from './sections';
+import { ChevronLeft, ChevronRight, Menu, X, Presentation, Server, Network, PanelRight, PanelLeft } from 'lucide-react';
+import { introSlides, installatieSlides, netwerkbeheerSlides } from './sections';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import './index.css';
@@ -20,6 +20,7 @@ const WORKSHOP_PASSWORD_HASH = import.meta.env.VITE_WORKSHOP_PASSWORD_HASH ||
 const sections = [
   { name: 'Overzicht', slides: introSlides, color: 'gray', icon: Presentation },
   { name: 'Installatie', slides: installatieSlides, color: 'blue', icon: Server },
+  { name: 'Netwerkbeheer', slides: netwerkbeheerSlides, color: 'green', icon: Network },
 ];
 
 // Calculate section start indices
@@ -58,6 +59,7 @@ const FourDSlides = () => {
   const slides = [
     ...introSlides,
     ...installatieSlides,
+    ...netwerkbeheerSlides,
   ];
 
   // Get current section based on slide index
