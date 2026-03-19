@@ -70,7 +70,7 @@ export const Login: React.FC<LoginProps> = ({ onSuccess, passwordHash }) => {
           <div className="text-center space-y-6">
             <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 text-blue-300 text-sm">
               <Server className="w-4 h-4" />
-              <span>PXL - OLOD</span>
+              <span>PXL-Digital</span>
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
@@ -92,6 +92,14 @@ export const Login: React.FC<LoginProps> = ({ onSuccess, passwordHash }) => {
               >
                 Open cursusslides
               </button>
+              <a
+                href="https://pxl-linux-advanced-sne.code-coaching.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transform hover:-translate-y-0.5 transition-all shadow-lg"
+              >
+                Open de cursustekst
+              </a>
               <a
                 href="mailto:guido.frissaer@pxl.be?subject=Vraag%20Linux%20Advanced"
                 className="px-8 py-3 bg-transparent border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all flex items-center gap-2"
