@@ -1,120 +1,87 @@
 # AI Native Software Engineering Workshop
 
-An interactive slideshow for the **AI Native Developer Workshop**, built with React and TypeScript. The presentation covers AI fundamentals, LLM concepts, and the **4D AI Fluency Framework** (Delegation, Description, Discernment, Diligence).
+An interactive slideshow for the **AI Native Developer Workshop**, built with React and TypeScript. Covers a full curriculum from AI fundamentals to hands-on tool demos.
 
-## Purpose
+## Slides
 
-This project serves as a presentation tool for teaching developers about:
-
-- AI adoption and the "quantum state" of modern development
-- How Large Language Models (LLMs) work
-- Transformer architecture and GPU acceleration
-- Context windows and model capabilities
-- The 4D AI Fluency Framework for effective AI collaboration
+| Section           | Topics                                             |
+| ----------------- | -------------------------------------------------- |
+| Introduction      | Workshop overview, the AI-native developer mindset |
+| Evolution         | How software development is changing with AI       |
+| LLM Basics        | Transformers, context windows, GPU acceleration    |
+| 4D Fluency        | Framework for effective AI collaboration           |
+| Models            | Model landscape and selection guidance             |
+| Ollama            | Running models locally                             |
+| Prompting         | Prompt engineering techniques                      |
+| Copilot           | GitHub Copilot features and usage                  |
+| Privacy           | Data handling and enterprise privacy controls      |
+| Security          | OWASP Top 10, secure AI-assisted coding            |
+| Instructions      | Custom instructions and system prompts             |
+| Context           | Context window management strategies               |
+| Spec Kit          | Spec-driven development with AI                    |
+| Reuse & Skills    | Prompt libraries, reuse patterns                   |
+| MCP               | Model Context Protocol                             |
+| Team Sharing      | Copilot for organizational knowledge sharing       |
+| Copilot CLI       | Terminal-based AI assistance                       |
+| Multi-Agent       | Agentic workflows and orchestration                |
+| Copilot SDK       | Building custom Copilot extensions                 |
+| What the Pros Use | Tools and practices from experienced AI developers |
+| Closing           | Summary and next steps                             |
 
 ## Tech Stack
 
-- **React 18** - UI framework
-- **TypeScript** - Type-safe JavaScript
-- **Vite** - Fast build tool and dev server
-- **Tailwind CSS** - Utility-first styling
-- **Lucide React** - Icon library
+- **React 18** + **TypeScript** — UI and type safety
+- **Vite** — Dev server and build tool
+- **Tailwind CSS** — Utility-first styling
+- **Lucide React** — Icons
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ installed
-- npm or yarn package manager
+- Node.js 18+
 
-### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone <repository-url>
-   cd ai_workshop
-   ```
-
-2. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-
-   ```bash
-   npm run dev
-   ```
-
-4. Open your browser to `http://localhost:5173`
-
-## Usage
-
-### Navigation
-
-- **Arrow keys**: Use ← and → to navigate between slides
-- **Buttons**: Click Previous/Next buttons at the bottom
-- **Dots**: Click any dot indicator to jump to a specific slide
-
-### Building for Production
+### Installation & Development
 
 ```bash
-npm run build
+git clone https://github.com/JanDeDobbeleer/workshop_ai_native.git
+cd workshop_ai_native
+npm install
+npm run dev
 ```
 
-The built files will be in the `dist` folder.
+Open `http://localhost:5173` in your browser. The app is password-protected; the default local dev password is `workshop`.
 
-### Preview Production Build
+### Build
 
 ```bash
-npm run preview
+npm run build   # outputs to dist/
+npm run preview # preview the production build
 ```
 
-## Project Structure
+## Authentication
 
-```text
-ai_workshop/
-├── src/
-│   ├── slides.tsx      # Main slideshow component with all slides
-│   ├── App.tsx         # Root application component
-│   ├── main.tsx        # Entry point
-│   ├── index.css       # Tailwind CSS imports
-│   └── img/            # Image assets
-├── index.html          # HTML template
-├── package.json        # Dependencies and scripts
-├── vite.config.ts      # Vite configuration
-├── tailwind.config.js  # Tailwind configuration
-├── tsconfig.json       # TypeScript configuration
-└── README.md           # This file
+The slideshow uses a lightweight password gate (SHA-256 hashed, client-side only — not a security mechanism, just casual access control).
+
+Set the password by providing a SHA-256 hash via environment variable:
+
+```bash
+VITE_WORKSHOP_PASSWORD_HASH=<your-hash> npm run build
 ```
 
-## Adding New Slides
+To generate a hash in the browser console:
 
-Slides are defined in `src/slides.tsx` as an array of objects:
-
-```tsx
-{
-  title: "Slide Title",
-  subtitle: "Subtitle text",
-  content: (
-    <div>
-      {/* Your JSX content here */}
-    </div>
-  )
-}
+```js
+crypto.subtle.digest('SHA-256', new TextEncoder().encode('your-password'))
+  .then(buf => Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join(''))
+  .then(console.log)
 ```
 
-Add new slides to the `slides` array - navigation automatically adjusts.
+## Navigation
 
-## License
-
-Private - All rights reserved.
-
-## Author
-
-**Jan De Dobbeleer**
-Engineering Leader & Open Source Innovator
-📧 jan@itdepends.be
-🐦 @jandedobbeleer
+| Action          | Control                          |
+| --------------- | -------------------------------- |
+| Next slide      | → arrow key or Next button       |
+| Previous slide  | ← arrow key or Previous button   |
+| Jump to section | Hamburger menu or dot indicators |
+| Toggle nav side | Panel toggle button              |
