@@ -177,7 +177,7 @@ export const serverAdministratieBasicsSlides: SlideType[] = [
           <h4 className="text-sm font-bold text-orange-900 mb-1">Validaties</h4>
           <ul className="space-y-1 text-sm text-gray-700">
             <li>• `systemctl status` toont `Active: active (running)`</li>
-            <li>• `systemctl is-enabled <service>` geeft `enabled`</li>
+            <li>• `systemctl is-enabled &lt;service&gt;` geeft `enabled`</li>
             <li>• Configuratiebestand bestaat in `/etc` voor de gekozen distro</li>
           </ul>
         </div>
