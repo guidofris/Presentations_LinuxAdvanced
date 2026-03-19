@@ -1,4 +1,4 @@
-import { Server, HardDrive, Copy, Camera } from 'lucide-react';
+import { Server, HardDrive, Copy, Camera, Terminal, CheckCircle, AlertTriangle } from 'lucide-react';
 import { SlideType } from './types';
 
 export const installatieSlides: SlideType[] = [
@@ -136,6 +136,125 @@ export const installatieSlides: SlideType[] = [
         <div className="bg-blue-100 p-4 rounded-lg">
           <p className="text-sm italic text-blue-900">
             <strong>Resultaat:</strong> Je hebt twee RHEL-VM's (Server en Client) en een herstelpunt via snapshots.
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: 'Lesflow: live voordoen + direct meedoen',
+    subtitle: 'Praktische volgorde voor in de klas',
+    content: (
+      <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
+        <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+          <h3 className="text-2xl font-bold text-blue-900 mb-3">Werkvorm</h3>
+          <p className="text-gray-700 text-lg">
+            Elke stap eerst kort demonstreren, daarna onmiddellijk door studenten laten uitvoeren met checkpoint.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+            <h4 className="font-semibold text-blue-900 mb-3">Blok 1 (30 min)</h4>
+            <ul className="space-y-2 text-gray-700">
+              <li>• VM aanmaken en ISO koppelen</li>
+              <li>• UEFI controleren</li>
+              <li>• Eerste boot tot installatiescherm</li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+            <h4 className="font-semibold text-blue-900 mb-3">Blok 2 (40 min)</h4>
+            <ul className="space-y-2 text-gray-700">
+              <li>• RHEL installatie voltooien</li>
+              <li>• student-account + admin rechten</li>
+              <li>• Eerste login en reboot</li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+            <h4 className="font-semibold text-blue-900 mb-3">Blok 3 (20 min)</h4>
+            <ul className="space-y-2 text-gray-700">
+              <li>• Updates en hostname instellen</li>
+              <li>• Snapshot maken en labelen</li>
+              <li>• Full clone naar Client maken</li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+            <h4 className="font-semibold text-blue-900 mb-3">Checkpoint</h4>
+            <ul className="space-y-2 text-gray-700">
+              <li>• Server[Initialen] draait</li>
+              <li>• Client[Initialen] draait</li>
+              <li>• Snapshot is zichtbaar in manager</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: 'Verificatiecommando\'s in de klas',
+    subtitle: 'Snelle controles na elke oefenstap',
+    content: (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
+        <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+          <div className="flex items-center gap-2 mb-3">
+            <Terminal className="w-5 h-5 text-blue-600" />
+            <h4 className="font-semibold text-blue-900">Server-controle</h4>
+          </div>
+          <div className="bg-gray-900 text-gray-100 rounded-lg p-3 text-sm font-mono space-y-1 overflow-x-auto">
+            <p>hostnamectl</p>
+            <p>cat /etc/redhat-release</p>
+            <p>sudo dnf repolist</p>
+            <p>ip -br a</p>
+          </div>
+        </div>
+
+        <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+          <div className="flex items-center gap-2 mb-3">
+            <CheckCircle className="w-5 h-5 text-blue-600" />
+            <h4 className="font-semibold text-blue-900">Verwachte output</h4>
+          </div>
+          <ul className="space-y-2 text-gray-700">
+            <li>• Hostname is Server[Initialen]</li>
+            <li>• RHEL 10.x is geïnstalleerd</li>
+            <li>• Repositories zijn beschikbaar</li>
+            <li>• Netwerkinterfaces zijn actief</li>
+          </ul>
+        </div>
+
+        <div className="md:col-span-2 bg-blue-100 p-4 rounded-lg">
+          <p className="text-sm italic text-blue-900">
+            <strong>Tip voor tempo:</strong> laat studenten telkens een screenshot nemen van output na elk checkpoint.
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: 'Top 5 problemen + directe fix',
+    subtitle: 'Troubleshooting die je live kan demonstreren',
+    content: (
+      <div className="flex flex-col space-y-5 max-w-4xl mx-auto">
+        <div className="bg-white p-5 rounded-lg shadow border border-blue-200">
+          <div className="flex items-center gap-2 mb-3">
+            <AlertTriangle className="w-5 h-5 text-orange-500" />
+            <h4 className="font-semibold text-blue-900">Veelvoorkomende issues</h4>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-700">
+            <p>• VT-x fout bij opstart → virtualisatie in BIOS activeren</p>
+            <p>• Geen internet in VM → adapter op NAT/Bridged controleren</p>
+            <p>• Clone faalt of is traag → VM volledig afsluiten, dan full clone</p>
+            <p>• Verkeerde hostname → hostnamectl opnieuw uitvoeren + reboot</p>
+            <p>• Updateproblemen → dnf clean all en opnieuw dnf update</p>
+          </div>
+        </div>
+
+        <div className="bg-blue-50 p-5 rounded-lg border-l-4 border-blue-500">
+          <h4 className="font-semibold text-blue-900 mb-2">Didactische aanpak</h4>
+          <p className="text-gray-700">
+            Laat studenten eerst zelf de oorzaak benoemen en pas daarna de fix uitvoeren. Dat bouwt troubleshooting-routine op.
           </p>
         </div>
       </div>
