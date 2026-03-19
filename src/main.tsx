@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChevronLeft, ChevronRight, Menu, X, Presentation, Sparkles, Target, Box, Code, Terminal, Shield, ShieldAlert, ScrollText, MessageSquare, Brain, Puzzle, Network, PanelRight, PanelLeft, Plug, TrendingUp, Cpu, FileCode, Users, Trophy } from 'lucide-react';
-import { introSlides, llmSlides, fluencySlides, modelsSlides, copilotSlides, copilotCliSlides, privacySlides, securitySlides, instructionsSlides, promptingSlides, skillsSlides, spacesSlides, contextSlides, evolutionSlides, multiagentSlides, sdkSlides, mcpSlides, closingSlides, ollamaSlides, speckitSlides, prosSlides } from './sections';
+import { ChevronLeft, ChevronRight, Menu, X, Presentation, Server, PanelRight, PanelLeft } from 'lucide-react';
+import { introSlides, installatieSlides } from './sections';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import './index.css';
@@ -11,34 +11,15 @@ import './index.css';
 //   crypto.subtle.digest('SHA-256', new TextEncoder().encode('your-password'))
 //     .then(buf => Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join(''))
 //     .then(console.log)
-// Local dev hash is for 'workshop', production uses VITE_WORKSHOP_PASSWORD_HASH env var
+// Local dev hash is for 'LinuxIsCool', production uses VITE_WORKSHOP_PASSWORD_HASH env var
 // This is not actual security, just a simple gate to prevent casual access
 const WORKSHOP_PASSWORD_HASH = import.meta.env.VITE_WORKSHOP_PASSWORD_HASH ||
-  'ee510d1a07ac7e6491ea191cd1918ea553ed2a358c8a0a04c1b90bd89222c314'; // hash of 'workshop'
+  '7df87d57d3055f9bb8ef467e9bfa059f1f51f1ad513439c5c543f51c005ea461'; // hash of 'LinuxIsCool'
 
 // Section definitions with metadata
 const sections = [
-  { name: 'Introduction', slides: introSlides, color: 'gray', icon: Presentation },
-  { name: 'Evolution', slides: evolutionSlides, color: 'indigo', icon: TrendingUp },
-  { name: 'LLM Basics', slides: llmSlides, color: 'blue', icon: Sparkles },
-  { name: '4D Fluency', slides: fluencySlides, color: 'green', icon: Target },
-  { name: 'Models', slides: modelsSlides, color: 'orange', icon: Box },
-  { name: 'Ollama', slides: ollamaSlides, color: 'blue', icon: Cpu },
-  { name: 'Prompting', slides: promptingSlides, color: 'indigo', icon: MessageSquare },
-  { name: 'Copilot', slides: copilotSlides, color: 'blue', icon: Code },
-  { name: 'Privacy', slides: privacySlides, color: 'purple', icon: Shield },
-  { name: 'Security', slides: securitySlides, color: 'red', icon: ShieldAlert },
-  { name: 'Instructions', slides: instructionsSlides, color: 'green', icon: ScrollText },
-  { name: 'Context', slides: contextSlides, color: 'purple', icon: Brain },
-  { name: 'Spec Kit', slides: speckitSlides, color: 'teal', icon: FileCode },
-  { name: 'Reuse & Skills', slides: skillsSlides, color: 'purple', icon: Puzzle },
-  { name: 'MCP', slides: mcpSlides, color: 'teal', icon: Plug },
-  { name: 'Team Sharing', slides: spacesSlides, color: 'blue', icon: Users },
-  { name: 'Copilot CLI', slides: copilotCliSlides, color: 'gray', icon: Terminal },
-  { name: 'Multi-Agent', slides: multiagentSlides, color: 'purple', icon: Network },
-  { name: 'Copilot SDK', slides: sdkSlides, color: 'indigo', icon: Code },
-  { name: 'What the Pros Use', slides: prosSlides, color: 'orange', icon: Trophy },
-  { name: 'Closing', slides: closingSlides, color: 'gray', icon: Presentation },
+  { name: 'Overzicht', slides: introSlides, color: 'gray', icon: Presentation },
+  { name: 'Installatie', slides: installatieSlides, color: 'blue', icon: Server },
 ];
 
 // Calculate section start indices
@@ -76,26 +57,7 @@ const FourDSlides = () => {
   // Combine all slide sections
   const slides = [
     ...introSlides,
-    ...evolutionSlides,
-    ...llmSlides,
-    ...fluencySlides,
-    ...modelsSlides,
-    ...ollamaSlides,
-    ...promptingSlides,
-    ...copilotSlides,
-    ...privacySlides,
-    ...securitySlides,
-    ...instructionsSlides,
-    ...contextSlides,
-    ...speckitSlides,
-    ...skillsSlides,
-    ...mcpSlides,
-    ...spacesSlides,
-    ...copilotCliSlides,
-    ...multiagentSlides,
-    ...sdkSlides,
-    ...prosSlides,
-    ...closingSlides,
+    ...installatieSlides,
   ];
 
   // Get current section based on slide index
@@ -354,7 +316,7 @@ const FourDSlides = () => {
             </div>
 
             <div className="flex justify-end">
-              {currentSlide < slides.length - 2 && (
+              {currentSlide < slides.length - 1 && (
                 <button
                   onClick={nextSlide}
                   className="flex items-center space-x-1 md:space-x-2 px-3 py-1.5 md:px-4 md:py-2 bg-white rounded-lg shadow hover:bg-gray-50 transition-all text-sm md:text-base md:hidden"
@@ -370,7 +332,7 @@ const FourDSlides = () => {
           </div>
 
           <div className="hidden md:flex md:flex-1 md:justify-end">
-            {currentSlide < slides.length - 2 && (
+            {currentSlide < slides.length - 1 && (
               <button
                 onClick={nextSlide}
                 className="flex items-center space-x-2 px-4 py-2 bg-white rounded-lg shadow hover:bg-gray-50 transition-all"
