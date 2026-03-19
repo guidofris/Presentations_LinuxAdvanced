@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChevronLeft, ChevronRight, Menu, X, Presentation, Server, Network, Globe, PanelRight, PanelLeft } from 'lucide-react';
-import { introSlides, installatieSlides, netwerkbeheerSlides, netwerkdienstenSlides } from './sections';
+import { ChevronLeft, ChevronRight, Menu, X, Presentation, Server, Network, Globe, Wrench, PanelRight, PanelLeft, FolderOpen, Database, Monitor, FileText, Shield, ShieldAlert, Activity, Workflow, Rocket, Box } from 'lucide-react';
+import { introSlides, installatieSlides, serverAdministratieBasicsSlides, processenManagenSlides, netwerkbeheerSlides, netwerkdienstenSlides, webserversSlides, proxySlides, lampserversSlides, sambaSlides, loggingSlides, nftablesSlides, securityEnhancedLinuxSlides, virtualisatieSlides, progressiveLabSlides } from './sections';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import './index.css';
@@ -20,8 +20,19 @@ const WORKSHOP_PASSWORD_HASH = import.meta.env.VITE_WORKSHOP_PASSWORD_HASH ||
 const sections = [
   { name: 'Overzicht', slides: introSlides, color: 'gray', icon: Presentation },
   { name: 'Installatie', slides: installatieSlides, color: 'blue', icon: Server },
+  { name: 'Serveradministratie basics', slides: serverAdministratieBasicsSlides, color: 'orange', icon: Wrench },
+  { name: 'Processen managen', slides: processenManagenSlides, color: 'green', icon: Activity },
   { name: 'Netwerkbeheer', slides: netwerkbeheerSlides, color: 'green', icon: Network },
   { name: 'Netwerkdiensten', slides: netwerkdienstenSlides, color: 'purple', icon: Globe },
+  { name: 'Webservers', slides: webserversSlides, color: 'blue', icon: Monitor },
+  { name: 'Proxy', slides: proxySlides, color: 'green', icon: Workflow },
+  { name: 'LAMP-servers', slides: lampserversSlides, color: 'blue', icon: Database },
+  { name: 'Samba', slides: sambaSlides, color: 'blue', icon: FolderOpen },
+  { name: 'Logging', slides: loggingSlides, color: 'orange', icon: FileText },
+  { name: 'NFTables', slides: nftablesSlides, color: 'orange', icon: Shield },
+  { name: 'Security Enhanced Linux', slides: securityEnhancedLinuxSlides, color: 'green', icon: ShieldAlert },
+  { name: 'Virtualisatie', slides: virtualisatieSlides, color: 'purple', icon: Box },
+  { name: 'Progressive Lab', slides: progressiveLabSlides, color: 'purple', icon: Rocket },
 ];
 
 // Calculate section start indices
@@ -60,8 +71,19 @@ const FourDSlides = () => {
   const slides = [
     ...introSlides,
     ...installatieSlides,
+    ...serverAdministratieBasicsSlides,
+    ...processenManagenSlides,
     ...netwerkbeheerSlides,
     ...netwerkdienstenSlides,
+    ...webserversSlides,
+    ...proxySlides,
+    ...lampserversSlides,
+    ...sambaSlides,
+    ...loggingSlides,
+    ...nftablesSlides,
+    ...securityEnhancedLinuxSlides,
+    ...virtualisatieSlides,
+    ...progressiveLabSlides,
   ];
 
   // Get current section based on slide index

@@ -40,7 +40,7 @@ export const netwerkbeheerSlides: SlideType[] = [
             <h4 className="font-semibold text-green-900 mb-2">Kernvragen</h4>
             <ul className="space-y-2 text-gray-700">
               <li>• Hoe stel je netwerk in via GUI en CLI?</li>
-              <li>• Wat is het verschil tussen DHCP en statisch?</li>
+              <li>• Wat is het verschil tussen dynamisch en statisch?</li>
               <li>• Hoe toon en controleer je netwerkstatus?</li>
               <li>• Hoe configureer je bonding voor redundantie?</li>
             </ul>
@@ -50,7 +50,7 @@ export const netwerkbeheerSlides: SlideType[] = [
             <h4 className="font-semibold text-green-900 mb-2">Doelstellingen</h4>
             <ul className="space-y-2 text-gray-700">
               <li>• Een verbinding correct opzetten met nmcli</li>
-              <li>• IP, gateway en DNS persistent configureren</li>
+              <li>• IP en gateway persistent configureren</li>
               <li>• Netwerkoutput analyseren met ip en nmcli</li>
               <li>• Bonding configureren en valideren</li>
             </ul>
@@ -83,7 +83,7 @@ export const netwerkbeheerSlides: SlideType[] = [
           </div>
           <ul className="space-y-2 text-gray-700">
             <li>• Nieuwe connection aanmaken</li>
-            <li>• Statisch IP + gateway + DNS instellen</li>
+            <li>• Statisch IP + gateway instellen</li>
             <li>• Connection down/up en controleren</li>
           </ul>
         </div>
@@ -158,7 +158,7 @@ export const netwerkbeheerSlides: SlideType[] = [
   },
   {
     title: 'Zoom in: Blok 2 - nmcli basis',
-    subtitle: 'Van DHCP naar statische configuratie en directe validatie',
+    subtitle: 'Van dynamische naar statische configuratie en directe validatie',
     content: (
       <div className="flex flex-col space-y-3 max-w-4xl mx-auto">
         <div className="bg-green-50 p-3 rounded-lg border-l-4 border-green-500">
@@ -174,7 +174,6 @@ export const netwerkbeheerSlides: SlideType[] = [
             <div className="bg-gray-900 text-gray-100 rounded-lg p-3 text-xs font-mono overflow-x-auto space-y-0.5">
               <p>sudo nmcli con mod ens224 ipv4.addresses 10.10.10.10/24</p>
               <p>sudo nmcli con mod ens224 ipv4.gateway 10.10.10.254</p>
-              <p>sudo nmcli con mod ens224 ipv4.dns "1.1.1.1 8.8.8.8"</p>
               <p>sudo nmcli con mod ens224 ipv4.method manual</p>
               <p>sudo nmcli con down ens224 &amp;&amp; sudo nmcli con up ens224</p>
             </div>
@@ -186,14 +185,13 @@ export const netwerkbeheerSlides: SlideType[] = [
               <li>• <span className="font-mono text-xs">ip -br a</span>: staat het nieuwe IP erop?</li>
               <li>• <span className="font-mono text-xs">nmcli c s ens224</span>: methode = manual?</li>
               <li>• <span className="font-mono text-xs">ip route</span>: default via juiste gateway?</li>
-              <li>• <span className="font-mono text-xs">resolvectl status</span>: DNS effectief aangepast?</li>
             </ul>
           </div>
         </div>
 
         <div className="bg-green-100 p-3 rounded-lg">
           <p className="text-xs italic text-green-900">
-            <strong>Checkpoint:</strong> bij fout gateway/DNS eerst profiel corrigeren, daarna opnieuw down/up.
+            <strong>Checkpoint:</strong> bij fout gateway eerst profiel corrigeren, daarna opnieuw down/up.
           </p>
         </div>
       </div>
@@ -305,7 +303,6 @@ export const netwerkbeheerSlides: SlideType[] = [
           <div className="bg-gray-900 text-gray-100 rounded-lg p-4 text-sm font-mono overflow-x-auto space-y-1">
             <p>sudo nmcli con mod ens224 ipv4.addresses 10.10.10.1/24</p>
             <p>sudo nmcli con mod ens224 ipv4.gateway 10.10.10.254</p>
-            <p>sudo nmcli con mod ens224 ipv4.dns "8.8.8.8 8.8.4.4"</p>
             <p>sudo nmcli con mod ens224 ipv4.method manual</p>
             <p>sudo nmcli con up ens224</p>
           </div>
@@ -333,7 +330,6 @@ export const netwerkbeheerSlides: SlideType[] = [
             <li>• IP ingesteld maar geen connectie: ipv4.method staat nog op auto</li>
             <li>• Wijzigingen niet actief: connection niet opnieuw geactiveerd</li>
             <li>• Gateway fout: verkeer verlaat interface niet correct</li>
-            <li>• DNS fout: resolv.conf toont oude nameserver</li>
             <li>• Bonding werkt niet: slave interfaces niet correct gekoppeld</li>
           </ul>
         </div>
@@ -341,7 +337,7 @@ export const netwerkbeheerSlides: SlideType[] = [
         <div className="bg-green-50 p-5 rounded-lg border-l-4 border-green-500">
           <h4 className="font-semibold text-green-900 mb-2">Debugvolgorde (altijd dezelfde)</h4>
           <p className="text-gray-700">
-            1) nmcli c s, 2) ip -br a, 3) ip route, 4) ping gateway, 5) ping 8.8.8.8, 6) DNS-test.
+            1) nmcli c s, 2) ip -br a, 3) ip route, 4) ping gateway, 5) ping doelhost.
           </p>
         </div>
       </div>

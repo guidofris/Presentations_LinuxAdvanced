@@ -50,7 +50,7 @@ export const introSlides: SlideType[] = [
             <h4 className="font-semibold text-blue-900 mb-3">Technische thema's</h4>
             <ul className="space-y-2 text-gray-700">
               <li>• Installatie en basis server-setup</li>
-              <li>• DHCP, DNS en netwerkbeheer</li>
+              <li>• IP-configuratie, routing en netwerkbeheer</li>
               <li>• Webservers, virtual hosting en LAMP</li>
               <li>• Filesharing, SELinux en nftables</li>
               <li>• Monitoring, logging en troubleshooting</li>
