@@ -99,7 +99,7 @@ export const Login: React.FC<LoginProps> = ({ onSuccess, passwordHash }) => {
                 Open cursusslides
               </button>
               <a
-                href="https://pxl-linux-advanced-sne.code-coaching.dev"
+                href="https://pxl-linux-advanced-sne.code-coaching.dev/cursus/overzicht.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transform hover:-translate-y-0.5 transition-all shadow-lg"
