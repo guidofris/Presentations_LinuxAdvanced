@@ -23,57 +23,12 @@ export const privacySlides: SlideType[] = [
     )
   },
   {
-    title: "What Data Does Copilot Collect?",
-    subtitle: "Understanding the four types of collected data",
-    content: (
-      <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
-        <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
-          <h3 className="text-xl font-bold text-purple-900 mb-2">Data Categories</h3>
-          <p className="text-gray-700">Copilot collects and processes data across these key categories.</p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="bg-white p-5 rounded-lg shadow border-l-4 border-blue-500">
-            <h4 className="font-bold text-gray-900 mb-2 flex items-center">
-              <span className="text-blue-500 mr-2">1.</span> Prompts
-            </h4>
-            <p className="text-gray-600 text-sm">Inputs for chat or code, along with context, sent to Copilot's AI to generate suggestions.</p>
-          </div>
-          <div className="bg-white p-5 rounded-lg shadow border-l-4 border-green-500">
-            <h4 className="font-bold text-gray-900 mb-2 flex items-center">
-              <span className="text-green-500 mr-2">2.</span> Suggestions
-            </h4>
-            <p className="text-gray-600 text-sm">AI-generated code lines or chat responses provided to users based on their prompts.</p>
-          </div>
-          <div className="bg-white p-5 rounded-lg shadow border-l-4 border-orange-500">
-            <h4 className="font-bold text-gray-900 mb-2 flex items-center">
-              <span className="text-orange-500 mr-2">3.</span> Feedback Data
-            </h4>
-            <p className="text-gray-600 text-sm">Real-time user feedback including reactions (thumbs up/down), optional comments, and support tickets.</p>
-          </div>
-          <div className="bg-white p-5 rounded-lg shadow border-l-4 border-purple-500">
-            <h4 className="font-bold text-gray-900 mb-2 flex items-center">
-              <span className="text-purple-500 mr-2">4.</span> User Engagement Data
-            </h4>
-            <p className="text-gray-600 text-sm">Pseudonymous identifiers on interactions: accepted/dismissed completions, error messages, system logs, and usage metrics.</p>
-          </div>
-        </div>
-
-        <div className="bg-blue-50 p-4 rounded-lg">
-          <p className="text-sm text-blue-900 text-center">
-            <strong>Source:</strong> <a href="https://copilot.github.trust.page/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub Copilot Trust Center</a>
-          </p>
-        </div>
-      </div>
-    )
-  },
-  {
     title: "Privacy by Tier",
     subtitle: "How data handling differs across Copilot plans",
     content: (
-      <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
+      <div className="flex flex-col space-y-4 max-w-3xl mx-auto">
         <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
-          <h3 className="text-xl font-bold text-green-900 mb-2">All Tiers: No Model Training by Default</h3>
+          <h3 className="text-lg font-bold text-green-900 mb-2">All Tiers: No Model Training by Default</h3>
           <p className="text-gray-700">GitHub, its affiliates, and third parties <strong>will not use your data</strong> (prompts, suggestions, code snippets) for AI model training. This setting cannot be changed.</p>
         </div>
 
@@ -84,7 +39,7 @@ export const privacySlides: SlideType[] = [
               <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold mr-2">Pro</span>
               <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-semibold mr-2">Pro+</span>
             </div>
-            <ul className="space-y-1 text-gray-700 text-sm">
+            <ul className="space-y-1 text-gray-700">
               <li className="flex"><span className="mr-2">•</span><span>Personal privacy settings (opt-in data sharing for product improvements)</span></li>
               <li className="flex"><span className="mr-2">•</span><span>Block suggestions matching public code</span></li>
             </ul>
@@ -92,10 +47,10 @@ export const privacySlides: SlideType[] = [
 
           <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
             <div className="flex items-center mb-2">
-              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold mr-3">Business</span>
-              <span className="text-green-600 text-sm">+ Organization controls</span>
+              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold mr-2">Business</span>
+              <span className="text-green-600">+ Organization controls</span>
             </div>
-            <ul className="space-y-1 text-gray-700 text-sm">
+            <ul className="space-y-1 text-gray-700">
               <li className="flex"><span className="mr-2">•</span><span>Organization-wide policy management</span></li>
               <li className="flex"><span className="mr-2">•</span><span><strong>Content exclusion</strong> — exclude specific files from Copilot</span></li>
             </ul>
@@ -103,14 +58,56 @@ export const privacySlides: SlideType[] = [
 
           <div className="bg-white p-4 rounded-lg shadow border border-purple-200">
             <div className="flex items-center mb-2">
-              <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold mr-3">Enterprise</span>
-              <span className="text-green-600 text-sm">+ Enterprise controls</span>
+              <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold mr-2">Enterprise</span>
+              <span className="text-green-600">+ Enterprise controls</span>
             </div>
-            <ul className="space-y-1 text-gray-700 text-sm">
+            <ul className="space-y-1 text-gray-700">
               <li className="flex"><span className="mr-2">•</span><span><strong>Audit logs</strong> for all Copilot interactions</span></li>
               <li className="flex"><span className="mr-2">•</span><span>Data residency and role-based access controls</span></li>
             </ul>
           </div>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: "Data Retention",
+    subtitle: "Business & Enterprise default retention periods",
+    content: (
+      <div className="flex flex-col space-y-4 max-w-3xl mx-auto">
+        <div className="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-500">
+          <p className="text-amber-900">Default settings for <strong>Business</strong> and <strong>Enterprise</strong> customers. Individual and Free/Pro tiers may differ.</p>
+        </div>
+
+        <div className="overflow-x-auto rounded-lg shadow border border-amber-200">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="bg-amber-100">
+                <th className="text-left p-4 font-semibold text-amber-900">Access Type</th>
+                <th className="text-left p-4 font-semibold text-amber-900">Prompts &amp; Suggestions</th>
+                <th className="text-left p-4 font-semibold text-amber-900">User Engagement</th>
+                <th className="text-left p-4 font-semibold text-amber-900">Feedback</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-t border-amber-200 bg-white">
+                <td className="p-4 text-gray-800 font-medium">IDE (Chat &amp; Code Completions)</td>
+                <td className="p-4 text-green-700 font-semibold">Not retained</td>
+                <td className="p-4 text-gray-700">2 years</td>
+                <td className="p-4 text-gray-700">As long as needed</td>
+              </tr>
+              <tr className="border-t border-amber-200 bg-amber-50/40">
+                <td className="p-4 text-gray-800 font-medium">Other Copilot access</td>
+                <td className="p-4 text-orange-700 font-semibold">28 days</td>
+                <td className="p-4 text-gray-700">2 years</td>
+                <td className="p-4 text-gray-700">As long as needed</td>
+              </tr>
+              <tr className="border-t border-amber-200 bg-white">
+                <td className="p-4 text-gray-800 font-medium">Copilot Coding Agent</td>
+                <td colSpan={3} className="p-4 text-gray-700">Session logs retained for the <strong>life of the account</strong></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <div className="bg-blue-50 p-3 rounded-lg">
