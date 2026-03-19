@@ -27,6 +27,12 @@ export const Login: React.FC<LoginProps> = ({ onSuccess, passwordHash }) => {
   const [isShaking, setIsShaking] = useState(false);
   const [isVerifying, setIsVerifying] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const [showLecturerModal, setShowLecturerModal] = useState(false);
+
+  const lecturers = [
+    { name: 'Guido Frissaer', email: 'guido.frissaer@pxl.be' },
+    { name: 'Stijn Jacobs', email: 'stijn.jacobs@pxl.be' },
+  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -100,13 +106,13 @@ export const Login: React.FC<LoginProps> = ({ onSuccess, passwordHash }) => {
               >
                 Open de cursustekst
               </a>
-              <a
-                href="mailto:guido.frissaer@pxl.be?subject=Vraag%20Linux%20Advanced"
+              <button
+                onClick={() => setShowLecturerModal(true)}
                 className="px-8 py-3 bg-transparent border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all flex items-center gap-2"
               >
                 <Mail className="w-5 h-5" />
                 Contacteer docent
-              </a>
+              </button>
             </div>
 
             <div className="flex flex-wrap justify-center gap-6 pt-6 text-gray-400 text-sm">
@@ -176,13 +182,13 @@ export const Login: React.FC<LoginProps> = ({ onSuccess, passwordHash }) => {
           <p className="text-gray-400 max-w-xl mx-auto">
             Contacteer ons voor vragen over het vak, de opdrachten of de evaluatie.
           </p>
-          <a
-            href="mailto:guido.frissaer@pxl.be?subject=Linux%20Advanced"
+          <button
+            onClick={() => setShowLecturerModal(true)}
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transform hover:-translate-y-0.5 transition-all shadow-lg"
           >
             <Mail className="w-5 h-5" />
-            guido.frissaer@pxl.be
-          </a>
+            Contacteer een docent
+          </button>
         </div>
       </div>
 
@@ -198,6 +204,44 @@ export const Login: React.FC<LoginProps> = ({ onSuccess, passwordHash }) => {
           </button>
         </div>
       </div>
+
+      {/* Lecturer Selection Modal */}
+      {showLecturerModal && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center justify-center w-14 h-14 bg-gray-100 rounded-full mb-4">
+                <Mail className="w-7 h-7 text-gray-600" />
+              </div>
+              <h2 className="text-xl font-bold text-gray-800">Kies een docent</h2>
+              <p className="text-gray-500 text-sm mt-2">
+                Selecteer naar wie je een email wilt sturen
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              {lecturers.map((lecturer, index) => (
+                <a
+                  key={index}
+                  href={`mailto:${lecturer.email}?subject=Vraag%20Linux%20Advanced`}
+                  onClick={() => setShowLecturerModal(false)}
+                  className="block w-full p-4 border-2 border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-all text-left"
+                >
+                  <div className="font-semibold text-gray-800">{lecturer.name}</div>
+                  <div className="text-sm text-gray-600">{lecturer.email}</div>
+                </a>
+              ))}
+            </div>
+
+            <button
+              onClick={() => setShowLecturerModal(false)}
+              className="w-full mt-4 py-2 px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-lg transition-all"
+            >
+              Annuleren
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Login Modal */}
       {showLogin && (
