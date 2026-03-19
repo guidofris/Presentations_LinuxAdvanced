@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChevronLeft, ChevronRight, Menu, X, Presentation, Server, Network, Globe, Wrench, PanelRight, PanelLeft, FolderOpen, Database, Monitor, FileText, Shield, ShieldAlert, Activity, Workflow, Rocket, Box } from 'lucide-react';
-import { introSlides, installatieSlides, serverAdministratieBasicsSlides, processenManagenSlides, netwerkbeheerSlides, netwerkdienstenSlides, webserversSlides, proxySlides, lampserversSlides, sambaSlides, loggingSlides, nftablesSlides, securityEnhancedLinuxSlides, virtualisatieSlides, progressiveLabSlides } from './sections';
+import { ChevronLeft, ChevronRight, Menu, X, Presentation, Server, Network, Globe, Wrench, PanelRight, PanelLeft, FolderOpen, Database, Monitor, FileText, Shield, ShieldAlert, Activity, Workflow, Rocket, Box, MessageSquare } from 'lucide-react';
+import { introSlides, installatieSlides, serverAdministratieBasicsSlides, processenManagenSlides, netwerkbeheerSlides, netwerkdienstenSlides, webserversSlides, proxySlides, lampserversSlides, sambaSlides, loggingSlides, nftablesSlides, securityEnhancedLinuxSlides, virtualisatieSlides, progressiveLabSlides, closingSlides } from './sections';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import './index.css';
@@ -33,6 +33,7 @@ const sections = [
   { name: 'Logging', slides: loggingSlides, color: 'orange', icon: FileText },
   { name: 'Virtualisatie', slides: virtualisatieSlides, color: 'purple', icon: Box },
   { name: 'Progressive Lab', slides: progressiveLabSlides, color: 'purple', icon: Rocket },
+  { name: 'Afsluiting', slides: closingSlides, color: 'blue', icon: MessageSquare },
 ];
 
 // Calculate section start indices
@@ -84,6 +85,7 @@ const FourDSlides = () => {
     ...loggingSlides,
     ...virtualisatieSlides,
     ...progressiveLabSlides,
+    ...closingSlides,
   ];
 
   // Get current section based on slide index
