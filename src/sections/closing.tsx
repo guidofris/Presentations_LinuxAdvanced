@@ -64,49 +64,58 @@ export const closingSlides: SlideType[] = [
     title: "",
     subtitle: "",
     content: (
-      <div className="flex flex-col items-center md:justify-center md:h-full space-y-4 md:space-y-8 px-4 md:px-0">
-        <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-2 md:mb-4">Thank You!</h2>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-6 md:mb-12">Questions & Discussion</p>
+      <div className="flex flex-col justify-center h-full max-w-4xl mx-auto space-y-3 px-3 md:px-0">
+        <div className="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-3 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-blue-900">
+            Linux Advanced is pas echt af als je het morgen opnieuw doet zonder spiekbrief.
+          </h2>
         </div>
 
-        <div className="bg-white p-4 md:p-8 rounded-lg shadow-lg border border-gray-200 w-full max-w-md md:max-w-none md:w-auto">
-          <div className="text-center">
-            <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-2">Jan De Dobbeleer</h3>
-            <p className="text-base md:text-lg text-gray-600 mb-4">Engineering Leader & Open Source Innovator</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-gray-600">
-              <span className="flex items-center space-x-2">
-                <span>📧</span>
-                <span>jan@itdepends.be</span>
-              </span>
-              <span className="flex items-center space-x-2">
-                <span>🐦</span>
-                <span>@jandedobbeleer</span>
-              </span>
-            </div>
+        <div className="bg-white p-3 rounded-lg shadow border border-blue-200">
+          <h3 className="text-sm font-bold text-blue-900 mb-2">Praktische recap</h3>
+          <ul className="text-sm text-gray-700 space-y-1">
+            <li>• Je automatiseert beheer met shell en systemd in plaats van handwerk.</li>
+            <li>• Je beveiligt de host met least privilege, logging en gerichte hardening.</li>
+            <li>• Je beheert netwerkdiensten met inzicht in poorten, routes en policies.</li>
+            <li>• Je valideert elke wijziging met meetbare checks voor je verder gaat.</li>
+          </ul>
+        </div>
+
+        <div className="bg-green-50 p-3 rounded-lg border border-green-200 space-y-2">
+          <h3 className="text-sm font-bold text-green-900">Volgende stap: mini-lab van 30 minuten</h3>
+          <div className="text-xs md:text-sm text-gray-700 space-y-1">
+            <p>
+              1) Baseline en updates: <span className="font-mono">sudo apt update && sudo apt upgrade -y</span>
+              <span className="text-green-800"> | Checkpoint: geen failed packages.</span>
+            </p>
+            <p>
+              2) Dienstcontrole: <span className="font-mono">systemctl --failed && sudo ss -tulpn</span>
+              <span className="text-green-800"> | Checkpoint: enkel verwachte services en poorten.</span>
+            </p>
+            <p>
+              3) Hardening-check: <span className="font-mono">sudo journalctl -p err -b --no-pager</span>
+              <span className="text-green-800"> | Checkpoint: kritieke fouten opgelost of geticket.</span>
+            </p>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center gap-3">
           <a
             href="https://github.com/JanDeDobbeleer/workshop_ai_native"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 px-4 py-2 bg-gray-900 text-white rounded-lg shadow hover:bg-gray-700 transition-colors"
+            className="flex items-center space-x-2 px-4 py-2 bg-gray-900 text-white rounded-lg shadow hover:bg-gray-700 transition-colors text-sm"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            <span>View Source on GitHub</span>
+            <span>Workshopmateriaal</span>
           </a>
 
           <FeedbackButton />
         </div>
 
-        <div className="mt-8 text-center">
-          <p className="text-base md:text-lg text-gray-600 italic">
-            "The best way to predict the future is to create it."
-          </p>
-          <p className="text-sm md:text-base text-gray-500 mt-2">
-            — Peter Drucker
+        <div className="text-center">
+          <p className="text-sm text-gray-600 italic">
+            "Sterke Linux-admins gokken niet, ze meten, valideren en verbeteren."
           </p>
         </div>
       </div>
