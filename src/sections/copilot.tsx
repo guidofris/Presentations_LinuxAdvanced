@@ -291,77 +291,6 @@ export const copilotSlides: SlideType[] = [
     )
   },
   {
-    title: "The AI Behind Code Suggestions",
-    subtitle: "Understanding the model powering your suggestions",
-    content: (
-      <div className="flex flex-col space-y-5 max-w-3xl mx-auto">
-        <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-          <h3 className="text-xl font-bold text-blue-900 mb-2">
-            GPT-4.1 Copilot Model
-          </h3>
-          <p className="text-gray-700">
-            The default model for Copilot inline suggestions, trained on a wide
-            range of high-quality public GitHub repositories.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
-            <h4 className="font-semibold text-blue-900 mb-2">Training Data:</h4>
-            <ul className="space-y-2 text-gray-700">
-              <li className="flex">
-                <span className="mr-2">•</span>
-                <span>High-quality public GitHub repositories</span>
-              </li>
-              <li className="flex">
-                <span className="mr-2">•</span>
-                <span>Coverage across 30+ programming languages</span>
-              </li>
-              <li className="flex">
-                <span className="mr-2">•</span>
-                <span>Diverse frameworks and patterns</span>
-              </li>
-            </ul>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow border border-blue-200">
-            <h4 className="font-semibold text-blue-900 mb-2">
-              Model Flexibility:
-            </h4>
-            <ul className="space-y-2 text-gray-700">
-              <li className="flex">
-                <span className="mr-2">•</span>
-                <span>Switch models if alternatives are available</span>
-              </li>
-              <li className="flex">
-                <span className="mr-2">•</span>
-                <span>Only affects ghost text suggestions</span>
-              </li>
-              <li className="flex">
-                <span className="mr-2">•</span>
-                <span>Next edit suggestions use separate model</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="bg-blue-100 p-4 rounded-lg">
-          <p className="text-sm italic text-blue-900">
-            <strong>Learn More:</strong>{" "}
-            <a
-              href="https://docs.github.com/en/copilot/how-tos/use-ai-models/change-the-completion-model"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:underline"
-            >
-              Change the AI model
-            </a>{" "}
-            for inline suggestions.
-          </p>
-        </div>
-      </div>
-    )
-  },
-  {
     title: "Code Referencing & Public Code Matching",
     subtitle: "How Copilot handles matches with public code",
     content: (
@@ -1180,7 +1109,7 @@ export const copilotSlides: SlideType[] = [
               <li className="flex">
                 <span className="mr-2">•</span>
                 <span>
-                  <strong>Ask/Edit:</strong> Active file auto-included
+                  <strong>Ask:</strong> Active file auto-included
                 </span>
               </li>
               <li className="flex">
@@ -1343,7 +1272,7 @@ export const copilotSlides: SlideType[] = [
                 • <strong>Selected text</strong> auto-included
               </p>
               <p>
-                • <strong>Active file</strong> in Ask/Edit modes
+                • <strong>Active file</strong> in Ask mode
               </p>
             </div>
           </div>
