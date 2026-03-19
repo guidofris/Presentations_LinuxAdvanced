@@ -2,6 +2,7 @@ export type { SlideType } from './types';
 export { introSlides } from './intro';
 export { installatieSlides } from './installatie';
 export { netwerkbeheerSlides } from './netwerkbeheer';
+export { netwerkdienstenSlides } from './netwerkdiensten';
 export { llmSlides } from './llm';
 export { fluencySlides } from './fluency';
 export { promptingSlides } from './prompting';

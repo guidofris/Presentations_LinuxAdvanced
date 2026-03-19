@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ChevronLeft, ChevronRight, Menu, X, Presentation, Server, Network, PanelRight, PanelLeft } from 'lucide-react';
-import { introSlides, installatieSlides, netwerkbeheerSlides } from './sections';
+import { ChevronLeft, ChevronRight, Menu, X, Presentation, Server, Network, Globe, PanelRight, PanelLeft } from 'lucide-react';
+import { introSlides, installatieSlides, netwerkbeheerSlides, netwerkdienstenSlides } from './sections';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import './index.css';
@@ -21,6 +21,7 @@ const sections = [
   { name: 'Overzicht', slides: introSlides, color: 'gray', icon: Presentation },
   { name: 'Installatie', slides: installatieSlides, color: 'blue', icon: Server },
   { name: 'Netwerkbeheer', slides: netwerkbeheerSlides, color: 'green', icon: Network },
+  { name: 'Netwerkdiensten', slides: netwerkdienstenSlides, color: 'purple', icon: Globe },
 ];
 
 // Calculate section start indices
@@ -60,6 +61,7 @@ const FourDSlides = () => {
     ...introSlides,
     ...installatieSlides,
     ...netwerkbeheerSlides,
+    ...netwerkdienstenSlides,
   ];
 
   // Get current section based on slide index

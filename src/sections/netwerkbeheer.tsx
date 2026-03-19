@@ -115,6 +115,177 @@ export const netwerkbeheerSlides: SlideType[] = [
     )
   },
   {
+    title: 'Zoom in: Blok 1 - Inventarisatie',
+    subtitle: 'Startmeting met vaste checklist en commando-volgorde',
+    content: (
+      <div className="flex flex-col space-y-3 max-w-4xl mx-auto">
+        <div className="bg-green-50 p-3 rounded-lg border-l-4 border-green-500">
+          <h3 className="text-sm font-bold text-green-900 mb-1">Doel</h3>
+          <p className="text-sm text-gray-700">
+            Voor je iets wijzigt: leg de beginsituatie vast zodat je na elke stap kan vergelijken.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="bg-white p-3 rounded-lg shadow border border-green-200">
+            <h4 className="text-sm font-bold text-green-900 mb-2">Commando's</h4>
+            <div className="bg-gray-900 text-gray-100 rounded-lg p-3 text-xs font-mono overflow-x-auto space-y-0.5">
+              <p>nmcli device status</p>
+              <p>nmcli connection show --active</p>
+              <p>ip -br a</p>
+              <p>ip route</p>
+            </div>
+          </div>
+
+          <div className="bg-white p-3 rounded-lg shadow border border-green-200">
+            <h4 className="text-sm font-bold text-green-900 mb-2">Wat moet op papier staan?</h4>
+            <ul className="space-y-1 text-sm text-gray-700">
+              <li>• Interface-namen (bv. ens224, ens256)</li>
+              <li>• Welke verbinding is actief</li>
+              <li>• Huidige IP/prefix en default gateway</li>
+              <li>• Open vragen of afwijkingen voor de docent</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-green-100 p-3 rounded-lg">
+          <p className="text-xs italic text-green-900">
+            <strong>Checkpoint:</strong> studenten kunnen de actieve interface en default route hardop aanwijzen.
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: 'Zoom in: Blok 2 - nmcli basis',
+    subtitle: 'Van DHCP naar statische configuratie en directe validatie',
+    content: (
+      <div className="flex flex-col space-y-3 max-w-4xl mx-auto">
+        <div className="bg-green-50 p-3 rounded-lg border-l-4 border-green-500">
+          <h3 className="text-sm font-bold text-green-900 mb-1">Werkvolgorde</h3>
+          <p className="text-sm text-gray-700">
+            Eerst profiel opbouwen, daarna activeren, dan onmiddellijk verifiëren met output.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="bg-white p-3 rounded-lg shadow border border-green-200">
+            <h4 className="text-sm font-bold text-green-900 mb-2">Commando's (voorbeeld)</h4>
+            <div className="bg-gray-900 text-gray-100 rounded-lg p-3 text-xs font-mono overflow-x-auto space-y-0.5">
+              <p>sudo nmcli con mod ens224 ipv4.addresses 10.10.10.10/24</p>
+              <p>sudo nmcli con mod ens224 ipv4.gateway 10.10.10.254</p>
+              <p>sudo nmcli con mod ens224 ipv4.dns "1.1.1.1 8.8.8.8"</p>
+              <p>sudo nmcli con mod ens224 ipv4.method manual</p>
+              <p>sudo nmcli con down ens224 &amp;&amp; sudo nmcli con up ens224</p>
+            </div>
+          </div>
+
+          <div className="bg-white p-3 rounded-lg shadow border border-green-200">
+            <h4 className="text-sm font-bold text-green-900 mb-2">Direct controleren</h4>
+            <ul className="space-y-1 text-sm text-gray-700">
+              <li>• <span className="font-mono text-xs">ip -br a</span>: staat het nieuwe IP erop?</li>
+              <li>• <span className="font-mono text-xs">nmcli c s ens224</span>: methode = manual?</li>
+              <li>• <span className="font-mono text-xs">ip route</span>: default via juiste gateway?</li>
+              <li>• <span className="font-mono text-xs">resolvectl status</span>: DNS effectief aangepast?</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-green-100 p-3 rounded-lg">
+          <p className="text-xs italic text-green-900">
+            <strong>Checkpoint:</strong> bij fout gateway/DNS eerst profiel corrigeren, daarna opnieuw down/up.
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: 'Zoom in: Blok 3 - Routing',
+    subtitle: 'Route toevoegen, tabel lezen en doelgericht testen',
+    content: (
+      <div className="flex flex-col space-y-3 max-w-4xl mx-auto">
+        <div className="bg-green-50 p-3 rounded-lg border-l-4 border-green-500">
+          <h3 className="text-sm font-bold text-green-900 mb-1">Didactische focus</h3>
+          <p className="text-sm text-gray-700">
+            Studenten linken elke route-regel aan een concreet doelnetwerk en next-hop.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="bg-white p-3 rounded-lg shadow border border-green-200">
+            <h4 className="text-sm font-bold text-green-900 mb-2">Commando's</h4>
+            <div className="bg-gray-900 text-gray-100 rounded-lg p-3 text-xs font-mono overflow-x-auto space-y-0.5">
+              <p>sudo nmcli con mod ens224 +ipv4.routes "172.16.50.0/24 10.10.10.254"</p>
+              <p>sudo nmcli con up ens224</p>
+              <p>ip route</p>
+              <p>ip route get 172.16.50.10</p>
+              <p>ping -c 3 172.16.50.10</p>
+            </div>
+          </div>
+
+          <div className="bg-white p-3 rounded-lg shadow border border-green-200">
+            <h4 className="text-sm font-bold text-green-900 mb-2">Interpretatievragen</h4>
+            <ul className="space-y-1 text-sm text-gray-700">
+              <li>• Welke route wordt effectief gekozen?</li>
+              <li>• Via welke interface vertrekt het pakket?</li>
+              <li>• Is het probleem routing of bereikbaarheid?</li>
+              <li>• Wat verandert als de route verwijderd wordt?</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-green-100 p-3 rounded-lg">
+          <p className="text-xs italic text-green-900">
+            <strong>Checkpoint:</strong> studenten kunnen uitleggen waarom een ping faalt op basis van de routingtabel.
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
+    title: 'Zoom in: Blok 4 - Bonding',
+    subtitle: 'Redundantie opzetten en failover zichtbaar maken',
+    content: (
+      <div className="flex flex-col space-y-3 max-w-4xl mx-auto">
+        <div className="bg-green-50 p-3 rounded-lg border-l-4 border-green-500">
+          <h3 className="text-sm font-bold text-green-900 mb-1">Labdoel</h3>
+          <p className="text-sm text-gray-700">
+            Bond active-backup bouwen en aantonen dat verkeer blijft lopen bij linkverlies.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="bg-white p-3 rounded-lg shadow border border-green-200">
+            <h4 className="text-sm font-bold text-green-900 mb-2">Commando's</h4>
+            <div className="bg-gray-900 text-gray-100 rounded-lg p-3 text-xs font-mono overflow-x-auto space-y-0.5">
+              <p>sudo nmcli con add type bond ifname bond0 mode active-backup con-name bond0</p>
+              <p>sudo nmcli con add type ethernet ifname ens224 master bond0 con-name bond0-slave1</p>
+              <p>sudo nmcli con add type ethernet ifname ens256 master bond0 con-name bond0-slave2</p>
+              <p>sudo nmcli con up bond0</p>
+              <p>cat /proc/net/bonding/bond0</p>
+            </div>
+          </div>
+
+          <div className="bg-white p-3 rounded-lg shadow border border-green-200">
+            <h4 className="text-sm font-bold text-green-900 mb-2">Failover-test</h4>
+            <ul className="space-y-1 text-sm text-gray-700">
+              <li>• Start een continue ping naar gateway</li>
+              <li>• Trek actieve slave los of zet interface down</li>
+              <li>• Controleer actieve slave in bonding-output</li>
+              <li>• Bevestig dat verbinding herstelt zonder reboot</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-green-100 p-3 rounded-lg">
+          <p className="text-xs italic text-green-900">
+            <strong>Checkpoint:</strong> studenten kunnen master/slave rollen en failover-gedrag verklaren.
+          </p>
+        </div>
+      </div>
+    )
+  },
+  {
     title: 'Demo- en checkpoint-commando\'s',
     subtitle: 'Commandoblokken die je live kan gebruiken',
     content: (
