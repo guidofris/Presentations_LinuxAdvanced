@@ -113,6 +113,14 @@ const FourDSlides = () => {
     localStorage.setItem('navOnLeft', String(navOnLeft));
   }, [navOnLeft]);
 
+  // Keep the browser tab title in sync with the active slide.
+  useEffect(() => {
+    const activeSlide = slides[currentSlide];
+    const activeSection = getCurrentSection();
+    const contextLabel = activeSlide?.title || activeSection?.name || 'Linux Advanced';
+    document.title = `${contextLabel} | Linux Advanced Presentatie`;
+  }, [currentSlide, slides]);
+
   const toggleNavPosition = () => {
     setNavOnLeft((prev) => !prev);
   };
